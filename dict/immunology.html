@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>免疫炎症词典 Immunology · 疾病·通路·成药</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Spectral:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<button class="menu-btn" id="menuBtn">☰ 目录</button>
+<div class="scrim" id="scrim"></div>
+<div class="shell">
+  <aside class="rail" id="rail">
+    <div class="brand"><a href="../index.html"><span class="cn">药物创新的逻辑</span></a><br><span style="font-size:14px;color:var(--soft)">The Logic of Drug Discovery</span></div>
+    <div class="brand-sub">词典 · 免疫炎症</div>
+    <div class="rail-divider"></div>
+    <div class="nav-label">词典 · 五大战场</div>
+    <nav>
+      <a class="nav-item" href="index.html"><span class="num">§</span><span class="txt">词典首页</span></a>
+      <a class="nav-item link" href="oncology.html"><span class="num">①</span><span class="txt">肿瘤</span></a>
+      <a class="nav-item active" href="immunology.html"><span class="num">②</span><span class="txt">免疫炎症</span></a>
+      <a class="nav-item link" href="metabolic.html"><span class="num">③</span><span class="txt">代谢</span></a>
+      <a class="nav-item link" href="cns.html"><span class="num">④</span><span class="txt">神经 CNS</span></a>
+      <a class="nav-item link" href="rare.html"><span class="num">⑤</span><span class="txt">罕见/遗传病</span></a>
+    </nav>
+    <div class="rail-divider"></div>
+    <div class="nav-label">本页分区</div>
+    <nav>
+      <a class="nav-item" href="#cytokine"><span class="num">A</span><span class="txt">细胞因子中和 · 抗体</span></a>
+      <a class="nav-item" href="#signal"><span class="num">B</span><span class="txt">胞内信号 · 小分子</span></a>
+      <a class="nav-item" href="#cell"><span class="num">C</span><span class="txt">细胞与受体</span></a>
+      <a class="nav-item" href="#frontier"><span class="num">D</span><span class="txt">前沿：CAR-T治自免</span></a>
+    </nav>
+  </aside>
+  <main class="main">
+    <section class="page">
+      <div class="crumb"><a href="../index.html">主课程</a><span class="sep">›</span><a href="index.html">词典</a><span class="sep">›</span>免疫炎症 Immunology</div>
+      <div class="eyebrow">Dictionary ② · Immunology</div>
+      <h1><span class="cn">免疫炎症词典</span> <span style="font-family:var(--mono);font-size:18px;color:var(--soft)">Immunology</span></h1>
+      <p class="lede">元规则：几条"细胞因子"在多个自免病里反复作乱。打法两大类——<strong>中和细胞因子/受体</strong>（抗体，安全但要打针）或<strong>阻断胞内信号</strong>（小分子，口服但更易全身影响）。同一靶点常横跨多病，价值随适应症滚雪球（pipeline-in-a-product）。</p>
+      <div class="note"><span class="tag">读法</span><p><span class="badge ok">已成功</span> 有获批药 · <span class="badge wip">爬坡中</span> 有信号/新机制 · <span class="badge fail">反复失败</span> 屡战屡败。留意每条的"适应症地图"——横向扩病是本战场最大价值来源。</p></div>
+
+      <!-- ============ A. CYTOKINE ============ -->
+      <h2 id="cytokine" class="anchor-h"><span class="cn">A · 细胞因子中和：抗体的主场</span></h2>
+      <p>把作乱的可溶信号分子（或其受体）用抗体"抓走"。原则：<em>打得越上游，覆盖病人越广，但也越可能过度抑制免疫。</em></p>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">类风关/银屑病/IBD · <span class="tgt">TNF-α</span></div><span class="badge ok">已成功 · 元祖</span></div>
+        <div class="e-path">核心促炎因子 <span class="arrow">→</span> TNF-α <span class="arrow">→</span> 抗体 / 融合蛋白</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val"><b>adalimumab/Humira（AbbVie）</b>——曾是全球药王；etanercept、infliximab</span></div>
+        <div class="erow"><span class="lbl">解法 / 解毒剂</span><span class="val">"一药多病"原型：类风关→银屑病→强直→克罗恩→溃结一路扩</span></div>
+        <div class="e-insight">pipeline-in-a-product 的鼻祖，也是专利悬崖的教材：生物类似药一上市收入断崖，逼 AbbVie 用 IL-23/JAK 接棒。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">银屑病/IBD · <span class="tgt">IL-23 (p19)</span></div><span class="badge ok">已成功 · 当红</span></div>
+        <div class="e-path">Th17 上游驱动 <span class="arrow">→</span> IL-23 <span class="arrow">→</span> 抗体</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val"><b>risankizumab/Skyrizi（AbbVie）</b>、guselkumab（J&J）；上一代 ustekinumab 打 IL-12/23 p40</span></div>
+        <div class="e-insight">Humira 的接班人。"打更上游"往往=更干净更持久，是免疫里 best-in-class 接力的样板。皮肤清除率成军备竞赛。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">银屑病/关节炎 · <span class="tgt">IL-17A/F</span></div><span class="badge ok">已成功</span></div>
+        <div class="e-path">Th17 效应因子 <span class="arrow">→</span> IL-17 <span class="arrow">→</span> 抗体</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">secukinumab（Novartis）、ixekizumab（Lilly）、<b>bimekizumab（双靶 A+F，UCB）</b></span></div>
+        <div class="e-insight">与 IL-23 同场竞争皮肤清除；但在 IBD 上 IL-17 反而无效甚至加重——提醒"同通路不同病，结果可能相反"。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">特应性皮炎/哮喘/COPD · <span class="tgt">IL-4Rα (IL-4/13)</span></div><span class="badge ok">已成功 · 巨头</span></div>
+        <div class="e-path">2 型炎症主轴 <span class="arrow">→</span> IL-4/IL-13 共用受体 <span class="arrow">→</span> 抗体</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val"><b>dupilumab/Dupixent（Regeneron/Sanofi）</b>，已扩到 COPD、嗜酸食管炎、结节性痒疹、慢性鼻窦炎等</span></div>
+        <div class="e-insight">"2 型炎症"通吃者，适应症地图最宽的免疫药之一——每个新适应症都是一次重估。单靶点撑起数百亿销售。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">嗜酸性哮喘/EGPA · <span class="tgt">IL-5 / IL-5Rα</span></div><span class="badge ok">已成功 · 生标选人</span></div>
+        <div class="e-path">嗜酸性粒细胞驱动 <span class="arrow">→</span> IL-5 <span class="arrow">→</span> 抗体</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">mepolizumab（GSK）、benralizumab（AZ，直接清嗜酸细胞）</span></div>
+        <div class="e-insight">"用血嗜酸细胞计数选人"的精准免疫：把哮喘按生物标志物分层，只治真正 2 型高炎症的那群。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">类风关/CRS/巨细胞动脉炎 · <span class="tgt">IL-6 / IL-6R</span></div><span class="badge ok">已成功 · 兼职解毒剂</span></div>
+        <div class="e-path">全身炎症放大器 <span class="arrow">→</span> IL-6 <span class="arrow">→</span> 抗体</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">tocilizumab（罗氏）、sarilumab（Regeneron/Sanofi）</span></div>
+        <div class="erow"><span class="lbl">解法 / 解毒剂</span><span class="val">同一药是 <b>CAR-T 细胞因子风暴（CRS）的标准解毒剂</b>——肿瘤科反向借用免疫科的药</span></div>
+        <div class="e-insight">一个通路两个战场：治自免，也救 CAR-T 的命。跨领域"老药新用"的典型。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">自身炎症/痛风/心血管 · <span class="tgt">IL-1β</span></div><span class="badge ok">已成功</span></div>
+        <div class="e-path">先天免疫警报 <span class="arrow">→</span> IL-1β <span class="arrow">→</span> 抗体 / 受体拮抗剂</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">canakinumab（Novartis）、anakinra；用于罕见自身炎症综合征、难治痛风</span></div>
+        <div class="e-insight">CANTOS 试验曾证明抗 IL-1β 能降心血管事件——"炎症假说"治动脉粥样硬化的里程碑（虽因性价比未转化为大适应症）。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">重症哮喘 · <span class="tgt">TSLP</span></div><span class="badge ok">已成功 · 最上游</span></div>
+        <div class="e-path">上皮"警报素"（炎症瀑布顶端）<span class="arrow">→</span> TSLP <span class="arrow">→</span> 抗体</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">tezepelumab（Amgen/AZ）——不分表型都有效</span></div>
+        <div class="e-insight">越往上游打覆盖越广：TSLP 在最顶端，所以对多种哮喘表型通用。上游打法的代表。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">溃结/克罗恩 · <span class="tgt">TL1A</span></div><span class="badge wip">爬坡中 · 大交易</span></div>
+        <div class="e-path">兼抗炎+抗纤维化 <span class="arrow">→</span> TL1A <span class="arrow">→</span> 抗体</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">tulisokibart（默沙东，收购 Prometheus）、duvakitug（赛诺菲/Teva）</span></div>
+        <div class="erow"><span class="lbl">解法 / 解毒剂</span><span class="val">卖点是"带生物标志物选人"——想先挑出会响应的病人再治</span></div>
+        <div class="e-insight">当下 IBD 最热的新机制，大药企砸重金抢购的下一代免疫资产。看它能否兑现"抗纤维化"这个 IBD 长期痛点。</div>
+      </div>
+
+      <!-- ============ B. SIGNAL ============ -->
+      <h2 id="signal" class="anchor-h"><span class="cn">B · 胞内信号阻断：小分子的立足点</span></h2>
+      <p>抗体进不了细胞，胞内信号（激酶、受体下游）就是小分子的天下。优势是口服便宜，代价是选择性不够时容易"广谱抑制"惹副作用。</p>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">多种自免 · <span class="tgt">JAK 1/2/3</span></div><span class="badge ok">已成功 · 带黑框</span></div>
+        <div class="e-path">众多细胞因子共用的胞内枢纽 <span class="arrow">→</span> JAK-STAT <span class="arrow">→</span> 口服小分子</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">tofacitinib（Pfizer）、upadacitinib（AbbVie）、baricitinib；<b>FDA 黑框</b>（心血管/血栓/感染）</span></div>
+        <div class="e-insight">口服便利 vs 抗体安全的经典权衡。黑框是"广谱阻断共用枢纽"的代价，差异化只能靠更高选择性——引出 TYK2。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">银屑病等 · <span class="tgt">TYK2（变构）</span></div><span class="badge ok">已成功 · 更安全</span></div>
+        <div class="e-path">JAK 家族一员，但走变构口袋 <span class="arrow">→</span> TYK2 假激酶域 <span class="arrow">→</span> 口服小分子</div>
+        <div class="erow"><span class="lbl">可成药性</span><span class="val">不抢 ATP 口袋、而抓调控域——换来更干净的选择性</span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val"><b>deucravacitinib/Sotyktu（BMS）</b>，无 JAK 类黑框</span></div>
+        <div class="e-insight">"同一家族、换个结合位点=更好安全性"的漂亮范例。变构抑制是新一代小分子提高选择性的通用招法。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">溃结/多发性硬化 · <span class="tgt">S1P 受体</span></div><span class="badge ok">已成功</span></div>
+        <div class="e-path">淋巴细胞出淋巴结的"闸门" <span class="arrow">→</span> S1P1 <span class="arrow">→</span> 口服小分子</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">fingolimod/ozanimod（BMS）、etrasimod（辉瑞，溃结）；MS 用 siponimod</span></div>
+        <div class="e-insight">机制巧妙——"把免疫细胞关在淋巴结里出不来"。口服、免打针，是 MS 和 UC 的重要口服选项。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">银屑病/银屑病关节炎 · <span class="tgt">PDE4</span></div><span class="badge ok">已成功 · 温和</span></div>
+        <div class="e-path">胞内 cAMP 降解酶 <span class="arrow">→</span> PDE4 <span class="arrow">→</span> 口服/外用小分子</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">apremilast（Amgen 口服）、roflumilast（外用）</span></div>
+        <div class="e-insight">疗效温和但安全性好、无需化验监测——占据"轻中度、怕打针怕黑框"的病人层。安全性也是一种差异化。</div>
+      </div>
+
+      <!-- ============ C. CELL / RECEPTOR ============ -->
+      <h2 id="cell" class="anchor-h"><span class="cn">C · 细胞与受体：组织选择与清除 B 细胞</span></h2>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">溃结/克罗恩 · <span class="tgt">整合素 α4β7</span></div><span class="badge ok">已成功 · 肠道选择性</span></div>
+        <div class="e-path">淋巴细胞归巢肠道 <span class="arrow">→</span> α4β7 <span class="arrow">→</span> 抗体</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">vedolizumab（武田）——只拦肠道免疫、全身少受累</span></div>
+        <div class="e-insight">"组织选择性"是降副作用的聪明思路：不全身压制，只在犯事器官动手。安全性溢价明显。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">系统性红斑狼疮 · <span class="tgt">BAFF/BLyS</span></div><span class="badge ok">已成功 · 狼疮少有</span></div>
+        <div class="e-path">B 细胞存活因子 <span class="arrow">→</span> BAFF <span class="arrow">→</span> 抗体</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">belimumab（GSK）——狼疮几十年里罕见的获批新药之一</span></div>
+        <div class="e-insight">狼疮是出了名的"临床坟场"（异质性高、终点难）。BAFF 的成功来之不易，凸显选人和终点设计之难。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">类风关/多发性硬化 · <span class="tgt">CD20（B 细胞）</span></div><span class="badge ok">已成功 · 跨界</span></div>
+        <div class="e-path">清除 B 细胞谱系 <span class="arrow">→</span> CD20 <span class="arrow">→</span> 抗体</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">rituximab（罗氏）；MS 用 ocrelizumab、ofatumumab</span></div>
+        <div class="e-insight">同一个肿瘤靶点（见肿瘤词典）在自免里再立功——清 B 细胞治 MS 的成功，反过来点燃了"CAR-T 治自免"的想象。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">慢性荨麻疹/AD 瘙痒 · <span class="tgt">IL-31 · BTK(免疫型)</span></div><span class="badge wip">爬坡中</span></div>
+        <div class="e-path">瘙痒/肥大细胞信号 <span class="arrow">→</span> IL-31 或 BTK <span class="arrow">→</span> 抗体 / 口服小分子</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">nemolizumab（IL-31，结节性痒疹已获批）；remibrutinib（诺华 BTK，CSU/MS 在研）</span></div>
+        <div class="e-insight">把"痒"本身当靶点——IL-31 是瘙痒专线；免疫型 BTK 抑制则想复制肿瘤 BTK 的成功、去掉出血副作用。</div>
+      </div>
+
+      <!-- ============ D. FRONTIER ============ -->
+      <h2 id="frontier" class="anchor-h"><span class="cn">D · 前沿：把肿瘤的"活药"搬来治自免</span></h2>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">重症狼疮/肌炎/硬皮病 · <span class="tgt">CD19（CAR-T / 双抗）</span></div><span class="badge wip">爬坡中 · 最热</span></div>
+        <div class="e-path">深度清除自身反应性 B 细胞 <span class="arrow">→</span> CD19 <span class="arrow">→</span> CAR-T / T 细胞衔接双抗</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">早期病例"无药停药缓解"信号惊人，样本仍小 <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">德国 Schett 团队开创；诸多 biotech（含中国）跟进 CAR-T 与 CD3×CD19/CD20 双抗</span></div>
+        <div class="erow"><span class="lbl">解法 / 解毒剂</span><span class="val">"免疫系统重启"假说：清干净 B 细胞后再生成的是不致病的；CRS 仍用 tocilizumab 兜底</span></div>
+        <div class="e-insight">当下免疫学最激动人心的外延——把肿瘤的细胞治疗搬进自免。若成，重塑整个自免治疗范式；风险在长期安全与可及性/成本。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">机制通用 · <span class="tgt">IgG 回收 FcRn</span></div><span class="badge ok">已成功 · 平台</span></div>
+        <div class="e-path">降低致病性自身抗体 <span class="arrow">→</span> FcRn（IgG 回收受体）<span class="arrow">→</span> 抗体 / Fc 片段</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">efgartigimod（argenx）、rozanolixizumab；用于重症肌无力、CIDP、ITP 等</span></div>
+        <div class="e-insight">"抗体介导病"的通用开关：不管哪种自身抗体，都靠加速清除 IgG 一网打尽——一个机制横扫一类疾病的平台逻辑。</div>
+      </div>
+
+      <div class="note investor">
+        <span class="tag">这一页的元规则</span>
+        <p>看免疫项目三问：① <strong>打在通路哪一层</strong>（越上游越通用，也越可能过度抑制）；② <strong>适应症地图能扩多宽</strong>（一靶跨几大病，价值翻几倍）；③ <strong>安全性差异化</strong>（TYK2 之于 JAK、组织选择性之于全身抑制——在免疫里"更安全"本身就能赢）。下一波盯 TL1A 类"带选人标志物的新机制"和 CD19 细胞治疗治自免的兑现。</p>
+      </div>
+      <div class="footer-note">免疫炎症词典 · 19 条，四区（细胞因子/信号/细胞受体/前沿）· 可继续加深：补体系统全景、狼疮管线、各 IBD 药头对头、中国自免 license-out。</div>
+    </section>
+  </main>
+</div>
+<script>
+  const rail=document.getElementById('rail'),scrim=document.getElementById('scrim'),menuBtn=document.getElementById('menuBtn');
+  menuBtn.addEventListener('click',()=>{rail.classList.add('open');scrim.classList.add('show')});
+  scrim.addEventListener('click',()=>{rail.classList.remove('open');scrim.classList.remove('show')});
+</script>
+</body>
+</html>

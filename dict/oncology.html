@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>肿瘤词典 Oncology · 疾病·通路·成药</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Spectral:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<button class="menu-btn" id="menuBtn">☰ 目录</button>
+<div class="scrim" id="scrim"></div>
+<div class="shell">
+
+  <aside class="rail" id="rail">
+    <div class="brand"><a href="../index.html"><span class="cn">药物创新的逻辑</span></a><br><span style="font-size:14px;color:var(--soft)">The Logic of Drug Discovery</span></div>
+    <div class="brand-sub">词典 · 肿瘤 Oncology</div>
+    <div class="rail-divider"></div>
+    <div class="nav-label">← 词典其它战场</div>
+    <nav>
+      <a class="nav-item" href="index.html"><span class="num">§</span><span class="txt">词典首页</span></a>
+      <a class="nav-item link" href="immunology.html"><span class="num">②</span><span class="txt">免疫炎症</span></a>
+      <a class="nav-item link" href="metabolic.html"><span class="num">③</span><span class="txt">代谢</span></a>
+      <a class="nav-item link" href="cns.html"><span class="num">④</span><span class="txt">神经 CNS</span></a>
+      <a class="nav-item link" href="rare.html"><span class="num">⑤</span><span class="txt">罕见/遗传病</span></a>
+    </nav>
+    <div class="rail-divider"></div>
+    <div class="nav-label">本页分区</div>
+    <nav>
+      <a class="nav-item" href="#kinase"><span class="num">A</span><span class="txt">驱动激酶 · 精准靶向</span></a>
+      <a class="nav-item" href="#lethal"><span class="num">B</span><span class="txt">DNA修复 · 合成致死</span></a>
+      <a class="nav-item" href="#cycle"><span class="num">C</span><span class="txt">细胞周期 · 凋亡</span></a>
+      <a class="nav-item" href="#epi"><span class="num">D</span><span class="txt">表观/转录 · 曾不可成药</span></a>
+      <a class="nav-item" href="#checkpoint"><span class="num">E</span><span class="txt">免疫检查点</span></a>
+      <a class="nav-item" href="#surface"><span class="num">F</span><span class="txt">表面抗原 · 定点投送</span></a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <section class="page">
+      <div class="crumb"><a href="../index.html">主课程</a><span class="sep">›</span><a href="index.html">词典</a><span class="sep">›</span>肿瘤 Oncology</div>
+      <div class="eyebrow">Dictionary ① · Oncology</div>
+      <h1><span class="cn">肿瘤词典</span> <span style="font-family:var(--mono);font-size:18px;color:var(--soft)">Oncology</span></h1>
+      <p class="lede">肿瘤是"疾病→通路→靶点→成药"最丰富的战场，因为它的因果最直接：很多癌有明确的<strong>驱动突变</strong>，掐断就崩（oncogene addiction）。下面按"打法/通路"分区，每条给你靶点、因果强度、弹药、代表药、成没成，以及攻克它的关键"招"。</p>
+
+      <div class="note"><span class="tag">读法提示</span><p>徽章：<span class="badge ok">已成功</span> 有获批药、机制确证；<span class="badge wip">爬坡中</span> 有信号/小适应症但主战场未定；<span class="badge fail">反复失败</span> 机制诱人但屡战屡败。因果强度四格：满格=人类遗传学/临床反复确证。</p></div>
+
+      <!-- ======================= A. KINASE ======================= -->
+      <h2 id="kinase" class="anchor-h"><span class="cn">A · 驱动激酶与突变：精准靶向的主场</span></h2>
+      <p>逻辑统一：肿瘤靠某个持续开着的激酶/突变蛋白活着，用小分子抑制剂精准关掉它。前提永远是<em>先做基因检测把对的人挑出来</em>。这一区是"可成药性"最友好的地方——激酶有天然的 ATP 口袋。</p>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">慢粒白血病 CML · <span class="tgt">BCR-ABL</span></div><span class="badge ok">已成功 · 教科书</span></div>
+        <div class="e-path">费城染色体融合激酶 <span class="arrow">→</span> BCR-ABL <span class="arrow">→</span> 小分子抑制剂</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">单一融合基因驱动，几乎全因果 <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val"><b>imatinib（格列卫，Novartis）</b>；后续 dasatinib/nilotinib/ponatinib，抗耐药新药 asciminib（打变构口袋）</span></div>
+        <div class="erow"><span class="lbl">解法 / 解毒剂</span><span class="val">耐药靠"下一代抑制剂"接力；asciminib 换个结合口袋绕开 T315I 突变</span></div>
+        <div class="e-insight">整个"精准靶向"范式的起点：把绝症变成吃药控制的慢性病。记住它——它是 oncogene addiction 的原型。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">非小细胞肺癌 · <span class="tgt">EGFR 突变</span></div><span class="badge ok">已成功</span></div>
+        <div class="e-path">EGFR 激活突变（外显子19/L858R）<span class="arrow">→</span> EGFR <span class="arrow">→</span> 小分子 TKI</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">突变型对药高度依赖，临床反复确证 <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">一/二代 gefitinib/erlotinib/afatinib；三代 <b>osimertinib（泰瑞沙，AstraZeneca）</b>覆盖 T790M 耐药+入脑</span></div>
+        <div class="erow"><span class="lbl">解法 / 解毒剂</span><span class="val">经典耐药接力；最难的 EGFR exon20ins 另需专药（amivantamab 双抗、mobocertinib）</span></div>
+        <div class="e-insight">"一代药选人、耐药后换新一代"的产品周期教科书。每一次耐药，都是下一个药的市场。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">非小细胞肺癌 · <span class="tgt">ALK / ROS1 融合</span></div><span class="badge ok">已成功</span></div>
+        <div class="e-path">染色体融合致激酶持续激活 <span class="arrow">→</span> ALK/ROS1 <span class="arrow">→</span> 小分子 TKI</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">融合=强驱动，应答率高 <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">crizotinib → alectinib → <b>lorlatinib（Pfizer）</b>（强效入脑）；ROS1 用 crizotinib/entrectinib/repotrectinib</span></div>
+        <div class="e-insight">"入脑能力"成了差异化关键——肺癌爱转移到脑，谁的药能过血脑屏障谁赢。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">黑色素瘤/多癌 · <span class="tgt">BRAF V600E</span></div><span class="badge ok">已成功</span></div>
+        <div class="e-path">MAPK 通路激活突变 <span class="arrow">→</span> BRAF(+MEK) <span class="arrow">→</span> 小分子双联</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">强，但单打易反弹 <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val"><b>dabrafenib+trametinib</b>、vemurafenib、encorafenib+binimetinib（结直肠需加 EGFR 抑制剂）</span></div>
+        <div class="erow"><span class="lbl">解法 / 解毒剂</span><span class="val">BRAF+MEK <b>双通路阻断</b>压住反馈性再激活——"打一个点会被绕过，就把下游也堵上"</span></div>
+        <div class="e-insight">同一个突变在不同组织疗效天差地别（黑色素瘤好、结直肠差）——组织背景决定成败。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">肺癌/结直肠 · <span class="tgt">KRAS G12C</span></div><span class="badge wip">爬坡中</span></div>
+        <div class="e-path">"癌王"驱动突变 <span class="arrow">→</span> KRAS G12C <span class="arrow">→</span> 共价小分子</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">最强的癌驱动之一，因果满格 <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></span></div>
+        <div class="erow"><span class="lbl">可成药性</span><span class="val">曾被判"不可成药"40 年——蛋白表面光滑无口袋</span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">sotorasib（Amgen）、adagrasib（BMS/Mirati）——已获批但<b>疗效偏温和、耐药快</b></span></div>
+        <div class="erow"><span class="lbl">解法 / 解毒剂</span><span class="val">抓 G12C 突变半胱氨酸做<b>共价钉死</b>，并利用 GDP 态"隐藏口袋"；下一步 pan-KRAS、G12D、"泛 RAS(ON)"抑制剂（RMC-6236）</span></div>
+        <div class="e-insight">"不可成药→可成药"引擎的当代样板。药已上市但只是开局，真正的大市场（G12D 胰腺癌）还在爬。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">胰腺癌/结直肠 · <span class="tgt">KRAS G12D / pan-RAS</span></div><span class="badge wip">爬坡中</span></div>
+        <div class="e-path">最常见 KRAS 突变型 <span class="arrow">→</span> G12D <span class="arrow">→</span> 小分子/分子胶/泛-RAS</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">胰腺癌头号驱动 <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">MRTX1133（Mirati/BMS）、RMC-6236/RMC-9805（Revolution Medicines）等临床中</span></div>
+        <div class="e-insight">G12D 没有那个方便的半胱氨酸，工程更难。谁先啃下胰腺癌 G12D，谁摸到肿瘤里最大的未满足需求之一。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">泛癌 · <span class="tgt">NTRK / RET / MET 融合突变</span></div><span class="badge ok">已成功 · 泛瘤种</span></div>
+        <div class="e-path">少见但强的融合 <span class="arrow">→</span> TRK/RET/MET <span class="arrow">→</span> 小分子 TKI</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">融合驱动，应答率极高 <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">larotrectinib/entrectinib（NTRK，<b>不看部位只看突变</b>）；selpercatinib（RET）；capmatinib（MET ex14）</span></div>
+        <div class="e-insight">"tissue-agnostic 泛瘤种批准"的诞生——监管从"按器官"转向"按突变"。小人群、强确定性、高定价的典型。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">急性髓系白血病 AML · <span class="tgt">FLT3 / IDH1/2</span></div><span class="badge ok">已成功</span></div>
+        <div class="e-path">AML 驱动突变 <span class="arrow">→</span> FLT3-ITD / IDH1/2 <span class="arrow">→</span> 小分子</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">明确的复发驱动 <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">FLT3：midostaurin/gilteritinib/quizartinib；IDH：ivosidenib(IDH1)/enasidenib(IDH2)</span></div>
+        <div class="erow"><span class="lbl">解法 / 解毒剂</span><span class="val">IDH 抑制剂是<b>"分化诱导"</b>——不是杀细胞，而是逼白血病细胞长大成熟</span></div>
+        <div class="e-insight">液体瘤把"精准分型+靶向"玩得最细，一个 AML 现在要测一串基因来配药。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">乳腺癌等 · <span class="tgt">HER2 扩增</span></div><span class="badge ok">已成功 · 多模态</span></div>
+        <div class="e-path">HER2 基因扩增 <span class="arrow">→</span> HER2 <span class="arrow">→</span> 抗体 / ADC / TKI 全都能打</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">扩增=强驱动，30 年确证 <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">trastuzumab/pertuzumab（抗体）；T-DM1、<b>T-DXd/Enhertu（第一三共/AZ）</b>（ADC）；tucatinib/neratinib（TKI）</span></div>
+        <div class="erow"><span class="lbl">解法 / 解毒剂</span><span class="val">T-DXd 的"旁观者效应"让<b>HER2 低表达</b>也能治——把老靶点的市场翻倍</span></div>
+        <div class="e-insight">一个靶点被"多种弹药"反复武器化的最佳案例：抗体→ADC→双抗。老靶点+新模态=新周期。</div>
+      </div>
+
+      <!-- ======================= B. SYNTHETIC LETHAL ======================= -->
+      <h2 id="lethal" class="anchor-h"><span class="cn">B · DNA 修复与合成致死</span></h2>
+      <p>不直接打驱动突变，而是利用肿瘤的"弱点互补"：癌细胞本身某条修复通路坏了，你把它<em>另一条备用通路也堵死</em>，正常细胞没事、癌细胞独死。这叫合成致死（synthetic lethality）。</p>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">卵巢/乳腺/前列腺 · <span class="tgt">PARP（BRCA 突变）</span></div><span class="badge ok">已成功 · 范式</span></div>
+        <div class="e-path">BRCA 修复缺陷 <span class="arrow">→</span> 抑制 PARP 断另一条修复路 <span class="arrow">→</span> 小分子</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">合成致死机制在人体确证 <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val"><b>olaparib（AstraZeneca/默沙东）</b>、niraparib、rucaparib、talazoparib</span></div>
+        <div class="erow"><span class="lbl">解法 / 解毒剂</span><span class="val">用"BRCA/HRD 生物标志物"选人是关键；下一代 PARP1-选择性、加 ATR/WEE1 联用</span></div>
+        <div class="e-insight">合成致死把"一个坏掉的基因"变成"可利用的软肋"。这是继 oncogene addiction 之后的第二大靶向逻辑。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">多癌 · <span class="tgt">ATR / WEE1 / DNA损伤应答(DDR)</span></div><span class="badge wip">爬坡中</span></div>
+        <div class="e-path">复制压力/检查点依赖 <span class="arrow">→</span> ATR/WEE1 <span class="arrow">→</span> 小分子</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">机制清楚，选人标志物还在磨 <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">ceralasertib(ATR)、adavosertib(WEE1) 等临床中；多与化疗/PARP 联用</span></div>
+        <div class="e-insight">DDR 是 PARP 成功后被系统性挖掘的"第二波合成致死"，卡点在毒性窗口和选人。</div>
+      </div>
+
+      <!-- ======================= C. CELL CYCLE / APOPTOSIS ======================= -->
+      <h2 id="cycle" class="anchor-h"><span class="cn">C · 细胞周期与凋亡</span></h2>
+      <p>不针对某个突变，而是打肿瘤赖以增殖/逃避死亡的"通用机器"。适应症更宽，但也更依赖联用与选人。</p>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">HR+ 乳腺癌 · <span class="tgt">CDK4/6</span></div><span class="badge ok">已成功 · 重磅</span></div>
+        <div class="e-path">雌激素驱动增殖 <span class="arrow">→</span> CDK4/6 细胞周期 <span class="arrow">→</span> 小分子 + 内分泌治疗</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">延长生存已在 III 期确证 <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val"><b>palbociclib（Pfizer）</b>、ribociclib（Novartis）、abemaciclib（Lilly）</span></div>
+        <div class="e-insight">最大的乳腺癌亚型 + 口服 + 联用=超级重磅。差异化在"哪个能证明延长总生存"。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">CLL / AML · <span class="tgt">BCL-2</span></div><span class="badge ok">已成功</span></div>
+        <div class="e-path">逃避凋亡 <span class="arrow">→</span> BCL-2 抗凋亡蛋白 <span class="arrow">→</span> 小分子 BH3 模拟物</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">血液瘤中确证强 <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></span></div>
+        <div class="erow"><span class="lbl">可成药性</span><span class="val">蛋白-蛋白相互作用曾被视为难打——venetoclax 证明 PPI 可成药</span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val"><b>venetoclax（AbbVie/Genentech）</b>；起始需防"肿瘤溶解综合征"</span></div>
+        <div class="e-insight">重新点燃"诱导凋亡"这条老思路——关键是选对高度依赖 BCL-2 的肿瘤。</div>
+      </div>
+
+      <!-- ======================= D. EPIGENETIC / TRANSCRIPTION ======================= -->
+      <h2 id="epi" class="anchor-h"><span class="cn">D · 表观/转录与"曾经不可成药"</span></h2>
+      <p>这一区是"不可成药→可成药"引擎最活跃的前线：转录因子、支架蛋白、缺乏口袋的调控蛋白。新弹药（降解剂、分子胶、变构、共价）正在逐个解锁。</p>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">AML（KMT2A/NPM1）· <span class="tgt">Menin–KMT2A</span></div><span class="badge wip">爬坡中 · 新获批</span></div>
+        <div class="e-path">融合白血病依赖的蛋白互作 <span class="arrow">→</span> Menin <span class="arrow">→</span> 小分子破坏 PPI</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">依赖关系明确 <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">revumenib（Syndax，2024 获批）、ziftomenib（Kura）等</span></div>
+        <div class="e-insight">又一个"打蛋白-蛋白界面"成功案例，说明 PPI 抑制正从个例走向常规打法。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">滤泡淋巴瘤/肉瘤 · <span class="tgt">EZH2</span></div><span class="badge ok">已成功 · 小众</span></div>
+        <div class="e-path">表观调控失衡 <span class="arrow">→</span> EZH2 甲基转移酶 <span class="arrow">→</span> 小分子</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">tazemetostat（Epizyme/Ipsen）</span></div>
+        <div class="e-insight">表观靶点能成药，但市场往往窄——赢在确定性而非规模。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">多癌核心驱动 · <span class="tgt">MYC</span></div><span class="badge fail">反复失败 · 尚未攻克</span></div>
+        <div class="e-path">最广泛的癌基因之一 <span class="arrow">→</span> MYC 转录因子 <span class="arrow">→</span> 无直接口袋</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">因果极强，几乎泛癌 <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></span></div>
+        <div class="erow"><span class="lbl">可成药性</span><span class="val">无结构口袋、无酶活、寿命短——直接打几乎不可能</span></div>
+        <div class="erow"><span class="lbl">解法 / 解毒剂</span><span class="val">走"间接路线"：打上游（BET/BRD4）、合成致死、降解剂、Omomyc 迷你蛋白（临床探索）</span></div>
+        <div class="e-insight">"因果满分、可成药零分"的经典矛盾。谁真正搞定 MYC，是肿瘤界的圣杯级事件——目前仍未。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">多癌（半数肿瘤）· <span class="tgt">p53（TP53）</span></div><span class="badge fail">反复失败 · 局部松动</span></div>
+        <div class="e-path">最常见抑癌基因失活 <span class="arrow">→</span> 恢复 p53 功能 <span class="arrow">→</span> 极难</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">突变频率最高的抑癌基因 <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></span></div>
+        <div class="erow"><span class="lbl">可成药性</span><span class="val">"恢复一个丢失的功能"远比"抑制一个多余的功能"难</span></div>
+        <div class="erow"><span class="lbl">解法 / 解毒剂</span><span class="val">曲线救国：MDM2 抑制剂（保住野生型 p53）、特定突变体重折叠、TP53 相关合成致死</span></div>
+        <div class="e-insight">记住"抑癌基因难做"这条规律：失去功能的靶点，比获得功能的靶点难成药一个数量级。</div>
+      </div>
+
+      <!-- ======================= E. CHECKPOINT ======================= -->
+      <h2 id="checkpoint" class="anchor-h"><span class="cn">E · 免疫检查点：松开免疫的刹车</span></h2>
+      <p>不直接杀癌，而是解除肿瘤对 T 细胞的抑制。改写了多种实体瘤的预后，是过去十年最大的范式转移，也是竞争最惨烈的地方。</p>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">多种实体瘤 · <span class="tgt">PD-1 / PD-L1</span></div><span class="badge ok">已成功 · 支柱</span></div>
+        <div class="e-path">肿瘤抑制 T 细胞的刹车 <span class="arrow">→</span> PD-1/PD-L1 <span class="arrow">→</span> 抗体</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">跨瘤种反复确证 <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val"><b>pembrolizumab/Keytruda（默沙东）</b>、nivolumab（BMS）、atezolizumab（罗氏）——K药即将成为史上最畅销药</span></div>
+        <div class="erow"><span class="lbl">解法 / 解毒剂</span><span class="val">选人靠 PD-L1 表达/TMB/MSI；免疫毒性（irAE）用类固醇/免疫抑制"反向解毒"</span></div>
+        <div class="e-insight">现代肿瘤治疗的"新化疗底座"——大多数新药都要证明"我加在 PD-1 上更好"。皮下版正在延长专利周期。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">黑色素瘤等 · <span class="tgt">CTLA-4</span></div><span class="badge ok">已成功 · 首个</span></div>
+        <div class="e-path">T 细胞早期激活刹车 <span class="arrow">→</span> CTLA-4 <span class="arrow">→</span> 抗体</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val"><b>ipilimumab（BMS）</b>，常与 PD-1 联用增效（也增毒）</span></div>
+        <div class="e-insight">第一个证明"检查点"概念的药（获诺奖）。联用=更强疗效换更多毒性的权衡。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">黑色素瘤 · <span class="tgt">LAG-3</span></div><span class="badge ok">已成功 · 第三个</span></div>
+        <div class="e-path">第三条抑制通路 <span class="arrow">→</span> LAG-3 <span class="arrow">→</span> 抗体（与 PD-1 固定联用）</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">relatlimab + nivolumab（Opdualag，BMS）</span></div>
+        <div class="e-insight">继 PD-1/CTLA-4 后<b>第三个被验证的检查点</b>——说明"下一个 checkpoint"是可复制的赛道，但不是每个都成（见 TIGIT）。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">肺癌 · <span class="tgt">TIGIT</span></div><span class="badge fail">反复失败 · 尚未兑现</span></div>
+        <div class="e-path">又一条抑制通路 <span class="arrow">→</span> TIGIT <span class="arrow">→</span> 抗体（+PD-L1）</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">机制诱人，临床未复现 <span class="meter"><i class="on"></i><i class="on"></i><i></i><i></i></span></span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">tiragolumab（罗氏）等多个 III 期读数令人失望</span></div>
+        <div class="e-insight">"下一个检查点"的反面教材：机制漂亮≠临床成功。提醒你对"me-too checkpoint"保持怀疑。</div>
+      </div>
+
+      <!-- ======================= F. SURFACE ANTIGEN ======================= -->
+      <h2 id="surface" class="anchor-h"><span class="cn">F · 表面抗原：定点投送与"活药"</span></h2>
+      <p>这一区靶点本身未必"驱动"肿瘤，而是肿瘤细胞表面一个"地址标签"。价值在于<em>用它做定点投送</em>：把毒素（ADC）、T 细胞（双抗/CAR-T）、放射性（放射配体）精准送到癌细胞门口。</p>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">B 细胞血液瘤 · <span class="tgt">CD19</span></div><span class="badge ok">已成功 · CAR-T 起点</span></div>
+        <div class="e-path">B 细胞表面标签 <span class="arrow">→</span> CD19 <span class="arrow">→</span> CAR-T / 双抗</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">谱系标记，投送靶极可靠 <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val"><b>tisagenlecleucel（诺华）</b>、axi-cel（Gilead/Kite）（CAR-T）；blinatumomab（CD19×CD3 双抗，Amgen）</span></div>
+        <div class="erow"><span class="lbl">解法 / 解毒剂</span><span class="val">CRS/神经毒性用 <b>tocilizumab（抗 IL-6）</b>反向解毒；正把 CAR-T 往自免病外扩</span></div>
+        <div class="e-insight">"活药"范式的开端。血液瘤惊艳，实体瘤仍难（缺干净靶点+微环境抑制）。CAR-T 治红斑狼疮是当下最热外延。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">多发性骨髓瘤 · <span class="tgt">BCMA</span></div><span class="badge ok">已成功 · 多模态</span></div>
+        <div class="e-path">浆细胞表面标签 <span class="arrow">→</span> BCMA <span class="arrow">→</span> CAR-T / 双抗 / ADC</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">CAR-T：ide-cel、cilta-cel（传奇生物/J&J）；双抗：teclistamab（J&J）</span></div>
+        <div class="e-insight">同一个表面靶被三种投送弹药同时武器化，是"靶点×模态矩阵"最生动的一格。中国 biotech（传奇）在此拿下全球领先资产。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">乳腺/肺/胃 · <span class="tgt">TROP2</span></div><span class="badge ok">已成功 · ADC 热门</span></div>
+        <div class="e-path">上皮肿瘤广泛表达 <span class="arrow">→</span> TROP2 <span class="arrow">→</span> ADC</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">sacituzumab govitecan（Gilead）、datopotamab deruxtecan（第一三共/AZ）</span></div>
+        <div class="e-insight">ADC 让"广谱但非驱动"的表面抗原变得有价值——不需要它致癌，只需要它是个好地址。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">尿路上皮癌 · <span class="tgt">Nectin-4</span></div><span class="badge ok">已成功</span></div>
+        <div class="e-path">肿瘤表面高表达 <span class="arrow">→</span> Nectin-4 <span class="arrow">→</span> ADC</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">enfortumab vedotin（Astellas/Pfizer），与 K 药联用成一线</span></div>
+        <div class="e-insight">"ADC + 检查点"联用把膀胱癌一线改写——两种新模态叠加，1+1&gt;2 的范例。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">胃癌 · <span class="tgt">Claudin18.2</span></div><span class="badge wip">爬坡中 · 刚获批</span></div>
+        <div class="e-path">胃上皮紧密连接蛋白 <span class="arrow">→</span> CLDN18.2 <span class="arrow">→</span> 抗体 / ADC / CAR-T</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">zolbetuximab（安斯泰来，2024 获批）；多个 ADC/CAR-T 在中国临床领先</span></div>
+        <div class="e-insight">胃癌这种"靶点贫瘠"的癌种终于有了新靶——留意中国管线在 CLDN18.2 上的密度。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">前列腺癌 · <span class="tgt">PSMA</span></div><span class="badge ok">已成功 · 放射配体</span></div>
+        <div class="e-path">前列腺癌表面抗原 <span class="arrow">→</span> PSMA <span class="arrow">→</span> 放射配体（"定点核打击"）</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val"><b>Pluvicto（¹⁷⁷Lu-PSMA-617，Novartis）</b>；配套 PSMA-PET 诊断（theranostics）</span></div>
+        <div class="erow"><span class="lbl">解法 / 解毒剂</span><span class="val">"诊断-治疗一体"：先 PET 显像确认表达，再用同一靶点送放射性——壁垒在同位素供应链</span></div>
+        <div class="e-insight">放射配体（RPT）赛道的旗舰。护城河不只在分子，更在同位素与给药基础设施——一个"重资产"的 biotech 方向。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">神经内分泌瘤 NET · <span class="tgt">SSTR2</span></div><span class="badge ok">已成功</span></div>
+        <div class="e-path">生长抑素受体高表达 <span class="arrow">→</span> SSTR2 <span class="arrow">→</span> 放射配体</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">Lutathera（¹⁷⁷Lu-DOTATATE，Novartis）</span></div>
+        <div class="e-insight">第一个证明放射配体商业可行的产品，为 PSMA 铺路。同样是 theranostics 双胞胎逻辑。</div>
+      </div>
+
+      <div class="note investor">
+        <span class="tag">把这一页读成一张"矩阵"</span>
+        <p>纵看是<strong>通路/打法</strong>（激酶→合成致死→周期→表观→检查点→表面投送），横看是<strong>模态</strong>（小分子/抗体/ADC/双抗/CAR-T/放射配体）。投资机会经常出现在矩阵里"某个已验证靶点 × 一种新模态"的空格上——HER2、BCMA、CD19 都被多种弹药反复填格。<em>反复失败区（MYC、p53、TIGIT）则是"下一个解锁点"的埋伏处。</em></p>
+      </div>
+
+      <div class="footer-note">肿瘤词典 · 本轮 28 条，按通路分区 · 后续可继续按同一卡片 schema 加深/补充（如各癌种一线方案、耐药机制树、中国管线对照）。</div>
+    </section>
+  </main>
+</div>
+<script>
+  const rail=document.getElementById('rail'),scrim=document.getElementById('scrim'),menuBtn=document.getElementById('menuBtn');
+  menuBtn.addEventListener('click',()=>{rail.classList.add('open');scrim.classList.add('show')});
+  scrim.addEventListener('click',()=>{rail.classList.remove('open');scrim.classList.remove('show')});
+</script>
+</body>
+</html>

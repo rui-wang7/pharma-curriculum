@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>代谢词典 Metabolic · 疾病·通路·成药</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Spectral:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<button class="menu-btn" id="menuBtn">☰ 目录</button>
+<div class="scrim" id="scrim"></div>
+<div class="shell">
+  <aside class="rail" id="rail">
+    <div class="brand"><a href="../index.html"><span class="cn">药物创新的逻辑</span></a><br><span style="font-size:14px;color:var(--soft)">The Logic of Drug Discovery</span></div>
+    <div class="brand-sub">词典 · 代谢/心血管</div>
+    <div class="rail-divider"></div>
+    <div class="nav-label">词典 · 五大战场</div>
+    <nav>
+      <a class="nav-item" href="index.html"><span class="num">§</span><span class="txt">词典首页</span></a>
+      <a class="nav-item link" href="oncology.html"><span class="num">①</span><span class="txt">肿瘤</span></a>
+      <a class="nav-item link" href="immunology.html"><span class="num">②</span><span class="txt">免疫炎症</span></a>
+      <a class="nav-item active" href="metabolic.html"><span class="num">③</span><span class="txt">代谢</span></a>
+      <a class="nav-item link" href="cns.html"><span class="num">④</span><span class="txt">神经 CNS</span></a>
+      <a class="nav-item link" href="rare.html"><span class="num">⑤</span><span class="txt">罕见/遗传病</span></a>
+    </nav>
+    <div class="rail-divider"></div>
+    <div class="nav-label">本页分区</div>
+    <nav>
+      <a class="nav-item" href="#lipid"><span class="num">A</span><span class="txt">血脂 · 动脉粥样硬化</span></a>
+      <a class="nav-item" href="#obesity"><span class="num">B</span><span class="txt">肥胖 · 糖尿病</span></a>
+      <a class="nav-item" href="#liver"><span class="num">C</span><span class="txt">代谢肝病 MASH</span></a>
+    </nav>
+  </aside>
+  <main class="main">
+    <section class="page">
+      <div class="crumb"><a href="../index.html">主课程</a><span class="sep">›</span><a href="index.html">词典</a><span class="sep">›</span>代谢 Metabolic</div>
+      <div class="eyebrow">Dictionary ③ · Metabolic / Cardiovascular</div>
+      <h1><span class="cn">代谢词典</span> <span style="font-family:var(--mono);font-size:18px;color:var(--soft)">Metabolic</span></h1>
+      <p class="lede">这个战场的独特优势：<strong>因果强度极高</strong>——很多靶点有"天生带某基因变异的人"当活体实验，等于照抄人体答案；而且读数快（血脂/血糖/体重可测），临床风险相对低。当下最大的 TAM 故事（GLP-1）就在这。</p>
+      <div class="note"><span class="tag">读法</span><p>特别看每条的"因果强度"四格——本页多个靶点满格，因为有人类遗传学直接背书，这正是它们成功率高的根本。<span class="badge ok">已成功</span>／<span class="badge wip">爬坡中</span>／<span class="badge fail">反复失败</span>。</p></div>
+
+      <!-- ============ A. LIPID ============ -->
+      <h2 id="lipid" class="anchor-h"><span class="cn">A · 血脂与动脉粥样硬化</span></h2>
+      <p>逻辑统一：降低致动脉粥样硬化的脂蛋白（LDL、Lp(a)、富含甘油三酯脂蛋白）以减少心梗中风。这里是"人类遗传学指路"最密集的地方。</p>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">高胆固醇/心血管 · <span class="tgt">PCSK9</span></div><span class="badge ok">已成功 · 满分范本</span></div>
+        <div class="e-path">调控 LDL 受体降解 <span class="arrow">→</span> PCSK9 <span class="arrow">→</span> 抗体 & siRNA</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">天生失活者终身低 LDL、少心梗且健康 <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">抗体 evolocumab（Amgen）/alirocumab（Regeneron，几周一针）；<b>siRNA inclisiran（Novartis，半年一针）</b></span></div>
+        <div class="erow"><span class="lbl">解法 / 解毒剂</span><span class="val">"同靶点换更持久弹药"：抗体→siRNA→在研口服小分子（enlicitide）/基因编辑（VERVE，一次性）</span></div>
+        <div class="e-insight">"因果强度"满分案例，也是"老靶点+新模态=新周期"最干净的示范。记死它。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">严重高甘油三酯 · <span class="tgt">ApoC3</span></div><span class="badge ok">已成功 · 刚扩</span></div>
+        <div class="e-path">甘油三酯代谢刹车 <span class="arrow">→</span> ApoC3 <span class="arrow">→</span> ASO / siRNA</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">天然缺失者甘油三酯低、心血管更好 <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val"><b>olezarsen/Tryngolza（Ionis，2024 获批 FCS）</b>；plozasiran（Arrowhead）在研</span></div>
+        <div class="e-insight">又一"人类遗传学指路"胜利。RNA 药在肝脏代谢靶点上的又一城；下一步向更大的高甘油三酯人群扩。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">纯合子家族性高胆固醇 · <span class="tgt">ANGPTL3</span></div><span class="badge ok">已成功 · 罕见</span></div>
+        <div class="e-path">脂代谢调节 <span class="arrow">→</span> ANGPTL3 <span class="arrow">→</span> 抗体 / siRNA</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">evinacumab（Regeneron 抗体）；zodasiran 在研</span></div>
+        <div class="e-insight">对连 LDL 受体都没有的极端病人也有效——因为走了不依赖 LDL 受体的旁路。示范"选对机制能绕开病理死路"。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">心血管残余风险 · <span class="tgt">Lp(a)</span></div><span class="badge wip">爬坡中 · 结局待读</span></div>
+        <div class="e-path">遗传决定的独立危险因素 <span class="arrow">→</span> Lp(a) <span class="arrow">→</span> ASO / siRNA / 口服</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">遗传学强证据，临床结局待验 <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">pelacarsen（诺华 ASO）、olpasiran（Amgen siRNA）、lepodisiran（Lilly）、muvalaplin（口服）——III 期结局试验中</span></div>
+        <div class="e-insight">经典"遗传学满分、就等结局试验"的赌局：能大幅降 Lp(a)已确定，能否降心梗是几十亿美元的悬念。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">他汀不耐受降 LDL · <span class="tgt">ATP 柠檬酸裂解酶 (ACL)</span></div><span class="badge ok">已成功 · 补位</span></div>
+        <div class="e-path">胆固醇合成上游 <span class="arrow">→</span> ACL（肝特异）<span class="arrow">→</span> 口服小分子（前药）</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">bempedoic acid/Nexletol（Esperion）——前药只在肝激活，避开肌肉副作用</span></div>
+        <div class="e-insight">"前药+组织特异激活"绕开他汀的肌痛痛点，占住"不耐受他汀"的补位市场。设计巧思胜过机制新颖。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">升 HDL 降风险 · <span class="tgt">CETP</span></div><span class="badge fail">反复失败 · 局部复活</span></div>
+        <div class="e-path">"好胆固醇"假说 <span class="arrow">→</span> CETP <span class="arrow">→</span> 口服小分子</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">升 HDL 无临床获益，但降 LDL/ApoB 或有 <span class="meter"><i class="on"></i><i class="on"></i><i></i><i></i></span></span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">torcetrapib/dalcetrapib/evacetrapib 全败；obicetrapib（NewAmsterdam）改押降 LDL 重启 III 期</span></div>
+        <div class="e-insight">"升 HDL 假说"崩塌的教科书：相关性≠因果。CETP 若翻身，靠的是降 LDL 而非当初的升 HDL 故事——机制叙事会变。</div>
+      </div>
+
+      <!-- ============ B. OBESITY / DIABETES ============ -->
+      <h2 id="obesity" class="anchor-h"><span class="cn">B · 肥胖与糖尿病：当下最大的超级周期</span></h2>
+      <p>incretin（肠促胰素）生物学把"减重"从美容变成能改善心/肾/肝硬结局的大适应症。战场已从"有没有效"转到"更强减重 + 口服 + 保肌肉 + 支付"。</p>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">肥胖/2型糖尿病 · <span class="tgt">GLP-1 (/GIP)</span></div><span class="badge ok">已成功 · 超级周期</span></div>
+        <div class="e-path">肠促胰素信号 <span class="arrow">→</span> GLP-1 受体（±GIP）<span class="arrow">→</span> 多肽 / 口服小分子</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">减重+心血管获益 III 期确证 <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val"><b>semaglutide/Wegovy（诺和诺德）</b>、<b>tirzepatide/Zepbound（礼来，双靶 GIP/GLP-1）</b></span></div>
+        <div class="erow"><span class="lbl">解法 / 解毒剂</span><span class="val">前沿：口服 orforglipron、三靶 retatrutide、月制剂 MariTide；扩到 MASH/肾/睡眠呼吸暂停/骨关节炎</span></div>
+        <div class="e-insight">十年一遇的 TAM 级机会：潜在人群以亿计、适应症滚雪球。瓶颈从"疗效"转到"产能、口服、支付、长期安全"。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">肥胖前沿 · <span class="tgt">Amylin</span></div><span class="badge wip">爬坡中 · 组合拳</span></div>
+        <div class="e-path">饱腹/胃排空信号 <span class="arrow">→</span> amylin 受体 <span class="arrow">→</span> 多肽（常与 GLP-1 联用）</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">cagrilintide、CagriSema（诺和诺德）；petrelintide（勃林格/Zealand）</span></div>
+        <div class="e-insight">GLP-1 之后减重的"下一层加法"。看点是"叠加能否在保肌肉/耐受性上胜过单纯加大 GLP-1 剂量"。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">2型糖尿病/减重 · <span class="tgt">胰高糖素受体 (三靶)</span></div><span class="badge wip">爬坡中 · 最强减重</span></div>
+        <div class="e-path">增能量消耗+降食欲 <span class="arrow">→</span> GLP-1×GIP×GCGR 三激动 <span class="arrow">→</span> 多肽</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val"><b>retatrutide（礼来）</b>早期减重数据逼近减重手术量级</span></div>
+        <div class="e-insight">"加靶点=加疗效"的极致。悬念在长期安全与保肌肉——减得多不等于减得健康。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">糖尿病/心衰/慢性肾病 · <span class="tgt">SGLT2</span></div><span class="badge ok">已成功 · 意外扩张</span></div>
+        <div class="e-path">肾脏葡萄糖重吸收 <span class="arrow">→</span> SGLT2 <span class="arrow">→</span> 口服小分子</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">dapagliflozin（AZ）、empagliflozin（BI/Lilly）</span></div>
+        <div class="e-insight">本为降糖药，却在<b>心衰和慢性肾病</b>拿到大适应症——"意外的心肾获益"是心血管代谢的常见惊喜，留意 label 外延。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">2型糖尿病 · <span class="tgt">DPP-4 / 胰岛素</span></div><span class="badge ok">已成功 · 基石</span></div>
+        <div class="e-path">血糖控制基础层 <span class="arrow">→</span> DPP-4（保住内源 GLP-1）/ 胰岛素替代 <span class="arrow">→</span> 口服 / 注射</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">sitagliptin（默沙东 DPP-4）；胰岛素百年基石，前沿是<b>周制剂 icodec</b> 与智能闭环</span></div>
+        <div class="e-insight">成熟基石类：增长慢、竞争充分，但奠定"血糖可测=读数快"的战场底色。创新点已上移到 incretin 和周制剂。</div>
+      </div>
+
+      <!-- ============ C. LIVER / MASH ============ -->
+      <h2 id="liver" class="anchor-h"><span class="cn">C · 代谢相关脂肪肝 MASH：刚破冰的大战场</span></h2>
+      <p>MASH（原 NASH）是"没有终点药、患者以千万计"的老大难。2024 年终于破冰，也成为 GLP-1 外延的重要下一站。</p>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">MASH（脂肪肝炎）· <span class="tgt">甲状腺激素受体 THR-β</span></div><span class="badge ok">已成功 · 首个破冰</span></div>
+        <div class="e-path">肝脏脂代谢 <span class="arrow">→</span> THR-β（肝特异）<span class="arrow">→</span> 口服小分子</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">组织学改善已 III 期达标 <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val"><b>resmetirom/Rezdiffra（Madrigal，2024 首个获批 MASH 药）</b></span></div>
+        <div class="erow"><span class="lbl">解法 / 解毒剂</span><span class="val">"肝脏靶向的甲状腺激素"——只在肝激活、避开全身甲亢副作用</span></div>
+        <div class="e-insight">一个空白大战场被打开的信号事件。但真正的降门槛可能来自 GLP-1/FGF21——MASH 未来是多机制联用的混战。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">MASH · <span class="tgt">FGF21 类似物</span></div><span class="badge wip">爬坡中 · 抗纤维化</span></div>
+        <div class="e-path">代谢+抗纤维化 <span class="arrow">→</span> FGF21 通路 <span class="arrow">→</span> 工程化多肽</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">efruxifermin（Akero）、pegozafermin（89bio）——纤维化逆转数据受关注</span></div>
+        <div class="e-insight">MASH 的关键不只是消脂肪，更是<b>逆转纤维化</b>。FGF21 类若能证明抗纤维化，将与 THR-β/GLP-1 形成联用底座。</div>
+      </div>
+
+      <div class="note investor">
+        <span class="tag">这一页的元规则</span>
+        <p>代谢是"因果强度"最友好的战场：<strong>先问有没有人类遗传学背书</strong>——有，成功率高一截（PCSK9/ApoC3/ANGPTL3）；<strong>警惕相关性冒充因果</strong>（CETP 升 HDL、CNS 式假说在这也翻过车）。其次看弹药持久度（抗体几周→siRNA 半年→基因编辑一次性，越持久越贴"预防"）。GLP-1 则把战场从"控指标"抬升到"改结局 + 超大人群 + 多器官外延"。</p>
+      </div>
+      <div class="footer-note">代谢词典 · 13 条，三区（血脂/肥胖糖尿病/MASH）· 可继续加深：口服 GLP-1 竞争格局、心衰通路（sGC/ARNI）、CKD、痛风尿酸。</div>
+    </section>
+  </main>
+</div>
+<script>
+  const rail=document.getElementById('rail'),scrim=document.getElementById('scrim'),menuBtn=document.getElementById('menuBtn');
+  menuBtn.addEventListener('click',()=>{rail.classList.add('open');scrim.classList.add('show')});
+  scrim.addEventListener('click',()=>{rail.classList.remove('open');scrim.classList.remove('show')});
+</script>
+</body>
+</html>

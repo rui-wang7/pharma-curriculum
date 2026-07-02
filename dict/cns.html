@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>神经词典 CNS · 疾病·通路·成药</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Spectral:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<button class="menu-btn" id="menuBtn">☰ 目录</button>
+<div class="scrim" id="scrim"></div>
+<div class="shell">
+  <aside class="rail" id="rail">
+    <div class="brand"><a href="../index.html"><span class="cn">药物创新的逻辑</span></a><br><span style="font-size:14px;color:var(--soft)">The Logic of Drug Discovery</span></div>
+    <div class="brand-sub">词典 · 神经 CNS</div>
+    <div class="rail-divider"></div>
+    <div class="nav-label">词典 · 五大战场</div>
+    <nav>
+      <a class="nav-item" href="index.html"><span class="num">§</span><span class="txt">词典首页</span></a>
+      <a class="nav-item link" href="oncology.html"><span class="num">①</span><span class="txt">肿瘤</span></a>
+      <a class="nav-item link" href="immunology.html"><span class="num">②</span><span class="txt">免疫炎症</span></a>
+      <a class="nav-item link" href="metabolic.html"><span class="num">③</span><span class="txt">代谢</span></a>
+      <a class="nav-item active" href="cns.html"><span class="num">④</span><span class="txt">神经 CNS</span></a>
+      <a class="nav-item link" href="rare.html"><span class="num">⑤</span><span class="txt">罕见/遗传病</span></a>
+    </nav>
+    <div class="rail-divider"></div>
+    <div class="nav-label">本页分区</div>
+    <nav>
+      <a class="nav-item" href="#neurodeg"><span class="num">A</span><span class="txt">神经退行</span></a>
+      <a class="nav-item" href="#pain"><span class="num">B</span><span class="txt">疼痛 · 偏头痛</span></a>
+      <a class="nav-item" href="#psych"><span class="num">C</span><span class="txt">精神疾病</span></a>
+      <a class="nav-item" href="#delivery"><span class="num">D</span><span class="txt">递送：过血脑屏障</span></a>
+    </nav>
+  </aside>
+  <main class="main">
+    <section class="page">
+      <div class="crumb"><a href="../index.html">主课程</a><span class="sep">›</span><a href="index.html">词典</a><span class="sep">›</span>神经 CNS</div>
+      <div class="eyebrow">Dictionary ④ · CNS / Neuroscience</div>
+      <h1><span class="cn">神经词典</span> <span style="font-family:var(--mono);font-size:18px;color:var(--soft)">CNS</span></h1>
+      <p class="lede">被称为"坟场"：血脑屏障挡药、动物脑不像人脑、终点慢到要熬几年花几亿。但正因难，突围格外值钱。规律很清楚——<strong>有明确遗传学撑腰的病翻身（SMA、CGRP、SOD1），靠"假说猜"的病继续折戟（tau、α-syn）。</strong>而精神领域正迎来几十年一遇的新机制。</p>
+      <div class="note"><span class="tag">读法</span><p>本页把"翻身仗"和"坟场"并排放，看同一战场里因果强度如何决定成败。<span class="badge ok">已成功</span>／<span class="badge wip">爬坡中</span>／<span class="badge fail">反复失败</span>。</p></div>
+
+      <!-- ============ A. NEURODEGENERATION ============ -->
+      <h2 id="neurodeg" class="anchor-h"><span class="cn">A · 神经退行：遗传学决定成败</span></h2>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">脊髓性肌萎缩 SMA · <span class="tgt">SMN2 / SMN1</span></div><span class="badge ok">已成功 · 翻身仗</span></div>
+        <div class="e-path">单基因缺陷 <span class="arrow">→</span> 补足 SMN 蛋白 <span class="arrow">→</span> ASO / 口服剪接 / 基因治疗</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">单基因病，因果满格 <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val"><b>nusinersen（Biogen ASO 鞘内）</b>、risdiplam（罗氏口服剪接）、onasemnogene（诺华 AAV 一次性）</span></div>
+        <div class="e-insight">CNS 最漂亮的胜利：一个致死婴儿病，被三种模态从不同角度攻克。原因只一个——因果干净。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">阿尔茨海默 · <span class="tgt">淀粉样蛋白 Aβ</span></div><span class="badge wip">爬坡中 · 争议缠身</span></div>
+        <div class="e-path">淀粉样斑块假说 <span class="arrow">→</span> Aβ <span class="arrow">→</span> 抗体</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">几十年屡败后近年才勉强验证部分获益 <span class="meter"><i class="on"></i><i class="on"></i><i></i><i></i></span></span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val"><b>lecanemab/Leqembi（卫材/Biogen）</b>、donanemab/Kisunla（Lilly）——延缓有限、有脑水肿/出血(ARIA)风险</span></div>
+        <div class="e-insight">最贵的"半胜"：证明清斑块能小幅延缓，但获益幅度与安全性争议不断。CNS"慢而模糊终点"的代价样本。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">阿尔茨海默/帕金森 · <span class="tgt">tau · α-突触核蛋白</span></div><span class="badge fail">反复失败 · 未攻克</span></div>
+        <div class="e-path">神经退行"第二假说" <span class="arrow">→</span> tau / α-syn <span class="arrow">→</span> 抗体 / ASO 多次落空</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">相关性强、干预获益未证 <span class="meter"><i class="on"></i><i class="on"></i><i></i><i></i></span></span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">抗 α-syn（cinpanemab/prasinezumab）帕金森试验失败；抗 tau 多数未达标</span></div>
+        <div class="e-insight">"病理相关≠致病可干预"。这些靶点上因果这把尺子还没给到及格分——继续烧钱验证假说。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">亨廷顿病 · <span class="tgt">HTT（亨廷顿蛋白）</span></div><span class="badge wip">爬坡中 · 起伏</span></div>
+        <div class="e-path">单基因显性遗传 <span class="arrow">→</span> 降低 HTT <span class="arrow">→</span> ASO / 基因治疗</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">单基因、因果极清楚 <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">tominersen（罗氏，一度失败后调剂量再试）；uniQure AMT-130 基因治疗现积极信号</span></div>
+        <div class="e-insight">因果满分却也翻车——说明 CNS 即便靶点对，"降多少、何时降、怎么送进脑"本身就是成败关键。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">ALS（渐冻症）· <span class="tgt">SOD1 · C9orf72</span></div><span class="badge wip">爬坡中 · 亚型突破</span></div>
+        <div class="e-path">遗传性 ALS 突变 <span class="arrow">→</span> SOD1 / C9orf72 <span class="arrow">→</span> ASO 鞘内</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">遗传亚型因果明确（各占少数）<span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val"><b>tofersen（Biogen，靠生物标志物 NfL 加速批准）</b>；C9orf72 ASO 多在研（有失败）</span></div>
+        <div class="e-insight">在无解的 ALS 里，先啃"有明确基因"的小亚型——典型"用遗传学对冲因果风险"打法，并示范 NfL 作为替代终点。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">多发性硬化 · <span class="tgt">CD20 · BTK · S1P</span></div><span class="badge ok">已成功 + 前沿</span></div>
+        <div class="e-path">神经免疫（B 细胞/信号）<span class="arrow">→</span> CD20/BTK/S1P <span class="arrow">→</span> 抗体 / 口服小分子</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">ocrelizumab（CD20，罗氏）已确立；<b>BTK 抑制剂（tolebrutinib/fenebrutinib）</b>攻"进展型 MS"这块硬骨头</span></div>
+        <div class="e-insight">MS 与免疫词典交叉。看点是能否打进"非炎症性的进展型 MS"——那是当前最大未满足需求，BTK 是当红赌注。</div>
+      </div>
+
+      <!-- ============ B. PAIN ============ -->
+      <h2 id="pain" class="anchor-h"><span class="cn">B · 疼痛与偏头痛：绕开血脑屏障的胜利</span></h2>
+      <p>共同智慧：<em>把作用点放在外周神经</em>，既避开血脑屏障难题、又躲开中枢副作用（成瘾、镇静）。</p>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">偏头痛 · <span class="tgt">CGRP</span></div><span class="badge ok">已成功 · 大众市场</span></div>
+        <div class="e-path">偏头痛核心介质 <span class="arrow">→</span> CGRP / 受体 <span class="arrow">→</span> 抗体（预防）+ 口服小分子（急性）</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">erenumab（Amgen/诺华）等抗体；<b>gepant 类口服</b> rimegepant/atogepant（Pfizer/AbbVie）</span></div>
+        <div class="e-insight">证明 CNS 也能有"大众化、可测、可预防"的成功。作用多在外周血管/三叉神经，巧妙绕开血脑屏障。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">急/慢性疼痛 · <span class="tgt">Nav1.8（钠通道）</span></div><span class="badge ok">已成功 · 非阿片新类</span></div>
+        <div class="e-path">外周痛觉信号 <span class="arrow">→</span> Nav1.8（外周特异）<span class="arrow">→</span> 口服小分子</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">人类遗传学背书（SCN 突变改变痛觉）<span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val"><b>suzetrigine/Journavx（Vertex，2025 获批急性痛）</b></span></div>
+        <div class="e-insight">数十年来第一个新机制止痛药类别，且<b>不成瘾</b>——对阿片危机是标志性事件。"选外周亚型通道绕开中枢"的范式。</div>
+      </div>
+
+      <!-- ============ C. PSYCHIATRY ============ -->
+      <h2 id="psych" class="anchor-h"><span class="cn">C · 精神疾病：几十年一遇的新机制潮</span></h2>
+      <p>精神药几十年停在"多巴胺/血清素"老机制上。近两年终于出现真正的新作用机制，重估了整个领域。</p>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">精神分裂症 · <span class="tgt">毒蕈碱 M1/M4</span></div><span class="badge ok">已成功 · 新机制</span></div>
+        <div class="e-path">绕开多巴胺 D2 <span class="arrow">→</span> 胆碱能 M1/M4 <span class="arrow">→</span> 口服小分子</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val"><b>xanomeline-trospium/Cobenfy（原 KarXT，BMS 收购 Karuna，2024 获批）</b></span></div>
+        <div class="erow"><span class="lbl">解法 / 解毒剂</span><span class="val">配一个"不进脑"的外周拮抗剂（trospium）来抵消胆碱能副作用——巧妙的组合工程</span></div>
+        <div class="e-insight">70 年来第一个非 D2 机制的抗精神病药。证明精神科仍有全新靶点可挖，点燃整个 CNS 精神管线的重估。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">抑郁/产后抑郁 · <span class="tgt">NMDA · GABA-A（速效）</span></div><span class="badge ok">已成功 · 速效</span></div>
+        <div class="e-path">谷氨酸/GABA 系统 <span class="arrow">→</span> NMDA / 神经甾体 <span class="arrow">→</span> 鼻喷 / 口服</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">esketamine/Spravato（强生，鼻喷）；<b>zuranolone/Zurzuvae（2023，产后抑郁口服短疗程）</b></span></div>
+        <div class="e-insight">打破"抗抑郁药要吃几周才起效"的旧范式——数小时到数天见效。机制新颖也带来滥用/镇静的管理挑战。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">难治抑郁/PTSD · <span class="tgt">5-HT2A（迷幻药）</span></div><span class="badge wip">爬坡中 · 监管坎坷</span></div>
+        <div class="e-path">血清素 2A 受体 <span class="arrow">→</span> psilocybin / MDMA 辅助治疗 <span class="arrow">→</span> 小分子 + 心理治疗</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">早期信号强，试验设盲/主观终点难 <span class="meter"><i class="on"></i><i class="on"></i><i></i><i></i></span></span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">psilocybin（Compass）在研；<b>MDMA（Lykos）2024 被 FDA 拒（CRL）</b></span></div>
+        <div class="e-insight">机制热但监管难：疗法离不开心理治疗、无法双盲、安全与滥用顾虑重。提醒"科学信号"要过"试验可证性"这关。</div>
+      </div>
+
+      <!-- ============ D. DELIVERY ============ -->
+      <h2 id="delivery" class="anchor-h"><span class="cn">D · 递送：把药真正送进脑</span></h2>
+      <p>CNS 的永恒瓶颈是血脑屏障。与其换靶点，不如解决"怎么进去"——这本身就是一个平台级机会。</p>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">机制通用 · <span class="tgt">转铁蛋白受体 TfR（分子木马）</span></div><span class="badge wip">爬坡中 · 平台</span></div>
+        <div class="e-path">搭"过屏障的顺风车" <span class="arrow">→</span> TfR 胞吞转运 <span class="arrow">→</span> 双特异抗体 / 融合"脑穿梭"</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">Denali "TV" 平台（酶替代进脑治溶酶体病）、Roche brain shuttle；把大分子"背"过血脑屏障</span></div>
+        <div class="e-insight">不改靶点、改递送——一旦成熟，能把一整批"打得着但送不进"的 CNS 靶点解锁。典型的"价值向平台迁移"。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">癫痫 · <span class="tgt">SV2A · 离子通道</span></div><span class="badge ok">已成功 · 成熟基石</span></div>
+        <div class="e-path">神经元过度放电 <span class="arrow">→</span> SV2A / 钠钙通道 <span class="arrow">→</span> 口服小分子</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">levetiracetam（SV2A）等；罕见癫痫用 cannabidiol、fenfluramine</span></div>
+        <div class="e-insight">成熟对症领域：症状可测、药能进脑，是 CNS 里"正常运转"的部分。创新已转向难治性/遗传性癫痫亚型。</div>
+      </div>
+
+      <div class="note investor">
+        <span class="tag">这一页的元规则</span>
+        <p>CNS 胜负几乎由两件事决定：① <strong>有没有硬遗传学</strong>（有→SMA/HTT/SOD1；无→tau/α-syn 长期折戟）；② <strong>能否绕开或穿过血脑屏障 + 有没有快读数</strong>（CGRP/Nav1.8 走外周、SOD1 用 NfL、TfR 平台专攻递送）。精神领域则刚打开新机制窗口（M1/M4、速效抗抑郁）。看 CNS 项目，先数它占了上面几条。</p>
+      </div>
+      <div class="footer-note">神经词典 · 13 条，四区（神经退行/疼痛/精神/递送）· 可继续加深：帕金森 GBA/LRRK2、睡眠 orexin、成瘾、疼痛 NGF、癫痫遗传亚型。</div>
+    </section>
+  </main>
+</div>
+<script>
+  const rail=document.getElementById('rail'),scrim=document.getElementById('scrim'),menuBtn=document.getElementById('menuBtn');
+  menuBtn.addEventListener('click',()=>{rail.classList.add('open');scrim.classList.add('show')});
+  scrim.addEventListener('click',()=>{rail.classList.remove('open');scrim.classList.remove('show')});
+</script>
+</body>
+</html>

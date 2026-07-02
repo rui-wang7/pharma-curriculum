@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>罕见/遗传病词典 Rare · 疾病·通路·成药</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Spectral:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<button class="menu-btn" id="menuBtn">☰ 目录</button>
+<div class="scrim" id="scrim"></div>
+<div class="shell">
+  <aside class="rail" id="rail">
+    <div class="brand"><a href="../index.html"><span class="cn">药物创新的逻辑</span></a><br><span style="font-size:14px;color:var(--soft)">The Logic of Drug Discovery</span></div>
+    <div class="brand-sub">词典 · 罕见/遗传病</div>
+    <div class="rail-divider"></div>
+    <div class="nav-label">词典 · 五大战场</div>
+    <nav>
+      <a class="nav-item" href="index.html"><span class="num">§</span><span class="txt">词典首页</span></a>
+      <a class="nav-item link" href="oncology.html"><span class="num">①</span><span class="txt">肿瘤</span></a>
+      <a class="nav-item link" href="immunology.html"><span class="num">②</span><span class="txt">免疫炎症</span></a>
+      <a class="nav-item link" href="metabolic.html"><span class="num">③</span><span class="txt">代谢</span></a>
+      <a class="nav-item link" href="cns.html"><span class="num">④</span><span class="txt">神经 CNS</span></a>
+      <a class="nav-item active" href="rare.html"><span class="num">⑤</span><span class="txt">罕见/遗传病</span></a>
+    </nav>
+    <div class="rail-divider"></div>
+    <div class="nav-label">本页分区</div>
+    <nav>
+      <a class="nav-item" href="#fix"><span class="num">A</span><span class="txt">蛋白替代 · 矫正</span></a>
+      <a class="nav-item" href="#silence"><span class="num">B</span><span class="txt">关基因 · RNA</span></a>
+      <a class="nav-item" href="#add"><span class="num">C</span><span class="txt">补基因 · 基因治疗</span></a>
+      <a class="nav-item" href="#edit"><span class="num">D</span><span class="txt">改基因 · 编辑</span></a>
+      <a class="nav-item" href="#other"><span class="num">E</span><span class="txt">补体 · 其它</span></a>
+    </nav>
+  </aside>
+  <main class="main">
+    <section class="page">
+      <div class="crumb"><a href="../index.html">主课程</a><span class="sep">›</span><a href="index.html">词典</a><span class="sep">›</span>罕见/遗传病 Rare</div>
+      <div class="eyebrow">Dictionary ⑤ · Rare / Genetic</div>
+      <h1><span class="cn">罕见/遗传病词典</span> <span style="font-family:var(--mono);font-size:18px;color:var(--soft)">Rare</span></h1>
+      <p class="lede">逻辑最干净的战场：<strong>单基因病 = 一个明确的因果 + 一个明确的靶点</strong>。正好是新模态的完美用武之地。人少，但响应确定、竞争少、定价百万美元级。本页按"攻法"分区——这是理解罕见病最好的框架：<em>缺蛋白就补/矫正，毒蛋白就关掉，缺基因就补进去，错字就改写。</em></p>
+      <div class="note"><span class="tag">读法</span><p>四种攻法各有位置：<b>补/矫正蛋白</b>（酶替代、小分子矫正）、<b>关基因</b>（siRNA/ASO，靶多在肝）、<b>补基因</b>（AAV，一次性）、<b>改基因</b>（CRISPR）。<span class="badge ok">已成功</span>／<span class="badge wip">爬坡中</span>。</p></div>
+
+      <!-- ============ A. REPLACE / CORRECT ============ -->
+      <h2 id="fix" class="anchor-h"><span class="cn">A · 蛋白替代与矫正</span></h2>
+      <p>不动基因，直接补上缺的蛋白（酶替代）、或用小分子把折叠错的蛋白掰回能用、或减少上游底物堆积。</p>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">囊性纤维化 CF · <span class="tgt">CFTR</span></div><span class="badge ok">已成功 · 标杆</span></div>
+        <div class="e-path">氯离子通道缺陷 <span class="arrow">→</span> CFTR <span class="arrow">→</span> 小分子"矫正器+增效剂"</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">单基因、因果满格 <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val"><b>Trikafta（elexacaftor/tezacaftor/ivacaftor，Vertex）</b>覆盖约 90% 患者</span></div>
+        <div class="erow"><span class="lbl">解法 / 解毒剂</span><span class="val">不换基因，用小分子"把折叠错误的蛋白掰回能用"——罕见病里罕见的小分子大胜</span></div>
+        <div class="e-insight">垂直深耕一个病、逐代改良直到通吃，缔造 Vertex 模式。证明"小分子也能治单基因病"，只要能矫正蛋白功能。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">溶酶体贮积症（Gaucher/Fabry/Pompe）· <span class="tgt">缺陷酶</span></div><span class="badge ok">已成功 · 平台</span></div>
+        <div class="e-path">缺一种降解酶致底物堆积 <span class="arrow">→</span> 补该酶 <span class="arrow">→</span> 酶替代 ERT（定期输注）</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">imiglucerase（Gaucher，Sanofi）、agalsidase（Fabry）、alglucosidase（Pompe）</span></div>
+        <div class="erow"><span class="lbl">解法 / 解毒剂</span><span class="val">"一类病一个平台"：同一 ERT 逻辑复制到几十种溶酶体病；难点是酶进不进得了组织（尤其脑）</span></div>
+        <div class="e-insight">罕见病商业模式的奠基（Genzyme）。局限是终身输注、进不了脑——正被基因治疗和"脑穿梭"递送迭代。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">ATTR 淀粉样变（多发神经病/心肌病）· <span class="tgt">TTR 稳定</span></div><span class="badge ok">已成功 · 小分子</span></div>
+        <div class="e-path">错误折叠蛋白沉积 <span class="arrow">→</span> 稳住 TTR 四聚体 <span class="arrow">→</span> 口服小分子</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">tafamidis（辉瑞）、acoramidis（BridgeBio）——口服稳定剂，心肌病大市场</span></div>
+        <div class="e-insight">与下面 RNA 版（关基因）打同一个病、机制不同：稳定 vs 减少。TTR 是"同病、多攻法竞争"的绝佳案例（见 B 区）。</div>
+      </div>
+
+      <!-- ============ B. SILENCE ============ -->
+      <h2 id="silence" class="anchor-h"><span class="cn">B · 关基因：RNA 疗法的主场</span></h2>
+      <p>当病因是"造了有毒的蛋白"或"某蛋白太多"，最直接是从源头少造它。GalNAc-siRNA/ASO 把药精准送到肝细胞，几周到几月一针。</p>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">遗传性 ATTR 淀粉样变 · <span class="tgt">TTR（沉默）</span></div><span class="badge ok">已成功 · 多模态</span></div>
+        <div class="e-path">从源头少造 TTR <span class="arrow">→</span> TTR mRNA <span class="arrow">→</span> siRNA / ASO</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">patisiran / <b>vutrisiran（Alnylam siRNA，季度到半年一针）</b>；eplontersen（Ionis ASO）</span></div>
+        <div class="erow"><span class="lbl">解法 / 解毒剂</span><span class="val">同一靶点四种打法齐飞：关基因(siRNA)、稳蛋白(小分子)、一次性编辑(CRISPR，见 D 区)</span></div>
+        <div class="e-insight">"靶点×模态矩阵"在罕见病里最完整的一格。投资看点：稳定剂(口服方便) vs siRNA(更彻底) vs CRISPR(一次性)谁通吃心肌病大市场。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">遗传性血管性水肿 HAE · <span class="tgt">血浆激肽释放酶 / 前激肽释放酶</span></div><span class="badge ok">已成功 · 多模态</span></div>
+        <div class="e-path">缓激肽过量致发作 <span class="arrow">→</span> kallikrein 系统 <span class="arrow">→</span> 抗体 / 口服 / siRNA</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">lanadelumab（抗体，武田）、berotralstat（口服，BioCryst）、donidalorsen（ASO）、fitusiran（siRNA）</span></div>
+        <div class="e-insight">又一"同靶点多模态"竞争：病人从"按需急救"走向"越来越省事的长期预防"。谁把给药频率降到最低谁赢。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">急性肝卟啉症 AHP · <span class="tgt">ALAS1</span></div><span class="badge ok">已成功</span></div>
+        <div class="e-path">血红素合成通路失调致毒性中间体堆积 <span class="arrow">→</span> ALAS1 <span class="arrow">→</span> GalNAc-siRNA</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">givosiran/Givlaari（Alnylam）</span></div>
+        <div class="e-insight">"关掉通路上游一个酶、掐断毒性中间体"的干净示范。GalNAc-siRNA 平台把一个个肝脏罕见代谢病逐一收割。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">原发性高草酸尿 1 型 PH1 · <span class="tgt">HAO1 (GO)</span></div><span class="badge ok">已成功 · 底物削减</span></div>
+        <div class="e-path">草酸过量致肾结石/肾衰 <span class="arrow">→</span> 关掉上游 HAO1 减少草酸 <span class="arrow">→</span> GalNAc-siRNA</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">lumasiran/Oxlumo（Alnylam）</span></div>
+        <div class="erow"><span class="lbl">解法 / 解毒剂</span><span class="val">巧思：不修缺陷酶，而是<b>关掉上游、从源头少造毒性底物</b>（substrate reduction）</span></div>
+        <div class="e-insight">"绕开难修的靶点、去关它上游"的通用思路——当致病蛋白难补时，往上游找一个好关的开关。</div>
+      </div>
+
+      <!-- ============ C. ADD GENE ============ -->
+      <h2 id="add" class="anchor-h"><span class="cn">C · 补基因：一次性基因治疗</span></h2>
+      <p>当病因是"缺了一个基因/蛋白"，用 AAV 把正常拷贝送进去，理论上一次给药、长期获益。疗效诱人，但天价、耐久性与商业化是现实考题。</p>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">血友病 A/B · <span class="tgt">凝血因子 FVIII / FIX</span></div><span class="badge ok">已成功 · 一次性</span></div>
+        <div class="e-path">缺一个凝血因子 <span class="arrow">→</span> 补 F8/F9 基因 <span class="arrow">→</span> AAV（也有双抗/RNA 替代）</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">Hemgenix（FIX，CSL/uniQure）、Roctavian（FVIII，BioMarin）；非基因路线：emicizumab 双抗（罗氏）、fitusiran/抗 TFPI</span></div>
+        <div class="erow"><span class="lbl">解法 / 解毒剂</span><span class="val">一次性补基因 vs 定期打双抗/皮下——"治愈"与"便利维持"两条路并存竞争</span></div>
+        <div class="e-insight">基因治疗商业化的现实课：疗效虽好，但天价、耐久性存疑、病人已有 emicizumab 好选择，推广远比想象难。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">杜氏肌营养不良 DMD · <span class="tgt">dystrophin</span></div><span class="badge wip">爬坡中 · 争议</span></div>
+        <div class="e-path">抗肌萎缩蛋白缺失 <span class="arrow">→</span> dystrophin <span class="arrow">→</span> AAV 微基因 / 外显子跳跃 ASO</div>
+        <div class="erow"><span class="lbl">因果强度</span><span class="val">单基因明确，但临床获益争议大 <span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></span></div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val"><b>Elevidys（AAV 微dystrophin，Sarepta）</b>；eteplirsen 等外显子跳跃（获批但疗效存疑）</span></div>
+        <div class="e-insight">"加速批准+替代终点"的争议中心：基因太大只能塞"迷你版"，蛋白升了但临床获益多大仍辩论。看疗效实证而非机制故事。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">遗传性视网膜变性 · <span class="tgt">RPE65</span></div><span class="badge ok">已成功 · 首个在体</span></div>
+        <div class="e-path">缺 RPE65 致失明 <span class="arrow">→</span> 视网膜下注射补基因 <span class="arrow">→</span> AAV</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">voretigene/Luxturna（Spark/罗氏）——首个 FDA 批准的在体基因治疗</span></div>
+        <div class="erow"><span class="lbl">解法 / 解毒剂</span><span class="val">眼睛是"免疫豁免+局部封闭"的理想器官——用量小、免疫风险低、就近给药</span></div>
+        <div class="e-insight">基因治疗的破冰之作。它成功的部分原因在器官选得好（眼），提醒"递送环境"对新模态成败的决定性。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">AADC 缺乏症 · <span class="tgt">DDC 基因</span></div><span class="badge ok">已成功 · 脑内给药</span></div>
+        <div class="e-path">缺多巴胺合成酶致严重运动障碍 <span class="arrow">→</span> 补 DDC <span class="arrow">→</span> AAV（直接注入脑）</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">eladocagene exuparvovec/Kebilidi（PTC，2024 获批，直接注入中脑）</span></div>
+        <div class="e-insight">首个直接注入脑实质的基因治疗——把 AAV 送进大脑特定核团。为更多 CNS 遗传病的"在体脑给药"探路。</div>
+      </div>
+
+      <!-- ============ D. EDIT ============ -->
+      <h2 id="edit" class="anchor-h"><span class="cn">D · 改基因：CRISPR 编辑</span></h2>
+      <p>终极方案：直接改写 DNA 里的错字。已从"体外改造再回输"迈向"体内直接编辑"，并向更精准的碱基/先导编辑演进。</p>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">镰状细胞病 / β地贫 · <span class="tgt">BCL11A（重启胎儿血红蛋白）</span></div><span class="badge ok">已成功 · 首个 CRISPR</span></div>
+        <div class="e-path">成人血红蛋白突变 <span class="arrow">→</span> 编辑 BCL11A 增强子重开 HbF <span class="arrow">→</span> 体外 CRISPR</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val"><b>Casgevy（exa-cel，Vertex/CRISPR Tx，2023 获批）</b>——史上首个 CRISPR 疗法</span></div>
+        <div class="erow"><span class="lbl">解法 / 解毒剂</span><span class="val">巧思：不修致病突变，而是<b>重新打开胎儿血红蛋白</b>这条备用系统绕过它</span></div>
+        <div class="e-insight">里程碑，但也暴露瓶颈：体外编辑+清髓移植，流程重、天价、可及性差。下一步是体内编辑（见下条）。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">ATTR / 遗传高胆固醇 · <span class="tgt">体内 CRISPR（TTR / PCSK9）</span></div><span class="badge wip">爬坡中 · 下一代</span></div>
+        <div class="e-path">一次性关掉致病基因 <span class="arrow">→</span> 肝内直接编辑 <span class="arrow">→</span> LNP 递送 CRISPR / 碱基编辑</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">NTLA-2001（Intellia，体内编辑 TTR）；VERVE（碱基编辑 PCSK9，一次性降胆固醇）</span></div>
+        <div class="erow"><span class="lbl">解法 / 解毒剂</span><span class="val">用 LNP 把 CRISPR 送进肝、就地编辑，免除体外改造和移植——真正的"一针治愈"雏形</span></div>
+        <div class="e-insight">从"体外→体内"是基因编辑的关键跃迁。若在体编辑安全过关，将把 siRNA 的"长期维持"直接升级为"一次性"。递送仍主要限于肝。</div>
+      </div>
+
+      <!-- ============ E. OTHER ============ -->
+      <h2 id="other" class="anchor-h"><span class="cn">E · 补体与其它</span></h2>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">阵发性睡眠性血红蛋白尿 PNH · <span class="tgt">补体 C5 / C3 / 因子B,D</span></div><span class="badge ok">已成功 · 长效化平台</span></div>
+        <div class="e-path">补体过度激活 <span class="arrow">→</span> C5（及上游）<span class="arrow">→</span> 抗体 / 口服小分子</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val"><b>eculizumab → ravulizumab（Alexion/AZ，延长给药间隔）</b>；口服因子 D/B 抑制剂（iptacopan）扩展</span></div>
+        <div class="e-insight">超罕见病靠"极高定价 + 长效迭代"撑起大生意（Alexion 因此被 AZ 高价收购）。补体平台后来外扩到多个补体介导病。</div>
+      </div>
+
+      <div class="entry">
+        <div class="e-top"><div class="e-title">1 型神经纤维瘤病 NF1 · <span class="tgt">MEK</span></div><span class="badge ok">已成功 · 借道通路</span></div>
+        <div class="e-path">NF1 失活致 RAS-MAPK 过度激活 <span class="arrow">→</span> 下游 MEK <span class="arrow">→</span> 小分子</div>
+        <div class="erow"><span class="lbl">代表药&公司</span><span class="val">selumetinib/Koselugo（AZ/默沙东，儿童丛状神经纤维瘤）</span></div>
+        <div class="erow"><span class="lbl">解法 / 解毒剂</span><span class="val">抑癌基因(NF1)本身没法"补"，就去打它失控后<b>下游那个可成药的激酶</b></span></div>
+        <div class="e-insight">"抑癌基因难做，就打下游"的通用招法（呼应肿瘤词典的 p53/MYC 困境）——罕见病与肿瘤在这里逻辑相通。</div>
+      </div>
+
+      <div class="note investor">
+        <span class="tag">这一页的元规则</span>
+        <p>罕见病是新模态的"练兵场"，因为因果最干净、监管有替代终点、定价高。选攻法看两点：<strong>致病机理</strong>（缺→补/矫正；毒/多→关；错字→改）和<strong>靶器官</strong>（肝最好送=siRNA/在体编辑的主场；眼/脑需就近给药；全身缺蛋白靠 AAV 或 ERT）。投资盯两条现实：<strong>耐久性</strong>（AAV 会不会衰减）和<strong>商业化</strong>（有没有更方便的非基因替代，如血友病 emicizumab）。</p>
+      </div>
+      <div class="footer-note">罕见/遗传病词典 · 15 条，五区（替代矫正/关基因/补基因/改基因/补体其它）· 可继续加深：更多溶酶体病、SMA 交叉、碱基/先导编辑管线全景、超罕见"n=1"定制 ASO。</div>
+    </section>
+  </main>
+</div>
+<script>
+  const rail=document.getElementById('rail'),scrim=document.getElementById('scrim'),menuBtn=document.getElementById('menuBtn');
+  menuBtn.addEventListener('click',()=>{rail.classList.add('open');scrim.classList.add('show')});
+  scrim.addEventListener('click',()=>{rail.classList.remove('open');scrim.classList.remove('show')});
+</script>
+</body>
+</html>
