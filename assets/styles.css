@@ -210,6 +210,14 @@ li::marker{color:var(--accent-soft)}
 .meter i{width:16px;height:5px;border-radius:2px;background:var(--line-strong)}
 .meter i.on{background:var(--verdigris)}
 
+/* company cards: market-cap badge + FIC/BIC inline tags */
+.badge.cap{color:var(--ink-2);background:var(--panel-2);border:1px solid var(--line-strong)}
+.badge.cap::before{display:none}
+.fic,.bic{font-family:var(--mono);font-size:9.5px;padding:1px 6px;border-radius:4px;font-weight:600;letter-spacing:.03em;white-space:nowrap;margin-left:2px}
+.fic{background:rgba(176,104,44,.15);color:var(--accent)}
+.bic{background:rgba(60,110,100,.15);color:var(--verdigris)}
+.entry .e-rank{font-family:var(--mono);font-size:13px;color:var(--accent);font-weight:600;margin-right:2px}
+
 /* section anchor headers inside dict */
 .anchor-h{scroll-margin-top:20px}
 
