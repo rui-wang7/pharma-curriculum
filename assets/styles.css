@@ -218,6 +218,32 @@ li::marker{color:var(--accent-soft)}
 .bic{background:rgba(60,110,100,.15);color:var(--verdigris)}
 .entry .e-rank{font-family:var(--mono);font-size:13px;color:var(--accent);font-weight:600;margin-right:2px}
 
+/* ---------- MATRIX table (company × pathway) ---------- */
+.mtx-wrap{overflow-x:auto;margin:26px 0;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);-webkit-overflow-scrolling:touch}
+table.mtx{border-collapse:separate;border-spacing:0;font-size:11px;min-width:1180px;background:var(--panel)}
+.mtx th,.mtx td{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:6px 7px;vertical-align:top;text-align:left;line-height:1.35}
+.mtx thead th{background:var(--panel-2);font-family:var(--mono);font-size:9.5px;letter-spacing:.01em;color:var(--soft);font-weight:600}
+.mtx thead .grp{text-align:center;font-family:var(--cjk);font-size:11px;color:var(--ink);border-bottom:1px solid var(--line-strong)}
+.mtx thead .grp.g-onc{background:rgba(176,104,44,.1)}
+.mtx thead .grp.g-imm{background:rgba(60,110,100,.1)}
+.mtx thead .grp.g-met{background:rgba(156,90,60,.09)}
+.mtx thead .grp.g-cns{background:rgba(90,110,100,.12)}
+.mtx thead .grp.g-rare{background:rgba(176,104,44,.07)}
+.mtx td{font-family:var(--cjk);color:var(--ink-2);min-width:76px}
+.mtx td.co,.mtx th.co{position:sticky;left:0;z-index:2;background:var(--panel);font-family:var(--cjk);font-weight:600;color:var(--ink);min-width:132px;border-right:1.5px solid var(--line-strong)}
+.mtx thead th.co{z-index:3;background:var(--panel-2)}
+.mtx td.co .rk{font-family:var(--mono);color:var(--accent);font-size:10px;margin-right:4px}
+.mtx td.co .cty{font-family:var(--mono);color:var(--faint);font-size:9px;display:block;margin-top:1px}
+.mtx tbody tr:hover td{background:var(--panel-2)}
+.mtx tbody tr:hover td.co{background:var(--panel-2)}
+.mtx td:empty{background:repeating-linear-gradient(135deg,transparent,transparent 5px,rgba(0,0,0,.014) 5px,rgba(0,0,0,.014) 6px)}
+.mtx .fic-s{color:var(--accent);font-weight:700}
+.mtx .bic-s{color:var(--verdigris);font-weight:700}
+.mtx .imp-s{color:var(--soft);font-weight:700}
+.mtx .dev-s{color:var(--faint)}
+.mtx-legend{display:flex;flex-wrap:wrap;gap:16px;font-family:var(--cjk);font-size:12.5px;color:var(--soft);margin:4px 0 0}
+.mtx-legend b{font-family:var(--mono)}
+
 /* section anchor headers inside dict */
 .anchor-h{scroll-margin-top:20px}
 

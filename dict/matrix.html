@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>矩阵 · 公司 × 通路 交叉表</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Spectral:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<button class="menu-btn" id="menuBtn">☰ 目录</button>
+<div class="scrim" id="scrim"></div>
+<div class="shell">
+  <aside class="rail" id="rail">
+    <div class="brand"><a href="../index.html"><span class="cn">药物创新的逻辑</span></a><br><span style="font-size:14px;color:var(--soft)">The Logic of Drug Discovery</span></div>
+    <div class="brand-sub">矩阵 · 公司 × 通路</div>
+    <div class="rail-divider"></div>
+    <div class="nav-label">词典</div>
+    <nav>
+      <a class="nav-item" href="index.html"><span class="num">§</span><span class="txt">词典首页</span></a>
+      <a class="nav-item link" href="companies.html"><span class="num">⑥</span><span class="txt">公司与通路贡献</span></a>
+      <a class="nav-item link" href="oncology.html"><span class="num">①</span><span class="txt">肿瘤</span></a>
+      <a class="nav-item link" href="immunology.html"><span class="num">②</span><span class="txt">免疫炎症</span></a>
+      <a class="nav-item link" href="metabolic.html"><span class="num">③</span><span class="txt">代谢</span></a>
+      <a class="nav-item link" href="cns.html"><span class="num">④</span><span class="txt">神经 CNS</span></a>
+      <a class="nav-item link" href="rare.html"><span class="num">⑤</span><span class="txt">罕见/遗传病</span></a>
+    </nav>
+    <div class="rail-divider"></div>
+    <div class="rail-foot">横 = 通路（按疾病分组）<br>纵 = 前30家公司<br>格子 = 靶点 + 地位<br>← 表格可左右滑动</div>
+  </aside>
+  <main class="main">
+    <section class="page" style="max-width:none">
+      <div class="crumb"><a href="../index.html">主课程</a><span class="sep">›</span><a href="index.html">词典</a><span class="sep">›</span>矩阵 · 公司 × 通路</div>
+      <div class="eyebrow">Cross-Reference Matrix</div>
+      <h1><span class="cn">公司 × 通路 矩阵</span></h1>
+      <p class="lede">把「公司词典」和「通路词典」交叉起来：<strong>横向是通路组</strong>（按 5 大疾病分类，沿用各词典的分区），<strong>纵向是市值前 30 家公司</strong>，每个格子写出该公司在该通路上的<strong>具体靶点 + 行业地位</strong>。空格=该公司在这条通路上没有重大布局。表格较宽，可左右滑动。</p>
+
+      <div class="mtx-legend">
+        <span><b class="fic-s">★</b> 首创 FIC</span>
+        <span><b class="bic-s">◆</b> 领跑 / 同类最优 BIC</span>
+        <span><b class="imp-s">●</b> 重要玩家</span>
+        <span><b class="dev-s">○</b> 在研 / 爬坡</span>
+      </div>
+
+      <div class="mtx-wrap">
+      <table class="mtx">
+        <thead>
+          <tr>
+            <th class="co" rowspan="2">公司（市值排名）</th>
+            <th class="grp g-onc" colspan="6">肿瘤 Oncology</th>
+            <th class="grp g-imm" colspan="4">免疫炎症 Immunology</th>
+            <th class="grp g-met" colspan="3">代谢 Metabolic</th>
+            <th class="grp g-cns" colspan="4">神经 CNS</th>
+            <th class="grp g-rare" colspan="5">罕见/遗传 Rare</th>
+          </tr>
+          <tr>
+            <th>驱动激酶/突变</th><th>合成致死</th><th>周期/凋亡</th><th>表观/转录</th><th>免疫检查点</th><th>表面投送/ADC/CAR-T</th>
+            <th>细胞因子(抗体)</th><th>胞内信号(小分子)</th><th>细胞/受体</th><th>FcRn/自免细胞</th>
+            <th>血脂</th><th>肥胖/糖尿</th><th>MASH</th>
+            <th>神经退行</th><th>疼痛/偏头痛</th><th>精神</th><th>递送/癫痫</th>
+            <th>替代/矫正</th><th>关基因(RNA)</th><th>补基因</th><th>改基因(编辑)</th><th>补体/其它</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="co"><span class="rk">01</span>Eli Lilly<span class="cty">🇺🇸 LLY</span></td>
+            <td>RET<span class="fic-s">★</span>·BTK<span class="imp-s">●</span></td><td></td><td>CDK4/6<span class="bic-s">◆</span></td><td></td><td></td><td></td>
+            <td>IL-13<span class="imp-s">●</span>·IL-23<span class="imp-s">●</span></td><td></td><td></td><td></td>
+            <td>Lp(a)<span class="dev-s">○</span></td><td>双靶GLP-1<span class="bic-s">◆</span></td><td>GLP-1<span class="dev-s">○</span></td>
+            <td>Aβ<span class="imp-s">●</span></td><td></td><td>SSRI<span class="fic-s">★</span></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td class="co"><span class="rk">02</span>J&amp;J<span class="cty">🇺🇸 JNJ</span></td>
+            <td>BTK<span class="fic-s">★</span>·EGFR×MET<span class="fic-s">★</span></td><td></td><td></td><td></td><td></td><td>CD38<span class="bic-s">◆</span>·BCMA/GPRC5D<span class="bic-s">◆</span></td>
+            <td>IL-12/23<span class="fic-s">★</span>·IL-23<span class="imp-s">●</span></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td>
+            <td></td><td></td><td>NMDA<span class="fic-s">★</span>·D2<span class="bic-s">◆</span></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td class="co"><span class="rk">03</span>AbbVie<span class="cty">🇺🇸 ABBV</span></td>
+            <td>BTK<span class="imp-s">●</span></td><td></td><td>BCL-2<span class="fic-s">★</span></td><td></td><td></td><td></td>
+            <td>TNF<span class="bic-s">◆</span>·IL-23<span class="bic-s">◆</span></td><td>JAK<span class="imp-s">●</span></td><td></td><td></td>
+            <td></td><td></td><td></td>
+            <td></td><td>CGRP<span class="imp-s">●</span></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td class="co"><span class="rk">04</span>Roche<span class="cty">🇨🇭 RO（含基因泰克）</span></td>
+            <td>HER2<span class="fic-s">★</span>·BRAF<span class="imp-s">●</span></td><td></td><td></td><td></td><td>PD-L1<span class="imp-s">●</span></td><td>CD20<span class="fic-s">★</span>·HER2-ADC<span class="imp-s">●</span></td>
+            <td>IL-6<span class="fic-s">★</span></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td>
+            <td>MS/CD20<span class="bic-s">◆</span></td><td></td><td></td><td></td>
+            <td></td><td></td><td>血友病·双抗<span class="bic-s">◆</span></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td class="co"><span class="rk">05</span>Merck（MSD）<span class="cty">🇺🇸 MRK</span></td>
+            <td></td><td></td><td></td><td></td><td>PD-1<span class="bic-s">◆</span></td><td></td>
+            <td></td><td></td><td></td><td></td>
+            <td>他汀<span class="fic-s">★</span>·口服PCSK9<span class="dev-s">○</span></td><td>DPP-4<span class="fic-s">★</span></td><td></td>
+            <td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td class="co"><span class="rk">06</span>Novartis<span class="cty">🇨🇭 NVS</span></td>
+            <td>BCR-ABL<span class="fic-s">★</span>·BRAF/MEK<span class="imp-s">●</span></td><td></td><td>CDK4/6<span class="imp-s">●</span></td><td></td><td></td><td>CD19 CAR-T<span class="fic-s">★</span>·放射配体<span class="bic-s">◆</span></td>
+            <td>IL-17<span class="fic-s">★</span>·IL-1β<span class="imp-s">●</span></td><td>S1P<span class="imp-s">●</span></td><td></td><td></td>
+            <td>PCSK9-siRNA<span class="imp-s">●</span></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td>
+            <td></td><td></td><td>SMA·AAV<span class="bic-s">◆</span></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td class="co"><span class="rk">07</span>AstraZeneca<span class="cty">🇬🇧 AZN</span></td>
+            <td>EGFR<span class="bic-s">◆</span>·BTK<span class="imp-s">●</span></td><td>PARP<span class="bic-s">◆</span></td><td></td><td></td><td>PD-L1<span class="imp-s">●</span></td><td>HER2-ADC<span class="bic-s">◆</span>·TROP2<span class="imp-s">●</span></td>
+            <td>TSLP<span class="fic-s">★</span>·IL-5<span class="imp-s">●</span></td><td></td><td></td><td></td>
+            <td></td><td>SGLT2<span class="bic-s">◆</span></td><td></td>
+            <td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td class="co"><span class="rk">08</span>Novo Nordisk<span class="cty">🇩🇰 NVO</span></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td>
+            <td></td><td>GLP-1<span class="bic-s">◆</span>·amylin<span class="dev-s">○</span></td><td>GLP-1<span class="imp-s">●</span></td>
+            <td></td><td></td><td></td><td></td>
+            <td></td><td></td><td>血友病<span class="imp-s">●</span></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td class="co"><span class="rk">09</span>Amgen<span class="cty">🇺🇸 AMGN</span></td>
+            <td>KRAS G12C<span class="fic-s">★</span></td><td></td><td></td><td></td><td></td><td>CD19-BiTE<span class="fic-s">★</span>·DLL3<span class="imp-s">●</span></td>
+            <td>TNF<span class="imp-s">●</span></td><td>PDE4<span class="imp-s">●</span></td><td></td><td></td>
+            <td>PCSK9<span class="bic-s">◆</span></td><td></td><td></td>
+            <td></td><td>CGRP<span class="fic-s">★</span></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td class="co"><span class="rk">10</span>Gilead<span class="cty">🇺🇸 GILD</span></td>
+            <td></td><td></td><td></td><td></td><td></td><td>TROP2-ADC<span class="fic-s">★</span>·CD19 CAR-T<span class="bic-s">◆</span></td>
+            <td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td class="co"><span class="rk">11</span>Pfizer<span class="cty">🇺🇸 PFE</span></td>
+            <td>ALK<span class="fic-s">★</span></td><td></td><td>CDK4/6<span class="fic-s">★</span></td><td></td><td></td><td>BCMA<span class="imp-s">●</span></td>
+            <td></td><td>JAK<span class="fic-s">★</span></td><td></td><td></td>
+            <td>他汀<span class="bic-s">◆</span></td><td></td><td></td>
+            <td></td><td>CGRP<span class="imp-s">●</span></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td class="co"><span class="rk">13</span>Bristol Myers Squibb<span class="cty">🇺🇸 BMY</span></td>
+            <td></td><td></td><td></td><td></td><td>CTLA-4<span class="fic-s">★</span>·PD-1<span class="imp-s">●</span>·LAG-3<span class="fic-s">★</span></td><td>BCMA/CD19 CAR-T<span class="imp-s">●</span></td>
+            <td></td><td>TYK2<span class="fic-s">★</span></td><td></td><td></td>
+            <td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td class="co"><span class="rk">14</span>Vertex<span class="cty">🇺🇸 VRTX</span></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td>
+            <td></td><td>Nav1.8<span class="fic-s">★</span></td><td></td><td></td>
+            <td>CFTR<span class="bic-s">◆</span></td><td></td><td></td><td>CRISPR/BCL11A<span class="fic-s">★</span></td><td></td>
+          </tr>
+          <tr>
+            <td class="co"><span class="rk">15</span>Sanofi<span class="cty">🇫🇷 SNY</span></td>
+            <td></td><td></td><td></td><td></td><td></td><td>CD38<span class="imp-s">●</span></td>
+            <td>IL-4/13<span class="bic-s">◆</span></td><td></td><td></td><td></td>
+            <td></td><td>基础胰岛素<span class="bic-s">◆</span></td><td></td>
+            <td></td><td></td><td></td><td></td>
+            <td>溶酶体酶替代<span class="fic-s">★</span></td><td>抗凝血酶<span class="dev-s">○</span></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td class="co"><span class="rk">16</span>GSK<span class="cty">🇬🇧 GSK</span></td>
+            <td></td><td></td><td></td><td></td><td>PD-1<span class="imp-s">●</span></td><td>BCMA-ADC<span class="imp-s">●</span></td>
+            <td>IL-5<span class="imp-s">●</span></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td class="co"><span class="rk">17</span>Chugai<span class="cty">🇯🇵 4519（罗氏系）</span></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td>
+            <td>IL-6<span class="fic-s">★</span></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td>
+            <td></td><td></td><td>血友病·双抗<span class="fic-s">★</span></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td class="co"><span class="rk">18</span>Merck KGaA<span class="cty">🇩🇪 MRK.DE</span></td>
+            <td>EGFR<span class="fic-s">★</span></td><td></td><td></td><td></td><td>PD-L1<span class="imp-s">●</span></td><td></td>
+            <td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td>
+            <td>MS<span class="imp-s">●</span></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td class="co"><span class="rk">19</span>Regeneron<span class="cty">🇺🇸 REGN</span></td>
+            <td></td><td></td><td></td><td></td><td>PD-1<span class="imp-s">●</span></td><td>BCMA/CD20双抗<span class="imp-s">●</span></td>
+            <td>IL-4/13<span class="bic-s">◆</span></td><td></td><td></td><td></td>
+            <td>PCSK9<span class="imp-s">●</span></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td class="co"><span class="rk">20</span>UCB<span class="cty">🇧🇪 UCB</span></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td>
+            <td>IL-17A/F<span class="fic-s">★</span>·TNF<span class="imp-s">●</span></td><td></td><td></td><td>FcRn<span class="imp-s">●</span></td>
+            <td></td><td></td><td></td>
+            <td></td><td></td><td></td><td>SV2A<span class="fic-s">★</span></td>
+            <td></td><td></td><td></td><td></td><td>硬骨素·骨<span class="imp-s">●</span></td>
+          </tr>
+          <tr>
+            <td class="co"><span class="rk">21</span>argenx<span class="cty">🇳🇱 ARGX</span></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td>FcRn<span class="fic-s">★</span></td>
+            <td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td class="co"><span class="rk">22</span>Galderma<span class="cty">🇨🇭 GALD</span></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td>IL-31<span class="fic-s">★</span></td><td></td>
+            <td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td class="co"><span class="rk">24</span>Takeda<span class="cty">🇯🇵 TAK</span></td>
+            <td></td><td></td><td>蛋白酶体<span class="fic-s">★</span></td><td></td><td></td><td>CD30-ADC<span class="imp-s">●</span></td>
+            <td></td><td></td><td>α4β7<span class="fic-s">★</span></td><td></td>
+            <td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td>
+            <td>溶酶体酶替代<span class="imp-s">●</span></td><td>HAE激肽<span class="imp-s">●</span></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td class="co"><span class="rk">25</span>江苏恒瑞<span class="cty">🇨🇳 600276</span></td>
+            <td>VEGFR2<span class="imp-s">●</span>·HER2<span class="imp-s">●</span></td><td></td><td></td><td></td><td>PD-1<span class="imp-s">●</span></td><td>HER2-ADC<span class="dev-s">○</span></td>
+            <td></td><td></td><td></td><td></td>
+            <td></td><td>GLP-1<span class="dev-s">○</span></td><td></td>
+            <td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td class="co"><span class="rk">26</span>Sun Pharma<span class="cty">🇮🇳 SUNPHARMA</span></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td>
+            <td>IL-23<span class="imp-s">●</span></td><td>JAK<span class="imp-s">●</span></td><td></td><td></td>
+            <td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td class="co"><span class="rk">28</span>Bayer<span class="cty">🇩🇪 BAYN</span></td>
+            <td>多激酶<span class="imp-s">●</span></td><td></td><td></td><td></td><td></td><td>放射(Ra-223)<span class="imp-s">●</span></td>
+            <td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td>非甾体MRA·肾<span class="fic-s">★</span></td>
+          </tr>
+          <tr>
+            <td class="co"><span class="rk">29</span>Alnylam<span class="cty">🇺🇸 ALNY</span></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td>
+            <td>PCSK9<span class="imp-s">●</span></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td>
+            <td></td><td>TTR/卟啉/草酸<span class="bic-s">◆</span></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td class="co"><span class="rk">30</span>Teva<span class="cty">🇮🇱 TEVA</span></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td>
+            <td>MS<span class="imp-s">●</span></td><td>CGRP<span class="imp-s">●</span></td><td>VMAT2<span class="imp-s">●</span></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td class="co"><span class="rk">31</span>Otsuka<span class="cty">🇯🇵 4578</span></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td>
+            <td></td><td></td><td>D2部分激动<span class="fic-s">★</span></td><td></td>
+            <td></td><td></td><td></td><td></td><td>V2·多囊肾<span class="fic-s">★</span></td>
+          </tr>
+          <tr>
+            <td class="co"><span class="rk">32</span>Sandoz<span class="cty">🇨🇭 SDZ</span></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td class="co"><span class="rk">33</span>Revolution Med.<span class="cty">🇺🇸 RVMD</span></td>
+            <td>pan-RAS/G12D<span class="fic-s">★</span><span class="dev-s">○</span></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div class="note"><span class="tag">怎么读这张表</span>
+        <p><strong>竖着读一列</strong>=某条通路上都有谁、谁是首创谁在跟：比如"免疫检查点"列，能一眼看到 BMS（CTLA-4/LAG-3 首创）、Merck（PD-1 领跑）、Roche/AZ（PD-L1）同框。<strong>横着读一行</strong>=一家公司的"火力分布"：Novartis 横跨激酶/细胞/放射/基因治疗最广，Vertex/argenx/Alnylam 则高度聚焦单点做深。</p>
+      </div>
+      <div class="note investor"><span class="tag">口径说明</span>
+        <p>格子内容取自本站「通路词典」与「公司词典」，只标注<strong>有重大布局</strong>的靶点（非全管线）。通路列沿用词典的分区，因此少数不属于这些通路组的重磅（如疫苗、HIV/HCV 抗病毒、抗凝、眼科 VEGF、前列腺激素治疗、EPO/G-CSF 支持治疗、骨/医美）未在表中体现，但在「公司词典」各卡片里有记。市值排名截至 2026-07；Sandoz 为生物类似药商、无自研通路，故整行留空。</p>
+      </div>
+
+      <div class="footer-note">公司 × 通路 矩阵 · 30 公司 × 22 通路组 · 配合「公司词典」「通路词典」交叉使用 · FIC=首创 BIC=同类最优。</div>
+    </section>
+  </main>
+</div>
+<script>
+  const rail=document.getElementById('rail'),scrim=document.getElementById('scrim'),menuBtn=document.getElementById('menuBtn');
+  menuBtn.addEventListener('click',()=>{rail.classList.add('open');scrim.classList.add('show')});
+  scrim.addEventListener('click',()=>{rail.classList.remove('open');scrim.classList.remove('show')});
+</script>
+</body>
+</html>
