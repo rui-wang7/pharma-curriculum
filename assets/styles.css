@@ -249,6 +249,7 @@ table.mtx{border-collapse:separate;border-spacing:0;font-size:11px;min-width:118
 .mtx-legend b{font-family:var(--mono)}
 .mtx .hot,.hot{color:#C0392B;font-weight:700}
 .mtx .loe,.loe{color:#2F6FB0;font-weight:600}
+.mtx .exp,.exp{color:#2E8B57;font-weight:600}
 
 /* section anchor headers inside dict */
 .anchor-h{scroll-margin-top:20px}
