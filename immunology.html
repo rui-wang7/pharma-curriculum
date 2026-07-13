@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>免疫学入门 · Immunology 101</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Spectral:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<button class="menu-btn" id="menuBtn">☰ 目录</button>
+<div class="scrim" id="scrim"></div>
+<div class="shell">
+
+  <aside class="rail" id="rail">
+    <div class="brand"><span class="cn">免疫学入门</span><br><span style="font-size:14px;color:var(--soft)">Immunology · 讲给非专业的你</span></div>
+    <div class="brand-sub">课程二 · 跟着 Janeway 框架</div>
+    <div class="rail-divider"></div>
+    <div class="nav-label">切换</div>
+    <nav>
+      <a class="nav-item link" href="index.html"><span class="num">⌂</span><span class="txt">课程门户（首页）</span></a>
+      <a class="nav-item link" href="overview.html"><span class="num">Ⅰ</span><span class="txt">药物创新概览</span></a>
+    </nav>
+    <div class="rail-divider"></div>
+    <div class="nav-label">本课程 · 章节</div>
+    <nav id="nav">
+      <button class="nav-item active" data-target="im0"><span class="num">00</span><span class="txt">导论：身体的国防部</span></button>
+      <button class="nav-item" data-target="im1"><span class="num">01</span><span class="txt">先天免疫（第一道防线）</span></button>
+      <button class="nav-item" data-target="im2"><span class="num">02</span><span class="txt">适应性免疫总览</span></button>
+      <button class="nav-item" data-target="im3"><span class="num">03</span><span class="txt">抗体与 B 细胞</span></button>
+      <button class="nav-item" data-target="im4"><span class="num">04</span><span class="txt">T 细胞与 MHC</span></button>
+      <button class="nav-item" data-target="im5"><span class="num">05</span><span class="txt">发育与自我耐受</span></button>
+      <button class="nav-item" data-target="im6"><span class="num">06</span><span class="txt">启动与协同作战</span></button>
+      <button class="nav-item" data-target="im7"><span class="num">07</span><span class="txt">效应机制（各种武器）</span></button>
+      <button class="nav-item" data-target="im8"><span class="num">08</span><span class="txt">记忆与疫苗</span></button>
+      <button class="nav-item" data-target="im9"><span class="num">09</span><span class="txt">当免疫出错</span></button>
+      <button class="nav-item" data-target="im10"><span class="num">10</span><span class="txt">免疫与药物</span></button>
+    </nav>
+    <div class="rail-divider"></div>
+    <div class="nav-label">参考</div>
+    <nav>
+      <a class="nav-item link" href="dict/immunology.html"><span class="num">§</span><span class="txt">免疫词典（药物视角）</span></a>
+    </nav>
+    <div class="rail-divider"></div>
+    <div class="rail-foot">框架参考 Janeway<br>《免疫生物学》<br>浅显中文 + 类比<br>不追求死记分子</div>
+  </aside>
+
+  <main class="main">
+
+    <!-- ============ im0 导论 ============ -->
+    <section class="module active" id="im0">
+      <div class="eyebrow">Immunology 00 · 导论</div>
+      <h1><span class="cn">免疫系统 = 身体的"国防部"</span></h1>
+      <p class="lede">免疫学的名词又多又吓人，但骨架其实很简单。把身体想成一个国家：时刻有外敌想入侵（细菌、病毒、真菌、寄生虫），偶尔还有内部叛乱（癌变的细胞）。免疫系统就是这个国家的<strong>国防部</strong>——它只做三件事：<strong>发现敌人、消灭敌人、记住敌人。</strong>整门课都挂在这三个问题上。</p>
+
+      <h2><span class="cn">一个根本任务：分清"自己人"和"外人"</span></h2>
+      <p>免疫系统最底层、最要命的能力，是分辨<strong>"自我"</strong><span class="en">(self)</span> 和 <strong>"非我"</strong><span class="en">(non-self)</span>。分对了，外敌被清除、自己人安然无恙；一旦分错，就出大事：</p>
+      <ul>
+        <li>把外人<strong>放过</strong> → 感染扩散、肿瘤长大；</li>
+        <li>把自己人<strong>当敌人打</strong> → 自身免疫病（类风湿、红斑狼疮、1 型糖尿病都是这么来的）。</li>
+      </ul>
+      <p>所以你会看到，免疫学几乎每一个机制，最后都要回答一句：<em>它怎么保证"只打外人、不打自己人"？</em></p>
+
+      <h2><span class="cn">两支军队：先天 + 适应性</span></h2>
+      <div class="loop">
+        <div class="loop-title">两支军队 · 分工</div>
+        <div class="chain">
+          <div class="link"><div class="k">Innate</div><div class="v">先天免疫</div><div class="d">生来就有 · 快（分钟）· 粗放 · 无记忆</div></div>
+          <div class="arrow">＋</div>
+          <div class="link"><div class="k">Adaptive</div><div class="v">适应性免疫</div><div class="d">后天练成 · 慢（一周+）· 精准 · 有记忆</div></div>
+        </div>
+      </div>
+      <p><strong>先天免疫</strong>像<em>边防 + 警察 + 消防</em>：人人生来就有，反应极快，但只认敌人的"大类特征"，不针对具体某个敌人，也不会记仇。<strong>适应性免疫</strong>像<em>情报局 + 特种部队</em>：反应慢（第一次要一周多），但极其精准、越战越强、能记住敌人一辈子。</p>
+      <p>关键：两支军队不是各干各的。<strong>先天负责"拖住敌人 + 拉响警报 + 指路"，适应性负责"精确清除 + 留下记忆"。</strong>先天免疫里的树突状细胞，就是把情报从前线送到后方的那个"桥"。</p>
+
+      <h2><span class="cn">一张总图：免疫应答的主线</span></h2>
+      <div class="loop">
+        <div class="loop-title">The Immune Response · 免疫应答主循环</div>
+        <div class="chain">
+          <div class="link"><div class="k">01 Barrier</div><div class="v">屏障</div><div class="d">皮肤黏膜先挡一道</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">02 Innate</div><div class="v">先天识别</div><div class="d">认"制服"，报警</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">03 Present</div><div class="v">呈递情报</div><div class="d">树突状细胞送通缉照</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">04 Activate</div><div class="v">适应性激活</div><div class="d">对上号的T/B被选中扩增</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">05 Effect</div><div class="v">效应清除</div><div class="d">抗体+杀伤T动手</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">06 Memory</div><div class="v">留记忆</div><div class="d">老兵潜伏，下次秒杀</div></div>
+        </div>
+      </div>
+      <p>后面每一章，其实都是把这条主线上的<strong>某一环</strong>拆开细看。你随时可以回到这张图，问自己"现在讲的是哪一环"。</p>
+
+      <div class="note">
+        <span class="tag">怎么学这门课</span>
+        <p>别一上来就背几十种细胞和分子的名字。每遇到一个新名词，只问两件事：<strong>它负责干什么？为什么需要它？</strong>把功能想通了，名字自然就记住了。这门课重"直觉与逻辑"，不追求分子结构细节。</p>
+      </div>
+
+      <div class="note investor">
+        <span class="tag">和药物的关系</span>
+        <p>你在<a href="overview.html">概览课</a>里见过的那些最重磅的药——PD-1（K 药）、Humira（抗 TNF）、CAR-T——几乎全都是在<strong>操纵免疫系统</strong>。学完这门课，你会明白它们到底在拨动哪一根弦。最后一章（<a href="#" onclick="return im('im10')">免疫与药物</a>）会把两门课正式接起来。</p>
+      </div>
+    </section>
+
+    <!-- ============ im1 先天免疫 ============ -->
+    <section class="module" id="im1">
+      <div class="eyebrow">Immunology 01 · Innate Immunity</div>
+      <h1><span class="cn">第一道防线：先天免疫</span></h1>
+      <p class="lede">先天免疫是你生来就有、24 小时待命的"边防 + 警察 + 消防队"。它不认识具体某个敌人，但认得<strong>"敌人共有的样子"</strong>，能在几分钟内动手。它的任务不是彻底歼灭，而是<strong>拖住敌人、拉响警报、给精确部队指路。</strong></p>
+
+      <h2><span class="cn">第一步：先把门关好（屏障）</span></h2>
+      <p>绝大多数微生物，还没进门就被挡住了。屏障有三层：</p>
+      <ul>
+        <li><strong>物理屏障</strong>：皮肤、黏膜像城墙；黏膜上的纤毛还会把脏东西往外扫。</li>
+        <li><strong>化学屏障</strong>：胃酸（强酸泡死细菌）、眼泪口水里的溶菌酶、皮肤的弱酸环境。</li>
+        <li><strong>生物屏障</strong>：肠道、皮肤上的正常菌群<em>占着地盘</em>，不给坏菌留位置（这也是为什么滥用抗生素杀光好菌后容易感染）。</li>
+      </ul>
+
+      <h2><span class="cn">先天免疫的"警察们"（细胞）</span></h2>
+      <ul>
+        <li><strong>中性粒细胞</strong> <span class="en">Neutrophil</span>：数量最多的"冲锋队"，哪里感染冲哪里，吞掉细菌后自爆——<em>脓，就是它们战斗后的尸体。</em></li>
+        <li><strong>巨噬细胞</strong> <span class="en">Macrophage</span>：字面意思"大胃王"，常驻各组织的吞噬者兼清道夫，吞敌人也吞垃圾，还会放出警报信号（细胞因子）。</li>
+        <li><strong>树突状细胞</strong> <span class="en">Dendritic cell</span>：<strong>最关键的"侦察兵 + 情报官"</strong>。它吞下敌人后，跑到淋巴结，把敌人的"通缉照片"交给适应性部队——它是连接两支军队的<strong>桥</strong>。</li>
+        <li><strong>NK 细胞（自然杀伤细胞）</strong> <span class="en">Natural Killer</span>：专盯"变节的自己人"——被病毒感染或癌变的细胞。它的逻辑很妙：正常细胞会亮出"我是自己人"的身份牌（叫 MHC I）；NK 看到身份牌就放过，<strong>身份牌一旦消失就当场击杀</strong>。而病毒和癌细胞常常故意藏起身份牌想躲开 T 细胞，结果正好撞进 NK 的枪口。</li>
+        <li><strong>肥大细胞</strong> <span class="en">Mast cell</span>：一受刺激就"爆开"放出组胺，引起红肿——它也是<em>过敏反应的元凶</em>（第 9 章细讲）。</li>
+      </ul>
+
+      <h2><span class="cn">先天免疫怎么"认"敌人？——认制服，不认脸</span></h2>
+      <p>这是先天和适应性最本质的区别：</p>
+      <ul>
+        <li><strong>适应性免疫认"脸"</strong>：某个敌人独有的、精确的分子特征。</li>
+        <li><strong>先天免疫认"制服"</strong>：一大类敌人共有的特征。这些"制服"叫 <strong>PAMP</strong>（病原体相关分子模式）——比如细菌的细胞壁成分、病毒的双链 RNA。它们的共同点是：<em>人体细胞没有、只有微生物才有</em>，所以认它们不会误伤自己。</li>
+      </ul>
+      <p>免疫细胞上那双"认制服的眼睛"叫 <strong>PRR</strong>（模式识别受体），最有名的一族是 <strong>TLR</strong>（Toll 样受体）。妙处在于：<em>用有限的几十种"眼睛"，就能识别一大片微生物</em>，因为敌人们的"制服"是共通的。</p>
+
+      <h2><span class="cn">补体：血液里的自动报警 + 打孔系统</span></h2>
+      <p>补体是血浆里一套平时休眠的蛋白，一旦被激活，就像多米诺骨牌一样连锁反应，干三件事：<strong>①在细菌表面打孔</strong>（直接捅破捅死）；<strong>②给细菌贴标签</strong>（叫"调理"，让吞噬细胞更容易抓到）；<strong>③拉响炎症警报</strong>。记住"打孔 + 贴标签 + 报警"三件事就够了。</p>
+
+      <h2><span class="cn">炎症：红、肿、热、痛是怎么回事</span></h2>
+      <p>感染局部：血管<strong>扩张</strong>（→ 红、热）、血管壁变"漏"让免疫细胞和液体渗出到组织（→ 肿）、化学信号刺激神经（→ 痛）。这不是坏事，而是免疫系统在<strong>"往前线调兵调水"</strong>。只有当炎症收不住、变成慢性，才成了病（很多自免病和这有关）。</p>
+
+      <div class="note">
+        <span class="tag">本章小结</span>
+        <p>先天免疫 = <strong>快、粗放、无记忆、模板化</strong>。它常常单靠自己搞不定，但它能<strong>拖住敌人、拉响警报、把情报交给树突状细胞</strong>，为下一支精确部队争取时间、指明目标。下一章就看这支精确部队。</p>
+      </div>
+    </section>
+
+    <!-- ============ im2 适应性免疫总览 ============ -->
+    <section class="module" id="im2">
+      <div class="eyebrow">Immunology 02 · Adaptive Immunity</div>
+      <h1><span class="cn">精确打击：适应性免疫</span></h1>
+      <p class="lede">如果先天免疫是边防和警察，适应性免疫就是<strong>情报局 + 特种部队</strong>：慢热（第一次要一周多），但精准、强大、而且能<strong>记住敌人一辈子</strong>。它由两种淋巴细胞挑大梁——<strong>B 细胞</strong>和 <strong>T 细胞</strong>。</p>
+
+      <h2><span class="cn">主角：淋巴细胞（T 和 B）</span></h2>
+      <p>一个关键设定：<strong>每一个淋巴细胞，天生只认一种敌人特征</strong>（这个特征叫"抗原" <span class="en">antigen</span>）。你全身有上亿种各不相同的淋巴细胞，合起来就像一个"几乎能认任何敌人"的<strong>巨大钥匙库</strong>。</p>
+
+      <h2><span class="cn">核心思想：克隆选择（全课最重要的一个概念）</span></h2>
+      <p>身体不是等敌人来了才去"设计"武器，而是<strong>提前造好上亿种"各认一种敌人"的淋巴细胞待命</strong>。敌人一来，正好能对上它的那一小撮淋巴细胞被"选中"，然后疯狂复制、扩增成一支专打它的大军。</p>
+      <div class="card">
+        <h3>用一个类比记住它</h3>
+        <p>想象一个<strong>巨大的钥匙库</strong>，里面预先挂着上亿把各不相同的钥匙。来了一把锁（敌人），你不是现场去打一把新钥匙，而是<em>从库里找出那把正好能开的，然后照着它复制一万把</em>。这就是"克隆选择"——<strong>选择</strong>已有的、再<strong>克隆</strong>扩增。</p>
+      </div>
+      <p>这一个思想，直接解释了适应性免疫的四大特点：</p>
+      <ul>
+        <li><strong>特异性</strong>：一个细胞只认一种敌人（一把钥匙一把锁）。</li>
+        <li><strong>多样性</strong>：钥匙库极大，几乎什么锁都有对应的（下一章讲这库怎么造出来）。</li>
+        <li><strong>记忆</strong>：打完仗留一批"老兵"（记忆细胞）潜伏，下次同一个敌人来，反应又快又猛。</li>
+        <li><strong>自我耐受</strong>：钥匙库里那些"会开自己家门"的危险钥匙，在出厂前被销毁了，否则会打自己人（第 5 章细讲）。</li>
+      </ul>
+
+      <h2><span class="cn">两条战线：抗体 vs 细胞</span></h2>
+      <p>敌人藏的位置不同，打法就不同：</p>
+      <ul>
+        <li><strong>细胞外的敌人</strong>（血里、组织间隙的细菌、毒素、游离的病毒）→ <strong>B 细胞造"抗体"</strong>，像导弹去中和、标记它们。这叫<strong>体液免疫</strong>。</li>
+        <li><strong>细胞内的敌人</strong>（钻进细胞里的病毒、癌变的细胞）→ 抗体够不着，得靠 <strong>T 细胞</strong>。杀伤性 T 细胞直接把"已经变节的细胞"连人带毒一起处决。这叫<strong>细胞免疫</strong>。</li>
+      </ul>
+      <p>一句话记：<strong>抗体打"外面的"，T 细胞管"里面的"。</strong></p>
+
+      <h2><span class="cn">初次 vs 再次：疫苗为什么管用</span></h2>
+      <p>第一次遇到某敌人，适应性免疫要 <strong>7–10 天</strong>才拉起队伍（所以初次感染会病一场）。打赢后，留下一批<strong>记忆细胞</strong>。第二次同一个敌人再来，记忆细胞几小时到一两天就爆发，往往你还没发病就被清除了。</p>
+      <p><strong>疫苗</strong>就是"安全地让你先见一次敌人的通缉照片"——提前把记忆建好，等真敌人来了直接秒杀（第 8 章细讲）。</p>
+
+      <div class="note">
+        <span class="tag">三支队伍，一句话</span>
+        <p>先天免疫 = 边防 + 警察（快、粗放）；B 细胞 / 抗体 = 远程导弹（打细胞外）；T 细胞 = 特种兵（清除被感染的自己细胞）。记住这三句，后面就不会乱。</p>
+      </div>
+      <div class="note investor">
+        <span class="tag">承上启下</span>
+        <p>接下来的章节，就是把这张总图拆开细看：敌人到底怎么被"看见"（第 3、4 章：抗体、T 细胞受体与 MHC）？淋巴细胞怎么被"教育"得不打自己人（第 5 章）？仗怎么打起来、各种武器怎么用（第 6、7 章）？怎么记住、怎么做成疫苗（第 8 章）？出错会怎样（第 9 章）？以及怎么被做成药（第 10 章）？</p>
+      </div>
+    </section>
+
+    <!-- ============ im3 抗体与B细胞 (outline) ============ -->
+    <section class="module" id="im3">
+      <div class="eyebrow">Immunology 03 · Antibodies & B cells</div>
+      <h1><span class="cn">识别敌人①：抗体与 B 细胞</span></h1>
+      <p class="lede">抗体是免疫系统最有名的武器，也是今天最大一类药（单抗）。本章讲抗体长什么样、为什么能认几乎任何敌人、以及它怎么变得越来越精准。</p>
+      <div class="note"><span class="tag">本章要回答的问题</span>
+        <p>① 抗体为什么长成 "Y" 形——哪一端认敌人、哪一端干活？<br>② 上亿种抗体的<strong>多样性从哪来</strong>（基因的 VDJ 重排：用少量零件拼出海量组合）？<br>③ <strong>亲和力成熟</strong>（越打越准）和<strong>类别转换</strong>（IgM / IgG / IgA / IgE 各管什么场景）？<br>④ 抗体到底怎么起效——中和、调理（贴标签让人吞）、激活补体？</p>
+      </div>
+      <h3>本章大纲（待展开）</h3>
+      <ul>
+        <li><strong>结构</strong>：可变区（认脸的手）+ 恒定区（干活的柄）；轻链重链。</li>
+        <li><strong>多样性的来源</strong>：VDJ 基因重排——为什么"随机拼装"能造出几乎无穷的钥匙。</li>
+        <li><strong>五种抗体类型</strong>：IgM（先锋）、IgG（主力、能过胎盘）、IgA（黏膜/母乳）、IgE（过敏与抗寄生虫）、IgD。</li>
+        <li><strong>抗体的三种打法</strong>：中和、调理吞噬、激活补体。</li>
+        <li><strong>接回药物</strong>：单抗、双抗、ADC 全都建立在这一章——见<a href="dict/immunology.html">免疫词典</a>。</li>
+      </ul>
+      <p style="color:var(--faint)">＊本章为框架大纲，详细内容待逐步展开。</p>
+    </section>
+
+    <!-- ============ im4 T细胞与MHC (outline) ============ -->
+    <section class="module" id="im4">
+      <div class="eyebrow">Immunology 04 · T cells & MHC</div>
+      <h1><span class="cn">识别敌人②：T 细胞与 MHC</span></h1>
+      <p class="lede">T 细胞看不见完整的敌人，只能看"被切碎、摆在细胞表面托盘上"的敌人碎片。这个托盘就是 <strong>MHC</strong>——理解它，就理解了细胞免疫的一半。</p>
+      <div class="note"><span class="tag">本章要回答的问题</span>
+        <p>① MHC I 和 MHC II 是什么，分别把情报交给谁（CD8 杀伤 T / CD4 辅助 T）？<br>② <strong>抗原呈递</strong>：敌人怎么被切碎、摆上"托盘"展示给 T 细胞？<br>③ 为什么 T 细胞非得"看着 MHC"才认敌人（MHC 限制）？<br>④ 这跟器官移植排斥、跟 PD-1 类药有什么关系？</p>
+      </div>
+      <h3>本章大纲（待展开）</h3>
+      <ul>
+        <li><strong>两种托盘</strong>：MHC I（几乎所有细胞都有，展示"细胞内部情况"给 CD8）；MHC II（只有专业呈递细胞有，展示"吞进来的外部敌人"给 CD4）。</li>
+        <li><strong>抗原呈递</strong>：细胞如何把蛋白切成碎片、装上托盘。</li>
+        <li><strong>T 细胞受体 TCR</strong>：只认"MHC + 碎片"的组合，不认游离敌人。</li>
+        <li><strong>CD4 vs CD8</strong>：辅助 T（发号施令）vs 杀伤 T（动手处决）。</li>
+        <li><strong>接回药物</strong>：检查点抑制剂（PD-1 / CTLA-4）就是在调 T 细胞这套识别–激活系统。</li>
+      </ul>
+      <p style="color:var(--faint)">＊本章为框架大纲，详细内容待逐步展开。</p>
+    </section>
+
+    <!-- ============ im5 发育与自我耐受 (outline) ============ -->
+    <section class="module" id="im5">
+      <div class="eyebrow">Immunology 05 · Development & Tolerance</div>
+      <h1><span class="cn">免疫细胞的"军校"：发育与自我耐受</span></h1>
+      <p class="lede">淋巴细胞的"钥匙"是随机生成的，难免造出"会开自己家门"的危险分子。本章讲免疫系统如何在"军校"里把这些危险分子筛掉，从而<strong>不打自己人</strong>。</p>
+      <div class="note"><span class="tag">本章要回答的问题</span>
+        <p>① T 细胞在胸腺的"正选择 / 负选择"（留下能用的、杀掉会攻击自己的）？<br>② <strong>中枢耐受</strong>（在军校里筛）vs <strong>外周耐受</strong>（上岗后再管）？<br>③ 这套机制一旦失灵会怎样——自身免疫病的根源？<br>④ 为什么 <strong>Treg（调节性 T 细胞）</strong>是"免疫系统的刹车"？</p>
+      </div>
+      <h3>本章大纲（待展开）</h3>
+      <ul>
+        <li><strong>胸腺教育</strong>：正选择（能认 MHC 才留）+ 负选择（太爱打自己就杀掉）。</li>
+        <li><strong>自我耐受</strong>：为什么绝大多数人不会攻击自己。</li>
+        <li><strong>耐受破裂</strong>：自身免疫病（类风湿、狼疮、1 型糖尿病）是怎么发生的。</li>
+        <li><strong>Treg</strong>：主动踩刹车、防止免疫过度。</li>
+      </ul>
+      <p style="color:var(--faint)">＊本章为框架大纲，详细内容待逐步展开。</p>
+    </section>
+
+    <!-- ============ im6 启动与协同 (outline) ============ -->
+    <section class="module" id="im6">
+      <div class="eyebrow">Immunology 06 · Activation & Cooperation</div>
+      <h1><span class="cn">拉响警报与协同作战：适应性免疫的启动</span></h1>
+      <p class="lede">一场适应性免疫应答不是单打独斗，而是树突状细胞、辅助 T 细胞、B 细胞的精密配合。本章讲仗是怎么被"点着"的。</p>
+      <div class="note"><span class="tag">本章要回答的问题</span>
+        <p>① 树突状细胞怎么把情报送到淋巴结、点燃 T 细胞（<strong>双信号</strong>：抗原 + 共刺激，缺一不可，这是安全锁）？<br>② 辅助 T 细胞的分工：Th1 打胞内菌、Th2 打寄生虫/管过敏、Th17 守黏膜、Treg 踩刹车？<br>③ B 细胞怎么在辅助 T 的帮助下、在"生发中心"里把抗体越造越好？<br>④ 为什么"共刺激"既是安全锁、也是免疫药物的靶点？</p>
+      </div>
+      <h3>本章大纲（待展开）</h3>
+      <ul>
+        <li><strong>双信号原理</strong>：只有"抗原 + 共刺激"同时给到，T 细胞才启动——防止误伤。</li>
+        <li><strong>辅助 T 细胞亚群</strong>：Th1 / Th2 / Th17 / Treg 各打什么、分别对应哪些病。</li>
+        <li><strong>生发中心</strong>：抗体"精修车间"，亲和力成熟在这发生。</li>
+        <li><strong>接回药物</strong>：免疫词典里的 IL-17、IL-23、IL-4/13 就是这些辅助 T 路线的信号。</li>
+      </ul>
+      <p style="color:var(--faint)">＊本章为框架大纲，详细内容待逐步展开。</p>
+    </section>
+
+    <!-- ============ im7 效应机制 (outline) ============ -->
+    <section class="module" id="im7">
+      <div class="eyebrow">Immunology 07 · Effector Mechanisms</div>
+      <h1><span class="cn">各种"武器"：效应机制</span></h1>
+      <p class="lede">敌人被识别之后，到底怎么被"物理消灭"？本章盘点免疫系统的各种武器。</p>
+      <div class="note"><span class="tag">本章要回答的问题</span>
+        <p>① 抗体的三种打法（中和 / 调理吞噬 / 激活补体）具体怎么运作？<br>② 杀伤性 T 细胞怎么精准处决被感染的细胞（打孔 + 诱导它自杀）？<br>③ <strong>细胞因子</strong>——免疫细胞之间的"对讲机"，为什么它既是关键信号、又是"细胞因子风暴"的祸首？<br>④ 炎症怎么被放大、又怎么收场？</p>
+      </div>
+      <h3>本章大纲（待展开）</h3>
+      <ul>
+        <li><strong>抗体效应</strong>：中和、调理、补体、招募 NK（ADCC）。</li>
+        <li><strong>CTL 杀伤</strong>：穿孔素 + 颗粒酶，诱导靶细胞凋亡。</li>
+        <li><strong>细胞因子网络</strong>：TNF、干扰素、白介素——免疫的"对讲机"。</li>
+        <li><strong>接回药物</strong>：CAR-T 的"细胞因子风暴"要用抗 IL-6 解救，正是这一章的知识。</li>
+      </ul>
+      <p style="color:var(--faint)">＊本章为框架大纲，详细内容待逐步展开。</p>
+    </section>
+
+    <!-- ============ im8 记忆与疫苗 (outline) ============ -->
+    <section class="module" id="im8">
+      <div class="eyebrow">Immunology 08 · Memory & Vaccines</div>
+      <h1><span class="cn">记忆与疫苗</span></h1>
+      <p class="lede">免疫系统最神奇的能力是"记仇"。本章讲记忆怎么形成、疫苗如何利用它，以及为什么这是人类医学史上性价比最高的发明。</p>
+      <div class="note"><span class="tag">本章要回答的问题</span>
+        <p>① 记忆 B / T 细胞是什么，为什么再次应答又快又猛？<br>② <strong>主动免疫</strong>（打疫苗、自己造记忆）vs <strong>被动免疫</strong>（直接打现成抗体、见效快但不持久）？<br>③ 各类疫苗的原理（灭活 / 减毒 / 亚单位 / mRNA）——为什么 mRNA 疫苗是里程碑？<br>④ 群体免疫是什么、需要多少人打？</p>
+      </div>
+      <h3>本章大纲（待展开）</h3>
+      <ul>
+        <li><strong>记忆细胞</strong>：为什么"老兵"反应快、门槛低。</li>
+        <li><strong>主动 vs 被动免疫</strong>：疫苗 vs 抗体注射（如新冠单抗、抗毒血清）。</li>
+        <li><strong>疫苗类型</strong>：灭活、减毒、亚单位、载体、mRNA。</li>
+        <li><strong>接回药物</strong>：mRNA 平台（Moderna / BioNTech）正是这一章 + 递送技术的结合。</li>
+      </ul>
+      <p style="color:var(--faint)">＊本章为框架大纲，详细内容待逐步展开。</p>
+    </section>
+
+    <!-- ============ im9 当免疫出错 (outline) ============ -->
+    <section class="module" id="im9">
+      <div class="eyebrow">Immunology 09 · When It Goes Wrong</div>
+      <h1><span class="cn">当免疫出错：过敏 / 自免 / 免疫缺陷</span></h1>
+      <p class="lede">免疫太弱、太强、或打错对象，都会出病。本章是把前面所有机制"反过来看"——它们失灵时会怎样。</p>
+      <div class="note"><span class="tag">本章要回答的问题</span>
+        <p>① <strong>超敏反应（过敏）</strong>的四种类型（I–IV），从花粉过敏到接触性皮炎各是哪种？<br>② <strong>自身免疫病</strong>：免疫打自己人（类风湿、狼疮、1 型糖尿病、多发性硬化）？<br>③ <strong>免疫缺陷</strong>：先天缺陷 vs 后天（如 HIV 摧毁 CD4 T 细胞）？<br>④ 器官移植<strong>排斥</strong>，以及为什么要终身吃抗排斥药？</p>
+      </div>
+      <h3>本章大纲（待展开）</h3>
+      <ul>
+        <li><strong>超敏反应 I–IV</strong>：IgE 速发型（过敏/过敏性休克）、抗体型、免疫复合物型、T 细胞迟发型。</li>
+        <li><strong>自身免疫</strong>：耐受破裂的后果，对应免疫词典里一大批药。</li>
+        <li><strong>免疫缺陷</strong>：为什么缺了某个环节就反复感染。</li>
+        <li><strong>移植免疫</strong>：为什么身体把新器官当"外人"。</li>
+      </ul>
+      <p style="color:var(--faint)">＊本章为框架大纲，详细内容待逐步展开。</p>
+    </section>
+
+    <!-- ============ im10 免疫与药物 (outline) ============ -->
+    <section class="module" id="im10">
+      <div class="eyebrow">Immunology 10 · Immunology meets Drugs</div>
+      <h1><span class="cn">免疫与药物：接回药物创新</span></h1>
+      <p class="lede">最后一章把免疫学接回你已经学过的药物创新——现代最重磅的一批药，几乎都在"调免疫"。学完这章，回头翻<a href="dict/immunology.html">免疫词典</a>和<a href="dict/matrix.html">公司×通路矩阵</a>，你会发现全对得上。</p>
+      <div class="note"><span class="tag">本章要回答的问题</span>
+        <p>① <strong>检查点抑制剂</strong>（PD-1 / CTLA-4）：怎么"松开免疫的刹车"去打肿瘤（用到第 4、6 章）？<br>② <strong>CAR-T / T 细胞衔接器</strong>：怎么改造或指挥 T 细胞去杀癌（第 4、7 章）？<br>③ <strong>抗体药与细胞因子拮抗</strong>：怎么中和作乱的信号治自免（第 6、7 章）？<br>④ 疫苗与免疫佐剂（第 8 章）？</p>
+      </div>
+      <h3>本章大纲（待展开）</h3>
+      <ul>
+        <li><strong>松刹车</strong>：检查点抑制剂——把 T 细胞的"别打"信号解除。</li>
+        <li><strong>换武器/指方向</strong>：CAR-T、双抗（CD3 衔接器）——直接指挥 T 细胞。</li>
+        <li><strong>掐信号</strong>：抗 TNF、抗 IL-17/23、抗 IL-4/13——治自身免疫与过敏。</li>
+        <li><strong>建记忆</strong>：疫苗与 mRNA 平台。</li>
+      </ul>
+      <div class="note investor">
+        <span class="tag">两门课打通了</span>
+        <p>到这里，<a href="overview.html">概览课</a>的"弹药库/主战场"和这门免疫学就正式接上了：概览告诉你<em>有哪些药、在打哪条通路</em>；免疫学告诉你<em>这些药到底在拨动身体的哪根弦</em>。两边配合，你对"免疫类药物"的理解就完整了。</p>
+      </div>
+      <div class="footer-note">
+        免疫学入门 · Immunology 101 · 框架参考 Janeway《免疫生物学》<br>
+        为非专业背景设计 —— 浅显中文、重直觉。前 3 章已详写，其余章节将逐步展开到同样深度。
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  const nav=document.getElementById('nav');
+  const items=[...document.querySelectorAll('.nav-item[data-target]')];
+  const mods=[...document.querySelectorAll('.module')];
+  const rail=document.getElementById('rail');
+  const scrim=document.getElementById('scrim');
+  const menuBtn=document.getElementById('menuBtn');
+
+  function show(id){
+    if(!mods.some(m=>m.id===id)) id='im0';
+    items.forEach(i=>i.classList.toggle('active',i.dataset.target===id));
+    mods.forEach(m=>m.classList.toggle('active',m.id===id));
+    window.scrollTo({top:0,behavior:'instant' in window?'instant':'auto'});
+    closeRail();
+  }
+  window.im=function(id){history.replaceState(null,'','#'+id);show(id);return false;};
+  nav.addEventListener('click',e=>{
+    const b=e.target.closest('.nav-item[data-target]'); if(!b)return;
+    history.replaceState(null,'','#'+b.dataset.target);
+    show(b.dataset.target);
+  });
+  function openRail(){rail.classList.add('open');scrim.classList.add('show')}
+  function closeRail(){rail.classList.remove('open');scrim.classList.remove('show')}
+  menuBtn.addEventListener('click',openRail);
+  scrim.addEventListener('click',closeRail);
+  show((location.hash||'#im0').slice(1));
+  window.addEventListener('hashchange',()=>show((location.hash||'#im0').slice(1)));
+</script>
+</body>
+</html>

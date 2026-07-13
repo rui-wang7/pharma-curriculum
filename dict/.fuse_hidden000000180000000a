@@ -32,7 +32,7 @@
   </aside>
   <main class="main">
     <section class="page" style="max-width:none">
-      <div class="crumb"><a href="../overview.html">主课程</a><span class="sep">›</span><a href="index.html">词典</a><span class="sep">›</span>矩阵 · 公司 × 通路</div>
+      <div class="crumb"><a href="../index.html">主课程</a><span class="sep">›</span><a href="index.html">词典</a><span class="sep">›</span>矩阵 · 公司 × 通路</div>
       <div class="eyebrow">Cross-Reference Matrix</div>
       <h1><span class="cn">公司 × 通路 矩阵</span></h1>
       <p class="lede">把「公司词典」和「通路词典」交叉起来：<strong>横向是通路组</strong>（按 5 大疾病分类，沿用各词典的分区），<strong>纵向是市值前 30 家公司</strong>（并在末尾补入 3 家榜外新锐：Moderna / BioNTech / Legend Biotech），每个格子写出该公司在该通路上的<strong>具体靶点 + 行业地位</strong>。空格=该公司在这条通路上没有重大布局。表格较宽，可左右滑动。</p>

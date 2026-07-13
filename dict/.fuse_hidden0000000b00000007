@@ -20,8 +20,8 @@
     <div class="rail-divider"></div>
     <div class="nav-label">← 回主课程</div>
     <nav>
-      <a class="nav-item" href="../overview.html#m0"><span class="num">00</span><span class="txt">像药物猎手一样思考</span></a>
-      <a class="nav-item" href="../overview.html#m3"><span class="num">03</span><span class="txt">主战场：疾病与通路</span></a>
+      <a class="nav-item" href="../index.html#m0"><span class="num">00</span><span class="txt">像药物猎手一样思考</span></a>
+      <a class="nav-item" href="../index.html#m3"><span class="num">03</span><span class="txt">主战场：疾病与通路</span></a>
     </nav>
     <div class="rail-divider"></div>
     <div class="nav-label">词典 · 五大战场</div>
@@ -40,7 +40,7 @@
 
   <main class="main">
     <section class="page">
-      <div class="crumb"><a href="../overview.html">主课程</a><span class="sep">›</span>疾病·通路·成药 词典</div>
+      <div class="crumb"><a href="../index.html">主课程</a><span class="sep">›</span>疾病·通路·成药 词典</div>
       <div class="eyebrow">Reference · The Dictionary</div>
       <h1><span class="cn">疾病 · 通路 · 成药 词典</span></h1>
       <p class="lede">这是主课程的"查得动"配套：把"哪种病 = 走哪条通路 = 打哪个靶点 = 用什么弹药 = 成没成"一条条排开，像字典一样翻。每条都带一个状态徽章，让你一眼看出：这条路已经被人类走通了，还是科学仍在硬啃。</p>

@@ -40,7 +40,7 @@
 
   <main class="main">
     <section class="page">
-      <div class="crumb"><a href="../overview.html">主课程</a><span class="sep">›</span><a href="index.html">词典</a><span class="sep">›</span>肿瘤 Oncology</div>
+      <div class="crumb"><a href="../index.html">主课程</a><span class="sep">›</span><a href="index.html">词典</a><span class="sep">›</span>肿瘤 Oncology</div>
       <div class="eyebrow">Dictionary ① · Oncology</div>
       <h1><span class="cn">肿瘤词典</span> <span style="font-family:var(--mono);font-size:18px;color:var(--soft)">Oncology</span></h1>
       <p class="lede">肿瘤是"疾病→通路→靶点→成药"最丰富的战场，因为它的因果最直接：很多癌有明确的<strong>驱动突变</strong>，掐断就崩（oncogene addiction）。下面按"打法/通路"分区，每条给你靶点、因果强度、弹药、代表药、成没成，以及攻克它的关键"招"。</p>

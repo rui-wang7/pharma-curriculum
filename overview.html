@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>药物创新自学课程 · The Logic of Drug Discovery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Spectral:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<button class="menu-btn" id="menuBtn">☰ 目录</button>
+<div class="scrim" id="scrim"></div>
+<div class="shell">
+
+  <!-- NAV -->
+  <aside class="rail" id="rail">
+    <div class="brand"><span class="cn">药物创新的逻辑</span><br><span style="font-size:14px;color:var(--soft)">The Logic of Drug Discovery</span></div>
+    <div class="brand-sub">课程一 · 药物创新概览</div>
+    <div class="rail-divider"></div>
+    <div class="nav-label">切换</div>
+    <nav>
+      <a class="nav-item link" href="index.html"><span class="num">⌂</span><span class="txt">课程门户（首页）</span></a>
+      <a class="nav-item link" href="immunology.html"><span class="num">Ⅱ</span><span class="txt">免疫学入门</span></a>
+    </nav>
+    <div class="rail-divider"></div>
+    <div class="nav-label">本课程 · 分步（00–06）</div>
+    <nav id="nav">
+      <button class="nav-item active" data-target="m0"><span class="num">00</span><span class="txt">像药物猎手一样思考</span></button>
+      <button class="nav-item" data-target="m1"><span class="num">01</span><span class="txt">创新史：六次浪潮</span></button>
+      <button class="nav-item" data-target="m2"><span class="num">02</span><span class="txt">弹药库：Modality 地图</span></button>
+      <button class="nav-item" data-target="m3"><span class="num">03</span><span class="txt">主战场：疾病与通路</span></button>
+      <button class="nav-item" data-target="m4"><span class="num">04</span><span class="txt">当下最热的技术</span></button>
+      <button class="nav-item" data-target="m5"><span class="num">05</span><span class="txt">看清未来的框架</span></button>
+      <button class="nav-item" data-target="m6"><span class="num">06</span><span class="txt">投资者综合 & 词汇表</span></button>
+    </nav>
+    <div class="rail-divider"></div>
+    <div class="nav-label">Reference · 可点开</div>
+    <nav>
+      <a class="nav-item link" href="dict/index.html"><span class="num">§</span><span class="txt">疾病·通路·成药 词典</span></a>
+      <a class="nav-item link" href="dict/companies.html"><span class="num">§</span><span class="txt">公司与通路贡献 Top30</span></a>
+      <a class="nav-item link" href="dict/matrix.html"><span class="num">⊞</span><span class="txt">公司×通路 矩阵</span></a>
+    </nav>
+    <div class="rail-divider"></div>
+    <div class="rail-foot">
+      为生物医药投资者设计<br>
+      目标：达到研究生级别的<br>「设计逻辑 + 趋势判断」理解<br>
+      —— 不追求动手 / 分子细节
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- ============ MODULE 0 ============ -->
+    <section class="module active" id="m0">
+      <div class="eyebrow">Module 00 · The Mental Model</div>
+      <h1><span class="cn">像药物猎手一样思考</span></h1>
+      <p class="lede">在记住任何一个药、任何一个靶点之前，你要先装上一个"操作系统"。整门课的所有内容，都挂在下面这条链条上。学完你会发现：历史、通路、技术、趋势——全都是这条链条在不同环节上的故事。</p>
+
+      <div class="loop">
+        <div class="loop-title">The Drug Hunter's Loop · 药物发现的主循环</div>
+        <div class="chain">
+          <div class="link"><div class="k">01 Biology</div><div class="v">疾病生物学</div><div class="d">这个病到底哪里坏了？</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">02 Target</div><div class="v">靶点</div><div class="d">打哪个分子能纠正它？</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">03 Modality</div><div class="v">弹药形式</div><div class="d">用什么武器去打？</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">04 Molecule</div><div class="v">具体分子</div><div class="d">造出能成药的那一个</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">05 Proof</div><div class="v">临床验证</div><div class="d">在人身上真的有效&安全？</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">06 Market</div><div class="v">市场</div><div class="d">谁会用、谁来付钱？</div></div>
+        </div>
+      </div>
+
+      <h2><span class="cn">一个反直觉的核心</span></h2>
+      <p>外行常以为药企是"先看哪个病市场大 <span class="en">(TAM)</span>，再去做"。<strong>这是反的，也是很多公司失败的根因。</strong></p>
+      <p>真正的顺序：<em>先有一个生物学上说得通的机会（靶点科学质量），再去匹配合适的疾病。</em>市场大小是后面用来做取舍的<strong>过滤器</strong>，不是出发点。整条链条里，越靠<strong>左边（生物学 / 靶点）</strong>的风险，越决定生死；越靠右边（市场 / 定价）的风险，越决定回报的<strong>大小</strong>。</p>
+
+      <div class="note investor">
+        <span class="tag">给投资者</span>
+        <p>把任何一个 biotech 项目，拆进这六个环节去问"它卡在哪一环、赌的是哪一环"。<strong>一个项目的真实风险，几乎总是集中在某一两环上。</strong>能一眼指出那一环，你就已经领先大多数只会看 PPT 故事的人了。</p>
+      </div>
+
+      <h2><span class="cn">贯穿全课的四把尺子</span></h2>
+      <p>后面每讲一个技术、一个疾病，你都可以用这四把尺子去量。现在先混个眼熟：</p>
+      <ul>
+        <li><strong>因果强度</strong> <span class="en">Causality</span> —— 打掉这个靶点，病真的会好吗？证据从强到弱：人类遗传学 › 人体组织数据 › 动物模型 › 只有细胞/理论。</li>
+        <li><strong>可成药性</strong> <span class="en">Druggability</span> —— 这个靶点"够得着"吗？酶和细胞表面受体好打；很多转录因子曾被视为"不可成药"。</li>
+        <li><strong>临床可测性</strong> <span class="en">Measurability</span> —— 有没有快而清晰的读数（生物标志物）？还是要等好几年看"活得更久没有"？这决定烧钱速度和失败率。</li>
+        <li><strong>可获得市场</strong> <span class="en">Addressable Market</span> —— 不是"多少人得病"，而是"多少人会被确诊、愿意治、付得起、且对药有反应"。</li>
+      </ul>
+
+      <div class="note">
+        <span class="tag">怎么用这门课</span>
+        <p>建议顺序学：<strong>00 → 01 → 02</strong> 打底（思维、历史、弹药），这三块是骨架；<strong>03</strong> 看主战场，<strong>04</strong> 看当下热点，<strong>05</strong> 训练趋势判断，<strong>06</strong> 收口成投资清单。每一模块都会回扣上面这条 Loop 和四把尺子。想查具体"疾病→通路→成药"案例，随时点开左栏的 <a href="dict/index.html">疾病·通路·成药 词典</a>。</p>
+      </div>
+    </section>
+
+    <!-- ============ MODULE 1 ============ -->
+    <section class="module" id="m1">
+      <div class="eyebrow">Module 01 · History as Logic</div>
+      <h1><span class="cn">创新史：六次浪潮</span></h1>
+      <p class="lede">历史不要背年份，要看"逻辑接力"：每一波都是因为上一代解决不了某个问题，而某个新工具刚好把它破了。看懂这六波，你就懂了"为什么现在的前沿长这样"——因为它们都是被前面的墙逼出来的。</p>
+
+      <div class="waves">
+        <div class="wave"><div class="yr">~1900<br>之前</div><div class="dot"></div><div class="body">
+          <h3>浪潮一 · 偶然与天然产物 <span class="en">Serendipity</span></h3>
+          <p class="prob">阿司匹林（柳树皮）、洋地黄（毛地黄）、青霉素（霉菌）。<b>特点：先有药，后懂理。</b>我们在完全不懂机制的情况下，靠观察和运气找到了有效物质。这解释了为什么药理学的底色是"天然产物"。</p>
+        </div></div>
+        <div class="wave"><div class="yr">1950s<br>–70s</div><div class="dot"></div><div class="body">
+          <h3>浪潮二 · 受体药理与理性小分子 <span class="en">Rational Small Molecules</span></h3>
+          <p class="prob">James Black 用"受体"概念<b>设计</b>出 β-受体阻滞剂、H2 阻滞剂（治胃溃疡）。<b>关键转折：从"碰运气"变成"针对一个靶点去设计"</b>——"靶点导向"思维就此诞生。小分子口服药的黄金时代。</p>
+        </div></div>
+        <div class="wave"><div class="yr">1980s</div><div class="dot"></div><div class="body">
+          <h3>浪潮三 · 生物技术与重组蛋白 <span class="en">Recombinant Proteins</span></h3>
+          <p class="prob">用基因工程让细菌/细胞<b>生产人类蛋白</b>当药：重组胰岛素、EPO（升血红蛋白）、生长激素。<b>破的墙：</b>有些病是"缺一种蛋白"，小分子造不出蛋白，生物技术能。Genentech / Amgen 这一代崛起。</p>
+        </div></div>
+        <div class="wave"><div class="yr">1990s<br>–2000s</div><div class="dot"></div><div class="body">
+          <h3>浪潮四 · 单克隆抗体革命 <span class="en">The mAb Revolution</span></h3>
+          <p class="prob">抗体是"能精准识别一个目标的导弹"。Humira（抗 TNF，治自免）成为史上最畅销药；后来 PD-1/CTLA-4 免疫检查点抗体<b>改写了肿瘤治疗</b>。<b>破的墙：</b>细胞外的靶点（受体、细胞因子）用抗体打，又准又强。</p>
+        </div></div>
+        <div class="wave"><div class="yr">2000s<br>–10s</div><div class="dot"></div><div class="body">
+          <h3>浪潮五 · 基因组学与精准靶向 <span class="en">Genomics / Targeted Tx</span></h3>
+          <p class="prob">Gleevec（imatinib）证明：找到癌症的"驱动突变"（BCR-ABL），精准打它，能把绝症变慢性病。<b>核心思想："oncogene addiction"</b>——肿瘤上瘾于某个突变，掐断就崩。激酶抑制剂大爆发，"精准医疗 + 生物标志物分层"成为范式。</p>
+        </div></div>
+        <div class="wave"><div class="yr">2015<br>–至今</div><div class="dot"></div><div class="body">
+          <h3>浪潮六 · 新模态大爆发 <span class="en">The New Modalities</span></h3>
+          <p class="prob">RNA（siRNA、mRNA 疫苗）、细胞治疗（CAR-T）、基因治疗（AAV）、基因编辑（CRISPR）、蛋白降解（PROTAC）。<b>破的墙：</b>过去"不可成药"的靶点、"缺个基因"的遗传病，现在有了新武器。<b>这是你现在所处的时代——也是投资机会最密集的地方。</b></p>
+        </div></div>
+      </div>
+
+      <div class="note investor">
+        <span class="tag">趋势读法</span>
+        <p>注意这条"接力"的方向：<strong>从细胞外 → 细胞内 → 基因层面</strong>，从"控制症状 → 改造疾病 → 一次性治愈"。每一波新工具，都在把上一波"够不着的靶点"变成"够得着"。<em>下一次机会，往往就藏在"某个老靶点 + 某种新弹药"的组合里。</em></p>
+      </div>
+    </section>
+
+    <!-- ============ MODULE 2 ============ -->
+    <section class="module" id="m2">
+      <div class="eyebrow">Module 02 · The Arsenal</div>
+      <h1><span class="cn">弹药库：Modality 地图</span></h1>
+      <p class="lede">这是整门课最该内化的一张图。"Modality"（药物模态/弹药形式）决定了你能打哪种靶点、药效多久、多贵、多难造。看懂弹药与靶点的匹配关系，你就掌握了 biotech 世界的"元规则"。</p>
+
+      <p>组织这张地图，只需要两条轴：</p>
+      <ul>
+        <li><strong>横轴 · 靶点在哪里？</strong> 细胞<em>外</em>（受体、细胞因子、循环蛋白）→ 抗体/蛋白最擅长；细胞<em>内</em>但有"口袋"→ 小分子；细胞内且"光滑无口袋"→ 需要降解剂或基因层面的手段。</li>
+        <li><strong>纵轴 · 药效多持久？</strong> 每天吃一次的小分子 → 几周一针的抗体 → 几个月一针的 siRNA → <em>一次性、可能终身有效</em>的基因治疗。越持久，越接近"治愈"，但也越贵、越不可逆。</li>
+      </ul>
+
+      <div class="mapwrap">
+        <div class="cap">Modality Map · 弹药定位象限（横=靶点位置，纵=作用持久度）</div>
+        <div class="plot">
+          <div class="axis-y"><span>持久 · 一次性</span><span>短效 · 每日</span></div>
+          <div class="pt a" style="left:22%;bottom:14%"><div class="b"></div><div class="lab">小分子 Small mol.</div></div>
+          <div class="pt a" style="left:30%;bottom:30%"><div class="b"></div><div class="lab">口服肽 Peptide</div></div>
+          <div class="pt" style="left:78%;bottom:38%"><div class="b"></div><div class="lab">抗体 mAb</div></div>
+          <div class="pt" style="left:84%;bottom:52%"><div class="b"></div><div class="lab">ADC / 双抗</div></div>
+          <div class="pt" style="left:70%;bottom:26%"><div class="b"></div><div class="lab">重组蛋白</div></div>
+          <div class="pt a" style="left:34%;bottom:64%"><div class="b"></div><div class="lab">siRNA / ASO</div></div>
+          <div class="pt a" style="left:26%;bottom:80%"><div class="b"></div><div class="lab">降解剂 PROTAC</div></div>
+          <div class="pt" style="left:56%;bottom:88%"><div class="b"></div><div class="lab">mRNA</div></div>
+          <div class="pt a" style="left:40%;bottom:93%"><div class="b"></div><div class="lab">基因治疗/编辑</div></div>
+          <div class="pt" style="left:88%;bottom:90%"><div class="b"></div><div class="lab">细胞治疗 CAR-T</div></div>
+          <div class="axis-x"><span>← 细胞内 Intracellular</span><span>细胞外 Extracellular →</span></div>
+        </div>
+        <div class="map-legend">
+          <span><span class="dota"></span> 主要打细胞内靶点</span>
+          <span><span class="dotv"></span> 主要打细胞外 / 表面靶点</span>
+        </div>
+      </div>
+
+      <h2><span class="cn">每种弹药，一句话记住它</span></h2>
+      <table class="tbl">
+        <tr><th>弹药</th><th>本质（大白话）</th><th>甜蜜点</th><th>最大软肋</th></tr>
+        <tr><td>小分子<br><span class="en">Small molecule</span></td><td>能钻进细胞、塞进蛋白口袋的小化学分子</td><td>细胞内靶点、口服、便宜、可规模化</td><td>需要有"口袋"；选择性差易脱靶</td></tr>
+        <tr><td>抗体<br><span class="en">mAb</span></td><td>精准识别一个目标的"生物导弹"</td><td>细胞外/表面靶点，准、强、长效</td><td>进不了细胞；要打针；贵</td></tr>
+        <tr><td>ADC</td><td>抗体（导航）+ 毒素（弹头）</td><td>把化疗毒素<em>定点</em>投到癌细胞</td><td>毒素脱靶、载荷/连接子工程难</td></tr>
+        <tr><td>双抗/T细胞衔接器<br><span class="en">Bispecific</span></td><td>一手抓癌细胞、一手拽免疫细胞去杀它</td><td>"现成"免疫激活，无需改造病人细胞</td><td>细胞因子风暴等安全性</td></tr>
+        <tr><td>siRNA / ASO<br><span class="en">Oligo</span></td><td>在源头"关掉"某个基因的表达（少造某蛋白）</td><td>肝脏靶点、几个月一针、极长效</td><td>递送难（目前主要到肝）</td></tr>
+        <tr><td>mRNA</td><td>给身体一份"图纸"，让它自己造蛋白/抗原</td><td>疫苗、快速可编程、平台化</td><td>递送（LNP）、稳定性、瞬时表达</td></tr>
+        <tr><td>基因治疗<br><span class="en">AAV</span></td><td>把一个正常基因"补"进去</td><td>单基因遗传病，<em>一次性可能治愈</em></td><td>贵到天价、不可逆、免疫反应</td></tr>
+        <tr><td>基因编辑<br><span class="en">CRISPR</span></td><td>直接"改写"DNA 里的错字</td><td>从根上修复致病突变</td><td>脱靶、递送、伦理与长期安全</td></tr>
+        <tr><td>细胞治疗<br><span class="en">CAR-T</span></td><td>把病人自己的免疫细胞取出、改造、再输回去</td><td>血液肿瘤疗效惊人，可"活药"增殖</td><td>贵、个体化难规模化、实体瘤难</td></tr>
+        <tr><td>降解剂<br><span class="en">PROTAC</span></td><td>不是抑制蛋白，而是给它贴"垃圾标签"让细胞销毁它</td><td>攻克"无口袋、不可成药"的细胞内靶点</td><td>分子大、口服性/成药性挑战</td></tr>
+      </table>
+
+      <div class="note investor">
+        <span class="tag">这张图怎么变成钱</span>
+        <p>投资机会经常长这样：<strong>一个"机制已被验证、但过去弹药够不着"的靶点，遇上一种"新弹药"。</strong>例如 PCSK9 这个降胆固醇靶点，先有抗体（几周一针），后有 siRNA（半年一针，inclisiran）——同一个靶点，换更持久的弹药，就是一个新的产品周期。<em>当你看到"老靶点 + 新模态"，多看两眼。</em></p>
+      </div>
+    </section>
+
+    <!-- ============ MODULE 3 ============ -->
+    <section class="module" id="m3">
+      <div class="eyebrow">Module 03 · The Battlegrounds</div>
+      <h1><span class="cn">主战场：疾病与通路</span></h1>
+      <p class="lede">现在把弹药落到具体战场。每个疾病领域都有它的"主导通路"和"作战风格"。你不需要记通路里每个分子，但要记住：<strong>每个领域为什么长这样、钱和难度集中在哪。</strong>每个战场标题下都有「进入词典」链接，点开可查该领域逐条"疾病→通路→靶点→成药状态"的案例。</p>
+
+      <div class="note">
+        <span class="tag">配套词典</span>
+        <p>这一模块是"地图"，讲每个战场的整体格局；具体到一条条通路和药，去 <a href="dict/index.html">疾病·通路·成药 词典</a> 查——那里像字典一样按状态徽章（✅已成功 / 🔧爬坡中 / ⚠️反复失败）逐条排列。</p>
+      </div>
+
+      <h2 id="onc"><span class="cn">① 肿瘤 Oncology —— 最大、最卷、最前沿</span></h2>
+      <p>底层框架是"癌症的标志 <span class="en">Hallmarks of Cancer</span>"：癌细胞获得了持续增殖、逃避凋亡、诱导血管、逃避免疫等能力。药物就是去<strong>掐断</strong>其中某个能力。三条主线：</p>
+      <ul>
+        <li><strong>精准靶向</strong>：找到"驱动突变"（如 EGFR、ALK、KRAS），用小分子/抗体精准打。逻辑=oncogene addiction。前提是<em>先做基因检测分层</em>。</li>
+        <li><strong>免疫治疗</strong>：不直接杀癌，而是<em>松开免疫系统的刹车</em>（PD-1/PD-L1、CTLA-4 检查点抑制剂）。改写了黑色素瘤、肺癌等的预后。</li>
+        <li><strong>精准投毒 & 细胞治疗</strong>：ADC（定点化疗）、CAR-T（改造免疫细胞）、放射配体（把放射性"贴"到癌细胞上，见模块04）。</li>
+      </ul>
+      <div class="note"><span class="tag">作战风格</span><p>肿瘤=市场巨大但极度拥挤、临床终点相对可测（肿瘤缩小/生存期）。<strong>胜负手在"差异化"和"生物标志物选对人群"</strong>——小而确定的响应人群，往往比大而模糊的更值钱。 →&nbsp;<a href="dict/oncology.html">进入肿瘤词典（20+ 靶点逐条）</a></p></div>
+
+      <h2><span class="cn">② 免疫与炎症 Immunology</span></h2>
+      <p>核心是几条"细胞因子"信号在作乱：<span class="en">TNF、IL-23、IL-17、IL-4/13</span>，以及它们下游的 <span class="en">JAK-STAT</span> 通路。打法就是<strong>中和某个细胞因子</strong>（抗体）或<strong>阻断信号</strong>（JAK 抑制剂小分子）。</p>
+      <div class="note"><span class="tag">"一药多病"现象</span><p>同一条通路常在多个自免病里作乱，所以一个药能不断拓展适应症（银屑病→关节炎→肠病…），俗称 <span class="en">"pipeline in a product"</span>。这类资产的价值会随适应症扩张而滚大——投资时要看它的"适应症地图"。 →&nbsp;<a href="dict/immunology.html">进入免疫词典</a></p></div>
+
+      <h2><span class="cn">③ 代谢 Metabolic —— 当下最火的超级周期</span></h2>
+      <p>两个必须懂的故事：</p>
+      <ul>
+        <li><strong>PCSK9 = 人类遗传学的教科书案例</strong>：有人天生此基因失活，终身低胆固醇、少心血管病、还活得好好的——这几乎是"照抄人体实验答案"，所以 PCSK9 药成功率极高。<em>记住它，因为它是"因果强度"这把尺子的满分范本。</em></li>
+        <li><strong>GLP-1 = 肥胖超级周期</strong>：incretin（肠促胰素）生物学，semaglutide、tirzepatide（双靶 GIP/GLP-1）不仅降糖，还大幅减重，正在向心血管、肾、睡眠呼吸暂停、甚至成瘾等外延。这是十年一遇的 TAM 级机会（见模块04）。</li>
+      </ul>
+      <div class="note"><span class="tag">配套词典</span><p>PCSK9、GLP-1、Lp(a)、ANGPTL3、SGLT2… 逐条状态见 →&nbsp;<a href="dict/metabolic.html">进入代谢词典</a></p></div>
+
+      <h2><span class="cn">④ 神经 CNS —— 高风险的"坟场"</span></h2>
+      <p>为什么难？三座墙：<strong>血脑屏障</strong>（药进不去）、<strong>模型差</strong>（动物脑≠人脑）、<strong>终点慢而模糊</strong>（"认知退化慢一点"要等几年、上千人、几亿美元）。阿尔茨海默的淀粉样蛋白（amyloid）假说几十年屡战屡败，近年 lecanemab / donanemab 才勉强验证部分获益，争议仍大。</p>
+      <div class="note investor"><span class="tag">给投资者</span><p>CNS 的高失败率来自"临床可测性"这把尺子给了低分。新的赌注多转向<strong>有明确遗传学支撑</strong>的 CNS 病（如某些罕见神经病、亨廷顿），用它来对冲"因果不清"的风险。 →&nbsp;<a href="dict/cns.html">进入 CNS 词典</a></p></div>
+
+      <h2><span class="cn">⑤ 罕见/遗传病 Rare Disease —— 新模态的完美战场</span></h2>
+      <p>逻辑最干净：<strong>单基因病 = 一个明确的因果 + 一个明确的靶点。</strong>正好是基因治疗、siRNA、CRISPR 大显身手的地方。虽然人少，但<em>响应确定、竞争少、定价极高</em>（罕见病单价可达百万美元级），过去十年资本大量涌入。 →&nbsp;<a href="dict/rare.html">进入罕见病词典</a></p>
+
+      <table class="tbl">
+        <tr><th>领域</th><th>因果强度</th><th>临床可测性</th><th>市场特征</th></tr>
+        <tr><td>肿瘤</td><td>中–高（有驱动突变）</td><td>较好</td><td>巨大但极卷</td></tr>
+        <tr><td>免疫炎症</td><td>中–高</td><td>好</td><td>大，一药多病</td></tr>
+        <tr><td>代谢</td><td>高（如PCSK9/GLP-1）</td><td>好（血糖/体重可测）</td><td>超大 TAM</td></tr>
+        <tr><td>神经CNS</td><td>常偏低</td><td>差（慢而模糊）</td><td>大但坟场</td></tr>
+        <tr><td>罕见遗传病</td><td>很高（单基因）</td><td>视病而定</td><td>小而确定、高价</td></tr>
+      </table>
+    </section>
+
+    <!-- ============ MODULE 4 ============ -->
+    <section class="module" id="m4">
+      <div class="eyebrow">Module 04 · What's Hot Now</div>
+      <h1><span class="cn">当下最热的技术</span></h1>
+      <p class="lede">这些是当前（2025–2026）资金与人才最密集的方向。每一个都用同一个模板讲：核心想法 → 为什么是现在 → 打开了什么 → 尚存的风险。看的时候，随时用模块00的四把尺子去量它。</p>
+
+      <div class="card">
+        <h3>1 · GLP-1 与代谢超级周期</h3>
+        <p><strong>核心：</strong>肠促胰素类药物（semaglutide、双靶 tirzepatide）在减重上效果空前，并向心血管、肾病、MASH、睡眠呼吸暂停等大面积外延。<strong>为什么是现在：</strong>疗效强 + 适应症像滚雪球 + 潜在人群以亿计。<strong>前沿：</strong>口服版、三靶点、肌肉保护型、更长效。<strong>风险：</strong>供给、依从性、长期安全、支付压力。</p>
+        <div class="pills"><span class="pill">最大TAM故事</span><span class="pill">incretin</span><span class="pill">oral next</span></div>
+      </div>
+
+      <div class="card">
+        <h3>2 · ADC 抗体偶联药物</h3>
+        <p><strong>核心：</strong>抗体做导航、细胞毒素做弹头，把化疗<em>定点</em>送进癌细胞。Enhertu（trastuzumab deruxtecan）是标杆，重新定义了 HER2 治疗。<strong>为什么是现在：</strong>连接子(linker)和载荷(payload)工程成熟，"旁观者效应"扩大杀伤。<strong>打开了：</strong>把老靶点重新武器化。<strong>风险：</strong>毒性窗口、耐药、拥挤。</p>
+        <div class="pills"><span class="pill">精准投毒</span><span class="pill">linker/payload</span></div>
+      </div>
+
+      <div class="card">
+        <h3>3 · 双抗 / T 细胞衔接器</h3>
+        <p><strong>核心：</strong>一个分子两只手——抓住癌细胞，同时拽来 T 细胞把它杀掉（如 CD3×肿瘤抗原）。<strong>相对 CAR-T 的优势：</strong>"现货"、无需改造病人细胞、更易规模化。<strong>风险：</strong>细胞因子释放综合征等安全性管理。</p>
+        <div class="pills"><span class="pill">off-the-shelf</span><span class="pill">TCE</span></div>
+      </div>
+
+      <div class="card">
+        <h3>4 · 放射配体疗法 <span class="en">Radioligand / RPT</span></h3>
+        <p><strong>核心：</strong>把放射性同位素"贴"到能精准找到癌细胞的分子上，实现"定点核打击"。Pluvicto（PSMA，前列腺癌）、Lutathera 打开了这个赛道。<strong>为什么热：</strong>疗效硬 + 同位素供应链成壁垒。<strong>风险：</strong>同位素供给、给药基础设施重。</p>
+        <div class="pills"><span class="pill">isotope供应链</span><span class="pill">theranostics</span></div>
+      </div>
+
+      <div class="card">
+        <h3>5 · 体内基因编辑 & 下一代 CRISPR</h3>
+        <p><strong>核心：</strong>Casgevy（exa-cel）已成为首个获批的 CRISPR 疗法（镰状细胞/地贫）。前沿在从"体外改造再回输"走向<em>体内直接编辑</em>，以及碱基编辑/先导编辑（base/prime editing，更精准、少断裂）。<strong>打开了：</strong>从根上一次性修复遗传病。<strong>风险：</strong>递送（如何送到肝以外）、脱靶、天价。</p>
+        <div class="pills"><span class="pill">in vivo editing</span><span class="pill">base/prime</span></div>
+      </div>
+
+      <div class="card">
+        <h3>6 · siRNA 的成熟化</h3>
+        <p><strong>核心：</strong>用 GalNAc 偶联把 siRNA 精准送到肝细胞，几个月一针"关掉"致病基因。patisiran、inclisiran（PCSK9）证明了长效 + 依从性优势。<strong>下一步：</strong>突破"只能到肝"的递送边界（送到中枢、肌肉、肿瘤）。</p>
+        <div class="pills"><span class="pill">GalNAc</span><span class="pill">超长效</span></div>
+      </div>
+
+      <div class="card">
+        <h3>7 · TPD 靶向蛋白降解</h3>
+        <p><strong>核心：</strong>PROTAC / 分子胶不"抑制"蛋白，而是给它贴垃圾标签、让细胞把它<em>销毁</em>。<strong>为什么重要：</strong>能攻克大量"无口袋、传统不可成药"的细胞内靶点（转录因子、支架蛋白）。<strong>风险：</strong>分子大、口服成药性、选择性。</p>
+        <div class="pills"><span class="pill">molecular glue</span><span class="pill">undruggable→druggable</span></div>
+      </div>
+
+      <div class="card">
+        <h3>8 · AI / 计算驱动的药物发现</h3>
+        <p><strong>核心：</strong>AlphaFold 把"预测蛋白结构"从难题变成常规；de novo 蛋白设计、生成式分子设计、AI 读病理/筛靶点正在铺开。<strong>务实的判断：</strong>AI 目前最实在的价值在<em>早期（靶点发现、结构、先导优化、试验设计）</em>——它压缩的是<strong>发现阶段的时间和成本</strong>，但<em>还改变不了"临床能不能成"这个最大的赌注</em>。别把 AI 当成能绕过临床风险的银弹。</p>
+        <div class="pills"><span class="pill">AlphaFold</span><span class="pill">生成式设计</span><span class="pill">别神化</span></div>
+      </div>
+
+      <div class="note investor">
+        <span class="tag">识别炒作 vs 真突破</span>
+        <p>一个朴素的过滤器：<strong>它是压缩了"发现成本"，还是真的降低了"临床失败率"？</strong>前者有价值但容易被高估（很多公司在这），后者才是稀缺的圣杯。任何声称"AI 让药必成"的说法，都要打问号。</p>
+      </div>
+    </section>
+
+    <!-- ============ MODULE 5 ============ -->
+    <section class="module" id="m5">
+      <div class="eyebrow">Module 05 · Reading the Future</div>
+      <h1><span class="cn">看清未来的框架</span></h1>
+      <p class="lede">前面给的是"知识"，这一模块给的是"元技能"——一组能让你在新技术出现时，自己判断它有多大、多快、值不值的思维工具。这是你从"学过"走向"看得懂未来"的关键。</p>
+
+      <h2><span class="cn">框架一 · "不可成药 → 可成药"引擎</span></h2>
+      <p>药物创新最持久的引擎，就是不断把"够不着的靶点"变成"够得着"。KRAS 曾被认为不可成药几十年，sotorasib 等 G12C 抑制剂证明了它可以。<strong>每当一种新弹药诞生，它就解锁了一整批过去被判死刑的靶点。</strong></p>
+      <div class="note"><span class="tag">怎么用</span><p>盯住"新弹药 × 存量已知靶点"的笛卡尔积。一个成熟的新模态出现时，问：<em>它让哪一批过去做不了的靶点，突然变得可做了？</em>那批靶点里，就藏着下一波管线。</p></div>
+
+      <h2><span class="cn">框架二 · 模态的 S 曲线</span></h2>
+      <p>每种模态都会走一条成熟曲线：<strong>概念验证 → 首个获批（惊艳但粗糙）→ 平台化 / 工程化成熟 → 规模化降本</strong>。抗体、siRNA 都走完了大半；细胞治疗、基因编辑还在中段（贵、难规模化）。<em>判断一个模态处在曲线哪一段，就能判断它未来的空间与瓶颈。</em>瓶颈通常是同一个词——<strong>递送 Delivery</strong>。</p>
+
+      <h2><span class="cn">框架三 · 价值向"平台"迁移</span></h2>
+      <p>单个药是资产，能反复产药的<strong>平台/技术</strong>是复利机器。mRNA（LNP 递送 + 可编程序列）、GalNAc-siRNA、通用型细胞治疗——它们的价值不在某一个产品，而在"能不断量产新产品"。<em>看一家公司，分清它卖的是"一个药"还是"一台产药机"。</em></p>
+
+      <h2><span class="cn">框架四 · 从"治疗"到"治愈"到"预防"</span></h2>
+      <p>大方向：慢性给药（终身吃药）→ 一次性治愈（基因/细胞）→ 早筛与预防（多癌早筛、遗传风险干预）。越往后，单次价值越高、支付模式越需要重构（一次性天价药 vs 分期付款/按疗效付费）。</p>
+
+      <h2><span class="cn">框架五 · 别忘了"非科学"的力量</span></h2>
+      <p>三股会重塑格局的外部力量，投资者尤其要盯：</p>
+      <ul>
+        <li><strong>支付与政策</strong>：美国 IRA 让 Medicare 可以谈判药价、专利悬崖（2028 前后一大批重磅药到期）——直接改变现金流与并购动机。</li>
+        <li><strong>中国 biotech 崛起</strong>：越来越多"first/best-in-class"资产从中国 license-out 给跨国药企（对外授权潮），改变了创新的地理与估值。</li>
+        <li><strong>技术融合</strong>：AI + 自动化实验室（干湿闭环）+ 合成生物学，正在压缩"发现"阶段，长期或改变整个行业的成本结构。</li>
+      </ul>
+
+      <div class="note investor">
+        <span class="tag">趋势判断的一页纸</span>
+        <p>看到任何"新东西"，连问五题：① 它把哪批不可成药的靶点解锁了？ ② 它在 S 曲线哪一段、瓶颈是不是递送？ ③ 它是一个药还是一台产药机？ ④ 它把治疗往"治愈/预防"推了多远？ ⑤ 政策/支付/地缘会怎么放大或压制它？ —— 能答这五题，你就具备了研究生级的趋势判断力。</p>
+      </div>
+    </section>
+
+    <!-- ============ MODULE 6 ============ -->
+    <section class="module" id="m6">
+      <div class="eyebrow">Module 06 · Synthesis</div>
+      <h1><span class="cn">投资者综合 & 词汇表</span></h1>
+      <p class="lede">把整门课收口成你能直接用的东西：一张拷问项目的清单、一份必备词汇、一条持续学习的路径。</p>
+
+      <h2><span class="cn">拷问任何 biotech 项目的六问</span></h2>
+      <ul class="checklist">
+        <li data-n="1"><b>因果强度：</b>靶点的人类遗传学证据强吗？（预测成败的单一最强指标）</li>
+        <li data-n="2"><b>机制验证：</b>这个机制被临床验证过了吗？还是拿你的钱去当第一个小白鼠？</li>
+        <li data-n="3"><b>临床可测性：</b>终点是快而清晰，还是慢而模糊？（决定烧钱速度与失败率）</li>
+        <li data-n="4"><b>竞争身份：</b>它是 first / best / me-too？有真差异化吗？（best-in-class 常是甜蜜点）</li>
+        <li data-n="5"><b>可获得市场：</b>是"小而确定、能高价、竞争少"，还是"大而拥挤、被医保压价"？</li>
+        <li data-n="6"><b>平台匹配：</b>它的弹药平台，配得上它选的靶点吗？它卖的是一个药还是一台产药机？</li>
+      </ul>
+
+      <h2><span class="cn">最小必备词汇表</span></h2>
+      <table class="tbl">
+        <tr><th>术语</th><th>一句话</th></tr>
+        <tr><td>Target 靶点</td><td>药物直接作用的那个分子（多为蛋白）</td></tr>
+        <tr><td>Modality 模态</td><td>药物的"弹药形式"（小分子/抗体/RNA/细胞…）</td></tr>
+        <tr><td>Mechanism of Action (MoA)</td><td>药是"怎么起效"的机制</td></tr>
+        <tr><td>Druggability</td><td>靶点"够不够得着"、能不能被药抓住</td></tr>
+        <tr><td>Biomarker 生物标志物</td><td>能快速读出"药起没起效/选对没选对人"的指标</td></tr>
+        <tr><td>First / Best-in-class</td><td>第一个做这机制 / 不是第一但做得最好</td></tr>
+        <tr><td>Proof of Concept (PoC)</td><td>首次在人身上证明"这机制真的有用"</td></tr>
+        <tr><td>Phase I / II / III</td><td>临床三阶段：安全 → 初步有效 → 大规模确证</td></tr>
+        <tr><td>Oncogene addiction</td><td>肿瘤"上瘾"于某个驱动突变，掐断就崩</td></tr>
+        <tr><td>Delivery 递送</td><td>把药精准送到该去的组织——新模态的永恒瓶颈</td></tr>
+        <tr><td>Pipeline-in-a-product</td><td>一个药靠不断扩适应症滚出多重价值</td></tr>
+      </table>
+
+      <h2><span class="cn">怎么持续保持"研究生级"</span></h2>
+      <p>这门课给你骨架，前沿要靠持续输入来更新。建议长期跟：</p>
+      <ul>
+        <li><strong>综述级</strong>：<span class="en">Nature Reviews Drug Discovery</span>（读它的 review 和年度获批盘点，性价比最高）。</li>
+        <li><strong>行业新闻</strong>：<span class="en">Endpoints News、STAT、Fierce Biotech</span>（交易、临床读数、监管动态）。</li>
+        <li><strong>一手信息</strong>：大药企的 <span class="en">R&amp;D Day</span>、ASCO/AACR/ASH 等大会摘要、FDA 获批公告。</li>
+        <li><strong>方法</strong>：每遇到一个新药/新技术，强迫自己用<em>模块00的四把尺子 + 模块05的五问</em>过一遍。练二十次，判断力就成肌肉记忆。</li>
+      </ul>
+
+      <div class="note investor">
+        <span class="tag">你现在的水平</span>
+        <p>如果你能拿起一个陌生的 biotech，说清楚：它在 Loop 的哪一环下注、四把尺子各打几分、处在哪个模态的 S 曲线、以及它是药还是产药机——<strong>你已经具备了研究生级的"设计逻辑 + 趋势判断"理解力。</strong>剩下的只是把这套框架，在越来越多真实案例上磨快。</p>
+      </div>
+
+      <div class="footer-note">
+        药物创新的逻辑 · The Logic of Drug Discovery · v2 自学课程<br>
+        为生物医药投资者设计 —— 重逻辑与趋势，轻分子细节。配套「疾病·通路·成药 词典」逐条深挖。
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  const nav=document.getElementById('nav');
+  const items=[...document.querySelectorAll('.nav-item[data-target]')];
+  const mods=[...document.querySelectorAll('.module')];
+  const rail=document.getElementById('rail');
+  const scrim=document.getElementById('scrim');
+  const menuBtn=document.getElementById('menuBtn');
+
+  function show(id){
+    if(!mods.some(m=>m.id===id)) id='m0';
+    items.forEach(i=>i.classList.toggle('active',i.dataset.target===id));
+    mods.forEach(m=>m.classList.toggle('active',m.id===id));
+    document.querySelector('.main').scrollTo?.(0,0);
+    window.scrollTo({top:0,behavior:'instant' in window?'instant':'auto'});
+    closeRail();
+  }
+  nav.addEventListener('click',e=>{
+    const b=e.target.closest('.nav-item[data-target]'); if(!b)return;
+    history.replaceState(null,'','#'+b.dataset.target);
+    show(b.dataset.target);
+  });
+  // honor #m3 style deep-links from sub-pages
+  show((location.hash||'#m0').slice(1));
+  window.addEventListener('hashchange',()=>show((location.hash||'#m0').slice(1)));
+  function openRail(){rail.classList.add('open');scrim.classList.add('show')}
+  function closeRail(){rail.classList.remove('open');scrim.classList.remove('show')}
+  menuBtn.addEventListener('click',openRail);
+  scrim.addEventListener('click',closeRail);
+</script>
+</body>
+</html>
