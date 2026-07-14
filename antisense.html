@@ -27,6 +27,7 @@
       <button class="nav-item" data-target="as6"><span class="num">06</span><span class="txt">毒性与脱靶</span></button>
       <button class="nav-item" data-target="as7"><span class="num">07</span><span class="txt">临床里程碑与选病逻辑</span></button>
       <button class="nav-item" data-target="as8"><span class="num">08</span><span class="txt">平台价值与展望</span></button>
+      <button class="nav-item" data-target="astrials"><span class="num">★</span><span class="txt">临床案例库</span></button>
     </nav>
     <div class="rail-cross">
       <div class="nav-label">切换 · 参考</div>
@@ -405,6 +406,133 @@
       <div class="footer-note">
         反义药物技术入门 · Antisense Drug Technology · 框架参考 Stanley Crooke《Antisense Drug Technology》<br>
         为非专业背景设计 —— 浅显中文、重直觉。全 9 章已完成。
+      </div>
+    </section>
+
+    <!-- astrials 临床案例库 -->
+    <section class="module" id="astrials">
+      <div class="eyebrow">Antisense ★ · Clinical Trials</div>
+      <h1><span class="cn">临床案例库：核酸药物的关键试验</span></h1>
+      <p class="lede trials-intro">反义技术从"美好设想"变成"真药"，靠的是一串标志性试验。这里按统一格式拆解它们——你会看到不同机制（剪接调控 / siRNA）、不同递送（鞘内 / LNP / GalNAc）、不同适应症（SMA / 淀粉样变 / 高血脂 / ALS）如何各自兑现，也会看到一个<strong>诚实的"终点争议"案例</strong>。每张卡片都对应本课某一章。</p>
+
+      <h2><span class="cn">先读懂这些指标</span></h2>
+      <div class="metric-key">
+        <div class="mk"><b>运动里程碑</b>婴儿能否达到抬头/翻身/独坐等发育动作</div>
+        <div class="mk"><b>HFMSE</b>运动功能评分——分数越高运动能力越好</div>
+        <div class="mk"><b>mNIS+7</b>神经病变评分——<strong>分数越低越好</strong>（治疗组下降=好转）</div>
+        <div class="mk"><b>LDL-C</b>"坏"胆固醇水平</div>
+        <div class="mk"><b>ALSFRS-R</b>ALS 功能评分——衡量渐冻症患者的日常功能</div>
+        <div class="mk"><b>NfL</b>神经丝轻链——反映神经损伤程度的生物标志物</div>
+      </div>
+      <div class="note">
+        <span class="tag">关于数据</span>
+        <p>下列为四舍五入的标志性结果，用于建立直觉；精确数值请以原始文献为准。</p>
+      </div>
+
+      <h2><span class="cn">剪接调控 ASO：把绝症变可治（对应第 2、5 章）</span></h2>
+
+      <div class="trial">
+        <div class="tr-top">
+          <div class="tr-name">ENDEAR <span class="en2">nusinersen · 诺西那生</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">婴儿型 SMA（1 型）</span></div>
+        </div>
+        <div class="trow"><div class="lbl">设计</div><div class="val"><b>诺西那生（剪接调控 ASO，鞘内注射）</b> <span class="vs">vs</span> 假操作对照；随机 2:1</div></div>
+        <div class="trow"><div class="lbl">人群</div><div class="val">婴儿型（1 型）脊髓性肌萎缩——曾是婴儿头号遗传致死病；N ≈ 121</div></div>
+        <div class="trow"><div class="lbl">时间</div><div class="val">约 2014–2016，因中期效果显著提前终止</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">运动里程碑应答</div><div class="m-v">≈51%<small> vs 0%</small></div><div class="m-d">对照组无一应答</div></div>
+          <div class="tr-metric"><div class="m-k">死亡/永久通气风险</div><div class="m-v">↓约47%</div><div class="m-d"></div></div>
+        </div>
+        <div class="tr-read">第 2 章"剪接调控"的封神之作：ASO 贴在剪接位点上，<strong>引导身体把"备份基因 SMN2"重新剪出能用的蛋白</strong>。对照组无一达到运动里程碑，治疗组过半数达到——把一个必死的婴儿病变成可治。递送用第 5 章的<strong>鞘内注射</strong>（绕开血脑屏障直达脊髓）。</div>
+      </div>
+
+      <div class="trial">
+        <div class="tr-top">
+          <div class="tr-name">CHERISH <span class="en2">nusinersen</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">晚发型 SMA 儿童</span></div>
+        </div>
+        <div class="trow"><div class="lbl">设计</div><div class="val"><b>诺西那生</b> <span class="vs">vs</span> 假操作对照（不同亚型/年龄的独立验证）</div></div>
+        <div class="trow"><div class="lbl">人群</div><div class="val">晚发型（多为 2 型）SMA 儿童；N ≈ 126</div></div>
+        <div class="trow"><div class="lbl">时间</div><div class="val">约 2015–2017</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">HFMSE 变化</div><div class="m-v">+3.9<small> vs −1.0</small></div><div class="m-d">治疗进步 · 对照退步</div></div>
+          <div class="tr-metric"><div class="m-k">组间差异</div><div class="m-v">≈4.9 分</div><div class="m-d">有临床意义</div></div>
+        </div>
+        <div class="tr-read">同一个药在<strong>不同亚型、不同年龄</strong>的人群里再次验证——这正是第 7 章"选病逻辑"里说的：一个药要覆盖不同亚型，往往要各做一个试验。注意对照组是<em>退步</em>的（病在进展），治疗组是<em>进步</em>的，差值才是真实获益。</div>
+      </div>
+
+      <h2><span class="cn">TTR 淀粉样变：ASO 与 siRNA 同台（对应第 3、5、6 章）</span></h2>
+
+      <div class="trial">
+        <div class="tr-top">
+          <div class="tr-name">APOLLO <span class="en2">patisiran</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">遗传性 TTR 淀粉样多神经病</span></div>
+        </div>
+        <div class="trow"><div class="lbl">设计</div><div class="val"><b>帕替西兰（LNP 递送的 siRNA）</b> <span class="vs">vs</span> 安慰剂；随机 2:1</div></div>
+        <div class="trow"><div class="lbl">人群</div><div class="val">遗传性 TTR 淀粉样变伴多神经病；N ≈ 225</div></div>
+        <div class="trow"><div class="lbl">时间</div><div class="val">约 2013–2017，2018 获批（首个 RNAi 药）</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">mNIS+7（18 月）</div><div class="m-v">改善<small> vs 恶化</small></div><div class="m-d">组间差 ≈ 34 分</div></div>
+          <div class="tr-metric"><div class="m-k">生活质量</div><div class="m-v">同向改善</div><div class="d">治疗组变好、对照变差</div></div>
+        </div>
+        <div class="tr-read">人类<strong>第一个获批的 RNAi 药物</strong>：第 3 章的 siRNA ＋ 第 5 章的 LNP 递送，"关掉肝里造 TTR 的图纸"。神经病变评分对照组恶化、治疗组反而改善——不只是延缓，甚至逆转。TTR 在肝合成，正是核酸药的"甜蜜区"（第 7 章选病逻辑）。</div>
+      </div>
+
+      <div class="trial">
+        <div class="tr-top">
+          <div class="tr-name">NEURO-TTR <span class="en2">inotersen</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">遗传性 TTR 多神经病</span></div>
+        </div>
+        <div class="trow"><div class="lbl">设计</div><div class="val"><b>伊诺特森（2′-MOE 修饰 ASO）</b> <span class="vs">vs</span> 安慰剂</div></div>
+        <div class="trow"><div class="lbl">人群</div><div class="val">同为遗传性 TTR 淀粉样多神经病；N ≈ 172</div></div>
+        <div class="trow"><div class="lbl">时间</div><div class="val">约 2013–2017，与 Patisiran 同期</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">mNIS+7</div><div class="m-v">显著优于对照</div><div class="m-d">神经病变改善</div></div>
+          <div class="tr-metric"><div class="m-k">安全监测</div><div class="m-v">血小板 / 肾</div><div class="m-d">需定期监测</div></div>
+        </div>
+        <div class="tr-read">同一个病，<strong>ASO（本药）和 siRNA（APOLLO）同期各自成功</strong>——第 3 章说的两条技术路线正式并立。它也印证第 6 章：ASO 有"化学相关毒性"（此处需监测血小板和肾），这是整类药的通病、靠监测和剂量管理。</div>
+      </div>
+
+      <h2><span class="cn">走向大众慢病：GalNAc-siRNA（对应第 5 章）</span></h2>
+
+      <div class="trial">
+        <div class="tr-top">
+          <div class="tr-name">ORION-10 &amp; 11 <span class="en2">inclisiran</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">高 LDL / 动脉粥样硬化</span></div>
+        </div>
+        <div class="trow"><div class="lbl">设计</div><div class="val"><b>英克司兰（GalNAc-siRNA，一年两针）</b> <span class="vs">vs</span> 安慰剂（均在他汀基础上）</div></div>
+        <div class="trow"><div class="lbl">人群</div><div class="val">他汀控制不佳的高 LDL / 心血管高危患者；两项合计 N ≈ 3178</div></div>
+        <div class="trow"><div class="lbl">时间</div><div class="val">约 2017–2019</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">LDL-C 降幅</div><div class="m-v">≈50%<small> vs 安慰剂</small></div><div class="m-d">靶向肝内 PCSK9 图纸</div></div>
+          <div class="tr-metric"><div class="m-k">给药频率</div><div class="m-v">每半年一针</div><div class="m-d">依从性优势巨大</div></div>
+        </div>
+        <div class="tr-read">第 5 章 <strong>GalNAc 递送</strong>（给核酸装"肝脏门牌"）的商业级兑现：把核酸药从"罕见病"带进"高血脂"这类<strong>大众慢病</strong>。核心卖点不只是降幅，更是<em>一年两针 vs 每天吃药</em>的依从性——这正是核酸药"长效"的结构性优势（第 8 章）。</div>
+      </div>
+
+      <h2><span class="cn">一个诚实的案例：当终点没达标（对应第 6、8 章）</span></h2>
+
+      <div class="trial">
+        <div class="tr-top">
+          <div class="tr-name">VALOR <span class="en2">tofersen</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">SOD1 突变 ALS（渐冻症）</span></div>
+        </div>
+        <div class="trow"><div class="lbl">设计</div><div class="val"><b>托弗生（SOD1 靶向 ASO，鞘内）</b> <span class="vs">vs</span> 安慰剂</div></div>
+        <div class="trow"><div class="lbl">人群</div><div class="val">携带 SOD1 突变的家族性肌萎缩侧索硬化；N ≈ 108</div></div>
+        <div class="trow"><div class="lbl">时间</div><div class="val">约 2019–2021</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">主要终点(28周)</div><div class="m-v">未达标</div><div class="m-d">ALSFRS-R 差异不显著</div></div>
+          <div class="tr-metric"><div class="m-k">SOD1 蛋白 / NfL</div><div class="m-v">显著下降</div><div class="m-d">生物标志物阳性</div></div>
+        </div>
+        <div class="tr-read">诚实地放这个案例：<strong>预设的临床终点没达到统计显著</strong>，但它确实压低了目标蛋白和神经损伤标志（NfL）。后基于生物标志物获<em>加速批准</em>，引发一场重要讨论——<strong>"该用什么终点来判定一个慢病神经药"</strong>（临床评分慢、生物标志快，呼应第 6、8 章）。它提醒你：不是每个核酸药都像 SMA 那样一击即中，读战报要看"主要终点到底达没达"。</div>
+      </div>
+
+      <div class="note investor">
+        <span class="tag">还有两个值得知道的名字</span>
+        <p><strong>Eteplirsen（DMD）</strong>：治杜氏肌营养不良的剪接调控 PMO（第 4 章），基于"替代终点（肌肉里多了点抗肌萎缩蛋白）"加速获批，但临床获益有争议——是"替代终点该不该算数"的著名讨论。<strong>Milasen</strong>：为<em>单个</em>患罕见病女孩 Mila 定制的 ASO，从发现突变到用药不到一年——没有传统对照试验，却展示了核酸药"可编程"的极致（第 0 章），也带来 n=1 医疗的监管与伦理新问题。</p>
+      </div>
+      <div class="footer-note">
+        临床案例库 · 数据为四舍五入的标志性结果，仅供建立直觉，精确数值以原始文献/说明书为准。
       </div>
     </section>
 

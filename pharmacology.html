@@ -27,6 +27,7 @@
       <button class="nav-item" data-target="ph6"><span class="num">06</span><span class="txt">其他靶点：通道·酶·转运体</span></button>
       <button class="nav-item" data-target="ph7"><span class="num">07</span><span class="txt">为什么会变、会出错</span></button>
       <button class="nav-item" data-target="ph8"><span class="num">08</span><span class="txt">从分子到新药</span></button>
+      <button class="nav-item" data-target="phtrials"><span class="num">★</span><span class="txt">临床案例库</span></button>
     </nav>
     <div class="rail-cross">
       <div class="nav-label">切换 · 参考</div>
@@ -423,6 +424,118 @@
       <div class="footer-note">
         药理学入门 · Pharmacology 101 · 框架参考 Rang &amp; Dale《药理学》<br>
         为非专业背景设计 —— 浅显中文、重直觉。全 9 章已完成。
+      </div>
+    </section>
+
+    <!-- phtrials 临床案例库 -->
+    <section class="module" id="phtrials">
+      <div class="eyebrow">Pharmacology ★ · Clinical Trials</div>
+      <h1><span class="cn">临床案例库：奠基性的药理试验</span></h1>
+      <p class="lede trials-intro">药理学的原理（靶点、量效、PK、治疗窗），最终都由一场场<strong>大型结局试验</strong>来定生死。这里挑几个<strong>改写了医学指南</strong>的经典试验——它们不只证明"药有效"，更示范了<em>怎么设计一个能说服人的试验</em>（对照、随机、剂量、终点）。每张卡片对应本课的某一章原理。</p>
+
+      <h2><span class="cn">先读懂这些指标</span></h2>
+      <div class="metric-key">
+        <div class="mk"><b>全因死亡</b>任何原因导致的死亡率——最硬的疗效证据</div>
+        <div class="mk"><b>HR / RR</b>风险比 / 相对风险——<strong>&lt;1 即降低风险</strong>（0.70=风险降 30%）</div>
+        <div class="mk"><b>MACE</b>主要不良心血管事件（心梗/卒中/心血管死亡的合集）</div>
+        <div class="mk"><b>HHF</b>因心力衰竭住院</div>
+        <div class="mk"><b>LDL-C</b>"坏"胆固醇水平</div>
+        <div class="mk"><b>安慰剂对照</b>对照组吃"无效的糖丸"，用来排除心理/自然波动</div>
+      </div>
+      <div class="note">
+        <span class="tag">关于数据</span>
+        <p>下列为四舍五入的标志性结果，用于建立直觉；精确数值请以原始文献为准。</p>
+      </div>
+
+      <h2><span class="cn">酶抑制剂：他汀与阿司匹林（对应第 6 章）</span></h2>
+
+      <div class="trial">
+        <div class="tr-top">
+          <div class="tr-name">4S · 北欧辛伐他汀生存研究 <span class="en2">simvastatin</span></div>
+          <div class="tr-tags"><span class="tr-phase">RCT</span><span class="tr-ind">冠心病 + 高胆固醇</span></div>
+        </div>
+        <div class="trow"><div class="lbl">设计</div><div class="val"><b>辛伐他汀（抑制胆固醇合成酶）</b> <span class="vs">vs</span> 安慰剂；随机双盲</div></div>
+        <div class="trow"><div class="lbl">人群</div><div class="val">已有冠心病、胆固醇偏高的患者；N ≈ 4444</div></div>
+        <div class="trow"><div class="lbl">时间</div><div class="val">约 1988–1994，中位随访 5.4 年</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">全因死亡</div><div class="m-v">↓30%<small></small></div><div class="m-d">RR ≈ 0.70</div></div>
+          <div class="tr-metric"><div class="m-k">冠心病死亡</div><div class="m-v">↓42%</div><div class="m-d"></div></div>
+          <div class="tr-metric"><div class="m-k">LDL-C</div><div class="m-v">↓约35%</div><div class="m-d">酶被抑制的直接结果</div></div>
+        </div>
+        <div class="tr-read">史上第一次证明"抑制一个酶把胆固醇降下来，真能让人少死"——第 6 章"酶抑制剂"的封神之战。它把他汀从"降指标的药"变成"救命的药"，奠定了此后全球血脂管理的基础。</div>
+      </div>
+
+      <div class="trial">
+        <div class="tr-top">
+          <div class="tr-name">ISIS-2 <span class="en2">aspirin · streptokinase</span></div>
+          <div class="tr-tags"><span class="tr-phase">RCT · 2×2 析因</span><span class="tr-ind">急性心肌梗死</span></div>
+        </div>
+        <div class="trow"><div class="lbl">设计</div><div class="val"><b>2×2 析因设计</b>：阿司匹林（抑 COX 酶、抗血小板）× 链激酶（溶栓），四组交叉对照</div></div>
+        <div class="trow"><div class="lbl">人群</div><div class="val">急性心梗发作患者；N ≈ 17187</div></div>
+        <div class="trow"><div class="lbl">时间</div><div class="val">约 1985–1987</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">血管性死亡</div><div class="m-v">↓约23%<small> 阿司匹林</small></div><div class="m-d">单靠一片阿司匹林</div></div>
+          <div class="tr-metric"><div class="m-k">两药合用</div><div class="m-v">效果叠加</div><div class="m-d">析因设计一举验证两药</div></div>
+        </div>
+        <div class="tr-read">这是"<strong>试验设计</strong>"本身的经典教材：<em>2×2 析因</em>让一个试验同时回答两个问题（阿司匹林有没有用、溶栓有没有用、以及合用如何）。结果证明一片廉价阿司匹林就能救命——也示范了第 7 章"PD 层面效应叠加"的现实版。</div>
+      </div>
+
+      <h2><span class="cn">受体药：β 阻断剂与 GLP-1 激动剂（对应第 5 章）</span></h2>
+
+      <div class="trial">
+        <div class="tr-top">
+          <div class="tr-name">MERIT-HF <span class="en2">metoprolol CR/XL</span></div>
+          <div class="tr-tags"><span class="tr-phase">RCT</span><span class="tr-ind">慢性心力衰竭</span></div>
+        </div>
+        <div class="trow"><div class="lbl">设计</div><div class="val"><b>美托洛尔（β1 阻断剂）</b> <span class="vs">vs</span> 安慰剂（均在标准治疗基础上）</div></div>
+        <div class="trow"><div class="lbl">人群</div><div class="val">稳定的慢性心衰患者；N ≈ 3991</div></div>
+        <div class="trow"><div class="lbl">时间</div><div class="val">约 1997–1999，因效果显著提前终止</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">全因死亡</div><div class="m-v">↓34%</div><div class="m-d">HR ≈ 0.66</div></div>
+          <div class="tr-metric"><div class="m-k">提前终止</div><div class="m-v">是</div><div class="m-d">获益太大，不宜再让对照组等</div></div>
+        </div>
+        <div class="tr-read">反直觉的经典：过去认为"β 阻滞会削弱心脏、禁用于心衰"，结果<strong>恰恰相反</strong>——阻断心脏 β1（第 5 章受体亚型）反而保护了衰竭的心。它也示范了"获益过大时提前终止试验"的伦理逻辑。</div>
+      </div>
+
+      <div class="trial">
+        <div class="tr-top">
+          <div class="tr-name">STEP-1 <span class="en2">semaglutide 2.4 mg</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">肥胖（非糖尿病）</span></div>
+        </div>
+        <div class="trow"><div class="lbl">设计</div><div class="val"><b>司美格鲁肽（GLP-1 受体激动剂）</b> <span class="vs">vs</span> 安慰剂 ＋ 生活方式干预</div></div>
+        <div class="trow"><div class="lbl">人群</div><div class="val">超重/肥胖的非糖尿病成人；N ≈ 1961</div></div>
+        <div class="trow"><div class="lbl">时间</div><div class="val">约 2018–2020，随访 68 周</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">体重变化</div><div class="m-v">−14.9%<small> vs −2.4%</small></div><div class="m-d">激动剂组减重远超对照</div></div>
+          <div class="tr-metric"><div class="m-k">减重 ≥10%</div><div class="m-v">≈69%<small> vs 12%</small></div><div class="m-d">达标比例</div></div>
+        </div>
+        <div class="tr-read">一个<strong>受体激动剂</strong>（第 1、5 章：冒充 GLP-1 信号、按下"饱腹/降糖"开关）在肥胖上做出前所未有的减重幅度。注意它是每周一次的长效设计——正呼应第 4 章"半衰期决定给药间隔"。这类药随后掀起了代谢病治疗的浪潮。</div>
+      </div>
+
+      <h2><span class="cn">转运体药：SGLT2 抑制剂的意外惊喜（对应第 6 章）</span></h2>
+
+      <div class="trial">
+        <div class="tr-top">
+          <div class="tr-name">EMPA-REG OUTCOME <span class="en2">empagliflozin</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">2 型糖尿病 + 心血管病</span></div>
+        </div>
+        <div class="trow"><div class="lbl">设计</div><div class="val"><b>恩格列净（SGLT2 抑制剂，拦肾脏糖转运体）</b> <span class="vs">vs</span> 安慰剂（均在标准治疗上）</div></div>
+        <div class="trow"><div class="lbl">人群</div><div class="val">2 型糖尿病合并已确诊心血管病；N ≈ 7020</div></div>
+        <div class="trow"><div class="lbl">时间</div><div class="val">约 2010–2015</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">心血管死亡</div><div class="m-v">↓38%</div><div class="m-d">最大的惊喜</div></div>
+          <div class="tr-metric"><div class="m-k">全因死亡</div><div class="m-v">↓32%</div><div class="m-d"></div></div>
+          <div class="tr-metric"><div class="m-k">心衰住院</div><div class="m-v">↓35%</div><div class="m-d">MACE · HR ≈ 0.86</div></div>
+        </div>
+        <div class="tr-read">本来只是个"让糖随尿排掉"的降糖药（第 6 章转运体），却意外发现<strong>强大的护心、护肾</strong>作用——一个靶点带来远超预期的获益。它提醒你：药物在体内的作用常常"溢出"设计初衷，这正是大型结局试验的价值。</div>
+      </div>
+
+      <div class="note investor">
+        <span class="tag">怎么读这些试验</span>
+        <p>注意每张卡片的"设计"行——<strong>对照是谁、随机没有、剂量多少、终点是不是"死亡"这种硬指标</strong>，决定了结论有多可信。一个只比"化验指标"的试验，远不如一个比"少死了多少人"的试验有说服力。这套判断力，比记住具体数字更值钱。</p>
+      </div>
+      <div class="footer-note">
+        临床案例库 · 数据为四舍五入的标志性结果，仅供建立直觉，精确数值以原始文献为准。
       </div>
     </section>
 

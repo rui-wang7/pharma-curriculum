@@ -27,6 +27,7 @@
       <button class="nav-item" data-target="mc6"><span class="num">06</span><span class="txt">把分子造出来：合成</span></button>
       <button class="nav-item" data-target="mc7"><span class="num">07</span><span class="txt">新式武器：共价·PROTAC·偶联</span></button>
       <button class="nav-item" data-target="mc8"><span class="num">08</span><span class="txt">从化学到药物</span></button>
+      <button class="nav-item" data-target="mctrials"><span class="num">★</span><span class="txt">临床案例库</span></button>
     </nav>
     <div class="rail-cross">
       <div class="nav-label">切换 · 参考</div>
@@ -369,6 +370,119 @@
       <div class="footer-note">
         药物化学入门 · Medicinal Chemistry 101 · 框架参考 Patrick《药物化学》<br>
         为非专业背景设计 —— 浅显中文、重直觉。全 9 章已完成。
+      </div>
+    </section>
+
+    <!-- mctrials 临床案例库 -->
+    <section class="module" id="mctrials">
+      <div class="eyebrow">Med Chem ★ · Clinical Trials</div>
+      <h1><span class="cn">临床案例库：药物设计如何改变结局</span></h1>
+      <p class="lede trials-intro">一把设计精良的"钥匙"，在临床上能有多惊人？这里挑几个<strong>药物化学的胜利</strong>——从理性设计的第一个激酶抑制剂，到共价、ADC、结构导向设计。每张卡片背后，都是本课某一章手艺的实战成果，你能清楚看到"设计上的巧思"如何变成"病人身上的数字"。</p>
+
+      <h2><span class="cn">先读懂这些指标</span></h2>
+      <div class="metric-key">
+        <div class="mk"><b>PFS</b>无进展生存期——到肿瘤进展或死亡的时间</div>
+        <div class="mk"><b>OS</b>总生存期——到死亡的时间</div>
+        <div class="mk"><b>ORR</b>客观缓解率——肿瘤明显缩小的比例</div>
+        <div class="mk"><b>DoR</b>缓解持续时间</div>
+        <div class="mk"><b>HR</b>风险比——<strong>&lt;1 即降低风险</strong>（0.28=风险降 72%）</div>
+        <div class="mk"><b>CCyR</b>完全细胞遗传学缓解——查不到癌变染色体（CML 的关键指标）</div>
+      </div>
+      <div class="note">
+        <span class="tag">关于数据</span>
+        <p>下列为四舍五入的标志性结果，用于建立直觉；精确数值请以原始文献为准。</p>
+      </div>
+
+      <h2><span class="cn">理性靶向设计的开山之作（对应第 2、3 章）</span></h2>
+
+      <div class="trial">
+        <div class="tr-top">
+          <div class="tr-name">IRIS <span class="en2">imatinib · 格列卫</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">慢性髓性白血病 CML</span></div>
+        </div>
+        <div class="trow"><div class="lbl">设计</div><div class="val"><b>伊马替尼（Bcr-Abl 激酶抑制剂，理性设计）</b> <span class="vs">vs</span> 干扰素 ＋ 阿糖胞苷（旧标准）</div></div>
+        <div class="trow"><div class="lbl">人群</div><div class="val">新诊断慢性期 CML；N ≈ 1106</div></div>
+        <div class="trow"><div class="lbl">时间</div><div class="val">约 2000–2001 入组，长期随访至 10 年以上</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">完全细胞遗传缓解</div><div class="m-v">≈76%<small> vs ~15%</small></div><div class="m-d">碾压旧疗法</div></div>
+          <div class="tr-metric"><div class="m-k">10 年 OS</div><div class="m-v">≈83%</div><div class="m-d">曾经的致死病</div></div>
+        </div>
+        <div class="tr-read">"照着一个明确的致病靶点（Bcr-Abl）设计一把专一小分子钥匙"——第 2、3 章理性设计的开山之作。它把 CML 从"几年内致命"变成"每天一片、正常寿命"的慢性病，也开启了整个"靶向治疗"时代。</div>
+      </div>
+
+      <h2><span class="cn">共价与突变选择性（对应第 7 章）</span></h2>
+
+      <div class="trial">
+        <div class="tr-top">
+          <div class="tr-name">FLAURA <span class="en2">osimertinib</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">EGFR 突变 NSCLC</span></div>
+        </div>
+        <div class="trow"><div class="lbl">设计</div><div class="val"><b>奥希替尼（第三代共价 EGFR 抑制剂，突变选择性）</b> <span class="vs">vs</span> 一代 EGFR-TKI</div></div>
+        <div class="trow"><div class="lbl">人群</div><div class="val">一线 EGFR 突变非小细胞肺癌；N ≈ 556</div></div>
+        <div class="trow"><div class="lbl">时间</div><div class="val">约 2014–2016，2018 改写一线指南</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">中位 PFS</div><div class="m-v">18.9<small> vs 10.2 月</small></div><div class="m-d">HR ≈ 0.46</div></div>
+          <div class="tr-metric"><div class="m-k">中位 OS</div><div class="m-v">38.6<small> vs 31.8 月</small></div><div class="m-d">HR ≈ 0.80</div></div>
+          <div class="tr-metric"><div class="m-k">副作用</div><div class="m-v">更少</div><div class="m-d">放过野生型 EGFR</div></div>
+        </div>
+        <div class="tr-read">第 7 章"可控共价 ＋ 突变选择性"的胜利：它只<strong>焊死突变的 EGFR</strong>、放过正常（野生型）EGFR，所以既更有效、又副作用更小，还能压住脑转移。<em>更有效同时更安全</em>——这是聪明设计才能同时拿到的两头好处。</div>
+      </div>
+
+      <div class="trial">
+        <div class="tr-top">
+          <div class="tr-name">CodeBreaK 100 <span class="en2">sotorasib</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 2 · 单臂</span><span class="tr-ind">KRAS G12C 突变 NSCLC</span></div>
+        </div>
+        <div class="trow"><div class="lbl">设计</div><div class="val"><b>索托拉西布（KRAS G12C 共价抑制剂）</b> 单臂</div></div>
+        <div class="trow"><div class="lbl">人群</div><div class="val">经治的 KRAS G12C 突变非小细胞肺癌；N ≈ 126</div></div>
+        <div class="trow"><div class="lbl">时间</div><div class="val">约 2018–2020，2021 加速获批</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">ORR</div><div class="m-v">≈37%</div><div class="m-d">对"不可成药"靶点的突破</div></div>
+          <div class="tr-metric"><div class="m-k">中位 PFS</div><div class="m-v">≈6.8 月</div><div class="m-d"></div></div>
+          <div class="tr-metric"><div class="m-k">中位 DoR</div><div class="m-v">≈11.1 月</div><div class="m-d">缓解相当持久</div></div>
+        </div>
+        <div class="tr-read">KRAS 是折磨药化界近 <strong>40 年</strong>的"不可成药"靶点（第 0、4 章：没有合适口袋）。靠共价化学＋抓住突变体上一个新出现的小凹陷，人类第一次撬开了它。数字不如格列卫惊艳，但"从 0 到 1"的意义巨大。</div>
+      </div>
+
+      <h2><span class="cn">偶联与结构导向设计（对应第 2、7 章）</span></h2>
+
+      <div class="trial">
+        <div class="tr-top">
+          <div class="tr-name">DESTINY-Breast03 <span class="en2">trastuzumab deruxtecan · T-DXd</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">HER2+ 转移性乳腺癌</span></div>
+        </div>
+        <div class="trow"><div class="lbl">设计</div><div class="val"><b>德曲妥珠单抗（新一代 HER2 ADC）</b> <span class="vs">vs</span> T-DM1（旧一代 ADC）</div></div>
+        <div class="trow"><div class="lbl">人群</div><div class="val">既往治疗过的 HER2 阳性转移性乳腺癌；N ≈ 524</div></div>
+        <div class="trow"><div class="lbl">时间</div><div class="val">约 2018–2020，2022 发表</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">PFS · HR</div><div class="m-v">≈0.28</div><div class="m-d">风险降约 72%，极罕见</div></div>
+          <div class="tr-metric"><div class="m-k">中位 PFS</div><div class="m-v">≈29<small> vs 7 月</small></div><div class="m-d">数倍延长</div></div>
+          <div class="tr-metric"><div class="m-k">ORR</div><div class="m-v">≈79%<small> vs 34%</small></div><div class="m-d"></div></div>
+        </div>
+        <div class="tr-read">两代 ADC 的正面对决，新一代<strong>碾压</strong>旧一代（HR 0.28 在肿瘤界极为罕见）。差别就在第 7 章的<strong>"连接臂 + 载荷"化学设计</strong>：更稳的连接、更强的弹头、一个抗体挂更多弹头、还有"旁观者效应"。同样的抗体导航，化学细节决定了天壤之别。</div>
+      </div>
+
+      <div class="trial">
+        <div class="tr-top">
+          <div class="tr-name">MURANO <span class="en2">venetoclax</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">复发难治 CLL</span></div>
+        </div>
+        <div class="trow"><div class="lbl">设计</div><div class="val"><b>维奈克拉（BCL-2 抑制剂，基于结构/片段设计）＋ 利妥昔单抗</b> <span class="vs">vs</span> 苯达莫司汀 ＋ 利妥昔单抗</div></div>
+        <div class="trow"><div class="lbl">人群</div><div class="val">复发/难治慢性淋巴细胞白血病；N ≈ 389</div></div>
+        <div class="trow"><div class="lbl">时间</div><div class="val">约 2014–2016，2018 发表</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">2 年 PFS</div><div class="m-v">85%<small> vs 36%</small></div><div class="m-d">HR ≈ 0.17</div></div>
+          <div class="tr-metric"><div class="m-k">给药模式</div><div class="m-v">固定疗程</div><div class="d">可停药，非终身服用</div></div>
+        </div>
+        <div class="tr-read">BCL-2 曾被认为"表面太光滑、没有口袋"（无法成药）。药化师用第 2 章的<strong>基于结构 / 片段生长</strong>法——先找能贴住一小块的碎片，再一点点长成完整分子——硬造出了维奈克拉。它是"给无口袋蛋白造钥匙"的教科书案例。</div>
+      </div>
+
+      <div class="note investor">
+        <span class="tag">一个还在路上的新武器：PROTAC</span>
+        <p>第 7 章讲的 <strong>PROTAC（拖去销毁）</strong>已进入 III 期临床（如雌激素受体降解剂 vepdegestrant 等），但成熟的头对头生存数据还在积累中。这提醒你读战报时要看<strong>"证据到哪一步了"</strong>：单臂 II 期（如 CodeBreaK）说明"有信号"，随机 III 期（如 FLAURA）才算"改写标准"。阶段不同，可信度不同。</p>
+      </div>
+      <div class="footer-note">
+        临床案例库 · 数据为四舍五入的标志性结果，仅供建立直觉，精确数值以原始文献为准。
       </div>
     </section>
 
