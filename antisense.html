@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>反义药物技术入门 · Antisense Drug Technology</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Spectral:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<button class="menu-btn" id="menuBtn">☰ 目录</button>
+<div class="scrim" id="scrim"></div>
+<div class="shell">
+
+  <aside class="rail" id="rail">
+    <a class="brand" href="index.html"><span class="brand-cn">反义药物技术</span><span class="brand-en">Antisense · 讲给非专业的你</span></a>
+    <div class="nav-label">章节 · Chapters</div>
+    <nav id="nav">
+      <button class="nav-item active" data-target="as0"><span class="num">00</span><span class="txt">导论：不打蛋白，去关"图纸"</span></button>
+      <button class="nav-item" data-target="as1"><span class="num">01</span><span class="txt">反义原理：一段互补序列</span></button>
+      <button class="nav-item" data-target="as2"><span class="num">02</span><span class="txt">两种机制：切割 vs 遮挡</span></button>
+      <button class="nav-item" data-target="as3"><span class="num">03</span><span class="txt">另一条路：siRNA / RNAi</span></button>
+      <button class="nav-item" data-target="as4"><span class="num">04</span><span class="txt">化学修饰：让核酸能当药</span></button>
+      <button class="nav-item" data-target="as5"><span class="num">05</span><span class="txt">递送：最大的一道坎</span></button>
+      <button class="nav-item" data-target="as6"><span class="num">06</span><span class="txt">毒性与脱靶</span></button>
+      <button class="nav-item" data-target="as7"><span class="num">07</span><span class="txt">临床里程碑与选病逻辑</span></button>
+      <button class="nav-item" data-target="as8"><span class="num">08</span><span class="txt">平台价值与展望</span></button>
+    </nav>
+    <div class="rail-cross">
+      <div class="nav-label">切换 · 参考</div>
+      <a href="index.html"><span class="num">⌂</span>课程门户（首页）</a>
+      <a href="medchem.html"><span class="num">Ⅳ</span>药物化学入门</a>
+      <a href="pharmacology.html"><span class="num">Ⅲ</span>药理学入门</a>
+    </div>
+    <div class="rail-foot">框架参考 Crooke《Antisense Drug Technology》<br>浅显中文 + 类比 · 重理解，轻死记</div>
+  </aside>
+
+  <main class="main">
+
+    <!-- as0 -->
+    <section class="module active" id="as0">
+      <div class="eyebrow">Antisense 00 · 导论</div>
+      <h1><span class="cn">反义药物 = 不打蛋白，去关掉"造它的图纸"</span></h1>
+      <p class="lede">前面三门课里的药，几乎都在<strong>操纵蛋白</strong>（受体、酶、通道）。反义药物走了一条截然不同的路：<strong>它不碰蛋白，而是更上游地拦截"造蛋白的中间图纸"（RNA），从源头减少这个蛋白的产量。</strong>这一章先把这个范式讲清楚——它为什么是一场革命。</p>
+
+      <h2><span class="cn">先复习一条生命主线：图纸怎么变成机器</span></h2>
+      <div class="loop">
+        <div class="loop-title">中心法则 · 蛋白是怎么造出来的</div>
+        <div class="chain">
+          <div class="link"><div class="k">DNA</div><div class="v">总图纸</div><div class="d">锁在细胞核里的永久档案</div></div>
+          <div class="arrow">→ 转录</div>
+          <div class="link"><div class="k">RNA (mRNA)</div><div class="v">工作副本</div><div class="d">从总图纸誊抄一份，送去车间</div></div>
+          <div class="arrow">→ 翻译</div>
+          <div class="link"><div class="k">Protein</div><div class="v">机器/零件</div><div class="d">照副本造出蛋白，干活（也致病）</div></div>
+        </div>
+      </div>
+      <p>身体里所有蛋白都是这么造的：<strong>DNA（总图纸）→ 誊抄成 mRNA（工作副本）→ 照副本造出蛋白</strong>。传统药在最后一步下手——蛋白造好了，去堵它、抑它。<strong>反义药提前一步，在"工作副本（mRNA）"这一层就动手</strong>：把副本销毁或封印，蛋白根本造不出来。</p>
+
+      <h2><span class="cn">为什么"关图纸"是革命性的</span></h2>
+      <ul>
+        <li><strong>能打"无法成药"的靶点</strong>：很多致病蛋白没有合适的"口袋"让小分子插进去（<a href="medchem.html">药化课</a>第 4、7 章说的难题）。但只要它有 mRNA，反义药就能对付——<em>因为攻击的是通用的核酸序列，不依赖蛋白有没有口袋。</em></li>
+        <li><strong>设计逻辑极简、可编程</strong>：识别 mRNA 靠的是<strong>碱基互补配对</strong>（A 对 U、G 对 C）——这是死规矩。<em>想关掉哪个基因，就照它的序列设计一段互补的核酸，几乎"查字典"一样。</em>这让研发从"碰运气找分子"变成"读序列写序列"。</li>
+        <li><strong>换靶点几乎只换序列</strong>：像<a href="pharmacology.html">mRNA 疫苗</a>一样，核酸药是<strong>平台型</strong>——底层化学和递送不变，换个病只换那段序列。</li>
+      </ul>
+
+      <h2><span class="cn">但有一个致命前提：核酸自己当不了药</span></h2>
+      <p>理念很美，现实很骨感。一段"裸"的核酸打进身体，<strong>几分钟就被血里的酶剪碎了，而且进不了细胞、还会惊动免疫系统</strong>。所以反义药物这门学问，<em>一大半篇幅其实不在"原理"，而在"怎么把这段脆弱的核酸，通过化学改造和递送手段，变成一个真能用的药"</em>——这正是第 4、5、6 章要解决的三座大山：稳定性、递送、毒性。</p>
+
+      <div class="note">
+        <span class="tag">怎么学这门课</span>
+        <p>把它当成"核酸时代的<a href="medchem.html">药物化学</a>"。经典药化问的是"怎么让小分子既有效又成药"；这门课问的是同一批问题，只是主角换成了核酸链：<strong>怎么让它找得准（原理）、扛得住（化学修饰）、送得到（递送）、不伤人（毒性）。</strong></p>
+      </div>
+      <div class="note investor">
+        <span class="tag">这门课的地位</span>
+        <p>Stanley Crooke 是这个领域的开创者之一（创立 Ionis/Isis）。从 1998 年第一个反义药，到今天治疗脊髓性肌萎缩（SMA）、遗传性淀粉样变的重磅药，再到为<em>单个病人</em>定制的 n=1 疗法，反义技术已经从"美好设想"变成了成熟的药物平台。学完这门课，你就理解了<a href="overview.html">概览课</a>里"核酸/寡核苷酸"那一整块弹药。</p>
+      </div>
+    </section>
+
+    <!-- as1 -->
+    <section class="module" id="as1">
+      <div class="eyebrow">Antisense 01 · The Core Principle</div>
+      <h1><span class="cn">反义原理：一段"互补序列"当探针</span></h1>
+      <p class="lede">"反义"这个词听着玄，其实指的就是一件极朴素的事：<strong>造一段和目标 mRNA 正好互补的短核酸，让它去和 mRNA 配对结合。</strong>结合之后，就有办法让这段 mRNA 失效。这一章讲这个"配对"为什么这么可靠、又为什么这么精准。</p>
+
+      <h2><span class="cn">"正义"与"反义"：一段序列和它的镜像</span></h2>
+      <p>mRNA 上带着造蛋白的信息，这段有意义的序列叫<strong>"正义链" (sense)</strong>。按碱基配对规则（A–U、G–C），能和它严丝合缝配上的那条镜像序列，就叫<strong>"反义链" (antisense)</strong>。<strong>反义寡核苷酸（ASO）</strong>就是人工合成的一小段（通常 15–25 个碱基）反义链——它像一把<em>照着目标 mRNA 定制的"分子拉链另一半"</em>，一进细胞就去找它的配对对象扣上。</p>
+
+      <h2><span class="cn">为什么配对既可靠又精准</span></h2>
+      <div class="card">
+        <h3>碱基配对：生命自带的"寻址系统"</h3>
+        <p>A 只配 U、G 只配 C，这是刻在化学里的死规矩，<em>不需要像蛋白靶点那样去猜形状、试口袋（<a href="medchem.html">药化课</a>第 1、3 章那些苦活）</em>。所以只要知道目标 mRNA 的序列，就能<strong>直接算出</strong>该造什么样的 ASO——设计变成了"查表"。这就是第 0 章说的"可编程"的物理根源。</p>
+      </div>
+      <p><strong>精准从哪来？</strong>——从"长度"。人体基因组里，<strong>一段连续 15–20 个碱基的特定序列，几乎在整个基因组里独一无二</strong>（因为组合数是天文数字）。所以一段 20 碱基的 ASO，理论上只会牢牢扣住那一个目标 mRNA，不太会误认别人——这是它高选择性的来源（现实中仍有脱靶，第 6 章细讲）。</p>
+
+      <h2><span class="cn">"扣上"之后呢？——本身不够,要触发下游</span></h2>
+      <p>光是 ASO 扣在 mRNA 上，<em>不一定就能关掉这个基因</em>。真正让 mRNA 失效，靠的是结合<strong>之后触发的机制</strong>——要么招来一把"剪刀"把 mRNA 剪断，要么用身体把它"堵在半路不让它干活"。这两条路，就是下一章的主题。</p>
+      <p>所以你可以把 ASO 理解成<strong>一个"定位贴"</strong>：它先精确贴到目标 mRNA 上，至于是"贴上后引爆"还是"贴上后封路"，取决于这段 ASO 是怎么设计的。</p>
+
+      <div class="note">
+        <span class="tag">本章小结</span>
+        <p>反义药＝一段<strong>和目标 mRNA 互补的短核酸（ASO）</strong>，靠<strong>碱基配对（A–U/G–C 的死规矩）</strong>精确找到并扣住目标——设计像查表，精准来自"20 个碱基在基因组里近乎唯一"。但"扣上"只是定位，真正让基因沉默要靠下游机制。下一章：两种让 mRNA 失效的办法。</p>
+      </div>
+    </section>
+
+    <!-- as2 -->
+    <section class="module" id="as2">
+      <div class="eyebrow">Antisense 02 · Two Mechanisms</div>
+      <h1><span class="cn">两种机制：切断它，还是遮住它</span></h1>
+      <p class="lede">ASO 扣上目标 mRNA 后，怎么让基因"闭嘴"？有两条根本不同的路：<strong>一条是"引来剪刀把 mRNA 剪断"（催化式销毁），另一条是"用身体挡在关键位置，让 mRNA 没法被正常读取"（占位式封印）。</strong>选哪条，决定了 ASO 的设计和用途。</p>
+
+      <div class="loop">
+        <div class="loop-title">两种让基因闭嘴的机制</div>
+        <div class="chain">
+          <div class="link"><div class="k">机制一 · RNase H</div><div class="v">切断销毁</div><div class="d">ASO扣上后招来一把细胞自带的"剪刀"，把mRNA剪碎 · 用来"减少"某蛋白</div></div>
+          <div class="arrow">↔</div>
+          <div class="link"><div class="k">机制二 · 空间位阻</div><div class="v">遮挡封印</div><div class="d">ASO像块"胶布"堵在关键位置，不剪断、只挡路 · 用来"改写"或"关闭"读取</div></div>
+        </div>
+      </div>
+
+      <h2><span class="cn">机制一：RNase H 切割 —— 招来剪刀，销毁副本</span></h2>
+      <p>细胞里本来就有一种酶叫 <strong>RNase H</strong>，它专门认"DNA–RNA 配对形成的双链"，一认到就把其中的 RNA 那条<strong>剪断</strong>。反义药利用了这一点：设计一段带 DNA 特征的 ASO，扣上目标 mRNA 后形成 DNA–RNA 双链，<strong>RNase H 闻讯赶来，一刀把 mRNA 剪碎</strong>——蛋白就造不出来了。</p>
+      <ul>
+        <li><strong>催化式，很省药</strong>：剪完一条，ASO 松开、去扣下一条 mRNA，反复利用。一个 ASO 能干掉很多 mRNA。</li>
+        <li><strong>用途：单纯"减少"一个有害蛋白</strong>。比如某个基因造出了致病蛋白（如遗传性淀粉样变里作乱的 TTR），就用这招把它的 mRNA 剪掉、降低蛋白水平。</li>
+        <li>这类 ASO 常做成"<strong>缺口聚体</strong> (gapmer)"结构：中间一段是让 RNase H 认得的 DNA、两端包上保护性化学修饰（第 4 章）——<em>中间"露出刀口"、两端"穿盔甲"。</em></li>
+      </ul>
+
+      <h2><span class="cn">机制二：空间位阻 —— 不剪断,只"堵路"</span></h2>
+      <p>另一条路根本不销毁 mRNA，而是让 ASO 像一块<strong>胶布</strong>牢牢贴在 mRNA 的某个关键位置，<em>物理上挡住</em>细胞机器去读它。妙处在于——<strong>挡在不同位置，能实现不同目的</strong>：</p>
+      <table class="tbl">
+        <thead><tr><th>贴在哪</th><th>效果</th><th>代表用途</th></tr></thead>
+        <tbody>
+          <tr><td>贴在"翻译起点"</td><td>造蛋白的机器上不了车 → 关掉这个蛋白</td><td>降低有害蛋白（不销毁mRNA的方式）</td></tr>
+          <tr><td>贴在"剪接位点"</td><td><strong>改写 mRNA 的拼接方式</strong> → 让细胞造出"修正版"蛋白</td><td>SMA 神药<strong>诺西那生 (Nusinersen)</strong>、部分 DMD 药</td></tr>
+        </tbody>
+      </table>
+      <div class="card">
+        <h3>最漂亮的应用：剪接调控（改写而非关闭）</h3>
+        <p>mRNA 从总图纸誊抄下来后，要经过"剪辑"——把没用的片段剪掉、有用的接起来（叫<strong>剪接 splicing</strong>）。有些遗传病正是<em>剪辑剪错了</em>，造出残缺蛋白。空间位阻型 ASO 可以贴在剪接位点上，<strong>"引导"细胞改按正确方式剪辑</strong>，从而造出有功能的蛋白。<em>SMA（脊髓性肌萎缩）的诺西那生就是这么救命的——它让身体把一个"备份基因"重新剪辑成能用的版本。这是"反义"从"关基因"升级到"修基因表达"的里程碑。</em></p>
+      </div>
+
+      <h2><span class="cn">一句话分清两条路</span></h2>
+      <p><strong>要"减少一个蛋白" → 用 RNase H 切割（催化销毁，gapmer）；要"改写或精细关闭" → 用空间位阻（占位不销毁，剪接调控）。</strong>这也是为什么两类 ASO 的化学结构不同——切割型中间要"露刀口"给酶认，位阻型则要"全身穿盔甲"贴得更牢、还不能招剪刀。这就自然引出了下一个大主题：化学修饰。</p>
+
+      <div class="note">
+        <span class="tag">本章小结</span>
+        <p>ASO 扣上后有两条路：<strong>RNase H 切割</strong>（招细胞自带剪刀销毁 mRNA，催化省药，gapmer 结构，用于"减蛋白"）和<strong>空间位阻</strong>（当胶布堵关键位置，不销毁，可实现"改写剪接"这种高级操作，如 SMA 的诺西那生）。选哪条决定了设计。下一章：这段核酸怎么被改造得能在身体里存活。</p>
+      </div>
+    </section>
+
+    <!-- as3 -->
+    <section class="module" id="as3">
+      <div class="eyebrow">Antisense 03 · siRNA / RNAi</div>
+      <h1><span class="cn">另一条路：siRNA 与 RNA 干扰</span></h1>
+      <p class="lede">除了 ASO，还有一支"表亲"也在 RNA 层面关基因，叫 <strong>siRNA</strong>（小干扰 RNA）。它借用了细胞里一套<strong>天生就存在的"基因静默"系统</strong>来干活。这一章把它讲清楚，并和 ASO 做个对比——它俩常被混为一谈，其实机制不同。</p>
+
+      <h2><span class="cn">RNAi：细胞自带的"基因灭火队"</span></h2>
+      <p>细胞本来就有一套防御机制叫 <strong>RNA 干扰 (RNAi)</strong>——它能识别并销毁"双链 RNA"（往往是病毒入侵的标志）。科学家发现，只要人工给细胞递进一小段<strong>双链 RNA（siRNA）</strong>，就能<em>劫持这套系统</em>，指哪打哪地销毁任何目标 mRNA。这个发现拿了 2006 年诺奖。</p>
+      <div class="loop">
+        <div class="loop-title">siRNA 的工作流程</div>
+        <div class="chain">
+          <div class="link"><div class="k">1</div><div class="v">递进双链 siRNA</div><div class="d">一段人工合成的双链小 RNA 进入细胞</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">2</div><div class="v">装进 RISC</div><div class="d">被细胞的"灭火队机器"(RISC)拾起，留一条当"通缉令"</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">3</div><div class="v">按令销毁</div><div class="d">RISC 拿着通缉令找到匹配的 mRNA，切断它</div></div>
+        </div>
+      </div>
+      <p>关键区别：ASO 是"单枪匹马"直接扣 mRNA（招 RNase H 或占位）；<strong>siRNA 是"报案"——把通缉令交给细胞里一支现成的专业灭火队（RISC 复合体）去执行销毁</strong>。RISC 也是催化式的，一条 siRNA 能引导销毁很多 mRNA，效率很高。</p>
+
+      <h2><span class="cn">ASO vs siRNA：一张对比表</span></h2>
+      <table class="tbl">
+        <thead><tr><th></th><th>ASO（反义寡核苷酸）</th><th>siRNA（小干扰 RNA）</th></tr></thead>
+        <tbody>
+          <tr><td>形态</td><td>单链</td><td>双链</td></tr>
+          <tr><td>怎么灭 mRNA</td><td>自己招 RNase H 剪，或占位封印</td><td>交给细胞的 RISC 机器去剪</td></tr>
+          <tr><td>能做的花样</td><td>多（切割 + 剪接调控 + 占位，第2章）</td><td>主要是"切割沉默"一种</td></tr>
+          <tr><td>能进细胞核吗</td><td>能（可作用于核内未剪辑的 RNA）</td><td>主要在细胞质起作用</td></tr>
+          <tr><td>代表药</td><td>诺西那生(SMA)、Inotersen(TTR)</td><td>Patisiran、Inclisiran(降胆固醇)</td></tr>
+        </tbody>
+      </table>
+      <p>不用记全，抓住一句：<strong>ASO 更"多才多艺"（能切、能改、能堵），siRNA 更"专精高效"（专门借 RISC 做沉默）。</strong>两者面临的化学和递送难题高度相似（都是脆弱核酸），所以后面第 4、5、6 章对两者基本通用。</p>
+
+      <div class="note investor">
+        <span class="tag">产业格局的一条线</span>
+        <p>这两条技术路线背后是两大阵营：<strong>ASO 以 Ionis 为代表</strong>（Crooke 的公司），<strong>siRNA 以 Alnylam 为代表</strong>。近年 siRNA 靠 GalNAc 递送（第 5 章）实现了"一年打两针降胆固醇"（Inclisiran）这类惊艳产品，让核酸药真正走向大众慢病。这条线在<a href="overview.html">概览课</a>的公司/通路矩阵里能对上号。</p>
+      </div>
+      <div class="note">
+        <span class="tag">本章小结</span>
+        <p><strong>siRNA</strong> 是双链核酸，通过劫持细胞天生的<strong>RNAi 灭火系统（RISC）</strong>来销毁目标 mRNA——"报案让专业队执行"。相比 ASO（单枪匹马、花样多），siRNA 专精于高效沉默。两者难题相通。下一章进入核酸药的第一座大山：化学修饰。</p>
+      </div>
+    </section>
+
+    <!-- as4 -->
+    <section class="module" id="as4">
+      <div class="eyebrow">Antisense 04 · Chemical Modification</div>
+      <h1><span class="cn">化学修饰：让脆弱的核酸能当药</span></h1>
+      <p class="lede">这是全课最"药化"的一章。一段天然核酸打进身体，<strong>几分钟就被降解、进不了细胞、还激惹免疫</strong>——根本当不了药。反义技术能成真，靠的是几代人给核酸链"穿盔甲"的化学修饰。理解这一章，你就懂了为什么这门技术"憋了二十年才爆发"。</p>
+
+      <h2><span class="cn">裸核酸的三宗罪</span></h2>
+      <ul>
+        <li><strong>会被秒降解</strong>：血液和细胞里到处是"核酸酶"，专门剪碎游离核酸。裸 ASO 半衰期以分钟计（<a href="pharmacology.html">药理课</a>第 4 章的半衰期，短到没法用）。</li>
+        <li><strong>进不了细胞</strong>：核酸带大量负电、又大，很难穿过细胞膜（膜是油性的，第 5 章细讲）。</li>
+        <li><strong>会惊动免疫</strong>：外源核酸长得像"病毒入侵",容易被<a href="immunology.html">免疫系统</a>的模式识别受体（免疫课第 1 章的 TLR）当敌人，引发炎症。</li>
+      </ul>
+      <p>化学修饰的任务，就是<strong>在不破坏"碱基配对能力"（第 1 章的命根子）的前提下，逐一解决这三宗罪</strong>。</p>
+
+      <h2><span class="cn">修饰的三个部位</span></h2>
+      <p>一段核酸有三个可改造的部位，历代修饰就在这三处做文章：</p>
+      <table class="tbl">
+        <thead><tr><th>改哪里</th><th>经典修饰</th><th>解决什么</th></tr></thead>
+        <tbody>
+          <tr><td>骨架（连接各碱基的"链条")</td><td><strong>硫代磷酸 (PS)</strong>：把链条上一个氧换成硫</td><td>抗降解 + 让 ASO 能和血浆蛋白结合，别太快被肾滤走。<em>几乎所有 ASO 都用它。</em></td></tr>
+          <tr><td>糖环（每个碱基挂着的"支架")</td><td><strong>2′ 修饰</strong>：2′-MOE、2′-O-甲基、<strong>LNA/cEt</strong>（把糖锁死）</td><td>大幅抗降解 + 让配对贴得更牢（结合力更强，可用更短序列）</td></tr>
+          <tr><td>碱基本身</td><td>少量化学微调</td><td>微调结合、降低免疫刺激</td></tr>
+        </tbody>
+      </table>
+
+      <h2><span class="cn">几代演进：一部"越穿越好的盔甲史"</span></h2>
+      <div class="loop">
+        <div class="loop-title">修饰的代际 · 越来越稳、越来越强</div>
+        <div class="chain">
+          <div class="link"><div class="k">第一代</div><div class="v">PS 骨架</div><div class="d">解决"抗降解" · 第一批药（Fomivirsen）就靠它</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">第二代</div><div class="v">2′-MOE 等</div><div class="d">更稳 + 结合更牢 + 毒性更低 · 诺西那生、Inotersen 属此代</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">进阶</div><div class="v">LNA/cEt · 化学缀合</div><div class="d">锁死糖环极大增强结合 · 或直接挂上"导航"(GalNAc,第5章)</div></div>
+        </div>
+      </div>
+      <p><strong>缺口聚体 (gapmer) 的智慧</strong>（第 2 章提过）在这里说圆了：切割型 ASO 需要中段"露出 DNA 刀口"给 RNase H 认，但那段又最容易被降解。<em>解法是"两端穿重甲（2′修饰）、中间留素身（DNA）"——两端保护整条链不被降解，中间那段刀口专供剪刀识别。</em>这种"分区设计"是反义化学的精髓。</p>
+
+      <h2><span class="cn">还有一种"另辟蹊径"：吗啉代 (PMO)</span></h2>
+      <p>有一类修饰干脆<strong>把核酸的骨架整个换成一种不带电的人工骨架（吗啉环 PMO）</strong>。好处是<em>完全不怕核酸酶、几乎不激惹免疫</em>；代价是它不招 RNase H（只能做空间位阻型），且递送方式不同。<em>治疗杜氏肌营养不良（DMD）的依特立生 (Eteplirsen) 就是 PMO 型的剪接调控药。</em></p>
+
+      <div class="note">
+        <span class="tag">本章小结</span>
+        <p>裸核酸有"三宗罪"（被秒降解、进不了细胞、惹免疫）。化学修饰在<strong>骨架（PS 抗降解）、糖环（2′-MOE / LNA 增稳增结合）、碱基</strong>三处做文章，一代代把核酸"武装成药"。<strong>gapmer 的分区设计（两端穿甲、中间露刀口）</strong>和 <strong>PMO 换骨架</strong>是两种典型思路。武装好了，还剩最难的一关——怎么把它送进目标细胞。</p>
+      </div>
+    </section>
+
+    <!-- as5 -->
+    <section class="module" id="as5">
+      <div class="eyebrow">Antisense 05 · Delivery</div>
+      <h1><span class="cn">递送：核酸药最大的一道坎</span></h1>
+      <p class="lede">如果说化学修饰解决了"核酸能不能活下来"，<strong>递送解决的是"它能不能到达目标细胞、并进到细胞里去"</strong>。这是核酸药几十年来最大的瓶颈——很多机制完美的药，都卡死在"送不进去"。这一章讲行业是怎么一点点攻克它的。</p>
+
+      <h2><span class="cn">为什么这么难：两道墙</span></h2>
+      <ul>
+        <li><strong>第一道墙：到不了对的器官</strong>。打进血里的核酸药，身体会按自己的规律处置它（<a href="pharmacology.html">药理课</a>的分布/排泄）——大部分自然跑到肝和肾，想去别的器官（心、肌肉、脑）非常难。</li>
+        <li><strong>第二道墙：进不了细胞</strong>。就算到了器官，核酸带强负电又大，<em>穿不过油性的细胞膜</em>。就算被细胞"吞"进去，也常被困在细胞内的"回收站"（内体）里出不来、白白降解。这叫"内体逃逸"难题。</li>
+      </ul>
+      <p>所以递送要同时解决<strong>"去对地方" + "进得了细胞" + "逃得出回收站"</strong>三件事。行业主要发展出三条路：</p>
+
+      <h2><span class="cn">路一：GalNAc 偶联 —— 给核酸装个"肝脏门牌"</span></h2>
+      <div class="card">
+        <h3>核酸药的"游戏规则改变者"</h3>
+        <p>肝细胞表面有一种受体（ASGPR），专门抓取一种叫 <strong>GalNAc</strong> 的糖分子。科学家把<strong>三个 GalNAc 糖挂到 ASO/siRNA 上当"门牌"</strong>——药一进血，就被肝细胞的这个受体高效地"认领"并吞进去。<em>这一招让"送到肝细胞"几乎变成了解决了的问题</em>，直接催生了一批皮下注射、几个月打一次的重磅药（如降胆固醇的 Inclisiran、治卟啉症的 Givosiran）。<strong>凡是致病基因在肝里表达的病，GalNAc 都是首选武器。</strong></p>
+      </div>
+      <p>为什么肝这么关键？因为<em>大量代谢/遗传病的作乱蛋白正好在肝合成</em>（胆固醇相关蛋白、TTR、凝血因子……）。GalNAc 把"最容易送达的器官"和"最多可打的靶点"对上了，这是近十年核酸药爆发的最大推手。</p>
+
+      <h2><span class="cn">路二：脂质纳米粒 (LNP) —— 用"油泡泡"包着送</span></h2>
+      <p>把核酸<strong>包进一颗微小的脂质球（LNP）里</strong>，用"油"帮它蒙混过细胞膜、并帮它逃出回收站。<em>第一个 siRNA 药 Patisiran 就用 LNP 递送；你更熟悉的是——新冠 mRNA 疫苗也是 LNP 送的（<a href="immunology.html">免疫课</a>第 8 章）。</em>LNP 静脉输注后也主要富集在肝，但它是"万能包装"，思路可拓展。</p>
+
+      <h2><span class="cn">路三：局部给药 —— 绕开血液，直接送到现场</span></h2>
+      <p>如果目标器官能"直接够到"，就绕开全身循环、直接局部给药，浓度高、全身副作用小：</p>
+      <ul>
+        <li><strong>鞘内注射（打进脊髓液）</strong>：治中枢神经病。<em>SMA 的诺西那生就是每隔几个月做一次腰穿，把 ASO 直接送进脑脊液</em>——因为血脑屏障（药理课第 3 章）挡住了普通静脉给药。</li>
+        <li><strong>玻璃体注射（打进眼球）</strong>：第一个反义药 Fomivirsen 就是打进眼睛治巨细胞病毒视网膜炎。</li>
+      </ul>
+
+      <div class="note">
+        <span class="tag">本章小结</span>
+        <p>递送要闯三关：<strong>去对器官 + 进得了细胞 + 逃出回收站</strong>。三条主路：<strong>GalNAc 偶联</strong>（给"肝脏门牌"，把肝内靶点变成易打，游戏规则改变者）、<strong>LNP</strong>（油泡泡包裹，也用于 mRNA 疫苗）、<strong>局部给药</strong>（鞘内治神经/玻璃体治眼，绕开屏障）。"肝外递送"仍是当前最前沿的未攻克难题。下一章：安全性。</p>
+      </div>
+    </section>
+
+    <!-- as6 -->
+    <section class="module" id="as6">
+      <div class="eyebrow">Antisense 06 · Toxicity &amp; Off-target</div>
+      <h1><span class="cn">毒性与脱靶：核酸药会怎么伤人</span></h1>
+      <p class="lede">核酸药的副作用，和小分子药（<a href="pharmacology.html">药理课</a>第 7 章）来源不同。搞清楚它们，是设计安全核酸药的关键。核酸药的毒性可以清爽地分成两大类：<strong>"因为序列而毒"和"因为化学而毒"。</strong></p>
+
+      <div class="loop">
+        <div class="loop-title">核酸药毒性 · 两大来源</div>
+        <div class="chain">
+          <div class="link"><div class="k">序列相关</div><div class="v">"认错了对象"</div><div class="d">ASO 序列碰巧也和别的 mRNA 部分配对 → 误关了别的基因（脱靶）</div></div>
+          <div class="arrow">＋</div>
+          <div class="link"><div class="k">化学相关</div><div class="v">"这类分子的通病"</div><div class="d">和序列无关，是这个化学骨架/给药方式本身带来的 → 免疫刺激、肝肾毒</div></div>
+        </div>
+      </div>
+
+      <h2><span class="cn">来源一：序列相关（脱靶）—— 认错对象</h2>
+      <p>第 1 章说"20 个碱基近乎唯一"，但这只是"近乎"。现实里，一段 ASO 可能<strong>和某个非目标 mRNA 有十几个碱基也能配上</strong>，于是<em>顺手把那个基因也关了一部分</em>——这就是<strong>杂交依赖的脱靶</strong>，可能引发意外毒性。</p>
+      <p>好消息是：<strong>脱靶可以靠"读序列"来预测和规避</strong>。设计时用计算机把候选 ASO 序列拿去和整个人类转录组比对，<em>凡是和别的重要基因有较高相似度的，提前淘汰</em>。这是核酸药相对小分子的一个独特优势——它的脱靶是"可计算"的（小分子脱靶靠形状，难预测）。</p>
+
+      <h2><span class="cn">来源二：化学相关 —— 这类分子的"通病"</span></h2>
+      <p>这类毒性<strong>和你选什么序列无关</strong>，是核酸这个"药物类别"本身带来的，主要几种：</p>
+      <ul>
+        <li><strong>免疫刺激</strong>：外源核酸被<a href="immunology.html">免疫系统</a>当"病毒信号"（免疫课第 1 章的 TLR/PRR），引发炎症、流感样反应。→ 靠碱基修饰（第 4 章）和序列设计来降低。<em>这也正是 mRNA 疫苗当年要用"修饰碱基"才成功的原因（同一个坑）。</em></li>
+        <li><strong>肝肾毒性</strong>：核酸药大量在肝肾蓄积（第 5 章），高剂量下可能伤这两个器官。PS 骨架也和一些促凝、补体激活反应有关。→ 靠化学优化和剂量控制管理。</li>
+        <li><strong>注射局部反应</strong>：皮下/鞘内注射常见局部炎症。</li>
+      </ul>
+      <p>规律很清楚：<strong>序列相关毒性 → 改序列解决；化学相关毒性 → 改化学修饰和给药方案解决。</strong>这也是为什么第 4 章的"代际演进"总在强调"毒性更低"——每一代新修饰，很大动力就是压住化学相关毒性。</p>
+
+      <h2><span class="cn">一个方法学优势：类效应可预期</span></h2>
+      <p>因为化学相关毒性是"整类共有"的，行业积累了大量经验，<strong>对一个新核酸药大致会有哪些副作用，往往能提前预判</strong>（不像新小分子每个都可能有独特惊吓）。这让核酸药的安全性开发相对"有章可循"——这是 Crooke 这一派几十年数据攒出来的家底。</p>
+
+      <div class="note">
+        <span class="tag">本章小结</span>
+        <p>核酸药毒性两分：<strong>序列相关（脱靶——认错别的 mRNA，可用计算机比对预测规避）</strong>和<strong>化学相关（免疫刺激、肝肾毒——整类通病，靠化学修饰和剂量管理）</strong>。"脱靶可计算""类效应可预期"是它相对小分子的独特优势。原理、化学、递送、毒性四座山都翻过了，下一章看它们在临床上结出的果实。</p>
+      </div>
+    </section>
+
+    <!-- as7 -->
+    <section class="module" id="as7">
+      <div class="eyebrow">Antisense 07 · Clinical Milestones</div>
+      <h1><span class="cn">临床里程碑与"选哪种病"的逻辑</span></h1>
+      <p class="lede">技术讲完了，来看它在真实病人身上的成绩单。反义药物走过了一条"从惊艳到失望、再到成熟爆发"的曲折路。串起这些里程碑，你就能总结出一条实用规律：<strong>什么样的病，最适合用核酸药来打。</strong></p>
+
+      <h2><span class="cn">一条时间线：从第一个药到 n=1 定制</span></h2>
+      <div class="waves">
+        <div class="wave"><span class="yr">1998</span><span class="dot"></span><div class="body"><h3>Fomivirsen · 第一个反义药</h3><p class="prob">打进眼球，治艾滋病人的巨细胞病毒视网膜炎。<b>证明了反义原理能成药</b>，但市场很小（后随抗病毒药进步而退市）。第一代 PS 化学。</p></div></div>
+        <div class="wave"><span class="yr">2013</span><span class="dot"></span><div class="body"><h3>Mipomersen · 全身给药的探路者</h3><p class="prob">降胆固醇（针对纯合子家族性高胆固醇血症）。<b>验证了皮下注射、全身反义</b>可行，但肝毒/耐受性问题限制了使用——暴露了递送和毒性的真实难度。</p></div></div>
+        <div class="wave"><span class="yr">2016</span><span class="dot"></span><div class="body"><h3>Nusinersen (Spinraza) · 改变命运的药</h3><p class="prob">治<b>脊髓性肌萎缩 (SMA)</b>——一种曾让婴儿早夭的绝症。鞘内注射的剪接调控 ASO，让患儿获得运动能力。<b>反义技术第一次"救命级"的成功</b>，也带火了整个领域。</p></div></div>
+        <div class="wave"><span class="yr">2018</span><span class="dot"></span><div class="body"><h3>Inotersen &amp; Patisiran · TTR 双雄</h3><p class="prob">同年治遗传性 TTR 淀粉样变：<b>Inotersen 是 ASO，Patisiran 是首个 LNP 递送的 siRNA</b>。ASO 和 siRNA 两条路线同时兑现，标志核酸药进入成熟期。</p></div></div>
+        <div class="wave"><span class="yr">2019</span><span class="dot"></span><div class="body"><h3>Milasen · 为一个孩子造的药</h3><p class="prob">为<b>单个</b>患罕见病的女孩 Mila 定制的 ASO，从发现突变到用药不到一年。<b>展示了核酸药"可编程"的极致</b>——n=1 个性化医疗的开端（也带来监管与伦理新问题）。</p></div></div>
+        <div class="wave"><span class="yr">2021+</span><span class="dot"></span><div class="body"><h3>Inclisiran 等 · 走向大众慢病</h3><p class="prob">GalNAc-siRNA 降胆固醇，<b>一年只需注射两次</b>。核酸药从"罕见病"迈向"高血脂"这类大众慢病，商业想象空间彻底打开。</p></div></div>
+      </div>
+
+      <h2><span class="cn">规律：什么病最适合核酸药？</span></h2>
+      <p>把上面这些成功案例的共性抽出来，就是核酸药的"最佳适应症画像"：</p>
+      <table class="tbl">
+        <thead><tr><th>有利条件</th><th>为什么</th></tr></thead>
+        <tbody>
+          <tr><td>病因是<strong>"某个基因过量/出错"</strong></td><td>核酸药最擅长"减少或改写一个特定基因产物"（第 2 章两种机制）</td></tr>
+          <tr><td>致病基因<strong>在肝表达</strong></td><td>GalNAc 递送已高度成熟（第 5 章）——送达不是问题</td></tr>
+          <tr><td>或器官<strong>能局部给药</strong>（眼、脊髓）</td><td>绕开递送难题，直达现场</td></tr>
+          <tr><td>是<strong>慢性/需长期</strong>用药的病</td><td>核酸药半衰期长、几月一次，依从性优势大</td></tr>
+          <tr><td><strong>传统小分子/抗体打不了</strong>的靶点</td><td>核酸药能打"无口袋"靶点（第 0 章）——差异化价值最大</td></tr>
+        </tbody>
+      </table>
+      <p>反过来，<strong>需要送到肝外（心、肌肉、实体瘤深处）、或病因不是"单基因过量"的病，核酸药目前仍很吃力</strong>——这也正是当前研发的主攻方向。</p>
+
+      <div class="note">
+        <span class="tag">本章小结</span>
+        <p>时间线：<strong>Fomivirsen（证明可成药）→ Mipomersen（暴露递送/毒性难度）→ 诺西那生（首个救命级、剪接调控）→ TTR 双雄（ASO+siRNA 同时成熟）→ Milasen（n=1 定制）→ Inclisiran（走向大众慢病）</strong>。最佳适应症画像：<em>单基因过量/出错、靶点在肝或可局部给药、慢性病、传统手段打不了</em>。最后一章总结平台价值。</p>
+      </div>
+    </section>
+
+    <!-- as8 -->
+    <section class="module" id="as8">
+      <div class="eyebrow">Antisense 08 · Platform &amp; Outlook</div>
+      <h1><span class="cn">平台价值与展望：核酸药在药物版图里的位置</span></h1>
+      <p class="lede">最后一章跳出细节，回答两个大问题：<strong>核酸药作为一个"平台"，独特价值在哪？它和小分子、抗体这些老武器是什么关系？</strong>并把这门课接回其余三门，合成一张完整的现代药物地图。</p>
+
+      <h2><span class="cn">核酸药的三个"结构性优势"</span></h2>
+      <ul>
+        <li><strong>可编程 = 研发提速</strong>：换靶点主要换序列（第 0、1 章），底层化学和递送平台复用。这让研发周期和成本<em>结构性下降</em>，极端情况下能为单个病人快速定制（Milasen）。</li>
+        <li><strong>能打"不可成药"靶点</strong>：不依赖蛋白有没有口袋（第 0 章），把一大批传统方式束手无策的靶点纳入射程——这是它<em>最不可替代的价值</em>。</li>
+        <li><strong>长效 = 依从性好</strong>：化学修饰后半衰期极长，很多药<em>几个月甚至半年给一次</em>（对比每天吃的小分子），对慢病是巨大优势。</li>
+      </ul>
+
+      <h2><span class="cn">也要清醒：三个仍未解决的短板</span></h2>
+      <ul>
+        <li><strong>肝外递送</strong>：目前的甜蜜区高度集中在"肝"和"可局部给药的器官"。<em>怎么高效、安全地送到心、肌肉、免疫细胞、实体瘤深处，是决定这个领域天花板的头号难题</em>（第 5 章）。</li>
+        <li><strong>成本与可及性</strong>：很多核酸药定价极高（尤其罕见病、n=1 定制），如何让更多人用得起是现实挑战。</li>
+        <li><strong>只能"减法"为主</strong>：ASO/siRNA 擅长"关掉/减少"一个基因，但"补上一个缺失的功能"不是它的强项（那更多是基因治疗、mRNA 的领域）。</li>
+      </ul>
+
+      <h2><span class="cn">和其他 modality 的关系：不是替代，是补位</span></h2>
+      <div class="loop">
+        <div class="loop-title">按"作用层次"给药物分类</div>
+        <div class="chain">
+          <div class="link"><div class="k">DNA 层</div><div class="v">基因治疗/编辑</div><div class="d">改总图纸（一次性、永久）</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">RNA 层</div><div class="v">反义 / siRNA / mRNA</div><div class="d">改工作副本（可逆、可编程）← 本课</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">蛋白层</div><div class="v">小分子 / 抗体</div><div class="d">改成品机器（成熟、量大）</div></div>
+        </div>
+      </div>
+      <p>看这张图就清楚了：<strong>核酸药占据的是"RNA 中间层"这个过去几乎空白的战略位置</strong>。它不取代小分子和抗体（那两层各有不可替代的场景），而是<em>把"可成药空间"往上游拓宽了一整层</em>。三层各有所长，未来是并存互补。</p>
+
+      <h2><span class="cn">四门课，一张完整地图</span></h2>
+      <table class="tbl">
+        <thead><tr><th>课程</th><th>作用层次 / 回答的问题</th></tr></thead>
+        <tbody>
+          <tr><td><a href="overview.html">药物创新概览</a></td><td>产业全景：有哪些药、打哪条通路、怎么运转</td></tr>
+          <tr><td><a href="immunology.html">免疫学</a></td><td>免疫系统与免疫类药物（抗体、疫苗、检查点）</td></tr>
+          <tr><td><a href="pharmacology.html">药理学</a></td><td>蛋白层：药进身体怎么起作用、怎么定剂量</td></tr>
+          <tr><td><a href="medchem.html">药物化学</a></td><td>怎么把操纵靶点的想法设计、造成真分子</td></tr>
+          <tr><td><strong>反义药物技术（本课）</strong></td><td>RNA 层：不碰蛋白，去关/改造"造蛋白的图纸"</td></tr>
+        </tbody>
+      </table>
+
+      <div class="note investor">
+        <span class="tag">你现在能看懂什么</span>
+        <p>学完这门课，再看核酸药相关新闻，你能一眼拆解：它是 <strong>ASO 还是 siRNA</strong>（第 3 章）？用<strong>切割还是剪接调控</strong>（第 2 章）？靠 <strong>GalNAc 还是 LNP 还是局部</strong>递送（第 5 章）——由此判断它打的是不是"肝内靶点"？适应症符不符合"最佳画像"（第 7 章）？这些正是判断一个核酸药项目成色的核心问题。</p>
+      </div>
+      <div class="note">
+        <span class="tag">整门课一句话收尾</span>
+        <p>反义药物＝<strong>用一段可编程的、武装过的核酸，在 RNA 这一层精确地关掉或改写"造蛋白的图纸"</strong>。它的原理极简（碱基配对），难点全在工程（化学修饰、递送、毒性）。它不取代旧武器，而是把人类"可成药"的疆域，往生命信息流的上游拓宽了一整层。</p>
+      </div>
+      <div class="footer-note">
+        反义药物技术入门 · Antisense Drug Technology · 框架参考 Stanley Crooke《Antisense Drug Technology》<br>
+        为非专业背景设计 —— 浅显中文、重直觉。全 9 章已完成。
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  const nav=document.getElementById('nav');
+  const items=[...document.querySelectorAll('.nav-item[data-target]')];
+  const mods=[...document.querySelectorAll('.module')];
+  const rail=document.getElementById('rail');
+  const scrim=document.getElementById('scrim');
+  const menuBtn=document.getElementById('menuBtn');
+  function show(id){
+    if(!mods.some(m=>m.id===id)) id='as0';
+    items.forEach(i=>i.classList.toggle('active',i.dataset.target===id));
+    mods.forEach(m=>m.classList.toggle('active',m.id===id));
+    window.scrollTo({top:0,behavior:'instant' in window?'instant':'auto'});
+    closeRail();
+  }
+  window.im=function(id){history.replaceState(null,'','#'+id);show(id);return false;};
+  nav.addEventListener('click',e=>{
+    const b=e.target.closest('.nav-item[data-target]'); if(!b)return;
+    history.replaceState(null,'','#'+b.dataset.target);
+    show(b.dataset.target);
+  });
+  function openRail(){rail.classList.add('open');scrim.classList.add('show')}
+  function closeRail(){rail.classList.remove('open');scrim.classList.remove('show')}
+  menuBtn.addEventListener('click',openRail);
+  scrim.addEventListener('click',closeRail);
+  show((location.hash||'#as0').slice(1));
+  window.addEventListener('hashchange',()=>show((location.hash||'#as0').slice(1)));
+</script>
+</body>
+</html>

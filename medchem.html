@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>药物化学入门 · Medicinal Chemistry 101</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Spectral:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<button class="menu-btn" id="menuBtn">☰ 目录</button>
+<div class="scrim" id="scrim"></div>
+<div class="shell">
+
+  <aside class="rail" id="rail">
+    <a class="brand" href="index.html"><span class="brand-cn">药物化学入门</span><span class="brand-en">Med Chem · 讲给非专业的你</span></a>
+    <div class="nav-label">章节 · Chapters</div>
+    <nav id="nav">
+      <button class="nav-item active" data-target="mc0"><span class="num">00</span><span class="txt">导论：设计一把"钥匙"</span></button>
+      <button class="nav-item" data-target="mc1"><span class="num">01</span><span class="txt">药物如何"贴住"靶点：作用力</span></button>
+      <button class="nav-item" data-target="mc2"><span class="num">02</span><span class="txt">找到起点：苗头与先导</span></button>
+      <button class="nav-item" data-target="mc3"><span class="num">03</span><span class="txt">构效关系 SAR 与药效团</span></button>
+      <button class="nav-item" data-target="mc4"><span class="num">04</span><span class="txt">成药性与 ADMET</span></button>
+      <button class="nav-item" data-target="mc5"><span class="num">05</span><span class="txt">优化工具箱</span></button>
+      <button class="nav-item" data-target="mc6"><span class="num">06</span><span class="txt">把分子造出来：合成</span></button>
+      <button class="nav-item" data-target="mc7"><span class="num">07</span><span class="txt">新式武器：共价·PROTAC·偶联</span></button>
+      <button class="nav-item" data-target="mc8"><span class="num">08</span><span class="txt">从化学到药物</span></button>
+    </nav>
+    <div class="rail-cross">
+      <div class="nav-label">切换 · 参考</div>
+      <a href="index.html"><span class="num">⌂</span>课程门户（首页）</a>
+      <a href="overview.html"><span class="num">Ⅰ</span>药物创新概览</a>
+      <a href="pharmacology.html"><span class="num">Ⅲ</span>药理学入门</a>
+    </div>
+    <div class="rail-foot">框架参考 Patrick《药物化学》<br>浅显中文 + 类比 · 重理解，轻死记</div>
+  </aside>
+
+  <main class="main">
+
+    <!-- mc0 -->
+    <section class="module active" id="mc0">
+      <div class="eyebrow">Med Chem 00 · 导论</div>
+      <h1><span class="cn">药物化学 = 设计一把能开锁的"钥匙"</span></h1>
+      <p class="lede">如果说<a href="pharmacology.html">药理学</a>研究"钥匙插进锁后会怎样"，那<strong>药物化学研究的是：怎么把这把钥匙设计、打磨、造出来。</strong>靶点是"锁"，药物分子是"钥匙"，这门课就是<strong>钥匙工匠的手艺</strong>——既要开得了锁（药效），又要经得起身体这一路折腾（成药性）。</p>
+
+      <h2><span class="cn">一句话定位：连接生物学和化学的桥</span></h2>
+      <p>生物学家告诉你"这个病靠这把锁（靶点）致病"；药物化学家的活，是<strong>造出正好能操纵这把锁的分子</strong>。所以这门课站在两门课中间：往上接<a href="overview.html">药物创新</a>的"选什么靶点"，往下接<a href="pharmacology.html">药理学</a>的"分子进身体如何表现"。</p>
+
+      <h2><span class="cn">全课的核心张力：药效 vs 成药性</span></h2>
+      <div class="loop">
+        <div class="loop-title">一把好钥匙的两个考核 · 缺一不可</div>
+        <div class="chain">
+          <div class="link"><div class="k">开得了锁</div><div class="v">药效 / 亲和力</div><div class="d">分子要能牢牢贴住靶点、拨动它（第1、3章）</div></div>
+          <div class="arrow">＋</div>
+          <div class="link"><div class="k">扛得住折腾</div><div class="v">成药性 ADMET</div><div class="d">能被吸收、不被秒代谢、不毒、能到达战场（第4、5章）</div></div>
+        </div>
+      </div>
+      <p>新手总以为"抓得越牢越好"，但<strong>历史上无数抓得极牢的分子，都死在了第二关</strong>：吃下去吸收不了、进身体就被肝脏拆光、或者顺手毒到别的器官。药化的真正难点，是<strong>在"药效"和"成药性"之间反复权衡、两头都要</strong>——这就是所谓"多参数优化"，也是这门手艺最烧脑的地方。</p>
+
+      <h2><span class="cn">一个贯穿全课的画面：不断微调分子</span></h2>
+      <p>药化的日常，是<strong>拿到一个还不够好的分子，一点点改它的结构</strong>——这里加个基团、那里换个原子、把某段"锁死"——然后测：药效变强了还是变弱？溶解度好了吗？还毒不毒？如此循环几十上百轮。整门课教的，就是<strong>"怎么改才聪明"</strong>的一套套路。</p>
+
+      <div class="note">
+        <span class="tag">怎么学这门课</span>
+        <p>你完全不需要会画分子结构、会做有机反应。只要抓住每一处改动背后的<strong>意图</strong>：这个改动是为了"贴得更牢"、还是"更好吸收"、还是"少被代谢/少中毒"？把意图想通，化学细节可以先放一边。</p>
+      </div>
+      <div class="note investor">
+        <span class="tag">和三门课的关系</span>
+        <p>这门课是三门课里"最动手"的一门。它和<a href="pharmacology.html">药理学</a>是一对：药理讲"分子在身体里的表现"，药化讲"怎么改分子去改善那个表现"。最后一章还会引出<a href="antisense.html">核酸药物</a>——那是一类连"造钥匙的材料"都换掉的新范式。</p>
+      </div>
+    </section>
+
+    <!-- mc1 -->
+    <section class="module" id="mc1">
+      <div class="eyebrow">Med Chem 01 · Binding Forces</div>
+      <h1><span class="cn">药物如何"贴住"靶点：分子间的作用力</span></h1>
+      <p class="lede">药物和靶点之间没有"焊死"，靠的是几种<strong>又弱又可逆的分子间作用力</strong>，像很多小磁扣一起吸住。理解这几种力，你就理解了"为什么改一个小基团，结合能差很多"——这是整门课所有优化的物理基础。</p>
+
+      <h2><span class="cn">先纠正一个直觉：结合是"可逆的贴合",不是焊接</span></h2>
+      <p>大多数药和靶点的结合是<strong>可逆</strong>的——贴上去，待一会儿，又松开。就像很多小磁扣同时吸住两个面：<em>单个磁扣很弱，但多个加起来就贴得相当牢，而且需要时能被拉开</em>（这样药代谢掉后靶点能恢复）。药化优化，本质就是<strong>让这些"磁扣"又多又准地对上</strong>。</p>
+
+      <h2><span class="cn">几种"磁扣"（结合力）</span></h2>
+      <table class="tbl">
+        <thead><tr><th>作用力</th><th>比喻 / 强度</th><th>药化里怎么用</th></tr></thead>
+        <tbody>
+          <tr><td>离子键（静电）</td><td>正负相吸，最强的一种</td><td>分子上带正电的部分对上靶点带负电的部分，贡献大</td></tr>
+          <tr><td>氢键</td><td>中等强度、<strong>有方向性</strong>的"小挂钩"</td><td>最常被精心设计——位置角度对上了才有效，是特异性的关键</td></tr>
+          <tr><td>疏水作用</td><td>"油和油抱团"（怕水的部分躲在一起）</td><td>分子的油性部分塞进靶点的油性口袋，往往贡献很大结合力</td></tr>
+          <tr><td>范德华力</td><td>最弱，但"贴面积大就多"</td><td>形状越贴合、接触面越大，累积越多</td></tr>
+        </tbody>
+      </table>
+      <p>关键领悟：<strong>这些力都随距离急剧变化</strong>。分子和靶点口袋的形状差一点点，磁扣就对不上、力就掉一大截。所以"改一个小基团，活性差几十倍"一点都不奇怪——你可能刚好让一个氢键接上了、或让一块形状终于塞进了口袋。</p>
+
+      <h2><span class="cn">形状互补：锁和钥匙，还是手和手套</span></h2>
+      <p>早期比喻是"锁与钥匙"（形状严丝合缝）。更准确的现代版是<strong>"手与手套"（诱导契合）</strong>：靶点口袋不是死板的，药物贴近时双方会<em>互相微调形状</em>去迁就对方。这解释了为什么设计分子既要看"形状对不对"，也要留意靶点会不会"配合地动一下"。</p>
+
+      <h2><span class="cn">手性：镜像分子可能天差地别</span></h2>
+      <p>有些分子存在两种<strong>互为镜像</strong>的版本（像左手和右手，叫<strong>手性</strong>）。由于靶点口袋本身也是"有手性的"，往往<strong>只有一只"手"能塞进手套</strong>，另一只无效、甚至有害。<em>历史上惨痛的教训（如反应停 thalidomide，一种镜像致畸）让"分清左右手"成了药化的必修课——现代很多药都专门只做有效的那一只手。</em></p>
+
+      <div class="note">
+        <span class="tag">本章小结</span>
+        <p>药和靶点靠<strong>可逆的分子间作用力</strong>（离子键、氢键、疏水、范德华）像一堆小磁扣一起贴住；力对距离和形状极其敏感，所以<strong>改一个小基团就能大幅改变结合</strong>。形状要<strong>互补（手与手套、诱导契合）</strong>，还要注意<strong>手性（左右手）</strong>。下一章：怎么找到第一个"大致能贴"的起点分子。</p>
+      </div>
+    </section>
+
+    <!-- mc2 -->
+    <section class="module" id="mc2">
+      <div class="eyebrow">Med Chem 02 · Hit &amp; Lead</div>
+      <h1><span class="cn">找到起点：苗头化合物与先导化合物</span></h1>
+      <p class="lede">造钥匙不是凭空画，得先有个"大致能插进锁"的粗胚。药化研发的起点分两级：先撞到一个有点苗头的（<strong>苗头 hit</strong>），再把它打磨成靠谱的优化起点（<strong>先导 lead</strong>）。这一章讲这些起点从哪来。</p>
+
+      <h2><span class="cn">苗头从哪来：四条常见路子</span></h2>
+      <ul>
+        <li><strong>高通量筛选 (HTS)</strong>：把几十万上百万个现成分子一股脑丢给靶点，机器自动测哪个有点反应——像"海选"。撞出来的就是苗头。</li>
+        <li><strong>天然产物</strong>：植物、微生物、海洋生物几十亿年"进化"出的分子往往就作用于生命分子。青霉素（霉菌）、紫杉醇（红豆杉）、他汀（霉菌）都源于此。<em>大自然是最老练的药化师。</em></li>
+        <li><strong>已有药物 / 文献</strong>：从一个已知能作用于相关靶点的分子出发改造（"me-too / me-better"），起点更稳。</li>
+        <li><strong>基于结构的设计</strong>：如果知道靶点口袋长什么样（靠晶体结构/冷冻电镜），可以<em>反过来"照着口袋画钥匙"</em>——计算机辅助药物设计。碎片筛选（先找小碎片再拼大）也属这类。</li>
+      </ul>
+
+      <h2><span class="cn">从苗头到先导：把粗胚打磨成靠谱起点</span></h2>
+      <p>一个苗头往往<strong>又弱又杂</strong>：活性不高、可能同时乱抓好几个靶点、结构也不适合当药。把它变成<strong>先导化合物</strong>，要做几件事：</p>
+      <div class="loop">
+        <div class="loop-title">Hit → Lead · 把粗胚磨成靠谱起点</div>
+        <div class="chain">
+          <div class="link"><div class="k">验真</div><div class="v">确认它真的有效</div><div class="d">排除假阳性（不是杂质/聚集捣乱）</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">提纯活性</div><div class="v">选活性好、结构清爽的</div><div class="d">在一组苗头里挑最有前途的骨架</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">初步优化</div><div class="v">提高专一性</div><div class="d">让它只抓目标靶点，别乱抓</div></div>
+        </div>
+      </div>
+
+      <h2><span class="cn">警惕"骗子分子"</span></h2>
+      <p>筛选里常撞到一些<strong>假阳性</strong>——它们看似有活性，其实靠"耍赖"：有的会到处乱粘（泛乱结合）、有的会破坏蛋白、有的其实是杂质在起作用。经验丰富的药化师会<em>提前把这类"骗子骨架"识别出来剔掉</em>（业内叫 PAINS，泛测定干扰化合物），免得在一个假起点上白忙几年。</p>
+
+      <div class="note investor">
+        <span class="tag">接回创新史</span>
+        <p><a href="overview.html">概览课</a>讲的很多"重磅药起源故事"，落到药化就是这一章：青霉素是天然产物偶然发现、他汀是从霉菌代谢物追出来的、很多激酶抑制剂是基于结构设计的。<strong>"起点从哪来"决定了后面几年优化的天花板</strong>——起点选得好，事半功倍。</p>
+      </div>
+      <div class="note">
+        <span class="tag">本章小结</span>
+        <p>研发起点分两级：<strong>苗头 (hit)</strong> 来自筛选/天然产物/已有药/结构设计，往往又弱又杂；把它<strong>验真、提纯活性、提高专一性</strong>，才成为可靠的<strong>先导 (lead)</strong>。中途要小心"骗子分子"（假阳性）。有了先导，下一章就开始系统地改它——这就是构效关系。</p>
+      </div>
+    </section>
+
+    <!-- mc3 -->
+    <section class="module" id="mc3">
+      <div class="eyebrow">Med Chem 03 · SAR &amp; Pharmacophore</div>
+      <h1><span class="cn">构效关系（SAR）：改一处，看效果怎么变</span></h1>
+      <p class="lede">有了先导分子，药化师就开始系统地"改造+测试"：改动结构里的一处，看活性升还是降。把这些规律攒起来，就得到<strong>构效关系</strong>——它像一张藏宝图，告诉你分子哪里是"命门"、哪里可以随便动。这是药化最核心的日常。</p>
+
+      <h2><span class="cn">SAR 是什么：结构与活性的对照表</span></h2>
+      <p><strong>SAR</strong> <span class="en">(Structure–Activity Relationship)</span> ＝ "结构改动 → 活性变化"的规律。做法很朴素：合成一系列<em>只差一点点</em>的分子（叫"类似物"），每个都测活性，然后对比：</p>
+      <ul>
+        <li>把某个基团去掉，活性<strong>大跌</strong> → 这个基团是<em>命门</em>，负责一个关键的结合力（第 1 章的某个磁扣）。</li>
+        <li>把某处换个基团，活性<strong>没变</strong> → 这里对结合不重要，<em>可以拿来做别的用途</em>（比如挂个能改善溶解度的基团）。</li>
+        <li>某处加大一点体积，活性<strong>反升</strong> → 这里靶点有个<em>空口袋</em>正好可以填。</li>
+      </ul>
+      <p>几十轮下来，就<strong>画出了这把钥匙的"齿形图"</strong>：哪些齿必须保留、哪些可以磨、哪里还能加齿。</p>
+
+      <h2><span class="cn">药效团：一把钥匙真正干活的"最小齿组"</span></h2>
+      <p>把 SAR 攒到极致，会提炼出一个抽象概念——<strong>药效团</strong> <span class="en">(pharmacophore)</span>。它不是具体某个分子，而是<em>"要激活这个靶点，一个分子必须具备的几个关键特征，以及它们的相对位置"</em>：比如"这里要有一个氢键给体、那里 5 埃外要有一个正电中心、再远处要有一块疏水团"。</p>
+      <div class="card">
+        <h3>为什么药效团很有用</h3>
+        <p>一旦知道了药效团（真正干活的"最小齿组"），你就<strong>不必守着原来那个分子骨架</strong>了——任何能把这几个特征摆到正确位置的<em>全新骨架</em>，都可能有效。这让药化师能<strong>跳出专利、换个骨架重造一把钥匙</strong>（叫"骨架跃迁 scaffold hopping"），是绕开竞争对手专利、或改善成药性的利器。</p>
+      </div>
+
+      <h2><span class="cn">一个反复出现的取舍：活性 vs 选择性</span></h2>
+      <p>改分子时经常遇到矛盾：<strong>让它抓目标靶点更牢，往往顺手也更容易抓住"长得像"的别的靶点</strong>（脱靶→副作用，见<a href="pharmacology.html">药理课</a>第 7 章）。所以 SAR 不只追"活性最高"，更要追<strong>"选择性"</strong>——只对目标靶点强、对别的弱。很多优化轮次，其实是在<em>雕掉那些让它"乱抓"的部分</em>。</p>
+
+      <div class="note">
+        <span class="tag">本章小结</span>
+        <p><strong>SAR</strong> ＝ 通过"改一处、测活性"攒出的规律，画出钥匙的齿形图（哪齿是命门、哪里可动）。提炼到极致就是<strong>药效团</strong>——干活的最小齿组，让你能换骨架重造。优化时永远在权衡<strong>活性 vs 选择性</strong>。但活性做到再好，还要过下一关——它能不能真在身体里当药，这就是成药性。</p>
+      </div>
+    </section>
+
+    <!-- mc4 -->
+    <section class="module" id="mc4">
+      <div class="eyebrow">Med Chem 04 · Druglikeness &amp; ADMET</div>
+      <h1><span class="cn">成药性与 ADMET：为什么"好分子"会死</span></h1>
+      <p class="lede">这一章是本课的"扎心真相"：一个抓靶点抓得极牢的分子，可能<strong>根本当不了药</strong>。因为它还要过身体这一路的关卡——能不能吸收、会不会被秒代谢、毒不毒。这些统称 <strong>ADMET</strong>，是候选药最大的"死因"。</p>
+
+      <h2><span class="cn">ADMET：药理 ADME 再加一个 T</span></h2>
+      <p><a href="pharmacology.html">药理课</a>第 3 章讲过 ADME（吸收/分布/代谢/排泄）。药化在前面再加一个 <strong>T（毒性 Toxicity）</strong>，合成 <strong>ADMET</strong>——这是药化师改分子时脑子里必须同时盯着的一整套"体检指标"：</p>
+      <div class="loop">
+        <div class="loop-title">ADMET · 分子当药的五道体检</div>
+        <div class="chain">
+          <div class="link"><div class="k">A</div><div class="v">吸收</div><div class="d">口服进得了血吗</div></div>
+          <div class="arrow">·</div>
+          <div class="link"><div class="k">D</div><div class="v">分布</div><div class="d">到得了战场吗</div></div>
+          <div class="arrow">·</div>
+          <div class="link"><div class="k">M</div><div class="v">代谢</div><div class="d">会被肝秒拆吗</div></div>
+          <div class="arrow">·</div>
+          <div class="link"><div class="k">E</div><div class="v">排泄</div><div class="d">排得掉吗</div></div>
+          <div class="arrow">·</div>
+          <div class="link"><div class="k">T</div><div class="v">毒性</div><div class="d">会毒到别处吗</div></div>
+        </div>
+      </div>
+
+      <h2><span class="cn">Lipinski 五规则：口服药的"体型门槛"</span></h2>
+      <p>一个经典的经验法则（<strong>Lipinski 五规则</strong>）总结了：想做成<strong>口服</strong>药，分子最好别太大、别太"油"也别太"水"。核心就四条（记大意即可）：<em>分子量别太大、油水分配别太极端、氢键给体/受体别太多</em>。超出太多，往往吸收就成问题。</p>
+      <p>为什么？因为口服药要<strong>穿过肠壁的细胞膜（油性）进血</strong>，又要<strong>在血水里溶得开</strong>——这是一对矛盾：太油了不溶于水（吸收前就沉淀）、太水了穿不过油膜。<strong>分子必须"油水两亲"、大小适中</strong>，才能两头兼顾。这条矛盾贯穿所有口服药设计。</p>
+      <div class="note investor">
+        <span class="tag">规则会被打破，但要有代价意识</span>
+        <p>五规则不是铁律——很多成功药（尤其近年一些大分子、大环）超标了。但打破它意味着<em>吸收会很难，往往要靠特殊制剂或改注射</em>。药化师心里要清楚：<strong>越偏离这个"体型门槛"，成药性的路越难走。</strong></p>
+      </div>
+
+      <h2><span class="cn">最常见的三个"死因"</span></h2>
+      <ul>
+        <li><strong>代谢太快（M）</strong>：分子上有个"软肋"位点特别容易被肝的 CYP 酶盯上拆掉，半衰期短到一天要吃很多次。→ 第 5 章教怎么"封堵"这个软肋。</li>
+        <li><strong>溶解/吸收差（A）</strong>：太油、结晶太稳，进了肠子溶不开，吸收寥寥。→ 第 5 章教怎么加"亲水基团"或用前药。</li>
+        <li><strong>毒性（T）</strong>：可能顺手抓了要命的靶点（比如影响心脏电活动的 hERG 通道→心律失常），或代谢产生了毒性副产物。→ 必须雕掉。</li>
+      </ul>
+
+      <div class="note">
+        <span class="tag">本章小结</span>
+        <p>抓靶点只是第一关；分子还要过 <strong>ADMET</strong>（吸收/分布/代谢/排泄/毒性）五道体检，这才是候选药最大的死因。<strong>Lipinski 五规则</strong>给口服药定了"体型门槛"，背后是"油水两亲"这对永恒矛盾。三大常见死因（代谢太快、吸收太差、有毒）都有对应的化学修补法——下一章就是这套"优化工具箱"。</p>
+      </div>
+    </section>
+
+    <!-- mc5 -->
+    <section class="module" id="mc5">
+      <div class="eyebrow">Med Chem 05 · Optimization Toolbox</div>
+      <h1><span class="cn">优化工具箱：药化师的几套"聪明改法"</span></h1>
+      <p class="lede">知道了分子的毛病（第 4 章），怎么修？药化积累了几套经典套路——用最小的结构改动，解决吸收、代谢、活性的问题，又尽量<strong>不破坏原有药效</strong>。这一章就是这套"手术刀"的清单。</p>
+
+      <h2><span class="cn">工具一：生物电子等排 —— "换个零件，功能不变"</span></h2>
+      <p><strong>生物电子等排体</strong> <span class="en">(bioisostere)</span> 指<em>一组"长得不一样、但在靶点看来作用相似"的基团</em>。把分子里某个基团换成它的等排体，能<strong>保住药效，同时改掉毛病</strong>：比如换掉一个容易被代谢的基团、或换一个改善溶解度的基团。<em>这是药化最常用、最优雅的一招——像给机器换个功能相同但更耐用的零件。</em></p>
+
+      <h2><span class="cn">工具二：代谢封堵 —— 给"软肋"贴块盾</span></h2>
+      <p>如果 SAR 发现分子上某个位点老是被肝酶盯上拆掉（第 4 章的死因），就在那个位点<strong>做点手脚挡住它</strong>：常见是<em>在易攻击的位置换上氟原子</em>（氟又小又稳，酶啃不动），或者干脆把那个易碎基团换掉。这能显著延长半衰期。<em>"氟"是药化师的宠儿，现代很多药都带着几个氟就是这个原因。</em></p>
+
+      <h2><span class="cn">工具三：前药 —— "先伪装，进体内再变身"</span></h2>
+      <p><strong>前药</strong> <span class="en">(prodrug)</span> 是一种巧思：分子本身没活性（或吸收好但没效），<strong>进了身体被代谢一步，才转成真正的活性药</strong>。用途：</p>
+      <ul>
+        <li><strong>改善吸收</strong>：把不好吸收的活性药"伪装"成好吸收的形式，进血后再脱掉伪装变回原形。</li>
+        <li><strong>定点释放</strong>：设计成只在特定器官（如肝、肿瘤）才被激活，减少全身副作用。</li>
+      </ul>
+      <p><em>这正好呼应<a href="pharmacology.html">药理课</a>第 3 章说的"代谢不一定灭活，也能激活"。</em></p>
+
+      <h2><span class="cn">工具四：构象限制 —— "把钥匙锁成对的形状"</span></h2>
+      <p>一个柔软的分子在溶液里会不停扭动，大部分时间形状<em>不对</em>，只有偶尔扭到"正确姿势"才能插进靶点。如果<strong>用一个环把它"锁定"在正确形状上</strong>（构象限制），它就<em>时刻保持能结合的姿势</em>，活性和选择性都能提升。<em>代价是分子变大变复杂，要权衡成药性。</em></p>
+
+      <div class="card">
+        <h3>一句话串起这四招</h3>
+        <p>它们都在回答第 4 章那三个死因：<strong>换零件（生物电子等排）</strong>和<strong>贴盾（代谢封堵）</strong>治"代谢太快"；<strong>前药</strong>治"吸收差"或"要定点"；<strong>构象限制</strong>提"活性/选择性"。共同原则是——<em>用最小改动解决问题，尽量别动到药效团（第 3 章）那几颗关键的齿。</em></p>
+      </div>
+
+      <div class="note">
+        <span class="tag">本章小结</span>
+        <p>优化工具箱：<strong>生物电子等排（换功能相同的零件）、代谢封堵（贴氟挡酶）、前药（先伪装进体内再变身）、构象限制（锁定正确形状）</strong>。它们精确对应第 4 章的死因，核心是"小改动、保药效、修毛病"。改好了分子，还得真的把它<strong>造出来</strong>——下一章看合成。</p>
+      </div>
+    </section>
+
+    <!-- mc6 -->
+    <section class="module" id="mc6">
+      <div class="eyebrow">Med Chem 06 · Synthesis</div>
+      <h1><span class="cn">把分子造出来：合成的直觉</span></h1>
+      <p class="lede">设计得再好，也得能<strong>造得出来</strong>——而且要从"实验室造几毫克"一路做到"工厂造几吨"。这一章不教有机反应，只给你几个关键直觉：合成为什么难、为什么"能不能便宜地大量造"本身就是成药性的一部分。</p>
+
+      <h2><span class="cn">合成就是"搭乐高",但零件会打架</span></h2>
+      <p>造一个药物分子，是把小的化学"零件"一步步拼接、修饰成目标结构。听起来像搭乐高，难点在于：<strong>化学反应往往不够听话</strong>——你想在 A 处反应，它可能顺手也在 B 处反应；想要左手分子，它可能造出一半左手一半右手（第 1 章的手性）。所以真实合成要用各种手段<em>"保护"不想反应的部位、"引导"反应只走对的路</em>，一条几步到几十步的合成路线就是这么设计出来的。</p>
+
+      <h2><span class="cn">为什么"好合成"本身就值钱</span></h2>
+      <ul>
+        <li><strong>步数越少越好</strong>：每多一步，产率就打个折、成本和杂质就增加。一条 20 步的路线可能最终只剩个位数的总产率。</li>
+        <li><strong>要能放大</strong>：实验室里能用的危险试剂、极端条件，工厂里未必安全或划算。<strong>工艺化学</strong>这门分支专门负责把"能造出来"变成"能安全、便宜、稳定地大量造"。</li>
+        <li><strong>可造性反过来影响设计</strong>：一个理论上完美但要 30 步才能合成的分子，往往会被一个"稍逊但 8 步能造"的分子淘汰。<em>可合成性是隐形的成药性指标。</em></li>
+      </ul>
+
+      <h2><span class="cn">组合化学与并行合成：批量试错</span></h2>
+      <p>做 SAR（第 3 章）需要合成一大批"只差一点"的类似物。<strong>组合化学 / 并行合成</strong>让药化师能<em>一次性平行造出几十上百个类似物</em>（像流水线同时装配多个变体），大大加快"改一处—测一次"的循环。这也是为什么现代药化能在几年内筛过成千上万个分子。</p>
+
+      <div class="note investor">
+        <span class="tag">接回产业</span>
+        <p>"能不能便宜地大量合成"直接决定一个药的<strong>成本和可及性</strong>。小分子药之所以便宜（相对生物药），很大程度就因为化学合成成熟、可大规模放大。反过来，一些结构极复杂的天然产物类药，卖得贵往往就贵在"造不出、只能提取或半合成"。这一层在<a href="overview.html">概览课</a>的成本/定价讨论里能对上。</p>
+      </div>
+      <div class="note">
+        <span class="tag">本章小结</span>
+        <p>合成＝拼装+引导化学反应走对路，难在"反应不听话"和"手性控制"。<strong>好合成（步数少、能放大、成本低）本身就是一项成药性指标</strong>，会反过来筛掉难造的设计。<strong>组合/并行合成</strong>加速了 SAR 的试错。下一章看几类跳出"经典小分子"框架的新式武器。</p>
+      </div>
+    </section>
+
+    <!-- mc7 -->
+    <section class="module" id="mc7">
+      <div class="eyebrow">Med Chem 07 · New Modalities</div>
+      <h1><span class="cn">新式武器：共价药、PROTAC、偶联与核酸</span></h1>
+      <p class="lede">前面讲的是"经典可逆小分子"。近二三十年，药化师造出了几类<strong>打破经典规则</strong>的新武器——它们要么改变了"结合方式"，要么改变了"作用逻辑"，甚至换掉了造钥匙的材料。这一章速览，为你连接到更前沿的课程。</p>
+
+      <h2><span class="cn">共价药：从"贴住"到"焊死"</span></h2>
+      <p>第 1 章说结合通常是可逆的。<strong>共价药</strong>反其道——它和靶点<em>形成一个真正的化学键，焊死</em>。好处是作用强而持久（靶点被永久关掉，直到细胞造出新的）；风险是"焊错了地方"更麻烦。<em>早期人们怕它不可控，如今通过精巧设计（只对目标靶点上某个特定位点反应）实现了可控共价，出了一批重磅药（如某些肺癌 EGFR 抑制剂、新冠口服药）。</em></p>
+
+      <h2><span class="cn">PROTAC：从"抑制"到"拖去销毁"</span></h2>
+      <div class="loop">
+        <div class="loop-title">经典抑制剂 vs PROTAC · 两种作用逻辑</div>
+        <div class="chain">
+          <div class="link"><div class="k">经典抑制剂</div><div class="v">"堵住它"</div><div class="d">占住靶点活性口袋，让它没法干活（但靶点还在）</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">PROTAC</div><div class="v">"拖去销毁"</div><div class="d">一头抓靶点、一头抓细胞的"垃圾处理系统"，把靶点整个降解掉</div></div>
+        </div>
+      </div>
+      <p><strong>PROTAC</strong> 是个"双头分子"：一头抓住致病蛋白，另一头抓住细胞里的"蛋白垃圾处理厂"（泛素-蛋白酶体），硬把致病蛋白<strong>拽过去销毁</strong>。革命性在于：①不用堵住活性口袋，所以<em>能打那些"没有口袋、传统认为无法成药"的靶点</em>；②"催化式"工作——一个 PROTAC 拖走一个后能去拖下一个，用量可以很低。<em>代价是分子很大，成药性（第 4 章）是它最大的挑战。</em></p>
+
+      <h2><span class="cn">偶联药物：给弹头装上导航</span></h2>
+      <p><strong>抗体偶联药物 (ADC)</strong> 是药化和生物药的联姻：把一颗<strong>剧毒的小分子"弹头"</strong>用一段<strong>"连接臂"（linker）</strong>挂到一个<strong>抗体"导航"</strong>上（抗体见<a href="immunology.html">免疫课</a>第 3 章）。抗体把毒药精确送到癌细胞，进去后连接臂断开、释放弹头杀敌。<em>药化在这里的核心贡献，是设计那段"连接臂"——它必须在血里稳稳挂住（别半路掉弹头毒到正常细胞）、到了癌细胞里又能准时断开。这是一门精细的化学。</em></p>
+
+      <h2><span class="cn">核酸药物：换掉"造钥匙的材料"</span></h2>
+      <p>最激进的一步：前面所有药都是去<strong>操纵蛋白（靶点）</strong>。而<strong>核酸药物（反义寡核苷酸 ASO、siRNA、mRNA）</strong>干脆<em>跳到更上游，去关掉"造这个蛋白的图纸"</em>。它们的"钥匙"不再是有机小分子，而是一段化学修饰过的<strong>核苷酸链</strong>——这带来一整套全新的药化问题（怎么修饰才稳定、怎么递送进细胞、怎么不被免疫误伤）。</p>
+      <div class="note investor">
+        <span class="tag">接下一门课</span>
+        <p>核酸药物已经复杂到自成一门学问。<a href="antisense.html">《反义药物技术》课程</a>（Crooke 框架）会专门讲：ASO 是怎么工作的、化学修饰的几代演进、如何解决递送和毒性——那门课其实就是"核酸时代的药物化学"。学完本课再去看，你会发现它在回答的还是同一批问题：结合、稳定性、递送、选择性、毒性。</p>
+      </div>
+      <div class="note">
+        <span class="tag">本章小结</span>
+        <p>新式武器打破经典：<strong>共价药</strong>（从贴住到焊死）、<strong>PROTAC</strong>（从抑制到拖去销毁，能打"无口袋"靶点）、<strong>ADC</strong>（毒弹头+连接臂+抗体导航，药化的活在"连接臂")、<strong>核酸药</strong>（换掉造钥匙的材料，去关图纸而非蛋白）。它们扩大了"可成药"的边界。最后一章收束整门课。</p>
+      </div>
+    </section>
+
+    <!-- mc8 -->
+    <section class="module" id="mc8">
+      <div class="eyebrow">Med Chem 08 · From Chemistry to Medicine</div>
+      <h1><span class="cn">从化学到药物：整门课的收束</span></h1>
+      <p class="lede">回头看，药物化学做的就一件事：<strong>把一个"能操纵靶点"的想法，变成一个"真能当药"的分子。</strong>这条路上的每一步，都是在"药效"和"成药性"这对矛盾之间反复权衡。最后把它接回另外三门课。</p>
+
+      <h2><span class="cn">一张全景图：药化的完整流水线</span></h2>
+      <div class="loop">
+        <div class="loop-title">Molecule → Medicine · 药化全流程</div>
+        <div class="chain">
+          <div class="link"><div class="k">01</div><div class="v">选锁</div><div class="d">靶点（来自生物学）</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">02</div><div class="v">找起点</div><div class="d">苗头→先导（第2章）</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">03</div><div class="v">磨齿形</div><div class="d">SAR/药效团（第1、3章）</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">04</div><div class="v">过体检</div><div class="d">ADMET/优化（第4、5章）</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">05</div><div class="v">造得出</div><div class="d">合成/工艺（第6章）</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">06</div><div class="v">进临床</div><div class="d">交给药理与试验</div></div>
+        </div>
+      </div>
+
+      <h2><span class="cn">核心心法：永远在做"多参数权衡"</span></h2>
+      <p>如果只带走一句话，就是这句：<strong>药化没有"单项冠军"，只有"全能选手"。</strong>一个分子把活性做到极致却不溶、或溶了却有毒、或都好却要 30 步才能造——都当不了药。真正的手艺，是<strong>同时盯着活性、选择性、溶解、代谢、毒性、可合成性这一长串指标，找一个各项都过得去的平衡点</strong>。这也是为什么一个新药从起点到上市，动辄改上千个分子、耗时十年。</p>
+
+      <h2><span class="cn">四门课，一个闭环</span></h2>
+      <p>到这里，四门课可以合成一张完整的地图：</p>
+      <table class="tbl">
+        <thead><tr><th>课程</th><th>回答的问题</th></tr></thead>
+        <tbody>
+          <tr><td><a href="overview.html">药物创新概览</a></td><td>有哪些药、在打哪条通路、产业怎么运转</td></tr>
+          <tr><td><a href="immunology.html">免疫学</a></td><td>免疫系统怎么工作、免疫类药物在拨哪根弦</td></tr>
+          <tr><td><strong>药物化学（本课）</strong></td><td>怎么把"操纵靶点的想法"设计、优化、造成真分子</td></tr>
+          <tr><td><a href="pharmacology.html">药理学</a></td><td>分子进了身体后怎么起作用、怎么定剂量、为何失败</td></tr>
+          <tr><td><a href="antisense.html">反义药物技术</a></td><td>核酸时代的新范式：不操纵蛋白，去关图纸</td></tr>
+        </tbody>
+      </table>
+
+      <div class="note investor">
+        <span class="tag">你现在能做什么</span>
+        <p>学完这门课，再看一条新药新闻，你能追问的层次深多了：它的<strong>起点</strong>怎么来的？<strong>药效团</strong>是什么、绕开了谁的专利？成药性上它靠什么<strong>优化手段</strong>解决了代谢/吸收？是经典小分子还是<strong>PROTAC/共价/偶联/核酸</strong>这类新武器？这些正是投资和技术判断里最值钱的问题。</p>
+      </div>
+      <div class="note">
+        <span class="tag">整门课一句话收尾</span>
+        <p>药物化学＝<strong>造一把既开得了锁（药效）、又扛得住身体折腾（成药性）的钥匙</strong>，靠的是"改一处—测一次"的耐心循环和一整套优化套路，最终在无数指标间找一个能落地的平衡。下一门课，我们换掉造钥匙的材料，进入核酸药物的世界。</p>
+      </div>
+      <div class="footer-note">
+        药物化学入门 · Medicinal Chemistry 101 · 框架参考 Patrick《药物化学》<br>
+        为非专业背景设计 —— 浅显中文、重直觉。全 9 章已完成。
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  const nav=document.getElementById('nav');
+  const items=[...document.querySelectorAll('.nav-item[data-target]')];
+  const mods=[...document.querySelectorAll('.module')];
+  const rail=document.getElementById('rail');
+  const scrim=document.getElementById('scrim');
+  const menuBtn=document.getElementById('menuBtn');
+  function show(id){
+    if(!mods.some(m=>m.id===id)) id='mc0';
+    items.forEach(i=>i.classList.toggle('active',i.dataset.target===id));
+    mods.forEach(m=>m.classList.toggle('active',m.id===id));
+    window.scrollTo({top:0,behavior:'instant' in window?'instant':'auto'});
+    closeRail();
+  }
+  window.im=function(id){history.replaceState(null,'','#'+id);show(id);return false;};
+  nav.addEventListener('click',e=>{
+    const b=e.target.closest('.nav-item[data-target]'); if(!b)return;
+    history.replaceState(null,'','#'+b.dataset.target);
+    show(b.dataset.target);
+  });
+  function openRail(){rail.classList.add('open');scrim.classList.add('show')}
+  function closeRail(){rail.classList.remove('open');scrim.classList.remove('show')}
+  menuBtn.addEventListener('click',openRail);
+  scrim.addEventListener('click',closeRail);
+  show((location.hash||'#mc0').slice(1));
+  window.addEventListener('hashchange',()=>show((location.hash||'#mc0').slice(1)));
+</script>
+</body>
+</html>

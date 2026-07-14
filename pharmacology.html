@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>药理学入门 · Pharmacology 101</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Spectral:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<button class="menu-btn" id="menuBtn">☰ 目录</button>
+<div class="scrim" id="scrim"></div>
+<div class="shell">
+
+  <aside class="rail" id="rail">
+    <a class="brand" href="index.html"><span class="brand-cn">药理学入门</span><span class="brand-en">Pharmacology · 讲给非专业的你</span></a>
+    <div class="nav-label">章节 · Chapters</div>
+    <nav id="nav">
+      <button class="nav-item active" data-target="ph0"><span class="num">00</span><span class="txt">导论：药物与身体的对话</span></button>
+      <button class="nav-item" data-target="ph1"><span class="num">01</span><span class="txt">药物怎么"抓住"身体：受体</span></button>
+      <button class="nav-item" data-target="ph2"><span class="num">02</span><span class="txt">剂量与效应（量效曲线）</span></button>
+      <button class="nav-item" data-target="ph3"><span class="num">03</span><span class="txt">身体怎么处理药物：ADME</span></button>
+      <button class="nav-item" data-target="ph4"><span class="num">04</span><span class="txt">药代动力学的几个数字</span></button>
+      <button class="nav-item" data-target="ph5"><span class="num">05</span><span class="txt">自主神经系统药理</span></button>
+      <button class="nav-item" data-target="ph6"><span class="num">06</span><span class="txt">其他靶点：通道·酶·转运体</span></button>
+      <button class="nav-item" data-target="ph7"><span class="num">07</span><span class="txt">为什么会变、会出错</span></button>
+      <button class="nav-item" data-target="ph8"><span class="num">08</span><span class="txt">从分子到新药</span></button>
+    </nav>
+    <div class="rail-cross">
+      <div class="nav-label">切换 · 参考</div>
+      <a href="index.html"><span class="num">⌂</span>课程门户（首页）</a>
+      <a href="overview.html"><span class="num">Ⅰ</span>药物创新概览</a>
+      <a href="immunology.html"><span class="num">Ⅱ</span>免疫学入门</a>
+    </div>
+    <div class="rail-foot">框架参考 Rang &amp; Dale《药理学》<br>浅显中文 + 类比 · 重理解，轻死记</div>
+  </aside>
+
+  <main class="main">
+
+    <!-- ph0 -->
+    <section class="module active" id="ph0">
+      <div class="eyebrow">Pharmacology 00 · 导论</div>
+      <h1><span class="cn">药理学 = 药物和身体的"对话"</span></h1>
+      <p class="lede">药理学听起来高深，其实只研究一件事：<strong>一颗药进了身体，双方互相做了什么？</strong>这句话里藏着整门课的骨架——它是一场<strong>双向对话</strong>，一个方向叫"药物对身体做了什么"，另一个方向叫"身体对药物做了什么"。所有内容都挂在这两个方向上。</p>
+
+      <h2><span class="cn">两个方向，两个词</span></h2>
+      <div class="loop">
+        <div class="loop-title">药理学的两大支柱</div>
+        <div class="chain">
+          <div class="link"><div class="k">PD · 药效动力学</div><div class="v">药 → 身体</div><div class="d">药物对身体做了什么：抓哪个靶点、产生什么效应、多大剂量起多大作用</div></div>
+          <div class="arrow">↔</div>
+          <div class="link"><div class="k">PK · 药代动力学</div><div class="v">身体 → 药</div><div class="d">身体对药物做了什么：怎么吸收、分布、代谢、排出——决定药在体内多久、多浓</div></div>
+        </div>
+      </div>
+      <ul>
+        <li><strong>药效学 (PD)</strong> 回答"<em>这药干了什么、干得多猛</em>"：它抓住哪个靶点（第 1 章）、剂量和效应什么关系（第 2 章）。</li>
+        <li><strong>药代学 (PK)</strong> 回答"<em>这药在体内经历了什么</em>"：怎么进来、去哪、待多久、怎么走（第 3、4 章）。这决定了你该<strong>吃多少、多久吃一次</strong>。</li>
+      </ul>
+      <p>一句话记：<strong>PD 是药对身体的作用，PK 是身体对药的处置。</strong>一个好药，必须两边都过关——效应对（PD），而且能在合适的地方维持合适的浓度、又不过量（PK）。</p>
+
+      <h2><span class="cn">一个核心信念：药物只是"调节",不是"新增"</span></h2>
+      <p>绝大多数药<strong>不会给身体装新功能</strong>，它们只是<em>拨动身体本来就有的开关</em>——把某个信号调强一点、或调弱一点。身体里到处是"受体、酶、离子通道、转运体"这些开关，药物就是去按这些开关。所以学药理，本质是学<strong>身体有哪些开关、每个开关拨动后会怎样。</strong></p>
+
+      <h2><span class="cn">剂量决定一切：毒和药只差一个量</span></h2>
+      <p>帕拉塞尔苏斯有句名言（大意）：<em>万物皆毒，唯剂量定药毒</em>。同一个分子，小剂量是药、大剂量是毒。所以药理学永远绕不开一个概念——<strong>治疗窗</strong>：有效又安全的那段剂量区间。窗宽的药好用（吃多点少点都没事，如青霉素）；窗窄的药难用（多一点就中毒，如华法林、地高辛，得反复验血调量）。这个"窗"贯穿全课。</p>
+
+      <div class="note">
+        <span class="tag">怎么学这门课</span>
+        <p>不要背药名。每遇到一个药，只问四件事：<strong>它按的是哪个开关（靶点）？按了往哪个方向拨（激动还是阻断）？身体怎么处置它（PK）？治疗窗宽不宽？</strong>四个问题想通，这药就"活"了。</p>
+      </div>
+      <div class="note investor">
+        <span class="tag">和其他课的关系</span>
+        <p>这门课是<a href="overview.html">概览课</a>的"物理引擎"：概览讲有哪些药、打哪条通路；药理讲这些药<em>在剂量和时间上到底怎么起作用</em>。它也和<a href="medchem.html">药物化学</a>互补——药化管"怎么把分子设计出来"，药理管"这分子进了身体表现如何"。</p>
+      </div>
+    </section>
+
+    <!-- ph1 -->
+    <section class="module" id="ph1">
+      <div class="eyebrow">Pharmacology 01 · Receptors &amp; Targets</div>
+      <h1><span class="cn">药物怎么"抓住"身体：受体与靶点</span></h1>
+      <p class="lede">药物不是"泼进"身体乱作用，而是像钥匙插锁一样，<strong>精确地抓住某个特定分子（靶点）</strong>。最常见的靶点是"受体"——身体的信号接收器。理解受体，就理解了大半个药效学。</p>
+
+      <h2><span class="cn">什么是受体：身体的"信号接收器"</span></h2>
+      <p><strong>受体</strong> <span class="en">(receptor)</span> 是细胞上（或细胞内）的一种蛋白，专门接收某个化学信号。身体本来的信号分子（激素、神经递质）来了，插进受体这把"锁"，就触发细胞里一连串反应。<em>药物的绝招，就是造一把能插进同一把锁的"假钥匙"</em>——要么冒充信号、要么堵住锁眼。</p>
+
+      <h2><span class="cn">两种最基本的药：激动剂 vs 拮抗剂</span></h2>
+      <div class="loop">
+        <div class="loop-title">按开关的两个方向</div>
+        <div class="chain">
+          <div class="link"><div class="k">Agonist · 激动剂</div><div class="v">"冒充信号，打开开关"</div><div class="d">插进锁并转动它 → 产生和天然信号一样的效应（加强）</div></div>
+          <div class="arrow">↔</div>
+          <div class="link"><div class="k">Antagonist · 拮抗剂</div><div class="v">"堵住锁眼，挡开信号"</div><div class="d">插进锁但不转动 → 自己没效应，还占着位置不让真信号进（削弱）</div></div>
+        </div>
+      </div>
+      <ul>
+        <li><strong>激动剂</strong>：假钥匙不但插得进，还能<em>转动锁</em>——冒充天然信号，把效应打开或加强。例：吗啡激动阿片受体（止痛）、沙丁胺醇激动β受体（扩张气管，平喘）。</li>
+        <li><strong>拮抗剂（阻断剂）</strong>：假钥匙插得进但<em>转不动锁</em>——它自己不产生效应，却占着锁眼，让真信号进不来。例：β 阻断剂（美托洛尔，降心率血压）、抗组胺药（挡组胺，止过敏）。</li>
+      </ul>
+      <p>还有"半吊子"叫<strong>部分激动剂</strong>：转得动锁，但只能转一半，效应有天花板。妙用在于——<em>信号少时它补一把（像激动剂），信号多时它反而占位降温（像拮抗剂）</em>，起"稳压"作用（如某些戒烟药、镇痛药）。</p>
+
+      <h2><span class="cn">两个关键性能：亲和力 vs 效力</span></h2>
+      <p>评价一把"假钥匙"，看两个不同维度，别混：</p>
+      <table class="tbl">
+        <thead><tr><th>性能</th><th>回答的问题</th><th>比喻</th></tr></thead>
+        <tbody>
+          <tr><td>亲和力 <span class="en">affinity</span></td><td>钥匙<strong>插得多牢</strong>？抓得紧不紧？</td><td>决定"多低浓度就能抓住受体"。激动剂拮抗剂都需要它。</td></tr>
+          <tr><td>内在活性 / 效力 <span class="en">efficacy</span></td><td>插进去后<strong>能不能转动锁</strong>、转多狠？</td><td>激动剂＞0（能转），拮抗剂＝0（插得牢却转不动，这正是它当阻断剂的原因）。</td></tr>
+        </tbody>
+      </table>
+      <p>这解释了一个常让人困惑的点：<strong>拮抗剂也可以抓得非常牢（高亲和力），只是它抓牢了却不干活、专门占位</strong>——占得越牢，挡得越死。</p>
+
+      <h2><span class="cn">四大受体家族（有个印象即可）</span></h2>
+      <p>身体的受体按"传信号的方式"分四大类，反应速度从毫秒到小时，跨越六个数量级：</p>
+      <ul>
+        <li><strong>离子通道型</strong>（最快，毫秒）：信号一到，通道立刻开，离子涌入——神经、肌肉的瞬间反应。例：烟碱受体。</li>
+        <li><strong>G 蛋白偶联受体 GPCR</strong>（秒级，最大一类药靶）：像"门铃"，按一下触发细胞内一串接力。<em>约三分之一的药都作用在 GPCR 上。</em></li>
+        <li><strong>酶联受体</strong>（分钟级）：受体本身连着一个酶，多管生长、代谢信号（如胰岛素受体）。</li>
+        <li><strong>核受体</strong>（小时级，最慢）：在细胞内，直接调控基因开关——起效慢但持久。例：糖皮质激素、性激素。</li>
+      </ul>
+
+      <div class="note">
+        <span class="tag">本章小结</span>
+        <p>药物＝插进身体某把"锁"（受体）的假钥匙。<strong>激动剂转动锁（加强信号），拮抗剂堵住锁（削弱信号）。</strong>看一把钥匙要分开看<strong>亲和力（插得牢不牢）</strong>和<strong>效力（转不转得动锁）</strong>。下一章：把"剂量"这个轴加进来，看效应随剂量怎么变。</p>
+      </div>
+    </section>
+
+    <!-- ph2 -->
+    <section class="module" id="ph2">
+      <div class="eyebrow">Pharmacology 02 · Dose–Response</div>
+      <h1><span class="cn">剂量与效应：那条经典的 S 形曲线</span></h1>
+      <p class="lede">"吃多少"和"起多大作用"之间不是直线，而是一条 <strong>S 形曲线</strong>。读懂这条曲线，你就能看懂"效价、效能、治疗窗、副作用"这些概念——它们全是曲线上的点和距离。</p>
+
+      <h2><span class="cn">为什么是 S 形，不是直线</span></h2>
+      <p>剂量很低时，受体没占几个，几乎没效应（曲线平）；剂量升到中段，每加一点药占的受体明显增多，效应<em>陡增</em>（曲线陡）；剂量再高，受体快占满了，再加药也没用（曲线又平，到达<strong>天花板</strong>）。<em>横轴常用对数刻度，所以这条"占位率"曲线画出来就是漂亮的 S 形。</em></p>
+
+      <h2><span class="cn">两个易混词：效价 vs 效能</span></h2>
+      <div class="loop">
+        <div class="loop-title">Potency vs Efficacy · 别混</div>
+        <div class="chain">
+          <div class="link"><div class="k">效价 · Potency</div><div class="v">"多小的量就管用"</div><div class="d">曲线左右位置 · 越靠左＝越少量就起效（EC50 小）</div></div>
+          <div class="arrow">≠</div>
+          <div class="link"><div class="k">效能 · Efficacy</div><div class="v">"最猛能到多强"</div><div class="d">曲线的天花板高度 · 越高＝最大效应越强</div></div>
+        </div>
+      </div>
+      <p>一个生活化对比：<strong>效价高</strong>＝"这药很浓，一小片就够"（比如需要 5mg 的 A 药，比需要 500mg 的 B 药效价高）；<strong>效能高</strong>＝"这药能达到的最强止痛效果更高"。<em>两者独立：一个药可以"很少量就起效但封顶低"，也可以"要大剂量但能顶得很高"。</em>临床上<strong>效能常常比效价更重要</strong>——你要的是"能不能把痛压到够低"，而不是"用了几毫克"。衡量效价的常用数字是 <strong>EC50</strong>（达到一半最大效应所需的浓度）。</p>
+
+      <h2><span class="cn">治疗窗与安全边界</span></h2>
+      <p>同一个药通常有两条 S 曲线：一条是<strong>疗效</strong>曲线，一条（在更高剂量）是<strong>毒性</strong>曲线。两条曲线之间的空档，就是第 0 章说的<strong>治疗窗</strong>。衡量它的经典指标叫<strong>治疗指数</strong>＝"中毒剂量 ÷ 有效剂量"。这个数越大越安全：</p>
+      <ul>
+        <li><strong>宽窗药</strong>（治疗指数大）：吃多点少点都安全，不用频繁监测（如多数抗生素）。</li>
+        <li><strong>窄窗药</strong>（治疗指数小）：有效和中毒挨得很近，必须<em>反复验血、精调剂量</em>（华法林、地高辛、锂盐）。</li>
+      </ul>
+
+      <h2><span class="cn">拮抗剂怎么"推"这条曲线</span></h2>
+      <p>第 1 章的拮抗剂，作用就是把激动剂的 S 曲线"推走"，但推法有两种：</p>
+      <ul>
+        <li><strong>竞争性拮抗</strong>：和激动剂抢同一个锁眼。<em>加大激动剂剂量能把它挤开</em>——曲线整体右移，但天花板不变（还能达到最大效应，只是要更多药）。多数临床阻断剂是这种，可"加量克服"。</li>
+        <li><strong>非竞争性拮抗</strong>：锁被永久占住或换了机制。<em>再加激动剂也顶不回来</em>——天花板被压低。</li>
+      </ul>
+
+      <div class="note">
+        <span class="tag">本章小结</span>
+        <p>剂量-效应是条 <strong>S 形曲线</strong>：<strong>效价</strong>看曲线左右（多小的量起效，EC50），<strong>效能</strong>看天花板高低（最强能多强），两者独立、效能常更重要。疗效曲线和毒性曲线之间是<strong>治疗窗</strong>，窄窗药要精调。拮抗剂把曲线右移（竞争性，可加量克服）或压低天花板（非竞争性）。下一章换到 PK：药在身体里的旅程。</p>
+      </div>
+    </section>
+
+    <!-- ph3 -->
+    <section class="module" id="ph3">
+      <div class="eyebrow">Pharmacology 03 · ADME</div>
+      <h1><span class="cn">身体怎么处理药物：ADME 四步旅程</span></h1>
+      <p class="lede">一颗药进了身体，要经历一段旅程才能到达战场、又被清出体外。这段旅程分四步，首字母拼成 <strong>ADME</strong>：吸收、分布、代谢、排泄。它决定了药"能不能到、到多少、待多久"——也就是你该怎么给药。</p>
+
+      <div class="loop">
+        <div class="loop-title">ADME · 药物在体内的旅程</div>
+        <div class="chain">
+          <div class="link"><div class="k">A · Absorption</div><div class="v">吸收</div><div class="d">从吃进去到进入血液</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">D · Distribution</div><div class="v">分布</div><div class="d">随血液散布到各组织</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">M · Metabolism</div><div class="v">代谢</div><div class="d">主要在肝脏被"拆解改装"</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">E · Excretion</div><div class="v">排泄</div><div class="d">主要经肾脏随尿排出</div></div>
+        </div>
+      </div>
+
+      <h2><span class="cn">A · 吸收：怎么进到血里，进得了多少</span></h2>
+      <p>关键概念是<strong>生物利用度</strong> <span class="en">(bioavailability)</span>——你吃下去的药，真正进入血液循环的<em>比例</em>。静脉注射是 100%（直接进血）；口服往往打折，因为要过两道关：肠壁能不能吸收，以及——</p>
+      <p><strong>首过效应</strong>：口服药被肠道吸收后，<em>先经门静脉全部流过肝脏</em>，肝脏这道"海关"会先拆掉一部分，剩下的才进入全身循环。有些药首过太狠（大半被肝拆掉），口服几乎无效，只能注射或舌下含服（绕开肝脏这一关，如硝酸甘油）。<em>这就是为什么同一个药"口服要 100mg、静脉只要 10mg"。</em></p>
+
+      <h2><span class="cn">D · 分布：药去了哪，为什么有些地方进不去</span></h2>
+      <p>进了血，药随血流散到全身，但不是均匀的：</p>
+      <ul>
+        <li><strong>血浆蛋白结合</strong>：很多药一进血就被血浆蛋白"抓住"一部分。<em>被抓住的那部分是"仓库存货"，不起作用；只有游离的那部分才能到靶点干活。</em>这会影响起效和药物相互作用（第 7 章）。</li>
+        <li><strong>屏障</strong>：最有名的是<strong>血脑屏障</strong>——大脑给自己修了道"防火墙"，只让特定分子通过。这是双刃剑：治脑病的药得<em>能穿过</em>它（很难，是中枢药研发的大坎），而不想影响大脑的药最好<em>穿不过</em>它（减少中枢副作用）。</li>
+      </ul>
+
+      <h2><span class="cn">M · 代谢：肝脏的"拆解改装车间"</span></h2>
+      <p>身体想排出药物，通常得先把它<strong>改造得更"溶于水"</strong>（水溶才好随尿排走）。这主要在肝脏进行，分两阶段：<strong>一相反应</strong>（用一大家子酶——著名的 <strong>CYP450</strong>——给分子做点小改动，"打个把手"）和<strong>二相反应</strong>（在把手上挂个大的水溶性基团，让它彻底变水溶）。</p>
+      <p>两个反常识但重要的点：</p>
+      <ul>
+        <li><strong>代谢不一定"灭活"</strong>：有的药本身没效，是被肝脏改造后才变成活性药——这叫<strong>前药</strong>（如可待因在体内变成吗啡才止痛）。药化设计常故意用前药来改善吸收（见<a href="medchem.html">药化课</a>）。</li>
+        <li><strong>CYP450 是药物相互作用的大本营</strong>：如果两个药抢同一个 CYP 酶，或一个药抑制/诱导了这个酶，另一个药的代谢速度就被打乱，浓度飙高或跌低——这是第 7 章的重头戏，也是"吃这药别喝西柚汁"的原因。</li>
+      </ul>
+
+      <h2><span class="cn">E · 排泄：主要走肾</span></h2>
+      <p>改造好的（水溶的）药物代谢物，主要由<strong>肾脏</strong>随尿排出（少数走胆汁→粪便）。所以<strong>肾功能不好的人，药排得慢、容易在体内蓄积中毒</strong>——临床上很多药要按肾功能减量。老年人肾功能自然下降，这也是他们更容易药物过量的原因之一。</p>
+
+      <div class="note">
+        <span class="tag">本章小结</span>
+        <p>药的旅程＝<strong>吸收（进血，看生物利用度和首过效应）→ 分布（散布，受蛋白结合和血脑屏障影响）→ 代谢（肝脏 CYP450 改装，可灭活也可激活）→ 排泄（肾脏随尿排走）</strong>。这四步共同决定"血里的药浓度随时间怎么变"。下一章就把这条浓度曲线用几个数字量化，直接指导"吃多少、多久一次"。</p>
+      </div>
+    </section>
+
+    <!-- ph4 -->
+    <section class="module" id="ph4">
+      <div class="eyebrow">Pharmacology 04 · PK Numbers</div>
+      <h1><span class="cn">药代动力学的几个数字：半衰期、清除率、稳态</span></h1>
+      <p class="lede">上一章讲了药在体内的旅程，这一章把旅程变成<strong>几个能算的数字</strong>——它们直接回答两个最实用的问题：<em>这药多久吃一次？要不要先来个"首剂加倍"？</em>不用记公式，理解直觉就够。</p>
+
+      <h2><span class="cn">半衰期：药"减一半"要多久</span></h2>
+      <p><strong>半衰期</strong> <span class="en">(half-life, t½)</span> ＝ 体内药量降到一半所需的时间。它是最实用的一个数，因为它直接决定<strong>给药间隔</strong>：</p>
+      <ul>
+        <li>半衰期短的药（几小时）→ 掉得快，得<em>一天吃好几次</em>，否则血药浓度掉出治疗窗。</li>
+        <li>半衰期长的药（一两天）→ <em>一天一次甚至更少</em>就能维持。</li>
+      </ul>
+      <p>一个好用的经验：<strong>约 4–5 个半衰期，药基本从体内清干净</strong>（每过一个半衰期减半：50%→25%→12.5%→6%→3%，5 个之后就剩零头了）。停药后多久药才"走干净"、换药要不要洗脱期，靠的就是这条。</p>
+
+      <h2><span class="cn">清除率：身体"清药"的速度</span></h2>
+      <p><strong>清除率</strong> <span class="en">(clearance)</span> ＝ 身体（主要靠肝和肾）每单位时间能"清理干净"多少药。它决定<strong>维持剂量</strong>——你每天补进去的量，得刚好等于身体清掉的量，浓度才稳。<em>清除率下降（肝肾不好），就得减量，否则药越积越多。</em>半衰期其实是"清除率"和"分布范围"共同的结果，但日常用半衰期这个数最直观。</p>
+
+      <h2><span class="cn">稳态：为什么药要吃几天才"到位"</span></h2>
+      <p>规律吃药时，血药浓度不是一下就到位的。每次吃，浓度升一点；两次之间，身体清掉一点。<strong>一开始"进"多于"清"，浓度像上台阶一样逐次抬高；直到某个高度，"每天进的量＝每天清的量"，浓度就稳定在一条水平带里波动——这叫稳态</strong> <span class="en">(steady state)</span>。</p>
+      <p>关键结论：<strong>达到稳态也需要约 4–5 个半衰期</strong>。所以很多药（抗抑郁药、某些降压药）要<em>连吃一两周才显出全部效果</em>——不是药没用，是还没到稳态。<em>这条常被患者误解为"药没效"而自行停药。</em></p>
+
+      <h2><span class="cn">首剂加倍：等不及稳态怎么办</span></h2>
+      <p>如果病情紧急（如严重感染、心律失常），等 4–5 个半衰期太慢。办法是先给一个<strong>负荷剂量</strong>（首剂加大）——<em>一次性把"水池"灌到目标水位</em>，之后再用正常的维持剂量补充损耗。这就是为什么有些药说明书写"首剂加倍"。<em>负荷剂量灌到位、维持剂量保住位，一个管"多快到"、一个管"稳多少"。</em></p>
+
+      <div class="card">
+        <h3>一个统一的比喻：往漏水的池子灌水</h3>
+        <p>把身体想成一个<strong>底部漏水的水池</strong>：你倒水＝吃药，漏水＝清除。<strong>半衰期</strong>＝水位降一半要多久；<strong>清除率</strong>＝漏水速度；<strong>稳态</strong>＝倒水速度＝漏水速度时的水位；<strong>负荷剂量</strong>＝第一桶多倒点、先把水位灌够。整个 PK 的数字，都是这口池子的水位学。</p>
+      </div>
+
+      <div class="note">
+        <span class="tag">本章小结</span>
+        <p><strong>半衰期</strong>定给药间隔、也告诉你"约 4–5 个半衰期清干净/到稳态"；<strong>清除率</strong>定维持剂量（肝肾差要减量）；<strong>稳态</strong>解释了药为何要吃几天才全效；<strong>负荷剂量</strong>用来"抢时间"。这些就是把上一章的旅程变成能开处方的数字。下一章进入最经典的教学战场——自主神经系统，看这些原理在真实药物上怎么落地。</p>
+      </div>
+    </section>
+
+    <!-- ph5 -->
+    <section class="module" id="ph5">
+      <div class="eyebrow">Pharmacology 05 · Autonomic Nervous System</div>
+      <h1><span class="cn">自主神经系统药理：一个"油门/刹车"系统</span></h1>
+      <p class="lede">自主神经系统是药理学最经典的教学战场——因为它是个干净的"油门 vs 刹车"双系统，几乎每类药都能在这里找到激动/阻断的对照。学会它，你就掌握了一大批常用药（降压、平喘、抗过敏、麻醉相关）的底层逻辑。</p>
+
+      <h2><span class="cn">两套神经：交感（油门）vs 副交感（刹车）</span></h2>
+      <div class="loop">
+        <div class="loop-title">自主神经 · 一对拮抗的开关</div>
+        <div class="chain">
+          <div class="link"><div class="k">Sympathetic · 交感</div><div class="v">"战或逃"油门</div><div class="d">心跳加快、血压升、瞳孔放大、支气管扩张 · 递质：去甲肾上腺素</div></div>
+          <div class="arrow">↔</div>
+          <div class="link"><div class="k">Parasympathetic · 副交感</div><div class="v">"休息与消化"刹车</div><div class="d">心跳减慢、促消化、瞳孔收缩 · 递质：乙酰胆碱</div></div>
+        </div>
+      </div>
+      <p>身体大多数器官同时接这两套线，一套踩油门、一套踩刹车，靠平衡来调节。<strong>关键：这两套系统各用一种化学递质当"信号"，药物就是去模仿或阻断这两种递质。</strong>——两种递质，就对应两大类药。</p>
+
+      <h2><span class="cn">递质一：乙酰胆碱（副交感的信号）</span></h2>
+      <p>乙酰胆碱 <span class="en">(ACh)</span> 是副交感（刹车）的递质。围绕它有四类药，正好是"加强 vs 削弱" × "直接 vs 间接"：</p>
+      <ul>
+        <li><strong>拟胆碱（加强刹车）</strong>：直接激动乙酰胆碱受体，或<em>抑制分解 ACh 的酶</em>（让 ACh 堆积，间接加强）。用途如青光眼、重症肌无力。</li>
+        <li><strong>抗胆碱（松开刹车）</strong>：阻断乙酰胆碱受体。<em>阿托品</em>是代表——能加快心率、放大瞳孔、减少分泌。日常的很多副作用（口干、便秘、视物模糊、尿潴留）就是药"顺手抗了胆碱"。</li>
+      </ul>
+      <p><em>注意：抗胆碱和第 1 章的拮抗剂是同一个逻辑——占住锁眼不让 ACh 进。</em></p>
+
+      <h2><span class="cn">递质二：去甲肾上腺素/肾上腺素（交感的信号）</span></h2>
+      <p>交感（油门）的递质作用在<strong>肾上腺素受体</strong>上，这类受体又分几个亚型（α、β1、β2……），<em>分布在不同器官</em>，所以选择性地激动/阻断某个亚型，就能精准调某个器官。这是"受体亚型"概念最漂亮的应用：</p>
+      <table class="tbl">
+        <thead><tr><th>药类</th><th>动作</th><th>用途（对应哪个亚型）</th></tr></thead>
+        <tbody>
+          <tr><td>β2 激动剂</td><td>激动支气管上的 β2</td><td><strong>平喘</strong>（沙丁胺醇扩张气管）</td></tr>
+          <tr><td>β1 阻断剂（"β 阻滞")</td><td>阻断心脏上的 β1</td><td><strong>降心率血压、护心</strong>（美托洛尔）</td></tr>
+          <tr><td>α1 阻断剂</td><td>阻断血管上的 α1</td><td>降压、缓解前列腺增生排尿困难</td></tr>
+          <tr><td>非选择激动剂（肾上腺素）</td><td>全都激动</td><td><strong>过敏性休克抢救</strong>（升血压、扩气管、强心）</td></tr>
+        </tbody>
+      </table>
+      <p>这里藏着一个贯穿全药理的智慧：<strong>受体分亚型 + 药物挑亚型 = 精准。</strong>老一代药"通杀"所有亚型，副作用多；新一代药只挑一个亚型，副作用少。<em>整个新药研发史，很大一部分就是在追求"更高的亚型选择性"。</em></p>
+
+      <div class="note">
+        <span class="tag">本章小结</span>
+        <p>自主神经＝<strong>交感油门（递质去甲肾上腺素→肾上腺素受体）</strong>和<strong>副交感刹车（递质乙酰胆碱→胆碱受体）</strong>两套拮抗系统。每套都有"加强（激动/抑酶）"和"削弱（阻断）"两向药。真正的精准来自<strong>挑受体亚型</strong>（β2 平喘、β1 护心）。这一章把前四章的抽象原理落到了真实药物上。下一章看受体之外的其他靶点。</p>
+      </div>
+    </section>
+
+    <!-- ph6 -->
+    <section class="module" id="ph6">
+      <div class="eyebrow">Pharmacology 06 · Other Targets</div>
+      <h1><span class="cn">受体之外：离子通道、酶、转运体</span></h1>
+      <p class="lede">受体是最常见的靶点，但不是唯一。还有三类靶点撑起了另一大半常用药：<strong>离子通道、酶、转运体</strong>。它们的共同逻辑还是那句话——<em>拨动身体本来就有的开关</em>，只是开关的形态不同。</p>
+
+      <h2><span class="cn">靶点二：离子通道 —— 控制"电"的闸门</span></h2>
+      <p>神经和肌肉靠离子（钠、钾、钙）进出细胞产生"电信号"。<strong>离子通道</strong>就是控制离子进出的闸门。药物堵住或调节某个通道，就能改变电活动：</p>
+      <ul>
+        <li><strong>钙通道阻滞剂</strong>：堵住血管平滑肌上的钙通道→血管放松→<em>降血压</em>（氨氯地平）。</li>
+        <li><strong>局部麻醉药</strong>：堵住神经的钠通道→电信号传不过去→<em>局部失去痛觉</em>（利多卡因）。</li>
+        <li>很多<strong>抗癫痫药</strong>也是稳定异常放电的离子通道。</li>
+      </ul>
+
+      <h2><span class="cn">靶点三：酶 —— 抑制身体的"化学工人"</span></h2>
+      <p>酶是催化化学反应的蛋白。抑制某个关键酶，就能掐断一条代谢链。这是超多重磅药的机制：</p>
+      <table class="tbl">
+        <thead><tr><th>抑制哪个酶</th><th>结果</th><th>代表药</th></tr></thead>
+        <tbody>
+          <tr><td>他汀（抑制胆固醇合成酶）</td><td>肝少造胆固醇</td><td>阿托伐他汀——降血脂</td></tr>
+          <tr><td>ACE 抑制剂</td><td>少造升压物质</td><td>依那普利——降血压</td></tr>
+          <tr><td>阿司匹林（抑制 COX 酶）</td><td>少造炎症/血栓信号</td><td>解热镇痛、抗血小板</td></tr>
+          <tr><td>质子泵抑制剂</td><td>关掉胃酸"泵"</td><td>奥美拉唑——治胃酸/溃疡</td></tr>
+        </tbody>
+      </table>
+      <p><em>抗生素、抗病毒药也大量是酶抑制剂——专挑细菌/病毒特有的酶下手，避免误伤人体（选择性毒性）。</em></p>
+
+      <h2><span class="cn">靶点四：转运体 —— 拦截"搬运工"</span></h2>
+      <p>转运体是把分子搬进搬出细胞的"泵"。挡住它，就能改变某物质在关键部位的浓度：</p>
+      <ul>
+        <li><strong>SSRI 抗抑郁药</strong>：挡住把血清素"回收"的转运体→血清素在神经间隙停留更久→<em>改善情绪</em>（氟西汀等）。</li>
+        <li><strong>利尿药</strong>：挡住肾脏里重吸收钠的转运体→更多钠和水随尿排出→<em>降压、消水肿</em>。</li>
+        <li><strong>SGLT2 抑制剂</strong>：挡住肾脏回收葡萄糖的转运体→糖随尿排掉→<em>降血糖</em>（近年降糖/护心的明星药）。</li>
+      </ul>
+
+      <div class="note">
+        <span class="tag">四类靶点，一张总图</span>
+        <p>把前几章合起来，身体的"开关"就四大类：<strong>受体</strong>（信号接收器，第 1、5 章）、<strong>离子通道</strong>（电闸门）、<strong>酶</strong>（化学工人）、<strong>转运体</strong>（搬运泵）。任何一个药，先问它按的是这四类里的哪一个、往哪拨——你就抓住了它的机制骨架。</p>
+      </div>
+      <div class="note investor">
+        <span class="tag">接回药物创新</span>
+        <p>这也是<a href="overview.html">概览课</a>说的"靶点"在药理层面的分类。<a href="antisense.html">反义/核酸药</a>之所以是新范式，正因为它跳出了这四类"蛋白靶点"——它不去按蛋白开关，而是<em>更上游地关掉"造这个蛋白的图纸"</em>。等你学到那门课会更有体会。</p>
+      </div>
+    </section>
+
+    <!-- ph7 -->
+    <section class="module" id="ph7">
+      <div class="eyebrow">Pharmacology 07 · Variability &amp; Adverse Effects</div>
+      <h1><span class="cn">为什么同一个药，人和人不一样、还会出错</span></h1>
+      <p class="lede">前面讲的都是"理想情况"。真实世界里，同一颗药、同样剂量，在不同人身上效果可能差很多，还可能出问题。这一章讲三件事：<strong>个体差异、药物相互作用、不良反应</strong>——它们决定了用药的安全边界。</p>
+
+      <h2><span class="cn">为什么因人而异</span></h2>
+      <ul>
+        <li><strong>基因（药物基因组学）</strong>：代谢药的 CYP450 酶（第 3 章）有基因差异。有人天生是"快代谢型"（药很快被拆掉，常规量嫌不够），有人是"慢代谢型"（药堆积，常规量就中毒）。<em>这是"精准用药"的核心——按基因型调剂量。</em></li>
+        <li><strong>年龄</strong>：老人肝肾功能下降（清除慢，易蓄积）、婴幼儿代谢系统未成熟——两头都要减量、慎用。</li>
+        <li><strong>肝肾功能、体重、疾病状态、怀孕</strong>：都会改变 PK/PD，需要个体化调整。</li>
+      </ul>
+
+      <h2><span class="cn">药物相互作用：一加一不等于二</span></h2>
+      <p>同时吃多个药，它们可能互相干扰，分两种层面：</p>
+      <ul>
+        <li><strong>PK 层面（改变彼此的浓度）</strong>：最常见是抢/干扰 CYP450 酶（第 3 章）。<em>一个药"抑制"了代谢另一个药的酶，后者浓度飙升可能中毒；反之"诱导"了酶，后者被拆太快可能失效。</em>"吃某些药别喝西柚汁""某抗生素让避孕药失效"都是这个原理。</li>
+        <li><strong>PD 层面（效应叠加或对冲）</strong>：两个都让人镇静的药一起吃（安眠药＋酒），效应叠加可能致命；一个升压一个降压，则互相抵消。</li>
+      </ul>
+
+      <h2><span class="cn">不良反应：从"顺手误伤"到"过敏"</span></h2>
+      <p>副作用不是玄学，多数能归到机制上：</p>
+      <table class="tbl">
+        <thead><tr><th>类型</th><th>怎么来的</th><th>例子</th></tr></thead>
+        <tbody>
+          <tr><td>剂量相关（A 型）</td><td>药理作用的延伸/过头，可预测</td><td>降压药降过头→头晕；抗凝药过量→出血</td></tr>
+          <tr><td>脱靶副作用</td><td>药"顺手"作用到了别的受体/组织</td><td>抗胆碱顺手引起口干便秘（第 5 章）</td></tr>
+          <tr><td>过敏/特异质（B 型）</td><td>与免疫或个人体质有关，不可预测</td><td>青霉素过敏（对应<a href="immunology.html">免疫课</a>第 9 章超敏反应）</td></tr>
+        </tbody>
+      </table>
+
+      <h2><span class="cn">耐受与依赖：身体会"适应"药</span></h2>
+      <ul>
+        <li><strong>耐受</strong>：反复用药后，同样剂量效果变弱——身体上调/下调了受体来"对抗"药物。所以要不断加量才有效（如某些止痛药、镇静药）。</li>
+        <li><strong>依赖 / 戒断</strong>：身体适应了"有药的状态"，突然停药反而失衡、出现戒断症状。<em>这也是很多药不能骤停、要逐渐减量的原因。</em></li>
+      </ul>
+
+      <div class="note">
+        <span class="tag">本章小结</span>
+        <p>真实用药的复杂性来自三处：<strong>个体差异</strong>（基因、年龄、肝肾——所以有"精准用药"）、<strong>药物相互作用</strong>（PK 上抢 CYP 酶、PD 上效应叠加或对冲）、<strong>不良反应</strong>（剂量相关可预测 vs 过敏不可预测）。再加上身体会<strong>耐受和依赖</strong>。这些正是"治疗窗"在现实中变窄的原因。最后一章：把这些原理接回新药是怎么造出来、怎么定剂量的。</p>
+      </div>
+    </section>
+
+    <!-- ph8 -->
+    <section class="module" id="ph8">
+      <div class="eyebrow">Pharmacology 08 · From Molecule to Medicine</div>
+      <h1><span class="cn">从分子到新药：药理学如何指导研发</span></h1>
+      <p class="lede">最后一章把整门课接回"造新药"。一个候选分子从实验室走到药房，每一步都在回答本课讲过的问题——它抓对靶点了吗（PD）？在体内表现如何（PK）？治疗窗够宽吗（安全）？这门课其实就是新药研发的评分表。</p>
+
+      <h2><span class="cn">研发就是在回答本课的问题</span></h2>
+      <div class="loop">
+        <div class="loop-title">新药之路 · 每一步都在问一个药理问题</div>
+        <div class="chain">
+          <div class="link"><div class="k">靶点</div><div class="v">按哪个开关</div><div class="d">选受体/酶/通道/转运体（第1、6章）</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">先导分子</div><div class="v">找到假钥匙</div><div class="d">亲和力/效力够不够（第1、2章）</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">成药性</div><div class="v">PK 过关吗</div><div class="d">吸收/代谢/半衰期（第3、4章）</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">临床</div><div class="v">人身上安全有效吗</div><div class="d">治疗窗、相互作用（第2、7章）</div></div>
+        </div>
+      </div>
+
+      <h2><span class="cn">"药效好"远远不够，"成药性"才是坎</span></h2>
+      <p>新手常以为"找到一个抓靶点很牢的分子"就成了。实际上，无数抓得很牢的分子<strong>死在 PK 上</strong>：口服吸收不了、被肝脏一下拆光（首过太狠）、半衰期太短要一天吃十次、进不了该去的组织（如穿不过血脑屏障）、或者被某个 CYP 酶盯上导致一堆相互作用。<em>药理学第 3–7 章讲的那些"麻烦"，正是研发中淘汰候选分子的主要原因。</em>把分子改得既保住药效、又 PK 达标，是<a href="medchem.html">药物化学</a>那门课的核心任务。</p>
+
+      <h2><span class="cn">临床试验：在人身上确定"剂量与安全"</span></h2>
+      <p>动物和试管数据再好，最终要在人身上验证，分三期（对应<a href="overview.html">概览课</a>）：</p>
+      <ul>
+        <li><strong>I 期</strong>：少数健康人，主要看<strong>安全性和 PK</strong>——在人体内的吸收代谢是什么样、多大剂量开始出现毒性（找治疗窗上界）。</li>
+        <li><strong>II 期</strong>：少量病人，找<strong>有效剂量</strong>（量效曲线，第 2 章）和初步疗效。</li>
+        <li><strong>III 期</strong>：大规模病人，确证<strong>疗效和安全</strong>，也暴露罕见的不良反应和相互作用（第 7 章）。</li>
+      </ul>
+      <p>"剂量选择"是贯穿始终的艺术：既要爬到有效（第 2 章 S 曲线的有效段），又不能越过毒性线（治疗窗上界）——整门药理学，最后都收敛到"给这个病人、这个药，选一个又有效又安全的剂量和方案"。</p>
+
+      <div class="note investor">
+        <span class="tag">三门课打通了</span>
+        <p>到这里，三门课形成一个闭环：<a href="overview.html">概览课</a>告诉你<em>市场上有哪些药、在打哪条通路</em>；<a href="medchem.html">药物化学</a>告诉你<em>这些分子怎么被设计合成出来</em>；这门<strong>药理学</strong>告诉你<em>分子进了身体后到底怎么起作用、怎么定剂量、为什么会失败</em>。下次看到一个新药新闻，你已经能从"靶点—分子—体内行为—剂量安全"四个层面把它拆开。</p>
+      </div>
+      <div class="note">
+        <span class="tag">整门课一句话收尾</span>
+        <p>药理学只研究一场对话：<strong>药对身体做了什么（PD：抓靶点、看量效）</strong>，<strong>身体对药做了什么（PK：ADME、半衰期、稳态）</strong>，中间夹着一条永恒的红线——<strong>治疗窗</strong>。把这三样记住，再多的药也能各归其位。</p>
+      </div>
+      <div class="footer-note">
+        药理学入门 · Pharmacology 101 · 框架参考 Rang &amp; Dale《药理学》<br>
+        为非专业背景设计 —— 浅显中文、重直觉。全 9 章已完成。
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  const nav=document.getElementById('nav');
+  const items=[...document.querySelectorAll('.nav-item[data-target]')];
+  const mods=[...document.querySelectorAll('.module')];
+  const rail=document.getElementById('rail');
+  const scrim=document.getElementById('scrim');
+  const menuBtn=document.getElementById('menuBtn');
+  function show(id){
+    if(!mods.some(m=>m.id===id)) id='ph0';
+    items.forEach(i=>i.classList.toggle('active',i.dataset.target===id));
+    mods.forEach(m=>m.classList.toggle('active',m.id===id));
+    window.scrollTo({top:0,behavior:'instant' in window?'instant':'auto'});
+    closeRail();
+  }
+  window.im=function(id){history.replaceState(null,'','#'+id);show(id);return false;};
+  nav.addEventListener('click',e=>{
+    const b=e.target.closest('.nav-item[data-target]'); if(!b)return;
+    history.replaceState(null,'','#'+b.dataset.target);
+    show(b.dataset.target);
+  });
+  function openRail(){rail.classList.add('open');scrim.classList.add('show')}
+  function closeRail(){rail.classList.remove('open');scrim.classList.remove('show')}
+  menuBtn.addEventListener('click',openRail);
+  scrim.addEventListener('click',closeRail);
+  show((location.hash||'#ph0').slice(1));
+  window.addEventListener('hashchange',()=>show((location.hash||'#ph0').slice(1)));
+</script>
+</body>
+</html>

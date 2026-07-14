@@ -42,28 +42,49 @@ body{
 /* ---------- NAV RAIL ---------- */
 .rail{
   position:sticky;top:0;align-self:start;height:100vh;overflow-y:auto;
-  border-right:1px solid var(--line);background:var(--panel-2);
-  padding:34px 26px 40px;
+  border-right:1px solid var(--line);
+  background:linear-gradient(180deg,var(--panel-2),var(--ground) 140%);
+  padding:32px 22px 36px;
+  scrollbar-width:thin;scrollbar-color:var(--line-strong) transparent;
 }
-.brand{font-family:var(--disp);font-weight:600;font-size:20px;line-height:1.15;letter-spacing:-.01em;color:var(--ink)}
+.rail::-webkit-scrollbar{width:7px}
+.rail::-webkit-scrollbar-thumb{background:var(--line-strong);border-radius:20px;border:2px solid var(--panel-2)}
+.rail::-webkit-scrollbar-track{background:transparent}
+
+/* brand block — clickable, links home */
+.brand{display:block;font-family:var(--disp);font-weight:600;font-size:19px;line-height:1.18;letter-spacing:-.01em;color:var(--ink);border:none;margin-bottom:4px}
+a.brand:hover .brand-cn{color:var(--accent)}
 .brand a{color:inherit;border:none}
-.brand .cn{font-family:var(--cjk);font-weight:600}
-.brand-sub{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-top:9px}
-.rail-divider{height:1px;background:var(--line);margin:26px 0 20px}
-.nav-label{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);margin-bottom:12px}
+.brand .cn,.brand-cn{font-family:var(--cjk);font-weight:600;transition:color .18s}
+.brand-en{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;color:var(--faint);margin-top:5px;font-weight:500}
+.brand-sub{font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--faint);margin-top:8px}
+
+.rail-divider{height:1px;background:var(--line);margin:22px 0 18px;border:none}
+.nav-label{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);margin:22px 0 10px;padding-left:2px}
+.nav-label:first-of-type{margin-top:20px}
+
 .nav-item{
-  display:flex;gap:13px;align-items:baseline;width:100%;text-align:left;
-  background:none;border:none;cursor:pointer;padding:9px 10px;border-radius:7px;
-  color:var(--ink-2);font-family:var(--body);font-size:15px;line-height:1.35;
-  transition:background .18s,color .18s;text-decoration:none;
+  display:flex;gap:12px;align-items:baseline;width:100%;text-align:left;
+  background:none;border:none;cursor:pointer;padding:8px 11px;border-radius:8px;
+  color:var(--ink-2);font-family:var(--body);font-size:14.5px;line-height:1.32;
+  transition:background .16s,color .16s,box-shadow .16s;text-decoration:none;position:relative;
 }
-.nav-item:hover{background:var(--panel)}
-.nav-item .num{font-family:var(--mono);font-size:11px;color:var(--faint);padding-top:2px;min-width:20px;transition:color .18s}
+.nav-item:hover{background:var(--panel);color:var(--ink)}
+.nav-item .num{font-family:var(--mono);font-size:10.5px;color:var(--faint);padding-top:2px;min-width:18px;transition:color .16s}
 .nav-item .txt{font-family:var(--cjk);font-weight:500}
-.nav-item.active{background:var(--ink);color:#F3F2E9}
+.nav-item.active{background:var(--ink);color:#F3F2E9;box-shadow:0 2px 10px rgba(23,48,41,.16)}
 .nav-item.active .num{color:var(--accent-soft)}
 .nav-item.link .num{color:var(--accent)}
-.rail-foot{margin-top:24px;font-family:var(--mono);font-size:10.5px;line-height:1.7;color:var(--faint)}
+
+/* compact cross-links cluster (portal / other courses / reference) */
+.rail-cross{margin-top:8px;padding-top:16px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:2px}
+.rail-cross a{display:flex;align-items:baseline;gap:10px;padding:6px 11px;border-radius:7px;border:none;
+  font-family:var(--cjk);font-size:13px;color:var(--soft);transition:background .16s,color .16s}
+.rail-cross a:hover{background:var(--panel);color:var(--ink)}
+.rail-cross a .num{font-family:var(--mono);font-size:11px;color:var(--accent);min-width:16px}
+.rail-cross .nav-label{margin:2px 0 6px}
+
+.rail-foot{margin-top:22px;padding-top:16px;border-top:1px solid var(--line);font-family:var(--mono);font-size:10px;line-height:1.75;color:var(--faint);letter-spacing:.02em}
 
 /* ---------- MAIN ---------- */
 .main{padding:0 clamp(24px,5vw,88px)}

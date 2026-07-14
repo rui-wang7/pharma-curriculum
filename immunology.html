@@ -15,16 +15,8 @@
 <div class="shell">
 
   <aside class="rail" id="rail">
-    <div class="brand"><span class="cn">免疫学入门</span><br><span style="font-size:14px;color:var(--soft)">Immunology · 讲给非专业的你</span></div>
-    <div class="brand-sub">课程二 · 跟着 Janeway 框架</div>
-    <div class="rail-divider"></div>
-    <div class="nav-label">切换</div>
-    <nav>
-      <a class="nav-item link" href="index.html"><span class="num">⌂</span><span class="txt">课程门户（首页）</span></a>
-      <a class="nav-item link" href="overview.html"><span class="num">Ⅰ</span><span class="txt">药物创新概览</span></a>
-    </nav>
-    <div class="rail-divider"></div>
-    <div class="nav-label">本课程 · 章节</div>
+    <a class="brand" href="index.html"><span class="brand-cn">免疫学入门</span><span class="brand-en">Immunology · 讲给非专业的你</span></a>
+    <div class="nav-label">章节 · Chapters</div>
     <nav id="nav">
       <button class="nav-item active" data-target="im0"><span class="num">00</span><span class="txt">导论：身体的国防部</span></button>
       <button class="nav-item" data-target="im1"><span class="num">01</span><span class="txt">先天免疫（第一道防线）</span></button>
@@ -38,13 +30,13 @@
       <button class="nav-item" data-target="im9"><span class="num">09</span><span class="txt">当免疫出错</span></button>
       <button class="nav-item" data-target="im10"><span class="num">10</span><span class="txt">免疫与药物</span></button>
     </nav>
-    <div class="rail-divider"></div>
-    <div class="nav-label">参考</div>
-    <nav>
-      <a class="nav-item link" href="dict/immunology.html"><span class="num">§</span><span class="txt">免疫词典（药物视角）</span></a>
-    </nav>
-    <div class="rail-divider"></div>
-    <div class="rail-foot">框架参考 Janeway<br>《免疫生物学》<br>浅显中文 + 类比<br>不追求死记分子</div>
+    <div class="rail-cross">
+      <div class="nav-label">切换 · 参考</div>
+      <a href="index.html"><span class="num">⌂</span>课程门户（首页）</a>
+      <a href="overview.html"><span class="num">Ⅰ</span>药物创新概览</a>
+      <a href="dict/immunology.html"><span class="num">§</span>免疫词典（药物视角）</a>
+    </div>
+    <div class="rail-foot">框架参考 Janeway《免疫生物学》<br>浅显中文 + 类比 · 重理解，轻死记</div>
   </aside>
 
   <main class="main">
@@ -193,156 +185,394 @@
       </div>
     </section>
 
-    <!-- ============ im3 抗体与B细胞 (outline) ============ -->
+    <!-- ============ im3 抗体与B细胞 ============ -->
     <section class="module" id="im3">
-      <div class="eyebrow">Immunology 03 · Antibodies & B cells</div>
+      <div class="eyebrow">Immunology 03 · Antibodies &amp; B cells</div>
       <h1><span class="cn">识别敌人①：抗体与 B 细胞</span></h1>
-      <p class="lede">抗体是免疫系统最有名的武器，也是今天最大一类药（单抗）。本章讲抗体长什么样、为什么能认几乎任何敌人、以及它怎么变得越来越精准。</p>
-      <div class="note"><span class="tag">本章要回答的问题</span>
-        <p>① 抗体为什么长成 "Y" 形——哪一端认敌人、哪一端干活？<br>② 上亿种抗体的<strong>多样性从哪来</strong>（基因的 VDJ 重排：用少量零件拼出海量组合）？<br>③ <strong>亲和力成熟</strong>（越打越准）和<strong>类别转换</strong>（IgM / IgG / IgA / IgE 各管什么场景）？<br>④ 抗体到底怎么起效——中和、调理（贴标签让人吞）、激活补体？</p>
+      <p class="lede">抗体是免疫系统最有名的武器，也是今天最大一类药（单抗）。本章讲抗体长什么样、为什么能认几乎任何敌人、以及它怎么变得越来越精准——把这一章想通，你就理解了半个现代生物药产业。</p>
+
+      <h2><span class="cn">抗体长什么样：一个"Y"字，两端分工</span></h2>
+      <p>抗体<span class="en">(antibody)</span> 就是 B 细胞造出来的一种蛋白，形状像个字母 <strong>Y</strong>。它由两条长链（重链）和两条短链（轻链）拼成，你只要记住<strong>Y 的两端分工完全不同</strong>：</p>
+      <div class="loop">
+        <div class="loop-title">抗体的两端 · 一端认脸，一端干活</div>
+        <div class="chain">
+          <div class="link"><div class="k">Fab · 上面两个尖</div><div class="v">可变区</div><div class="d">"认脸的手"——每个抗体这里都不一样，决定它认哪个敌人</div></div>
+          <div class="arrow">＋</div>
+          <div class="link"><div class="k">Fc · 下面的柄</div><div class="v">恒定区</div><div class="d">"干活的柄"——同类抗体这里都一样，负责招募吞噬细胞、补体</div></div>
+        </div>
       </div>
-      <h3>本章大纲（待展开）</h3>
+      <p><strong>Y 的两个尖（可变区）</strong>是抓手，专门去抓敌人身上那个特征（抗原）；这两个尖的形状千变万化，所以不同抗体能认不同敌人。<strong>Y 的柄（恒定区，又叫 Fc 段）</strong>则是"接口"——它不认敌人，但负责招呼后援：勾住吞噬细胞、启动补体。<em>认脸的是手，干活的是柄</em>，一句话记住抗体。</p>
+
+      <h2><span class="cn">上亿种抗体，从哪来？——VDJ 重排：用几十个零件拼出天文数字</span></h2>
+      <p>这是免疫学最精巧的一招。人体基因总共才两万多个，怎么可能给上亿种抗体各存一份图纸？答案是<strong>不存图纸，现拼</strong>。</p>
+      <div class="card">
+        <h3>像乐高，也像老虎机</h3>
+        <p>造抗体"认脸那只手"的图纸，被拆成三盒零件：<strong>V 盒</strong>（几十种）、<strong>D 盒</strong>（十几种）、<strong>J 盒</strong>（几种）。每个 B 细胞发育时，像老虎机一样<em>从每盒里随机抽一个拼起来</em>（这叫 <strong>VDJ 重排</strong>）。光是排列组合就有几百万种，再加上拼接处随机加减几个字母，最终能造出<strong>上亿种不同的"手"</strong>。</p>
+      </div>
+      <p>这就解释了第 2 章说的"巨大钥匙库"是怎么来的：<strong>不是设计出来的，是随机拼出来的。</strong>代价是——难免拼出一些"会抓自己人"的危险抗体，所以出厂前必须质检销毁（第 5 章的自我耐受）。</p>
+
+      <h2><span class="cn">越打越准：亲和力成熟</span></h2>
+      <p>第一次造出来的抗体，往往"抓得不太牢"。在淋巴结的一个专门车间里（<strong>生发中心</strong>，第 6 章细讲），B 细胞会<strong>故意让自己的抗体基因反复微小突变</strong>，然后择优录取：抓得更牢的 B 细胞被留下扩增，抓不牢的被淘汰。几轮下来，抗体就<strong>越磨越精准</strong>——这叫<strong>亲和力成熟</strong> <span class="en">(affinity maturation)</span>。这也是为什么二次感染时抗体质量高得多。</p>
+
+      <h2><span class="cn">五种抗体，五种场景（类别转换）</span></h2>
+      <p>同一只 B 细胞造的抗体，"认脸的手"不变，但可以<strong>换柄</strong>——换上不同的恒定区，就变成不同"型号"，去不同战场干活。这叫<strong>类别转换</strong>。你只要记住五种里最重要的三种：</p>
+      <table class="tbl">
+        <thead><tr><th>型号</th><th>比喻</th><th>干什么 / 在哪</th></tr></thead>
+        <tbody>
+          <tr><td>IgM</td><td>先锋</td><td>感染最早期先造出来的，五个 Y 连成一串、抓得广但不精。血检里 IgM 高＝<em>近期新感染</em>。</td></tr>
+          <tr><td>IgG</td><td>主力军</td><td>数量最多、最精准的主力抗体，绝大多数抗体药都是 IgG 型。<strong>唯一能穿过胎盘</strong>，妈妈用它给新生儿"预装"半年免疫力。</td></tr>
+          <tr><td>IgA</td><td>边防哨</td><td>守在黏膜和分泌液里——口水、鼻涕、肠道、<strong>母乳</strong>。你喝的母乳里就是它在保护婴儿肠道。</td></tr>
+          <tr><td>IgE</td><td>惹祸精</td><td>本职是打寄生虫，但在现代人身上常"闲得发慌"去打花粉、尘螨——<strong>过敏的元凶</strong>（第 9 章）。抗 IgE 药 Xolair 就是治它。</td></tr>
+          <tr><td>IgD</td><td>打酱油</td><td>功能最不清楚，考试之外基本可以忽略。</td></tr>
+        </tbody>
+      </table>
+
+      <h2><span class="cn">抗体到底怎么"杀敌"？三种打法</span></h2>
+      <p>抗体本身通常不直接杀死敌人（它没有"刀"），它靠三种间接方式：</p>
       <ul>
-        <li><strong>结构</strong>：可变区（认脸的手）+ 恒定区（干活的柄）；轻链重链。</li>
-        <li><strong>多样性的来源</strong>：VDJ 基因重排——为什么"随机拼装"能造出几乎无穷的钥匙。</li>
-        <li><strong>五种抗体类型</strong>：IgM（先锋）、IgG（主力、能过胎盘）、IgA（黏膜/母乳）、IgE（过敏与抗寄生虫）、IgD。</li>
-        <li><strong>抗体的三种打法</strong>：中和、调理吞噬、激活补体。</li>
-        <li><strong>接回药物</strong>：单抗、双抗、ADC 全都建立在这一章——见<a href="dict/immunology.html">免疫词典</a>。</li>
+        <li><strong>中和</strong> <span class="en">Neutralize</span>：像给敌人的手铐上，堵住病毒/毒素"扎进细胞的那把钥匙"，让它进不去、发不了作。<em>新冠中和抗体、抗蛇毒血清就是这个原理。</em></li>
+        <li><strong>调理</strong> <span class="en">Opsonize</span>：给敌人"贴上小旗子"（抗体的柄朝外），吞噬细胞一看到旗子就知道"这个该吃"，抓取效率大增。<em>裸细菌滑不溜手，贴了旗子就好抓。</em></li>
+        <li><strong>激活补体</strong>：抗体的柄勾住补体，启动第 1 章说的"打孔 + 报警"连锁反应。</li>
       </ul>
-      <p style="color:var(--faint)">＊本章为框架大纲，详细内容待逐步展开。</p>
+      <p>还有一种进阶打法叫 <strong>ADCC</strong>：抗体一头抓住癌细胞、柄那头招手把 NK 细胞叫来，由 NK 动手处决。<em>很多抗肿瘤单抗（如利妥昔单抗 Rituximab）就靠这招。</em></p>
+
+      <div class="note investor">
+        <span class="tag">接回药物：整个"抗体药"产业都长在这一章</span>
+        <p><strong>单抗</strong>＝人工造一种"认脸的手"专挑某个靶点（如 PD-1、TNF）。<strong>双抗</strong>＝把一个 Y 的两只手改成认两个不同东西，比如一手抓癌细胞、一手抓 T 细胞，硬把杀手拽到癌旁边（CD3 T 细胞衔接器）。<strong>ADC</strong>＝在抗体的柄上挂一颗"毒药炸弹"，用抗体当 GPS 把毒药精确送到癌细胞。这些都在 <a href="dict/immunology.html">免疫词典</a> 里能查到具体的药。</p>
+      </div>
+      <div class="note">
+        <span class="tag">本章小结</span>
+        <p>抗体 = 一个 Y，<strong>手认脸、柄干活</strong>；上亿种手靠 <strong>VDJ 随机拼装</strong>来，靠<strong>亲和力成熟</strong>越磨越准，靠<strong>类别转换</strong>换柄适应不同战场；杀敌靠<strong>中和 / 调理 / 补体 / ADCC</strong>。下一章看另一种识别系统——T 细胞，它连"完整的敌人"都不看，只看碎片。</p>
+      </div>
     </section>
 
-    <!-- ============ im4 T细胞与MHC (outline) ============ -->
+    <!-- ============ im4 T细胞与MHC ============ -->
     <section class="module" id="im4">
-      <div class="eyebrow">Immunology 04 · T cells & MHC</div>
+      <div class="eyebrow">Immunology 04 · T cells &amp; MHC</div>
       <h1><span class="cn">识别敌人②：T 细胞与 MHC</span></h1>
-      <p class="lede">T 细胞看不见完整的敌人，只能看"被切碎、摆在细胞表面托盘上"的敌人碎片。这个托盘就是 <strong>MHC</strong>——理解它，就理解了细胞免疫的一半。</p>
-      <div class="note"><span class="tag">本章要回答的问题</span>
-        <p>① MHC I 和 MHC II 是什么，分别把情报交给谁（CD8 杀伤 T / CD4 辅助 T）？<br>② <strong>抗原呈递</strong>：敌人怎么被切碎、摆上"托盘"展示给 T 细胞？<br>③ 为什么 T 细胞非得"看着 MHC"才认敌人（MHC 限制）？<br>④ 这跟器官移植排斥、跟 PD-1 类药有什么关系？</p>
+      <p class="lede">T 细胞和抗体的识别方式完全不同：它<strong>看不见完整的敌人</strong>，只能看"被切碎、摆在细胞表面小托盘上"的敌人碎片。这个托盘叫 <strong>MHC</strong>。理解了托盘，你就理解了细胞免疫的一半，也理解了为什么 PD-1 类药能治癌。</p>
+
+      <h2><span class="cn">核心怪癖：T 细胞只看"摆盘的碎片"</span></h2>
+      <p>抗体能直接抓住漂在血里的完整病毒；T 细胞不行。<strong>T 细胞受体（TCR）只认一种组合：一小段敌人碎片 + 托住它的托盘（MHC）。</strong>没有托盘、光有碎片，它视而不见。这个怪癖有个大用处：托盘是<em>细胞主动摆出来的</em>，等于每个细胞都在<strong>持续向 T 细胞汇报"我肚子里现在有什么"</strong>——正常就放行，藏了病毒就露馅。</p>
+
+      <h2><span class="cn">两种托盘，对两种"检查官"</span></h2>
+      <div class="loop">
+        <div class="loop-title">MHC I vs MHC II · 两种汇报窗口</div>
+        <div class="chain">
+          <div class="link"><div class="k">MHC I</div><div class="v">"内部账本"</div><div class="d">几乎每个细胞都有 · 展示"我体内正在造什么蛋白" · 交给 CD8 杀手</div></div>
+          <div class="arrow">↔</div>
+          <div class="link"><div class="k">MHC II</div><div class="v">"外部战利品"</div><div class="d">只有专业呈递细胞有 · 展示"我吞进来的外部敌人" · 交给 CD4 指挥官</div></div>
+        </div>
       </div>
-      <h3>本章大纲（待展开）</h3>
       <ul>
-        <li><strong>两种托盘</strong>：MHC I（几乎所有细胞都有，展示"细胞内部情况"给 CD8）；MHC II（只有专业呈递细胞有，展示"吞进来的外部敌人"给 CD4）。</li>
-        <li><strong>抗原呈递</strong>：细胞如何把蛋白切成碎片、装上托盘。</li>
-        <li><strong>T 细胞受体 TCR</strong>：只认"MHC + 碎片"的组合，不认游离敌人。</li>
-        <li><strong>CD4 vs CD8</strong>：辅助 T（发号施令）vs 杀伤 T（动手处决）。</li>
-        <li><strong>接回药物</strong>：检查点抑制剂（PD-1 / CTLA-4）就是在调 T 细胞这套识别–激活系统。</li>
+        <li><strong>MHC I = 内部审计</strong>：几乎<em>所有</em>有核细胞都装了它，随时把"自己体内正在合成的蛋白碎片"摆出来。细胞健康时摆的都是自家蛋白，T 细胞放行；一旦被病毒感染或癌变，摆出来的碎片里就混进了病毒/异常蛋白——<strong>CD8 杀伤 T 细胞</strong>看到，当场处决这个细胞。</li>
+        <li><strong>MHC II = 战况汇报</strong>：只有"专业情报员"（树突状细胞、巨噬细胞、B 细胞）才有。它们把<em>吞进来的外部敌人</em>切碎摆上 MHC II，交给<strong>CD4 辅助 T 细胞</strong>——后者不亲自动手，而是<em>发号施令、调动全军</em>。</li>
       </ul>
-      <p style="color:var(--faint)">＊本章为框架大纲，详细内容待逐步展开。</p>
+      <div class="card">
+        <h3>一句话记住 CD8 与 CD4</h3>
+        <p><strong>CD8＝8 像手枪，杀手</strong>，看 MHC I，处决变节细胞。<strong>CD4＝指挥官</strong>，看 MHC II，发命令、给 B 细胞和杀手"打气"。记忆口诀：<em>8 拿枪、4 发令；I 管内、II 管外。</em>（数字上还有个巧合：CD 数字 × MHC 罗马数字都等于 8，方便对号。）</p>
+      </div>
+
+      <h2><span class="cn">抗原呈递：敌人怎么被"切碎摆盘"</span></h2>
+      <p>不用记生化细节，抓住画面就行：细胞内有个"碎纸机 + 传送带"，把蛋白（自家的或病毒的）绞成小段，装到 MHC 托盘上，再运到细胞表面举起来给 T 细胞看。这个全过程叫<strong>抗原呈递</strong> <span class="en">(antigen presentation)</span>。树突状细胞是最专业的"呈递员"——第 1 章说它是连接两支军队的桥，桥就搭在这里。</p>
+
+      <h2><span class="cn">为什么这套设计很聪明</span></h2>
+      <ul>
+        <li><strong>躲不掉</strong>：病毒钻进细胞想躲开抗体，但只要它在细胞里造蛋白，碎片就会被 MHC I 举出来"举报"，照样被 CD8 抓到。</li>
+        <li><strong>NK 兜底</strong>：有些狡猾的病毒/癌细胞干脆<em>把 MHC I 托盘全撤了</em>，想让 CD8 没得看。但这正好触发第 1 章的 NK 细胞——"没有身份牌？杀！"两套系统互相堵漏。</li>
+      </ul>
+
+      <div class="note investor">
+        <span class="tag">接回药物：PD-1、CTLA-4、CAR-T 全在这一章的地基上</span>
+        <p><strong>检查点抑制剂（PD-1 / CTLA-4）</strong>：癌细胞会向 CD8 杀手伸出"别打我"的假信号（PD-L1），让杀手熄火。PD-1 药就是把这只假信号的手<em>挡住</em>，让杀手恢复攻击——这叫"松开免疫的刹车"（第 6、10 章细讲）。<strong>器官移植排斥</strong>也源于此：别人的 MHC 在你 T 细胞眼里就是"非我"，所以要终身吃抗排斥药压制。<strong>CAR-T</strong> 则更激进——它给 T 细胞装一副"不用看 MHC 托盘、直接认癌细胞表面标志"的人工受体，绕开了整套呈递系统。</p>
+      </div>
+      <div class="note">
+        <span class="tag">本章小结</span>
+        <p>T 细胞不看完整敌人，只看 <strong>MHC 托盘上的碎片</strong>。<strong>MHC I（人人都有）→ CD8 杀手</strong>管细胞内部；<strong>MHC II（专业呈递细胞）→ CD4 指挥官</strong>管外部战况。这套"每个细胞持续汇报肚子里有什么"的设计，是细胞免疫的地基，也是检查点药物的靶场。下一章：这些强大的细胞是怎么在"军校"里被驯得不打自己人的。</p>
+      </div>
     </section>
 
-    <!-- ============ im5 发育与自我耐受 (outline) ============ -->
+    <!-- ============ im5 发育与自我耐受 ============ -->
     <section class="module" id="im5">
-      <div class="eyebrow">Immunology 05 · Development & Tolerance</div>
+      <div class="eyebrow">Immunology 05 · Development &amp; Tolerance</div>
       <h1><span class="cn">免疫细胞的"军校"：发育与自我耐受</span></h1>
-      <p class="lede">淋巴细胞的"钥匙"是随机生成的，难免造出"会开自己家门"的危险分子。本章讲免疫系统如何在"军校"里把这些危险分子筛掉，从而<strong>不打自己人</strong>。</p>
-      <div class="note"><span class="tag">本章要回答的问题</span>
-        <p>① T 细胞在胸腺的"正选择 / 负选择"（留下能用的、杀掉会攻击自己的）？<br>② <strong>中枢耐受</strong>（在军校里筛）vs <strong>外周耐受</strong>（上岗后再管）？<br>③ 这套机制一旦失灵会怎样——自身免疫病的根源？<br>④ 为什么 <strong>Treg（调节性 T 细胞）</strong>是"免疫系统的刹车"？</p>
+      <p class="lede">上一章埋了个雷：淋巴细胞的"钥匙"是<strong>随机拼出来的</strong>，必然会拼出一些"专开自己家门"的危险分子。如果不管，它们会掉头攻击自己人。本章讲免疫系统如何在"军校"里把这些叛徒提前筛掉——这套机制叫<strong>自我耐受</strong>，它一旦失灵，就是自身免疫病。</p>
+
+      <h2><span class="cn">胸腺：T 细胞的"魔鬼军校"，两轮考试</span></h2>
+      <p>T 细胞在一个叫<strong>胸腺</strong>的器官里受训。每个新兵（拿着随机生成的 TCR）要连过两关，<strong>过不了就地淘汰（凋亡）</strong>——胸腺里<em>超过 95% 的新兵都毕不了业</em>，可见筛得多狠。</p>
+      <div class="loop">
+        <div class="loop-title">胸腺两轮筛选 · 既要有用，又要安全</div>
+        <div class="chain">
+          <div class="link"><div class="k">第一关 · 正选择</div><div class="v">"看得懂托盘吗？"</div><div class="d">连自家 MHC 托盘都认不出的，废物，淘汰。留下能正常读托盘的。</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">第二关 · 负选择</div><div class="v">"会打自己人吗？"</div><div class="d">对自家蛋白反应过于强烈的，危险分子，销毁。留下"认得托盘但不打自己"的。</div></div>
+        </div>
       </div>
-      <h3>本章大纲（待展开）</h3>
       <ul>
-        <li><strong>胸腺教育</strong>：正选择（能认 MHC 才留）+ 负选择（太爱打自己就杀掉）。</li>
-        <li><strong>自我耐受</strong>：为什么绝大多数人不会攻击自己。</li>
-        <li><strong>耐受破裂</strong>：自身免疫病（类风湿、狼疮、1 型糖尿病）是怎么发生的。</li>
-        <li><strong>Treg</strong>：主动踩刹车、防止免疫过度。</li>
+        <li><strong>正选择</strong>：先考"能力"——你得能看懂自家的 MHC 托盘，否则上岗也没用，淘汰。</li>
+        <li><strong>负选择</strong>：再考"忠诚"——军校里故意把<em>各种自身蛋白</em>拿给新兵看，谁要是对自己人反应过激、跃跃欲试要开火，立刻销毁。<em>胸腺里有个神奇机制，能把全身各处器官的蛋白"样品"都搬来展示，尽量把叛徒筛干净。</em></li>
       </ul>
-      <p style="color:var(--faint)">＊本章为框架大纲，详细内容待逐步展开。</p>
+      <p>B 细胞在骨髓里也有类似的"忠诚测试"。两条线合起来叫<strong>中枢耐受</strong>——在"军校"里（出厂前）就把危险分子清掉。</p>
+
+      <h2><span class="cn">军校筛不干净怎么办？——外周耐受"上岗后再管"</span></h2>
+      <p>军校再严也有漏网之鱼（有些自身蛋白军校里没样品）。所以身体在"前线"还有第二道保险，叫<strong>外周耐受</strong>：</p>
+      <ul>
+        <li><strong>双信号安全锁</strong>：一个自己反应性 T 细胞就算漏出来，它要开火也<em>需要两个信号同时到位</em>（抗原 + 共刺激，第 6 章细讲）。平时没有"警报"（共刺激）时，它只收到抗原一个信号，反而会被<strong>诱导麻痹或自杀</strong>。等于"没接到上级批准就擅自开火＝直接吊销资格"。</li>
+        <li><strong>Treg 踩刹车</strong>：见下。</li>
+      </ul>
+
+      <h2><span class="cn">Treg：免疫系统的"刹车片"</span></h2>
+      <p><strong>调节性 T 细胞</strong> <span class="en">(Treg)</span> 是一支专门"踩刹车"的部队。别的免疫细胞想开火太猛时，Treg 主动上前<strong>压制、叫停</strong>，防止误伤自己人、防止炎症失控。它是<em>主动维持和平</em>的力量。Treg 一旦先天缺陷，婴儿会得一种全身多器官自身免疫的重病（IPEX），从反面证明了它多重要。</p>
+
+      <h2><span class="cn">耐受破裂 = 自身免疫病</span></h2>
+      <p>把这套机制反过来看：只要"筛叛徒"或"踩刹车"任何一环失灵，免疫就会掉头打自己人，这就是<strong>自身免疫病</strong>。举几个你听过的：</p>
+      <table class="tbl">
+        <thead><tr><th>病</th><th>免疫打错了谁</th></tr></thead>
+        <tbody>
+          <tr><td>1 型糖尿病</td><td>误杀胰腺里造胰岛素的细胞</td></tr>
+          <tr><td>类风湿关节炎</td><td>攻击关节滑膜，慢性炎症把关节啃坏</td></tr>
+          <tr><td>红斑狼疮 (SLE)</td><td>产生打自己 DNA 的抗体，多器官受累</td></tr>
+          <tr><td>多发性硬化</td><td>攻击神经的髓鞘（神经的"绝缘皮")</td></tr>
+        </tbody>
+      </table>
+
+      <div class="note investor">
+        <span class="tag">接回药物</span>
+        <p>自免病的治疗逻辑，就是"帮免疫系统重新踩住刹车"：要么<strong>掐掉作乱的信号</strong>（抗 TNF 的 Humira、抗 IL-17/23，见第 7、10 章），要么<strong>整体压制免疫</strong>（激素、免疫抑制剂）。前沿方向是<em>只关掉"打自己那一支"、不误伤整支军队</em>——比如抗原特异性 Treg 疗法，正是这一章思想的延伸。</p>
+      </div>
+      <div class="note">
+        <span class="tag">本章小结</span>
+        <p>随机造出的"钥匙"必有叛徒，所以要<strong>军校筛（中枢耐受：正选择比能力、负选择比忠诚）＋ 上岗后再管（外周耐受：双信号锁 + Treg 刹车）</strong>。这套"自我耐受"是免疫最沉默却最关键的工程；它一破裂，就是自身免疫病。下一章：合格的部队怎么被"点着"、怎么协同打一场仗。</p>
+      </div>
     </section>
 
-    <!-- ============ im6 启动与协同 (outline) ============ -->
+    <!-- ============ im6 启动与协同 ============ -->
     <section class="module" id="im6">
-      <div class="eyebrow">Immunology 06 · Activation & Cooperation</div>
+      <div class="eyebrow">Immunology 06 · Activation &amp; Cooperation</div>
       <h1><span class="cn">拉响警报与协同作战：适应性免疫的启动</span></h1>
-      <p class="lede">一场适应性免疫应答不是单打独斗，而是树突状细胞、辅助 T 细胞、B 细胞的精密配合。本章讲仗是怎么被"点着"的。</p>
-      <div class="note"><span class="tag">本章要回答的问题</span>
-        <p>① 树突状细胞怎么把情报送到淋巴结、点燃 T 细胞（<strong>双信号</strong>：抗原 + 共刺激，缺一不可，这是安全锁）？<br>② 辅助 T 细胞的分工：Th1 打胞内菌、Th2 打寄生虫/管过敏、Th17 守黏膜、Treg 踩刹车？<br>③ B 细胞怎么在辅助 T 的帮助下、在"生发中心"里把抗体越造越好？<br>④ 为什么"共刺激"既是安全锁、也是免疫药物的靶点？</p>
+      <p class="lede">前面几章把"演员"都介绍完了。这一章讲<strong>仗是怎么被点着的</strong>——一场适应性免疫应答从来不是单打独斗，而是树突状细胞、CD4 指挥官、B 细胞的精密配合。搞懂这套启动逻辑，你就懂了为什么很多免疫药物专挑"启动信号"下手。</p>
+
+      <h2><span class="cn">双信号：免疫的"安全锁"（本章第一重点）</span></h2>
+      <p>T 细胞被启动，必须<strong>同时</strong>收到两个信号，缺一不可：</p>
+      <div class="loop">
+        <div class="loop-title">Two-Signal · 两把钥匙才能开火</div>
+        <div class="chain">
+          <div class="link"><div class="k">信号 1</div><div class="v">"是这个敌人"</div><div class="d">TCR 认出 MHC 托盘上的碎片——回答"打谁"</div></div>
+          <div class="arrow">＋</div>
+          <div class="link"><div class="k">信号 2 · 共刺激</div><div class="v">"确实有敌情"</div><div class="d">呈递细胞在真有危险时才亮出的"许可灯"——回答"该不该打"</div></div>
+          <div class="arrow">＝</div>
+          <div class="link"><div class="k">开火</div><div class="v">T 细胞激活</div><div class="d">两灯齐亮才启动、扩增</div></div>
+        </div>
       </div>
-      <h3>本章大纲（待展开）</h3>
-      <ul>
-        <li><strong>双信号原理</strong>：只有"抗原 + 共刺激"同时给到，T 细胞才启动——防止误伤。</li>
-        <li><strong>辅助 T 细胞亚群</strong>：Th1 / Th2 / Th17 / Treg 各打什么、分别对应哪些病。</li>
-        <li><strong>生发中心</strong>：抗体"精修车间"，亲和力成熟在这发生。</li>
-        <li><strong>接回药物</strong>：免疫词典里的 IL-17、IL-23、IL-4/13 就是这些辅助 T 路线的信号。</li>
-      </ul>
-      <p style="color:var(--faint)">＊本章为框架大纲，详细内容待逐步展开。</p>
+      <p>为什么要两把锁？因为信号 1 光能说"我认得这东西"，但认得不等于该打（很多"自己人"分子也认得）。<strong>信号 2（共刺激）</strong>是呈递细胞在<em>真正闻到危险（PAMP、炎症）时才点亮的许可灯</em>。只有"认出敌人"＋"确认有敌情"两灯齐亮，T 细胞才开火。<strong>只给信号 1、没有信号 2，T 细胞不但不启动，反而被诱导沉默（第 5 章的外周耐受安全锁就是这个）。</strong></p>
+      <div class="note investor">
+        <span class="tag">这把锁就是 CTLA-4 类药的靶点</span>
+        <p>既然"信号 2"是开火许可，那调控它就能调控整支军队。<strong>CTLA-4</strong> 是 T 细胞自带的一个"抢开关"，会把信号 2 的许可灯抢走、给自己降温。抗 CTLA-4 药（伊匹木单抗）就是把这个"降温开关"堵住，让 T 细胞火力更足去打肿瘤。反过来，治自免病可以人为"只给信号 1、不给信号 2"，把捣乱的 T 细胞哄睡（阿巴西普 Abatacept 就是这思路）。</p>
+      </div>
+
+      <h2><span class="cn">CD4 指挥官的"兵种分化"：一个命令，四种打法</span></h2>
+      <p>第 4 章说 CD4 辅助 T 是"发号施令的指挥官"。但敌人种类不同，命令也不同——CD4 被激活后会<strong>分化成不同"兵种"</strong>，各带一套打法（靠不同的细胞因子"喊话")：</p>
+      <table class="tbl">
+        <thead><tr><th>兵种</th><th>专打</th><th>招牌信号 / 相关的病与药</th></tr></thead>
+        <tbody>
+          <tr><td>Th1</td><td>躲在细胞里的细菌、病毒</td><td>激励巨噬细胞和 CD8 杀手。过度→某些慢性炎症。</td></tr>
+          <tr><td>Th2</td><td>寄生虫（大个头）</td><td>指挥 IgE、肥大细胞。<strong>跑偏就成了过敏</strong>；抗 IL-4/13（度普利尤单抗 Dupixent）治特应性皮炎/哮喘。</td></tr>
+          <tr><td>Th17</td><td>守黏膜、抗真菌</td><td>招牌信号 <strong>IL-17</strong>。过度→<strong>银屑病、强直性脊柱炎</strong>；抗 IL-17/IL-23 是这些病的重磅药。</td></tr>
+          <tr><td>Treg</td><td>（不打，专踩刹车）</td><td>压制过度反应、维持耐受（第 5 章）。</td></tr>
+        </tbody>
+      </table>
+      <p>你不用背全，但要记住这个<strong>大逻辑</strong>：<em>很多自免/过敏药，本质是掐掉某个"兵种"的招牌喊话信号</em>——银屑病掐 IL-17/23、特应性皮炎掐 IL-4/13。这就是第 10 章"掐信号"那一类药的来源。</p>
+
+      <h2><span class="cn">生发中心：抗体的"精修车间"</span></h2>
+      <p>B 细胞要造出高质量抗体，也离不开 CD4 的帮助。被激活的 B 细胞钻进淋巴结里一个叫<strong>生发中心</strong>的车间，在 CD4（这里叫 Tfh，滤泡辅助 T）的督导下反复做两件事：<strong>①类别转换</strong>（换柄，第 3 章）和<strong>②亲和力成熟</strong>（越磨越准，第 3 章）。<em>第 3 章欠的账，在这里还上了</em>：抗体正是在生发中心被"精修"成高精度武器，同时挑出一批做成记忆细胞（第 8 章）。</p>
+
+      <div class="note">
+        <span class="tag">本章小结</span>
+        <p>启动的核心是<strong>双信号安全锁</strong>（认出敌人＋确认敌情，两灯齐亮才开火）——它既防误伤，又是 CTLA-4 类药的靶点。CD4 指挥官会<strong>分化成 Th1/Th2/Th17/Treg</strong> 打不同的仗，其招牌信号（IL-17、IL-4/13…）正是大批自免药的靶点。B 细胞在<strong>生发中心</strong>被精修成高精度抗体。下一章：识别、启动都完成后，到底用哪些"武器"把敌人物理消灭。</p>
+      </div>
     </section>
 
-    <!-- ============ im7 效应机制 (outline) ============ -->
+    <!-- ============ im7 效应机制 ============ -->
     <section class="module" id="im7">
       <div class="eyebrow">Immunology 07 · Effector Mechanisms</div>
       <h1><span class="cn">各种"武器"：效应机制</span></h1>
-      <p class="lede">敌人被识别之后，到底怎么被"物理消灭"？本章盘点免疫系统的各种武器。</p>
-      <div class="note"><span class="tag">本章要回答的问题</span>
-        <p>① 抗体的三种打法（中和 / 调理吞噬 / 激活补体）具体怎么运作？<br>② 杀伤性 T 细胞怎么精准处决被感染的细胞（打孔 + 诱导它自杀）？<br>③ <strong>细胞因子</strong>——免疫细胞之间的"对讲机"，为什么它既是关键信号、又是"细胞因子风暴"的祸首？<br>④ 炎症怎么被放大、又怎么收场？</p>
-      </div>
-      <h3>本章大纲（待展开）</h3>
+      <p class="lede">敌人被识别、部队被点着之后，到底怎么把敌人<strong>物理消灭</strong>？本章盘点免疫系统的武器库。重点讲杀伤 T 细胞的"处决手法"，以及那把双刃剑——细胞因子，它既是全军的对讲机，也是"细胞因子风暴"的祸首。</p>
+
+      <h2><span class="cn">武器一：抗体的四种打法（复习+补全）</span></h2>
+      <p>第 3 章讲过抗体本身没有刀，靠间接手段：<strong>中和</strong>（给敌人铐手铐）、<strong>调理</strong>（贴旗子让人吞）、<strong>激活补体</strong>（打孔+报警）、<strong>ADCC</strong>（抓住癌细胞、招 NK 来处决）。这四招管的是<em>细胞外</em>的敌人。细胞里的敌人，抗体够不着，得靠下面这把刀。</p>
+
+      <h2><span class="cn">武器二：杀伤 T 细胞怎么"处决"变节细胞</span></h2>
+      <p>CD8 杀伤 T 细胞（第 4 章）通过 MHC I 托盘认出"这个细胞里藏了病毒/已经癌变"后，它不是把细胞炸烂（那会把病毒撒得到处都是），而是<strong>逼它体面地自杀</strong>——干净利落，连里面的病毒一起打包处理。手法有两种：</p>
       <ul>
-        <li><strong>抗体效应</strong>：中和、调理、补体、招募 NK（ADCC）。</li>
-        <li><strong>CTL 杀伤</strong>：穿孔素 + 颗粒酶，诱导靶细胞凋亡。</li>
-        <li><strong>细胞因子网络</strong>：TNF、干扰素、白介素——免疫的"对讲机"。</li>
-        <li><strong>接回药物</strong>：CAR-T 的"细胞因子风暴"要用抗 IL-6 解救，正是这一章的知识。</li>
+        <li><strong>穿孔素 + 颗粒酶</strong>：先用"穿孔素"在目标细胞膜上钻个小孔，再从孔里注入"颗粒酶"，启动目标细胞的<strong>自毁程序（凋亡）</strong>。像给叛徒递上一杯"赐死的毒酒"。</li>
+        <li><strong>死亡信号</strong>：直接按下目标细胞表面的"自毁按钮"（Fas），命令它自杀。</li>
       </ul>
-      <p style="color:var(--faint)">＊本章为框架大纲，详细内容待逐步展开。</p>
+      <p>关键词是<strong>凋亡</strong> <span class="en">(apoptosis)</span>——细胞"安静地自我了断"，不外泄内容物、不引发额外炎症。这跟细胞被"炸死"（坏死，会爆出内容物引发大炎症）完全不同。<em>免疫系统连杀人都讲究"不留烂摊子"。</em></p>
+
+      <h2><span class="cn">武器三 / 通信网：细胞因子——全军的"对讲机"</span></h2>
+      <p><strong>细胞因子</strong> <span class="en">(cytokine)</span> 是免疫细胞之间互相喊话的小分子信号。它不是子弹，而是<strong>命令与情报</strong>："快来支援""升高体温""开始造抗体""都撤，别打了"。前面章节反复出现的 IL-17、IL-4、TNF、干扰素，全是细胞因子。几类你需要有印象的：</p>
+      <ul>
+        <li><strong>干扰素</strong> <span class="en">Interferon</span>：细胞被病毒感染时喊的"警报"，让周围细胞进入抗病毒戒备。</li>
+        <li><strong>TNF</strong>：强力的炎症"总动员"信号——<em>抗 TNF 药（Humira）是史上最畅销药之一，就是把它按住来治类风湿等自免病。</em></li>
+        <li><strong>白介素</strong> <span class="en">Interleukin, IL-x</span>：编号一大串的"内部通讯"，各管一摊（IL-6 促炎、IL-2 催 T 细胞增殖……）。</li>
+      </ul>
+
+      <h2><span class="cn">双刃剑：细胞因子风暴</span></h2>
+      <p>对讲机喊话是好事，但如果<strong>喊话失控、正反馈滚雪球</strong>——细胞因子越放越多、招来越多细胞又放更多——就成了<strong>细胞因子风暴</strong> <span class="en">(cytokine storm)</span>。此时免疫系统火力全开、敌我不分，反而把自己人的器官打坏。重症流感、重症新冠的很多死亡，以及 <strong>CAR-T 治疗后的 CRS</strong>，都是这么回事。</p>
+      <div class="note investor">
+        <span class="tag">接回药物：CAR-T 的"风暴"要用抗 IL-6 来救</span>
+        <p>CAR-T（改造的超强杀手 T 细胞）杀癌太猛时，会引爆细胞因子风暴，其中 <strong>IL-6</strong> 是关键推手。临床上就用<strong>抗 IL-6 受体药（托珠单抗 Tocilizumab）</strong>紧急"掐掉这根对讲机"，把风暴按下去。这是"第 7 章知识救第 10 章疗法"的活例子——不懂细胞因子网络，就没法安全地用 CAR-T。</p>
+      </div>
+      <div class="note">
+        <span class="tag">本章小结</span>
+        <p>武器库三件套：<strong>抗体</strong>（中和/调理/补体/ADCC，管细胞外）、<strong>CD8 杀手</strong>（逼变节细胞凋亡，管细胞内）、<strong>细胞因子</strong>（全军对讲机，既是命令网、也是风暴之源）。记住：免疫既要够狠杀敌，又要够稳不失控——"够狠"和"够稳"的平衡贯穿整个武器系统，也贯穿所有免疫药物设计。下一章：仗打完了，怎么把这次经验"存档"成记忆，做成疫苗。</p>
+      </div>
     </section>
 
-    <!-- ============ im8 记忆与疫苗 (outline) ============ -->
+    <!-- ============ im8 记忆与疫苗 ============ -->
     <section class="module" id="im8">
-      <div class="eyebrow">Immunology 08 · Memory & Vaccines</div>
+      <div class="eyebrow">Immunology 08 · Memory &amp; Vaccines</div>
       <h1><span class="cn">记忆与疫苗</span></h1>
-      <p class="lede">免疫系统最神奇的能力是"记仇"。本章讲记忆怎么形成、疫苗如何利用它，以及为什么这是人类医学史上性价比最高的发明。</p>
-      <div class="note"><span class="tag">本章要回答的问题</span>
-        <p>① 记忆 B / T 细胞是什么，为什么再次应答又快又猛？<br>② <strong>主动免疫</strong>（打疫苗、自己造记忆）vs <strong>被动免疫</strong>（直接打现成抗体、见效快但不持久）？<br>③ 各类疫苗的原理（灭活 / 减毒 / 亚单位 / mRNA）——为什么 mRNA 疫苗是里程碑？<br>④ 群体免疫是什么、需要多少人打？</p>
-      </div>
-      <h3>本章大纲（待展开）</h3>
+      <p class="lede">免疫系统最神奇的能力是"记仇"。打赢一仗后，它会留下一批"老兵"潜伏几十年；同一个敌人再来，反应又快又猛，往往你还没发病就被清除。<strong>疫苗</strong>就是人类学会了"安全地伪造这段记忆"——这是医学史上性价比最高的发明，没有之一。</p>
+
+      <h2><span class="cn">为什么"二次感染"往往察觉不到</span></h2>
+      <p>回到第 2 章那条曲线：第一次遇敌，适应性免疫要 <strong>7–10 天</strong>才拉起队伍（你会病一场）；打赢后，一小批表现最好的 T/B 细胞不解散，转为<strong>记忆细胞</strong>潜伏下来。它们比新兵有三个优势：</p>
       <ul>
-        <li><strong>记忆细胞</strong>：为什么"老兵"反应快、门槛低。</li>
-        <li><strong>主动 vs 被动免疫</strong>：疫苗 vs 抗体注射（如新冠单抗、抗毒血清）。</li>
-        <li><strong>疫苗类型</strong>：灭活、减毒、亚单位、载体、mRNA。</li>
-        <li><strong>接回药物</strong>：mRNA 平台（Moderna / BioNTech）正是这一章 + 递送技术的结合。</li>
+        <li><strong>数量多</strong>：这个敌人的"专属兵"从零星几个，扩到一大群常备着。</li>
+        <li><strong>门槛低、手快</strong>：记忆细胞更容易被唤醒，几小时到一两天就爆发，而不是一周。</li>
+        <li><strong>质量高</strong>：记忆 B 细胞造的抗体已经过<em>亲和力成熟</em>（第 3、6 章），一上来就是高精度 IgG。</li>
       </ul>
-      <p style="color:var(--faint)">＊本章为框架大纲，详细内容待逐步展开。</p>
+      <p>所以第二次同一个敌人来，常常在你出现症状之前就被清掉了——这就是"免疫力"的分子真相。</p>
+
+      <h2><span class="cn">主动 vs 被动：自己造记忆，还是借现成抗体</span></h2>
+      <div class="loop">
+        <div class="loop-title">两种获得免疫的方式</div>
+        <div class="chain">
+          <div class="link"><div class="k">Active · 主动免疫</div><div class="v">自己造记忆</div><div class="d">打疫苗 / 得过一次病 · 起效慢但<strong>持久</strong>（数年~终身）</div></div>
+          <div class="arrow">↔</div>
+          <div class="link"><div class="k">Passive · 被动免疫</div><div class="v">直接借抗体</div><div class="d">打现成抗体（抗血清、母乳、治疗性单抗）· <strong>立刻起效但不持久</strong>（几周~几月）</div></div>
+        </div>
+      </div>
+      <p><strong>主动免疫</strong>是让你自己的免疫系统去经历、去建记忆库——慢，但一劳永逸。<strong>被动免疫</strong>是把别人/别处造好的抗体直接注进来——立竿见影（比如被毒蛇咬了打抗蛇毒血清、暴露狂犬后打免疫球蛋白），但抗体几周就代谢掉、没有记忆。<em>妈妈通过胎盘（IgG）和母乳（IgA）给婴儿的，也是被动免疫——救急用的，几个月后就得靠孩子自己打疫苗建主动免疫。</em></p>
+
+      <h2><span class="cn">疫苗的几种"造法"</span></h2>
+      <p>疫苗的本质都一样：<strong>把敌人的"通缉照片"安全地给免疫系统看一眼，让它提前建好记忆</strong>。区别只在"怎么把照片做得既像真敌人、又不会真致病"：</p>
+      <table class="tbl">
+        <thead><tr><th>类型</th><th>怎么做的</th><th>例子 / 特点</th></tr></thead>
+        <tbody>
+          <tr><td>灭活疫苗</td><td>把病原体<strong>杀死</strong>再打进去</td><td>安全，但刺激弱，常需多针+加强。</td></tr>
+          <tr><td>减毒活疫苗</td><td>把病原体<strong>驯化到几乎无害</strong>但仍活着</td><td>麻疹、卡介苗。免疫最强最持久，但免疫缺陷者慎用。</td></tr>
+          <tr><td>亚单位疫苗</td><td>只取敌人身上<strong>一个关键零件</strong>展示</td><td>乙肝、HPV。很安全，常需佐剂增强。</td></tr>
+          <tr><td>mRNA 疫苗</td><td>把"照片的图纸"（mRNA）送进你的细胞，<strong>让细胞自己造出那个零件</strong>再展示</td><td>新冠 mRNA 疫苗。研发极快、可快速改版——里程碑式平台。</td></tr>
+        </tbody>
+      </table>
+      <p>很多疫苗还要加<strong>佐剂</strong> <span class="en">(adjuvant)</span>——本质是"人为制造一点危险信号"，把第 6 章说的<em>信号 2（共刺激）</em>点亮，否则免疫系统看了照片也可能不当回事。<em>这又和第 6 章接上了。</em></p>
+
+      <h2><span class="cn">群体免疫：保护打不了疫苗的人</span></h2>
+      <p>当一个人群里<strong>足够多的人有免疫力</strong>，病原体找不到足够的"下家"传播，链条就断了。这样连那些<em>不能打疫苗的人</em>（婴儿、免疫缺陷者）也被间接保护——这叫<strong>群体免疫</strong>。传染性越强的病，需要的接种比例越高（麻疹要 ~95%），这也是为什么麻疹一旦接种率下滑就容易反扑。</p>
+
+      <div class="note investor">
+        <span class="tag">接回药物：mRNA 平台的商业意义</span>
+        <p>mRNA 疫苗（Moderna / BioNTech）之所以是产业里程碑，是因为它把"疫苗"变成了<strong>可编程平台</strong>：换个敌人只要换一段 mRNA 序列，生产工艺不变，几周就能出新版。这背后还站着<strong>递送技术（脂质纳米粒 LNP）</strong>——把脆弱的 mRNA 包好送进细胞。同一套 mRNA+递送思路，正被用来做<em>肿瘤个性化疫苗</em>。这门课到这里，和<a href="overview.html">概览课</a>里的"mRNA 弹药"就对上了。</p>
+      </div>
+      <div class="note">
+        <span class="tag">本章小结</span>
+        <p>记忆细胞让二次应答<strong>又快、又猛、又准</strong>；<strong>主动免疫</strong>（疫苗，慢而持久）vs <strong>被动免疫</strong>（借抗体，快而短暂）是两条路；疫苗的花样（灭活/减毒/亚单位/mRNA）都是"怎么安全地给免疫系统看照片"，佐剂负责点亮信号 2。这一章是免疫系统"最好的一面"。下一章反过来看——它出错时的样子。</p>
+      </div>
     </section>
 
-    <!-- ============ im9 当免疫出错 (outline) ============ -->
+    <!-- ============ im9 当免疫出错 ============ -->
     <section class="module" id="im9">
       <div class="eyebrow">Immunology 09 · When It Goes Wrong</div>
-      <h1><span class="cn">当免疫出错：过敏 / 自免 / 免疫缺陷</span></h1>
-      <p class="lede">免疫太弱、太强、或打错对象，都会出病。本章是把前面所有机制"反过来看"——它们失灵时会怎样。</p>
-      <div class="note"><span class="tag">本章要回答的问题</span>
-        <p>① <strong>超敏反应（过敏）</strong>的四种类型（I–IV），从花粉过敏到接触性皮炎各是哪种？<br>② <strong>自身免疫病</strong>：免疫打自己人（类风湿、狼疮、1 型糖尿病、多发性硬化）？<br>③ <strong>免疫缺陷</strong>：先天缺陷 vs 后天（如 HIV 摧毁 CD4 T 细胞）？<br>④ 器官移植<strong>排斥</strong>，以及为什么要终身吃抗排斥药？</p>
-      </div>
-      <h3>本章大纲（待展开）</h3>
+      <h1><span class="cn">当免疫出错：过敏 / 自免 / 免疫缺陷 / 排斥</span></h1>
+      <p class="lede">免疫这套系统，<strong>太弱、太强、或打错对象</strong>都会出病。这一章其实是把前八章所有机制"反过来看"——它们失灵时会变成什么病。你会发现每一种"出错"都精确对应前面某一章的某个环节。</p>
+
+      <h2><span class="cn">出错一：太强／打错无害的东西 —— 过敏（超敏反应）</span></h2>
+      <p>免疫系统对本来无害的东西（花粉、尘螨、食物）反应过度，就是<strong>超敏反应</strong>。教科书分四型（I–IV），你重点抓第 I 型和第 IV 型：</p>
+      <table class="tbl">
+        <thead><tr><th>型</th><th>机制（对应前面哪章）</th><th>例子</th></tr></thead>
+        <tbody>
+          <tr><td>I 型 · 速发型</td><td><strong>IgE + 肥大细胞</strong>（第 3、7 章）：过敏原一来，IgE 命令肥大细胞瞬间"爆开"放组胺</td><td>花粉症、荨麻疹、食物过敏、<strong>过敏性休克</strong>（几分钟内致命）</td></tr>
+          <tr><td>II 型 · 抗体型</td><td>抗体直接打在某种自身细胞上，招补体/吞噬把它清掉</td><td>某些溶血性贫血、新生儿溶血</td></tr>
+          <tr><td>III 型 · 免疫复合物型</td><td>抗体+抗原结成"团块"沉积在血管、肾、关节，引发炎症</td><td>狼疮肾炎、血清病</td></tr>
+          <tr><td>IV 型 · 迟发型</td><td><strong>T 细胞</strong>主导（不靠抗体），1–3 天才发作</td><td>接触性皮炎（碰镍、毒藤）、结核菌素试验</td></tr>
+        </tbody>
+      </table>
+      <p>记忆诀窍：<strong>前三型靠抗体（快），第四型靠 T 细胞（慢）</strong>。"迟发"两个字就在提示你——抗体是现成的所以快，T 细胞要现召集所以慢。<em>抗组胺药治的是 I 型的组胺；抗 IgE（Xolair）、抗 IL-4/13（Dupixent）则从更上游掐 I 型/过敏体质。</em></p>
+
+      <h2><span class="cn">出错二：打自己人 —— 自身免疫病</span></h2>
+      <p>这是第 5 章"自我耐受破裂"的后果：军校没筛干净、或刹车（Treg）失灵，免疫掉头攻击自己。类风湿、狼疮、1 型糖尿病、多发性硬化都属此类（第 5 章表格）。<strong>治疗逻辑就是"重新压制或踩刹车"</strong>：抗 TNF、抗 IL-17/23、免疫抑制剂——全是第 6、7 章那些信号的靶点。</p>
+
+      <h2><span class="cn">出错三：太弱／缺零件 —— 免疫缺陷</span></h2>
       <ul>
-        <li><strong>超敏反应 I–IV</strong>：IgE 速发型（过敏/过敏性休克）、抗体型、免疫复合物型、T 细胞迟发型。</li>
-        <li><strong>自身免疫</strong>：耐受破裂的后果，对应免疫词典里一大批药。</li>
-        <li><strong>免疫缺陷</strong>：为什么缺了某个环节就反复感染。</li>
-        <li><strong>移植免疫</strong>：为什么身体把新器官当"外人"。</li>
+        <li><strong>先天性</strong>：生来缺某个环节。最极端的"泡泡男孩"（重症联合免疫缺陷 SCID）几乎没有 T/B 细胞，一点感染都致命，得住无菌舱——这从反面说明每个零件都不可少。</li>
+        <li><strong>后天性</strong>：最典型是 <strong>HIV / 艾滋病</strong>。HIV 专门感染并摧毁 <strong>CD4 辅助 T 细胞</strong>（第 4 章的"指挥官"）。指挥官被杀光，整支军队群龙无首——所以艾滋病人不是死于 HIV 本身，而是死于<em>本来根本不算事的机会性感染</em>。这精准演示了"CD4 是全局枢纽"。</li>
       </ul>
-      <p style="color:var(--faint)">＊本章为框架大纲，详细内容待逐步展开。</p>
+
+      <h2><span class="cn">出错四（不算错，但很麻烦）：器官移植排斥</span></h2>
+      <p>移植的新器官带着<strong>别人的 MHC</strong>（第 4 章）。在你 T 细胞眼里，别人的 MHC＝铁证如山的"非我"，于是全力攻击新器官——这叫<strong>排斥</strong>。这不是免疫"出错"，恰恰是它<em>尽职</em>的结果，只是这次我们不希望它尽职。所以移植病人要<strong>终身吃免疫抑制药</strong>，在"别排斥器官"和"别太弱容易感染/长瘤"之间走钢丝。</p>
+
+      <div class="note">
+        <span class="tag">本章小结（一张对照表就够）</span>
+        <p><strong>太强打无害物＝过敏</strong>（I 型 IgE 快、IV 型 T 细胞慢）；<strong>打自己人＝自身免疫</strong>（耐受破裂，第 5 章）；<strong>太弱缺零件＝免疫缺陷</strong>（HIV 杀 CD4 是典型）；<strong>打新器官＝移植排斥</strong>（MHC 非我）。每一种病，都是前面某个机制的"反面演示"。最后一章：我们怎么<em>主动地</em>拨动这些机制来治病——把整门课接回药物创新。</p>
+      </div>
     </section>
 
-    <!-- ============ im10 免疫与药物 (outline) ============ -->
+    <!-- ============ im10 免疫与药物 ============ -->
     <section class="module" id="im10">
       <div class="eyebrow">Immunology 10 · Immunology meets Drugs</div>
       <h1><span class="cn">免疫与药物：接回药物创新</span></h1>
-      <p class="lede">最后一章把免疫学接回你已经学过的药物创新——现代最重磅的一批药，几乎都在"调免疫"。学完这章，回头翻<a href="dict/immunology.html">免疫词典</a>和<a href="dict/matrix.html">公司×通路矩阵</a>，你会发现全对得上。</p>
-      <div class="note"><span class="tag">本章要回答的问题</span>
-        <p>① <strong>检查点抑制剂</strong>（PD-1 / CTLA-4）：怎么"松开免疫的刹车"去打肿瘤（用到第 4、6 章）？<br>② <strong>CAR-T / T 细胞衔接器</strong>：怎么改造或指挥 T 细胞去杀癌（第 4、7 章）？<br>③ <strong>抗体药与细胞因子拮抗</strong>：怎么中和作乱的信号治自免（第 6、7 章）？<br>④ 疫苗与免疫佐剂（第 8 章）？</p>
+      <p class="lede">最后一章把整门课接回你已经学过的药物创新。现代最重磅的一批药，几乎都在"调免疫"。我把它们归成<strong>四种动作</strong>——松刹车、换武器、掐信号、建记忆——每一种都直接对应前面某几章。学完回头翻<a href="dict/immunology.html">免疫词典</a>和<a href="dict/matrix.html">公司×通路矩阵</a>，你会发现全对得上。</p>
+
+      <div class="loop">
+        <div class="loop-title">免疫药物 · 四种动作</div>
+        <div class="chain">
+          <div class="link"><div class="k">松刹车</div><div class="v">检查点抑制剂</div><div class="d">解除 T 细胞的"别打"信号 · 打肿瘤</div></div>
+          <div class="arrow">·</div>
+          <div class="link"><div class="k">换武器</div><div class="v">CAR-T / 双抗</div><div class="d">改造或指挥 T 细胞去认癌</div></div>
+          <div class="arrow">·</div>
+          <div class="link"><div class="k">掐信号</div><div class="v">抗细胞因子</div><div class="d">按住作乱的对讲机 · 治自免/过敏</div></div>
+          <div class="arrow">·</div>
+          <div class="link"><div class="k">建记忆</div><div class="v">疫苗 / mRNA</div><div class="d">提前建好免疫记忆</div></div>
+        </div>
       </div>
-      <h3>本章大纲（待展开）</h3>
+
+      <h2><span class="cn">动作一：松刹车 —— 检查点抑制剂（抗肿瘤革命）</span></h2>
+      <p><strong>用到第 4、6 章。</strong>癌细胞很狡猾：它会向 T 细胞伸出"别打我，我是自己人"的假信号（PD-L1 按住 T 细胞的 PD-1 刹车），让杀手熄火。检查点抑制剂（PD-1/PD-L1 药，如 K 药 Keytruda）<strong>不是给 T 细胞加油，而是把这只按刹车的手挡开</strong>——让本来就认得癌细胞、只是被摁住的 T 细胞重新开火。抗 CTLA-4（第 6 章的"信号 2 抢开关"）是另一种松法。这类药让一部分晚期癌症第一次有了长期生存的可能，拿了 2018 年诺奖。</p>
+
+      <h2><span class="cn">动作二：换武器 / 指方向 —— CAR-T 与双抗</span></h2>
+      <p><strong>用到第 4、7 章。</strong>如果 T 细胞根本认不出癌细胞（癌细胞把 MHC 托盘撤了，第 4 章），那就<em>绕开识别系统、直接给它换一副眼睛</em>：</p>
       <ul>
-        <li><strong>松刹车</strong>：检查点抑制剂——把 T 细胞的"别打"信号解除。</li>
-        <li><strong>换武器/指方向</strong>：CAR-T、双抗（CD3 衔接器）——直接指挥 T 细胞。</li>
-        <li><strong>掐信号</strong>：抗 TNF、抗 IL-17/23、抗 IL-4/13——治自身免疫与过敏。</li>
-        <li><strong>建记忆</strong>：疫苗与 mRNA 平台。</li>
+        <li><strong>CAR-T</strong>：抽出病人自己的 T 细胞，在体外给它装一副<strong>人工受体（CAR）</strong>——不用看 MHC 托盘，直接认癌细胞表面标志（如 CD19），再回输体内。等于给杀手配了把"自动锁定癌细胞"的新枪。对某些血液瘤效果惊人，但要小心第 7 章的<strong>细胞因子风暴</strong>。</li>
+        <li><strong>双抗 / T 细胞衔接器</strong>：一个抗体两只手，<strong>一手抓癌细胞、一手抓 T 细胞</strong>，硬把路过的杀手拽到癌旁边逼它动手（第 3 章的双抗，如 CD3 衔接器）。不用改造细胞，现成药就能用。</li>
       </ul>
+
+      <h2><span class="cn">动作三：掐信号 —— 抗细胞因子（治自免与过敏）</span></h2>
+      <p><strong>用到第 6、7、9 章。</strong>自免/过敏是免疫"太强、打错人"（第 9 章）。治法是<strong>按住那根喊得最凶的对讲机（细胞因子）</strong>：</p>
+      <table class="tbl">
+        <thead><tr><th>按住哪根信号</th><th>治什么病</th><th>代表药</th></tr></thead>
+        <tbody>
+          <tr><td>抗 TNF</td><td>类风湿、克罗恩病等</td><td>Humira（阿达木单抗）——史上最畅销药之一</td></tr>
+          <tr><td>抗 IL-17 / IL-23</td><td>银屑病、强直性脊柱炎（Th17 线，第 6 章）</td><td>司库奇尤单抗等</td></tr>
+          <tr><td>抗 IL-4 / IL-13</td><td>特应性皮炎、哮喘（Th2 线，第 6 章）</td><td>Dupixent（度普利尤单抗）</td></tr>
+          <tr><td>抗 IL-6 受体</td><td>类风湿，并用于救 CAR-T 引发的风暴（第 7 章）</td><td>Tocilizumab（托珠单抗）</td></tr>
+        </tbody>
+      </table>
+
+      <h2><span class="cn">动作四：建记忆 —— 疫苗与 mRNA 平台</span></h2>
+      <p><strong>用到第 8 章。</strong>疫苗是"预装免疫记忆"，mRNA 把它升级成<strong>可编程平台</strong>：换敌人只换一段序列。同样的思路正被用于<em>肿瘤个性化疫苗</em>——给免疫系统看"这个病人癌细胞的专属通缉照"，训练它去清除。这类药站在第 8 章（记忆/疫苗）＋递送技术（LNP）的交汇处。</p>
+
       <div class="note investor">
         <span class="tag">两门课打通了</span>
-        <p>到这里，<a href="overview.html">概览课</a>的"弹药库/主战场"和这门免疫学就正式接上了：概览告诉你<em>有哪些药、在打哪条通路</em>；免疫学告诉你<em>这些药到底在拨动身体的哪根弦</em>。两边配合，你对"免疫类药物"的理解就完整了。</p>
+        <p>到这里，<a href="overview.html">概览课</a>的"弹药库 / 主战场"和这门免疫学就正式接上了：<strong>概览告诉你有哪些药、在打哪条通路；免疫学告诉你这些药到底在拨动身体的哪根弦。</strong>下次你在新闻里看到某个 biotech 说自己做"PD-1×VEGF 双抗"或"IL-23 抑制剂"或"体内 CAR-T"，你已经能自己拆解它属于哪种动作、用到了哪一章的机制、在赌什么。</p>
+      </div>
+      <div class="note">
+        <span class="tag">整门课一句话收尾</span>
+        <p>免疫系统只做三件事：<strong>发现、消灭、记住</strong>。所有免疫药物，也只做四个动作：<strong>松刹车、换武器、掐信号、建记忆</strong>。把这"三件事、四动作"记住，几十种吓人的名词都能各归其位。</p>
       </div>
       <div class="footer-note">
         免疫学入门 · Immunology 101 · 框架参考 Janeway《免疫生物学》<br>
-        为非专业背景设计 —— 浅显中文、重直觉。前 3 章已详写，其余章节将逐步展开到同样深度。
+        为非专业背景设计 —— 浅显中文、重直觉。全 11 章已完成。
       </div>
     </section>
 
