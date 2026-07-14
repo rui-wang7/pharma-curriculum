@@ -431,7 +431,7 @@
     <section class="module" id="phtrials">
       <div class="eyebrow">Pharmacology ★ · Clinical Trials</div>
       <h1><span class="cn">临床案例库：奠基性的药理试验</span></h1>
-      <p class="lede trials-intro">药理学的原理（靶点、量效、PK、治疗窗），最终都由一场场<strong>大型结局试验</strong>来定生死。这里挑几个<strong>改写了医学指南</strong>的经典试验——它们不只证明"药有效"，更示范了<em>怎么设计一个能说服人的试验</em>（对照、随机、剂量、终点）。每张卡片对应本课的某一章原理。</p>
+      <p class="lede trials-intro">药理学的原理（靶点、量效、PK、治疗窗），最终都由一场场<strong>大型结局试验</strong>来定生死。这里挑了<strong>改写医学指南</strong>的经典试验——它们不只证明"药有效"，更示范了<em>怎么设计一个能说服人的试验</em>。每张卡片标注厂商与获批年份，并对应本课某一章原理。</p>
 
       <h2><span class="cn">先读懂这些指标</span></h2>
       <div class="metric-key">
@@ -444,7 +444,7 @@
       </div>
       <div class="note">
         <span class="tag">关于数据</span>
-        <p>下列为四舍五入的标志性结果，用于建立直觉；精确数值请以原始文献为准。</p>
+        <p>下列为四舍五入的标志性结果，用于建立直觉；精确数值请以原始文献为准。厂商为主要开发方，获批年份为该药大致首次上市时间（部分老药为通用名，各国略有差异）。</p>
       </div>
 
       <h2><span class="cn">酶抑制剂：他汀与阿司匹林（对应第 6 章）</span></h2>
@@ -452,13 +452,14 @@
       <div class="trial">
         <div class="tr-top">
           <div class="tr-name">4S · 北欧辛伐他汀生存研究 <span class="en2">simvastatin</span></div>
-          <div class="tr-tags"><span class="tr-phase">RCT</span><span class="tr-ind">冠心病 + 高胆固醇</span></div>
+          <div class="tr-tags"><span class="tr-phase">RCT</span><span class="tr-ind">冠心病 + 高胆固醇</span><span class="tr-appr">获批 1991</span></div>
         </div>
+        <div class="trow"><div class="lbl mfr">厂商</div><div class="val">默沙东 <b>Merck</b>（Zocor / 舒降之）</div></div>
         <div class="trow"><div class="lbl">设计</div><div class="val"><b>辛伐他汀（抑制胆固醇合成酶）</b> <span class="vs">vs</span> 安慰剂；随机双盲</div></div>
         <div class="trow"><div class="lbl">人群</div><div class="val">已有冠心病、胆固醇偏高的患者；N ≈ 4444</div></div>
         <div class="trow"><div class="lbl">时间</div><div class="val">约 1988–1994，中位随访 5.4 年</div></div>
         <div class="tr-metrics">
-          <div class="tr-metric"><div class="m-k">全因死亡</div><div class="m-v">↓30%<small></small></div><div class="m-d">RR ≈ 0.70</div></div>
+          <div class="tr-metric"><div class="m-k">全因死亡</div><div class="m-v">↓30%</div><div class="m-d">RR ≈ 0.70</div></div>
           <div class="tr-metric"><div class="m-k">冠心病死亡</div><div class="m-v">↓42%</div><div class="m-d"></div></div>
           <div class="tr-metric"><div class="m-k">LDL-C</div><div class="m-v">↓约35%</div><div class="m-d">酶被抑制的直接结果</div></div>
         </div>
@@ -468,8 +469,9 @@
       <div class="trial">
         <div class="tr-top">
           <div class="tr-name">ISIS-2 <span class="en2">aspirin · streptokinase</span></div>
-          <div class="tr-tags"><span class="tr-phase">RCT · 2×2 析因</span><span class="tr-ind">急性心肌梗死</span></div>
+          <div class="tr-tags"><span class="tr-phase">RCT · 2×2 析因</span><span class="tr-ind">急性心肌梗死</span><span class="tr-appr">阿司匹林 1899</span></div>
         </div>
+        <div class="trow"><div class="lbl mfr">厂商</div><div class="val">阿司匹林已是通用药（拜耳 Bayer 首创）；试验为学术主导</div></div>
         <div class="trow"><div class="lbl">设计</div><div class="val"><b>2×2 析因设计</b>：阿司匹林（抑 COX 酶、抗血小板）× 链激酶（溶栓），四组交叉对照</div></div>
         <div class="trow"><div class="lbl">人群</div><div class="val">急性心梗发作患者；N ≈ 17187</div></div>
         <div class="trow"><div class="lbl">时间</div><div class="val">约 1985–1987</div></div>
@@ -480,13 +482,30 @@
         <div class="tr-read">这是"<strong>试验设计</strong>"本身的经典教材：<em>2×2 析因</em>让一个试验同时回答两个问题（阿司匹林有没有用、溶栓有没有用、以及合用如何）。结果证明一片廉价阿司匹林就能救命——也示范了第 7 章"PD 层面效应叠加"的现实版。</div>
       </div>
 
-      <h2><span class="cn">受体药：β 阻断剂与 GLP-1 激动剂（对应第 5 章）</span></h2>
+      <div class="trial">
+        <div class="tr-top">
+          <div class="tr-name">UKPDS 34 <span class="en2">metformin · 二甲双胍</span></div>
+          <div class="tr-tags"><span class="tr-phase">RCT</span><span class="tr-ind">超重 2 型糖尿病</span><span class="tr-appr">二甲双胍 1957</span></div>
+        </div>
+        <div class="trow"><div class="lbl mfr">厂商</div><div class="val">二甲双胍已是通用药（原 Glucophage）；试验为学术主导</div></div>
+        <div class="trow"><div class="lbl">设计</div><div class="val"><b>二甲双胍强化控糖</b> <span class="vs">vs</span> 常规饮食控制</div></div>
+        <div class="trow"><div class="lbl">人群</div><div class="val">新诊断的超重 2 型糖尿病；N ≈ 753（二甲双胍亚组）</div></div>
+        <div class="trow"><div class="lbl">时间</div><div class="val">约 1977–1997，长期随访</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">全因死亡</div><div class="m-v">↓约36%</div><div class="m-d">超重人群获益尤显著</div></div>
+          <div class="tr-metric"><div class="m-k">心肌梗死</div><div class="m-v">↓约39%</div><div class="m-d"></div></div>
+        </div>
+        <div class="tr-read">让二甲双胍坐稳"2 型糖尿病一线基石"几十年的证据：它不只降血糖，还实打实降低了死亡和心梗。一个便宜的老药，靠一场长期硬终点试验证明了自己的地位——提醒你"新≠好，证据说了算"。</div>
+      </div>
+
+      <h2><span class="cn">受体药：β 阻断、醛固酮拮抗、脑啡肽酶（对应第 5、6 章）</span></h2>
 
       <div class="trial">
         <div class="tr-top">
           <div class="tr-name">MERIT-HF <span class="en2">metoprolol CR/XL</span></div>
-          <div class="tr-tags"><span class="tr-phase">RCT</span><span class="tr-ind">慢性心力衰竭</span></div>
+          <div class="tr-tags"><span class="tr-phase">RCT</span><span class="tr-ind">慢性心力衰竭</span><span class="tr-appr">获批 ~1992</span></div>
         </div>
+        <div class="trow"><div class="lbl mfr">厂商</div><div class="val">阿斯利康 <b>AstraZeneca</b>（Toprol-XL / 倍他乐克缓释）</div></div>
         <div class="trow"><div class="lbl">设计</div><div class="val"><b>美托洛尔（β1 阻断剂）</b> <span class="vs">vs</span> 安慰剂（均在标准治疗基础上）</div></div>
         <div class="trow"><div class="lbl">人群</div><div class="val">稳定的慢性心衰患者；N ≈ 3991</div></div>
         <div class="trow"><div class="lbl">时间</div><div class="val">约 1997–1999，因效果显著提前终止</div></div>
@@ -499,9 +518,42 @@
 
       <div class="trial">
         <div class="tr-top">
-          <div class="tr-name">STEP-1 <span class="en2">semaglutide 2.4 mg</span></div>
-          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">肥胖（非糖尿病）</span></div>
+          <div class="tr-name">RALES <span class="en2">spironolactone · 螺内酯</span></div>
+          <div class="tr-tags"><span class="tr-phase">RCT</span><span class="tr-ind">重度心力衰竭</span><span class="tr-appr">螺内酯 1959</span></div>
         </div>
+        <div class="trow"><div class="lbl mfr">厂商</div><div class="val">螺内酯为通用老药（原 Aldactone / 安体舒通）</div></div>
+        <div class="trow"><div class="lbl">设计</div><div class="val"><b>螺内酯（醛固酮受体拮抗剂，小剂量）</b> <span class="vs">vs</span> 安慰剂（均在标准治疗上）</div></div>
+        <div class="trow"><div class="lbl">人群</div><div class="val">重度慢性心衰；N ≈ 1663</div></div>
+        <div class="trow"><div class="lbl">时间</div><div class="val">约 1995–1998，因效果显著提前终止</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">全因死亡</div><div class="m-v">↓30%</div><div class="m-d">RR ≈ 0.70</div></div>
+          <div class="tr-metric"><div class="m-k">给药剂量</div><div class="m-v">小剂量</div><div class="m-d">非利尿剂量，靠阻断受体</div></div>
+        </div>
+        <div class="tr-read">同一个老药，<strong>换个剂量、换个用途</strong>就救了命：小剂量螺内酯不为利尿，而是阻断"醛固酮受体"这条促心脏纤维化的通路（第 5 章受体拮抗）。它示范了"剂量决定用途"——同分子，大剂量利尿、小剂量护心。</div>
+      </div>
+
+      <div class="trial">
+        <div class="tr-top">
+          <div class="tr-name">PARADIGM-HF <span class="en2">sacubitril/valsartan</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">射血分数降低心衰</span><span class="tr-appr">获批 2015</span></div>
+        </div>
+        <div class="trow"><div class="lbl mfr">厂商</div><div class="val">诺华 <b>Novartis</b>（Entresto / 诺欣妥）</div></div>
+        <div class="trow"><div class="lbl">设计</div><div class="val"><b>沙库巴曲/缬沙坦（脑啡肽酶抑制 ＋ 血管紧张素受体阻断，二合一）</b> <span class="vs">vs</span> 依那普利（旧标准 ACEI）</div></div>
+        <div class="trow"><div class="lbl">人群</div><div class="val">射血分数降低的慢性心衰；N ≈ 8442</div></div>
+        <div class="trow"><div class="lbl">时间</div><div class="val">约 2009–2014，因效果显著提前终止</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">心血管死亡/心衰住院</div><div class="m-v">↓20%</div><div class="m-d">HR ≈ 0.80</div></div>
+          <div class="tr-metric"><div class="m-k">全因死亡</div><div class="m-v">↓16%</div><div class="m-d">HR ≈ 0.84</div></div>
+        </div>
+        <div class="tr-read">"一个分子干两件事"的现代设计：既抑制脑啡肽酶（保护有益的利钠肽）、又阻断血管紧张素受体（第 5、6 章酶＋受体双靶）。它击败了统治心衰二十年的 ACEI，是"联合作用机制"胜过单机制的样板。</div>
+      </div>
+
+      <div class="trial">
+        <div class="tr-top">
+          <div class="tr-name">STEP-1 <span class="en2">semaglutide 2.4 mg</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">肥胖（非糖尿病）</span><span class="tr-appr">获批 2021</span></div>
+        </div>
+        <div class="trow"><div class="lbl mfr">厂商</div><div class="val">诺和诺德 <b>Novo Nordisk</b>（Wegovy）</div></div>
         <div class="trow"><div class="lbl">设计</div><div class="val"><b>司美格鲁肽（GLP-1 受体激动剂）</b> <span class="vs">vs</span> 安慰剂 ＋ 生活方式干预</div></div>
         <div class="trow"><div class="lbl">人群</div><div class="val">超重/肥胖的非糖尿病成人；N ≈ 1961</div></div>
         <div class="trow"><div class="lbl">时间</div><div class="val">约 2018–2020，随访 68 周</div></div>
@@ -509,16 +561,17 @@
           <div class="tr-metric"><div class="m-k">体重变化</div><div class="m-v">−14.9%<small> vs −2.4%</small></div><div class="m-d">激动剂组减重远超对照</div></div>
           <div class="tr-metric"><div class="m-k">减重 ≥10%</div><div class="m-v">≈69%<small> vs 12%</small></div><div class="m-d">达标比例</div></div>
         </div>
-        <div class="tr-read">一个<strong>受体激动剂</strong>（第 1、5 章：冒充 GLP-1 信号、按下"饱腹/降糖"开关）在肥胖上做出前所未有的减重幅度。注意它是每周一次的长效设计——正呼应第 4 章"半衰期决定给药间隔"。这类药随后掀起了代谢病治疗的浪潮。</div>
+        <div class="tr-read">一个<strong>受体激动剂</strong>（第 1、5 章：冒充 GLP-1 信号、按下"饱腹/降糖"开关）在肥胖上做出前所未有的减重幅度。它是每周一次的长效设计——正呼应第 4 章"半衰期决定给药间隔"。这类药随后掀起了代谢病治疗的浪潮。</div>
       </div>
 
-      <h2><span class="cn">转运体药：SGLT2 抑制剂的意外惊喜（对应第 6 章）</span></h2>
+      <h2><span class="cn">转运体与"坏胆固醇清道夫"（对应第 2、6 章）</span></h2>
 
       <div class="trial">
         <div class="tr-top">
           <div class="tr-name">EMPA-REG OUTCOME <span class="en2">empagliflozin</span></div>
-          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">2 型糖尿病 + 心血管病</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">2 型糖尿病 + 心血管病</span><span class="tr-appr">获批 2014</span></div>
         </div>
+        <div class="trow"><div class="lbl mfr">厂商</div><div class="val">勃林格殷格翰 <b>Boehringer</b> / 礼来（Jardiance / 欧唐静）</div></div>
         <div class="trow"><div class="lbl">设计</div><div class="val"><b>恩格列净（SGLT2 抑制剂，拦肾脏糖转运体）</b> <span class="vs">vs</span> 安慰剂（均在标准治疗上）</div></div>
         <div class="trow"><div class="lbl">人群</div><div class="val">2 型糖尿病合并已确诊心血管病；N ≈ 7020</div></div>
         <div class="trow"><div class="lbl">时间</div><div class="val">约 2010–2015</div></div>
@@ -528,6 +581,22 @@
           <div class="tr-metric"><div class="m-k">心衰住院</div><div class="m-v">↓35%</div><div class="m-d">MACE · HR ≈ 0.86</div></div>
         </div>
         <div class="tr-read">本来只是个"让糖随尿排掉"的降糖药（第 6 章转运体），却意外发现<strong>强大的护心、护肾</strong>作用——一个靶点带来远超预期的获益。它提醒你：药物在体内的作用常常"溢出"设计初衷，这正是大型结局试验的价值。</div>
+      </div>
+
+      <div class="trial">
+        <div class="tr-top">
+          <div class="tr-name">FOURIER <span class="en2">evolocumab</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">动脉粥样硬化性心血管病</span><span class="tr-appr">获批 2015</span></div>
+        </div>
+        <div class="trow"><div class="lbl mfr">厂商</div><div class="val">安进 <b>Amgen</b>（Repatha / 瑞百安）</div></div>
+        <div class="trow"><div class="lbl">设计</div><div class="val"><b>依洛尤单抗（PCSK9 抑制剂，防"坏胆固醇回收器"被降解）</b> <span class="vs">vs</span> 安慰剂（均在他汀基础上）</div></div>
+        <div class="trow"><div class="lbl">人群</div><div class="val">已有心血管病、他汀治疗中的患者；N ≈ 27564</div></div>
+        <div class="trow"><div class="lbl">时间</div><div class="val">约 2013–2016</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">LDL-C 降幅</div><div class="m-v">↓约59%</div><div class="m-d">降到极低（~30 mg/dL）</div></div>
+          <div class="tr-metric"><div class="m-k">主要 MACE</div><div class="m-v">↓15%</div><div class="m-d">HR ≈ 0.85</div></div>
+        </div>
+        <div class="tr-read">把 LDL 从"已经很低"再降到"极低"，仍能进一步减少心血管事件——这是第 2 章<strong>量效关系</strong>的延伸："坏胆固醇越低越好、没有明显下限"。它把血脂管理推进到他汀之外的新层次（注：本试验主要看 MACE，未显示显著降低总死亡）。</div>
       </div>
 
       <div class="note investor">

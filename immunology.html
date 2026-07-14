@@ -581,7 +581,7 @@
     <section class="module" id="imtrials">
       <div class="eyebrow">Immunology ★ · Clinical Trials</div>
       <h1><span class="cn">临床案例库：免疫类药物的关键试验</span></h1>
-      <p class="lede trials-intro">前面讲的机制，最终都要在<strong>真实病人</strong>身上用一场场临床试验来验证。这里挑几个<strong>改变了治疗格局</strong>的免疫药物试验，按统一格式拆给你看：<em>怎么设计的、对比谁、多少人、什么时间、关键数据是多少、该怎么解读</em>。学会读这几张卡片，你就能自己看懂几乎任何一份肿瘤/免疫新药战报。</p>
+      <p class="lede trials-intro">前面讲的机制，最终都要在<strong>真实病人</strong>身上用一场场临床试验来验证。这里挑了<strong>改变治疗格局</strong>的免疫药物试验，按统一格式拆给你看：<em>厂商与获批年份、怎么设计的、对比谁、多少人、什么时间、关键数据是多少、该怎么解读</em>。学会读这些卡片，你就能自己看懂几乎任何一份肿瘤/免疫新药战报。</p>
 
       <h2><span class="cn">先读懂这些指标（看卡片前必备）</span></h2>
       <div class="metric-key">
@@ -591,20 +591,22 @@
         <div class="mk"><b>CR</b>完全缓解——肿瘤检测不到</div>
         <div class="mk"><b>DoR</b>缓解持续时间——缓解能维持多久</div>
         <div class="mk"><b>HR</b>风险比——治疗组 vs 对照的风险倍数，<strong>&lt;1 即降低风险</strong>（0.5=风险减半）</div>
+        <div class="mk"><b>ACR20/50</b>类风湿改善评分——症状改善 20%/50% 的病人比例</div>
         <div class="mk"><b>EASI-75 / IGA</b>皮肤病评分——皮损改善 75% / 医生评"基本清零"</div>
       </div>
       <div class="note">
         <span class="tag">关于数据</span>
-        <p>下列均为经过<strong>四舍五入的标志性数据</strong>，用来建立直觉；精确数值、置信区间与最新随访请以原始文献与说明书为准。试验期只列大致年份。</p>
+        <p>下列均为经过<strong>四舍五入的标志性数据</strong>，用来建立直觉；精确数值、置信区间与最新随访请以原始文献与说明书为准。厂商为主要开发/上市方，获批年份指该药<strong>首次上市或该适应症获批</strong>的大致年份，各国略有差异。</p>
       </div>
 
       <h2><span class="cn">检查点抑制剂：松开免疫的刹车（对应第 4、6、10 章）</span></h2>
 
       <div class="trial imm">
         <div class="tr-top">
-          <div class="tr-name">KEYNOTE-189 <span class="en2">pembrolizumab</span></div>
-          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">一线 非鳞 NSCLC</span></div>
+          <div class="tr-name">KEYNOTE-189 <span class="en2">pembrolizumab · 帕博利珠</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">一线 非鳞 NSCLC</span><span class="tr-appr">获批 2018</span></div>
         </div>
+        <div class="trow"><div class="lbl mfr">厂商</div><div class="val">默沙东 <b>Merck</b>（商品名 Keytruda / K 药）</div></div>
         <div class="trow"><div class="lbl">设计</div><div class="val"><b>帕博利珠单抗（PD-1）＋ 含铂化疗</b> <span class="vs">vs</span> 安慰剂＋化疗；随机 2:1</div></div>
         <div class="trow"><div class="lbl">人群</div><div class="val">转移性非鳞非小细胞肺癌、<b>无 EGFR/ALK 突变</b>；N ≈ 616</div></div>
         <div class="trow"><div class="lbl">时间</div><div class="val">约 2016 起入组，2018 首次结果</div></div>
@@ -613,33 +615,67 @@
           <div class="tr-metric"><div class="m-k">OS · HR</div><div class="m-v">≈0.56</div><div class="m-d">越低越好</div></div>
           <div class="tr-metric"><div class="m-k">中位 PFS</div><div class="m-v">8.8<small> vs 4.9 月</small></div><div class="m-d">HR ≈ 0.52</div></div>
         </div>
-        <div class="tr-read">把 PD-1 药"加"到标准化疗上，就把肺癌患者的死亡风险砍掉近一半——这是检查点抑制剂从"末线兜底"走进"一线标配"的里程碑。它验证的正是第 10 章的"松刹车"动作：化疗把癌细胞打碎、暴露更多抗原，PD-1 再解除 T 细胞的"别打"信号，二者协同。</div>
+        <div class="tr-read">把 PD-1 药"加"到标准化疗上，就把肺癌患者的死亡风险砍掉近一半——检查点抑制剂从"末线兜底"走进"一线标配"的里程碑。它验证第 10 章的"松刹车"：化疗把癌细胞打碎、暴露更多抗原，PD-1 再解除 T 细胞的"别打"信号，二者协同。</div>
+      </div>
+
+      <div class="trial imm">
+        <div class="tr-top">
+          <div class="tr-name">KEYNOTE-006 <span class="en2">pembrolizumab vs ipilimumab</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">晚期黑色素瘤</span><span class="tr-appr">获批 2014</span></div>
+        </div>
+        <div class="trow"><div class="lbl mfr">厂商</div><div class="val">默沙东 <b>Merck</b>（Keytruda）</div></div>
+        <div class="trow"><div class="lbl">设计</div><div class="val">头对头：<b>帕博利珠（PD-1）</b> <span class="vs">vs</span> 伊匹木单抗（CTLA-4，旧一代检查点药）</div></div>
+        <div class="trow"><div class="lbl">人群</div><div class="val">晚期黑色素瘤；N ≈ 834</div></div>
+        <div class="trow"><div class="lbl">时间</div><div class="val">约 2013–2014</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">OS · HR</div><div class="m-v">≈0.68–0.73</div><div class="m-d">PD-1 优于 CTLA-4</div></div>
+          <div class="tr-metric"><div class="m-k">毒性</div><div class="m-v">更低</div><div class="m-d">PD-1 副作用少于 CTLA-4</div></div>
+        </div>
+        <div class="tr-read">两种"松刹车"药的正面 PK：<strong>PD-1 路线既更有效、副作用又更少</strong>，从此成为主流一线，CTLA-4 退居联用配角（见下一张 CheckMate-067）。这是"同类靶点里选哪条通路"的经典裁决。</div>
       </div>
 
       <div class="trial imm">
         <div class="tr-top">
           <div class="tr-name">CheckMate-067 <span class="en2">nivolumab + ipilimumab</span></div>
-          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">晚期黑色素瘤</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">晚期黑色素瘤</span><span class="tr-appr">获批 2015</span></div>
         </div>
+        <div class="trow"><div class="lbl mfr">厂商</div><div class="val">百时美施贵宝 <b>BMS</b>（Opdivo ＋ Yervoy）</div></div>
         <div class="trow"><div class="lbl">设计</div><div class="val">三臂：<b>纳武利尤（PD-1）＋伊匹木（CTLA-4）双药</b> <span class="vs">vs</span> 单纳武 <span class="vs">vs</span> 单伊匹木</div></div>
         <div class="trow"><div class="lbl">人群</div><div class="val">既往未治的晚期黑色素瘤；N ≈ 945</div></div>
-        <div class="trow"><div class="lbl">时间</div><div class="val">约 2013 起入组，长期随访至 6.5 年以上</div></div>
+        <div class="trow"><div class="lbl">时间</div><div class="val">约 2013 起入组，随访至 6.5 年以上</div></div>
         <div class="tr-metrics">
           <div class="tr-metric"><div class="m-k">中位 OS</div><div class="m-v">&gt;72<small> vs 37 vs 20 月</small></div><div class="m-d">双药 / 单纳武 / 单伊匹木</div></div>
           <div class="tr-metric"><div class="m-k">5 年 OS</div><div class="m-v">52%<small> vs 44% vs 26%</small></div><div class="m-d">双药最高</div></div>
           <div class="tr-metric"><div class="m-k">3/4 级毒性</div><div class="m-v">≈59%<small> 双药</small></div><div class="m-d">远高于单药，是代价</div></div>
         </div>
-        <div class="tr-read">同时松开<strong>两道</strong>刹车（PD-1 ＋ CTLA-4，对应第 6 章"双信号"里 CTLA-4 那把抢开关）疗效最强，但严重副作用也翻倍——这是"联用 vs 单药""疗效换毒性"权衡的经典教材。也解释了为什么临床要按病人体质选"单药还是双药"。</div>
+        <div class="tr-read">同时松开<strong>两道</strong>刹车（PD-1 ＋ CTLA-4，对应第 6 章"双信号"里 CTLA-4 那把抢开关）疗效最强，但严重副作用也翻倍——"联用 vs 单药""疗效换毒性"权衡的经典教材，也解释临床为何要按病人体质选"单药还是双药"。</div>
       </div>
 
-      <h2><span class="cn">CAR-T：给 T 细胞换一副眼睛（对应第 4、7、10 章）</span></h2>
+      <div class="trial imm">
+        <div class="tr-top">
+          <div class="tr-name">IMbrave150 <span class="en2">atezolizumab + bevacizumab</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">不可切除 肝细胞癌</span><span class="tr-appr">获批 2020</span></div>
+        </div>
+        <div class="trow"><div class="lbl mfr">厂商</div><div class="val">罗氏 <b>Roche</b> / 基因泰克（Tecentriq ＋ Avastin）</div></div>
+        <div class="trow"><div class="lbl">设计</div><div class="val"><b>阿替利珠（PD-L1）＋ 贝伐珠（抗 VEGF，断肿瘤血供）</b> <span class="vs">vs</span> 索拉非尼（旧标准靶向药）</div></div>
+        <div class="trow"><div class="lbl">人群</div><div class="val">不可切除的肝细胞癌；N ≈ 501</div></div>
+        <div class="trow"><div class="lbl">时间</div><div class="val">约 2018–2019</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">OS · HR</div><div class="m-v">≈0.58</div><div class="m-d">十余年来肝癌首个大突破</div></div>
+          <div class="tr-metric"><div class="m-k">PFS · HR</div><div class="m-v">≈0.59</div><div class="m-d"></div></div>
+        </div>
+        <div class="tr-read">"免疫 ＋ 抗血管"联用：PD-L1 松刹车的同时，抗 VEGF 既断肿瘤血供、又改善肿瘤微环境让免疫细胞更好进场。它打破了肝癌十余年无进展的僵局——示范了检查点药常需"找个搭档"才能在冷肿瘤里发力。</div>
+      </div>
+
+      <h2><span class="cn">换武器：CAR-T 与双抗（对应第 3、4、7、10 章）</span></h2>
 
       <div class="trial imm">
         <div class="tr-top">
           <div class="tr-name">ZUMA-1 <span class="en2">axicabtagene ciloleucel</span></div>
-          <div class="tr-tags"><span class="tr-phase">Phase 2 · 单臂</span><span class="tr-ind">难治性大 B 细胞淋巴瘤</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 2 · 单臂</span><span class="tr-ind">难治性大 B 细胞淋巴瘤</span><span class="tr-appr">获批 2017</span></div>
         </div>
-        <div class="trow"><div class="lbl">设计</div><div class="val"><b>抗 CD19 CAR-T</b> 单臂（无对照——因为这类病人已无标准有效方案）</div></div>
+        <div class="trow"><div class="lbl mfr">厂商</div><div class="val">Kite Pharma / 吉利德 <b>Gilead</b>（Yescarta）</div></div>
+        <div class="trow"><div class="lbl">设计</div><div class="val"><b>抗 CD19 CAR-T</b> 单臂（无对照——这类病人已无标准有效方案）</div></div>
         <div class="trow"><div class="lbl">人群</div><div class="val">对化疗难治的复发大 B 细胞淋巴瘤；N ≈ 101 输注</div></div>
         <div class="trow"><div class="lbl">时间</div><div class="val">约 2015–2017 治疗，2017 获批</div></div>
         <div class="tr-metrics">
@@ -647,14 +683,15 @@
           <div class="tr-metric"><div class="m-k">CR</div><div class="m-v">≈54%</div><div class="m-d">一半以上完全缓解</div></div>
           <div class="tr-metric"><div class="m-k">CRS（任意级）</div><div class="m-v">高发</div><div class="m-d">细胞因子风暴，需抗 IL-6 救</div></div>
         </div>
-        <div class="tr-read">在"化疗都失败"的绝境病人里做出 82% 缓解，是"换武器"策略（第 10 章）的震撼验证。而它的主要风险 CRS，正是第 7 章"细胞因子风暴"——临床用抗 IL-6（托珠单抗）紧急压制。<strong>不懂第 7 章，就没法安全用这类药。</strong></div>
+        <div class="tr-read">在"化疗都失败"的绝境病人里做出 82% 缓解，是"换武器"策略（第 10 章）的震撼验证。其主要风险 CRS 正是第 7 章"细胞因子风暴"——临床用抗 IL-6（托珠单抗）紧急压制。<strong>不懂第 7 章，就没法安全用这类药。</strong></div>
       </div>
 
       <div class="trial imm">
         <div class="tr-top">
           <div class="tr-name">ELIANA <span class="en2">tisagenlecleucel</span></div>
-          <div class="tr-tags"><span class="tr-phase">Phase 2 · 单臂</span><span class="tr-ind">儿童/青年 复发难治 B-ALL</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 2 · 单臂</span><span class="tr-ind">儿童/青年 复发难治 B-ALL</span><span class="tr-appr">获批 2017</span></div>
         </div>
+        <div class="trow"><div class="lbl mfr">厂商</div><div class="val">诺华 <b>Novartis</b>（Kymriah）——首个获批的 CAR-T</div></div>
         <div class="trow"><div class="lbl">设计</div><div class="val"><b>抗 CD19 CAR-T</b> 全球多中心单臂</div></div>
         <div class="trow"><div class="lbl">人群</div><div class="val">复发/难治的儿童及青年 B 系急性淋巴细胞白血病；N ≈ 75</div></div>
         <div class="trow"><div class="lbl">时间</div><div class="val">约 2015–2017，2017 成为首个获批 CAR-T</div></div>
@@ -665,13 +702,30 @@
         <div class="tr-read">人类第一个获批的 CAR-T 细胞疗法，把复发难治的儿童白血病从"几乎无解"变成"多数可缓解"。它也开启了"活药"（把病人自己的细胞改造成药）这一全新品类。</div>
       </div>
 
+      <div class="trial imm">
+        <div class="tr-top">
+          <div class="tr-name">TOWER <span class="en2">blinatumomab</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">复发难治 B-ALL</span><span class="tr-appr">获批 2014</span></div>
+        </div>
+        <div class="trow"><div class="lbl mfr">厂商</div><div class="val">安进 <b>Amgen</b>（Blincyto）——首个 CD3 双抗</div></div>
+        <div class="trow"><div class="lbl">设计</div><div class="val"><b>贝林妥欧（CD19×CD3 双抗，把 T 细胞拽到癌旁）</b> <span class="vs">vs</span> 标准化疗</div></div>
+        <div class="trow"><div class="lbl">人群</div><div class="val">复发/难治的 B 系急性淋巴细胞白血病成人；N ≈ 405</div></div>
+        <div class="trow"><div class="lbl">时间</div><div class="val">约 2014–2016</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">中位 OS</div><div class="m-v">7.7<small> vs 4.0 月</small></div><div class="m-d">HR ≈ 0.71</div></div>
+          <div class="tr-metric"><div class="m-k">CR</div><div class="m-v">≈34%<small> vs 16%</small></div><div class="m-d">优于化疗</div></div>
+        </div>
+        <div class="tr-read">第 3 章"双抗"的活例子：一头抓癌细胞的 CD19、一头抓 T 细胞的 CD3，硬把杀手拽到癌旁边逼它动手。相比 CAR-T 要抽细胞改造，双抗是<strong>现成药</strong>、随打随用——两种"换武器"思路的对照。</div>
+      </div>
+
       <h2><span class="cn">掐信号：抗细胞因子治过敏/自免（对应第 6、7、9、10 章）</span></h2>
 
       <div class="trial imm">
         <div class="tr-top">
-          <div class="tr-name">SOLO 1 &amp; 2 <span class="en2">dupilumab</span></div>
-          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">中重度特应性皮炎</span></div>
+          <div class="tr-name">SOLO 1 &amp; 2 <span class="en2">dupilumab · 度普利尤</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">中重度特应性皮炎</span><span class="tr-appr">获批 2017</span></div>
         </div>
+        <div class="trow"><div class="lbl mfr">厂商</div><div class="val">再生元 <b>Regeneron</b> / 赛诺菲（Dupixent）</div></div>
         <div class="trow"><div class="lbl">设计</div><div class="val"><b>度普利尤单抗（抗 IL-4Rα，掐 Th2 信号）</b> <span class="vs">vs</span> 安慰剂</div></div>
         <div class="trow"><div class="lbl">人群</div><div class="val">外用药控制不佳的中重度特应性皮炎（湿疹）成人；两项合计 N ≈ 1379</div></div>
         <div class="trow"><div class="lbl">时间</div><div class="val">约 2015–2016，2017 获批</div></div>
@@ -682,9 +736,25 @@
         <div class="tr-read">精准"掐掉一根对讲机"（IL-4/13，第 6 章 Th2 路线）就能显著清退顽固湿疹——第 10 章"掐信号"动作在过敏性疾病上的直接兑现。同一靶点后来还拓展到哮喘、慢性鼻窦炎等一整片 Th2 相关疾病。</div>
       </div>
 
+      <div class="trial imm">
+        <div class="tr-top">
+          <div class="tr-name">ARMADA <span class="en2">adalimumab · 阿达木</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">类风湿关节炎</span><span class="tr-appr">获批 2002</span></div>
+        </div>
+        <div class="trow"><div class="lbl mfr">厂商</div><div class="val">雅培 / 艾伯维 <b>Abbott/AbbVie</b>（Humira）——曾多年全球销冠</div></div>
+        <div class="trow"><div class="lbl">设计</div><div class="val"><b>阿达木单抗（抗 TNF，掐炎症总动员信号）＋ 甲氨蝶呤</b> <span class="vs">vs</span> 安慰剂＋甲氨蝶呤</div></div>
+        <div class="trow"><div class="lbl">人群</div><div class="val">甲氨蝶呤疗效不佳的类风湿关节炎；N ≈ 271</div></div>
+        <div class="trow"><div class="lbl">时间</div><div class="val">约 1999–2001</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">ACR20（24 周）</div><div class="m-v">≈67%<small> vs ~15%</small></div><div class="m-d">症状改善 20% 的比例</div></div>
+          <div class="tr-metric"><div class="m-k">ACR50</div><div class="m-v">≈55%<small> vs ~8%</small></div><div class="m-d">改善 50%</div></div>
+        </div>
+        <div class="tr-read">第 7 章 TNF 这根"炎症总动员对讲机"被按住，顽固类风湿显著缓解。抗 TNF 药（Humira）后来成为史上最畅销药之一，把一大批自身免疫病（类风湿、银屑病、克罗恩）拉进"生物制剂时代"——"掐信号"治自免的开山产品。</div>
+      </div>
+
       <div class="note investor">
         <span class="tag">怎么用这个案例库</span>
-        <p>把每张卡片和对应章节对读：机制（前面章节）＋ 证据（这里的试验）＝ 一个完整的"药物故事"。你在 <a href="dict/immunology.html">免疫词典</a> 里查到的每个药，几乎都有这样一场关键试验撑着它上市。看新闻里的新药战报时，就按这套"设计→对比→人数→时间→指标→解读"去拆。</p>
+        <p>把每张卡片和对应章节对读：机制（前面章节）＋ 证据（这里的试验）＝ 一个完整的"药物故事"。你在 <a href="dict/immunology.html">免疫词典</a> 里查到的每个药，几乎都有这样一场关键试验撑着它上市。看新闻里的新药战报时，就按这套"厂商→设计→对比→人数→时间→指标→解读"去拆。</p>
       </div>
       <div class="footer-note">
         临床案例库 · 数据为四舍五入的标志性结果，仅供建立直觉，精确数值以原始文献/说明书为准。

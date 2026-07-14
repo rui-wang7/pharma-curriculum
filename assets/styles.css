@@ -297,6 +297,8 @@ table.mtx{border-collapse:separate;border-spacing:0;font-size:11px;min-width:118
 .trial .tr-tags{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
 .trial .tr-phase{font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;padding:3px 9px;border-radius:20px;background:var(--ink);color:#F3F2E9;white-space:nowrap;font-weight:500}
 .trial .tr-ind{font-family:var(--mono);font-size:9.5px;letter-spacing:.04em;padding:3px 9px;border-radius:20px;background:rgba(60,110,100,.12);color:var(--verdigris);white-space:nowrap;border:1px solid rgba(60,110,100,.22)}
+.trial .tr-appr{font-family:var(--mono);font-size:9.5px;letter-spacing:.04em;padding:3px 9px;border-radius:20px;background:rgba(176,104,44,.12);color:var(--accent);white-space:nowrap;border:1px solid rgba(176,104,44,.25);font-weight:600}
+.trow .lbl.mfr{color:var(--verdigris)}
 .trow{display:grid;grid-template-columns:64px 1fr;gap:8px 14px;font-family:var(--cjk);font-size:13.5px;padding:7px 0;border-top:1px dashed var(--line)}
 .trow .lbl{font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);padding-top:4px}
 .trow .val{color:var(--ink-2);line-height:1.55}

@@ -377,7 +377,7 @@
     <section class="module" id="mctrials">
       <div class="eyebrow">Med Chem ★ · Clinical Trials</div>
       <h1><span class="cn">临床案例库：药物设计如何改变结局</span></h1>
-      <p class="lede trials-intro">一把设计精良的"钥匙"，在临床上能有多惊人？这里挑几个<strong>药物化学的胜利</strong>——从理性设计的第一个激酶抑制剂，到共价、ADC、结构导向设计。每张卡片背后，都是本课某一章手艺的实战成果，你能清楚看到"设计上的巧思"如何变成"病人身上的数字"。</p>
+      <p class="lede trials-intro">一把设计精良的"钥匙"，在临床上能有多惊人？这里挑了<strong>药物化学的胜利</strong>——从理性设计的第一个激酶抑制剂，到共价、ADC、结构导向设计与前药。每张卡片标注厂商与获批年份，你能清楚看到"设计上的巧思"如何变成"病人身上的数字"。</p>
 
       <h2><span class="cn">先读懂这些指标</span></h2>
       <div class="metric-key">
@@ -387,10 +387,11 @@
         <div class="mk"><b>DoR</b>缓解持续时间</div>
         <div class="mk"><b>HR</b>风险比——<strong>&lt;1 即降低风险</strong>（0.28=风险降 72%）</div>
         <div class="mk"><b>CCyR</b>完全细胞遗传学缓解——查不到癌变染色体（CML 的关键指标）</div>
+        <div class="mk"><b>SVR</b>持续病毒学应答——停药后仍查不到病毒，等于"治愈"（HCV）</div>
       </div>
       <div class="note">
         <span class="tag">关于数据</span>
-        <p>下列为四舍五入的标志性结果，用于建立直觉；精确数值请以原始文献为准。</p>
+        <p>下列为四舍五入的标志性结果，用于建立直觉；精确数值请以原始文献为准。厂商为主要开发/上市方，获批年份为大致首次上市时间，多为美国 FDA 批准，各国略有差异。</p>
       </div>
 
       <h2><span class="cn">理性靶向设计的开山之作（对应第 2、3 章）</span></h2>
@@ -398,11 +399,12 @@
       <div class="trial">
         <div class="tr-top">
           <div class="tr-name">IRIS <span class="en2">imatinib · 格列卫</span></div>
-          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">慢性髓性白血病 CML</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">慢性髓性白血病 CML</span><span class="tr-appr">获批 2001</span></div>
         </div>
+        <div class="trow"><div class="lbl mfr">厂商</div><div class="val">诺华 <b>Novartis</b>（Gleevec/Glivec / 格列卫）</div></div>
         <div class="trow"><div class="lbl">设计</div><div class="val"><b>伊马替尼（Bcr-Abl 激酶抑制剂，理性设计）</b> <span class="vs">vs</span> 干扰素 ＋ 阿糖胞苷（旧标准）</div></div>
         <div class="trow"><div class="lbl">人群</div><div class="val">新诊断慢性期 CML；N ≈ 1106</div></div>
-        <div class="trow"><div class="lbl">时间</div><div class="val">约 2000–2001 入组，长期随访至 10 年以上</div></div>
+        <div class="trow"><div class="lbl">时间</div><div class="val">约 2000–2001 入组，随访至 10 年以上</div></div>
         <div class="tr-metrics">
           <div class="tr-metric"><div class="m-k">完全细胞遗传缓解</div><div class="m-v">≈76%<small> vs ~15%</small></div><div class="m-d">碾压旧疗法</div></div>
           <div class="tr-metric"><div class="m-k">10 年 OS</div><div class="m-v">≈83%</div><div class="m-d">曾经的致死病</div></div>
@@ -410,13 +412,30 @@
         <div class="tr-read">"照着一个明确的致病靶点（Bcr-Abl）设计一把专一小分子钥匙"——第 2、3 章理性设计的开山之作。它把 CML 从"几年内致命"变成"每天一片、正常寿命"的慢性病，也开启了整个"靶向治疗"时代。</div>
       </div>
 
+      <div class="trial">
+        <div class="tr-top">
+          <div class="tr-name">BRIM-3 <span class="en2">vemurafenib</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">BRAF V600E 黑色素瘤</span><span class="tr-appr">获批 2011</span></div>
+        </div>
+        <div class="trow"><div class="lbl mfr">厂商</div><div class="val">罗氏 <b>Roche</b> / Plexxikon（Zelboraf）</div></div>
+        <div class="trow"><div class="lbl">设计</div><div class="val"><b>维莫非尼（BRAF V600E 抑制剂，片段/结构导向设计）</b> <span class="vs">vs</span> 达卡巴嗪（旧化疗）</div></div>
+        <div class="trow"><div class="lbl">人群</div><div class="val">携带 BRAF V600E 突变的晚期黑色素瘤；N ≈ 675</div></div>
+        <div class="trow"><div class="lbl">时间</div><div class="val">约 2010–2011</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">ORR</div><div class="m-v">≈48%<small> vs 5%</small></div><div class="m-d">起效快到数天可见</div></div>
+          <div class="tr-metric"><div class="m-k">OS · HR</div><div class="m-v">≈0.63–0.70</div><div class="m-d">生存显著改善</div></div>
+        </div>
+        <div class="tr-read">用第 2 章的<strong>片段/结构导向设计</strong>专门针对突变的 BRAF。反应之快令人震撼（有病人几天内肿瘤缩小）。它也带出一个药理教训：单靠它易耐药，后来要和 MEK 抑制剂联用——"针对通路上下游一起打"的组合思路由此而生。</div>
+      </div>
+
       <h2><span class="cn">共价与突变选择性（对应第 7 章）</span></h2>
 
       <div class="trial">
         <div class="tr-top">
           <div class="tr-name">FLAURA <span class="en2">osimertinib</span></div>
-          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">EGFR 突变 NSCLC</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">EGFR 突变 NSCLC</span><span class="tr-appr">获批 2015</span></div>
         </div>
+        <div class="trow"><div class="lbl mfr">厂商</div><div class="val">阿斯利康 <b>AstraZeneca</b>（Tagrisso / 泰瑞沙）</div></div>
         <div class="trow"><div class="lbl">设计</div><div class="val"><b>奥希替尼（第三代共价 EGFR 抑制剂，突变选择性）</b> <span class="vs">vs</span> 一代 EGFR-TKI</div></div>
         <div class="trow"><div class="lbl">人群</div><div class="val">一线 EGFR 突变非小细胞肺癌；N ≈ 556</div></div>
         <div class="trow"><div class="lbl">时间</div><div class="val">约 2014–2016，2018 改写一线指南</div></div>
@@ -431,8 +450,9 @@
       <div class="trial">
         <div class="tr-top">
           <div class="tr-name">CodeBreaK 100 <span class="en2">sotorasib</span></div>
-          <div class="tr-tags"><span class="tr-phase">Phase 2 · 单臂</span><span class="tr-ind">KRAS G12C 突变 NSCLC</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 2 · 单臂</span><span class="tr-ind">KRAS G12C 突变 NSCLC</span><span class="tr-appr">获批 2021</span></div>
         </div>
+        <div class="trow"><div class="lbl mfr">厂商</div><div class="val">安进 <b>Amgen</b>（Lumakras / Lumykras）</div></div>
         <div class="trow"><div class="lbl">设计</div><div class="val"><b>索托拉西布（KRAS G12C 共价抑制剂）</b> 单臂</div></div>
         <div class="trow"><div class="lbl">人群</div><div class="val">经治的 KRAS G12C 突变非小细胞肺癌；N ≈ 126</div></div>
         <div class="trow"><div class="lbl">时间</div><div class="val">约 2018–2020，2021 加速获批</div></div>
@@ -444,13 +464,48 @@
         <div class="tr-read">KRAS 是折磨药化界近 <strong>40 年</strong>的"不可成药"靶点（第 0、4 章：没有合适口袋）。靠共价化学＋抓住突变体上一个新出现的小凹陷，人类第一次撬开了它。数字不如格列卫惊艳，但"从 0 到 1"的意义巨大。</div>
       </div>
 
-      <h2><span class="cn">偶联与结构导向设计（对应第 2、7 章）</span></h2>
+      <h2><span class="cn">激酶与"跨癌种"设计（对应第 3 章）</span></h2>
+
+      <div class="trial">
+        <div class="tr-top">
+          <div class="tr-name">PALOMA-2 <span class="en2">palbociclib</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">HR+/HER2− 转移乳腺癌</span><span class="tr-appr">获批 2015</span></div>
+        </div>
+        <div class="trow"><div class="lbl mfr">厂商</div><div class="val">辉瑞 <b>Pfizer</b>（Ibrance / 爱博新）</div></div>
+        <div class="trow"><div class="lbl">设计</div><div class="val"><b>哌柏西利（CDK4/6 抑制剂，锁住细胞周期）＋ 来曲唑</b> <span class="vs">vs</span> 来曲唑（内分泌单药）</div></div>
+        <div class="trow"><div class="lbl">人群</div><div class="val">一线激素受体阳性、HER2 阴性转移乳腺癌；N ≈ 666</div></div>
+        <div class="trow"><div class="lbl">时间</div><div class="val">约 2013–2016</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">中位 PFS</div><div class="m-v">≈24.8<small> vs 14.5 月</small></div><div class="m-d">HR ≈ 0.58</div></div>
+          <div class="tr-metric"><div class="m-k">给药</div><div class="m-v">口服</div><div class="m-d">与内分泌药联用</div></div>
+        </div>
+        <div class="tr-read">精准设计的激酶抑制剂（挡住细胞分裂的"油门" CDK4/6），把最常见亚型乳腺癌的无进展时间几乎翻倍。它示范了肿瘤治疗的一个主流思路：<strong>靶向药 ＋ 内分泌药联用</strong>，各打一环、协同增效。</div>
+      </div>
+
+      <div class="trial">
+        <div class="tr-top">
+          <div class="tr-name">LOXO-101 汇总分析 <span class="en2">larotrectinib</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 1/2</span><span class="tr-ind">TRK 融合 · 跨癌种</span><span class="tr-appr">获批 2018</span></div>
+        </div>
+        <div class="trow"><div class="lbl mfr">厂商</div><div class="val">Loxo Oncology / 拜耳 <b>Bayer</b>（Vitrakvi）</div></div>
+        <div class="trow"><div class="lbl">设计</div><div class="val"><b>拉罗替尼（TRK 抑制剂）</b> 单臂；<b>不看长在哪个器官，只看有没有 NTRK 融合</b></div></div>
+        <div class="trow"><div class="lbl">人群</div><div class="val">携带 NTRK 基因融合的各种实体瘤（肺、甲状腺、软组织…）；早期 N ≈ 55</div></div>
+        <div class="trow"><div class="lbl">时间</div><div class="val">约 2015–2018</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">ORR</div><div class="m-v">≈75%</div><div class="m-d">跨多种癌种一致有效</div></div>
+          <div class="tr-metric"><div class="m-k">批准依据</div><div class="m-v">按突变</div><div class="m-d">"广谱/不限癌种"批准</div></div>
+        </div>
+        <div class="tr-read">一个里程碑式转变：为某个<strong>基因改变（NTRK 融合）</strong>设计的钥匙，<strong>不管肿瘤长在哪个器官都有效</strong>。它促成 FDA 首批"不限癌种、按分子标志物"的批准——药物设计从"按器官"走向"按分子"，正是第 3 章"药效团决定一切"的极致延伸。</div>
+      </div>
+
+      <h2><span class="cn">偶联、结构导向与前药（对应第 2、5、7 章）</span></h2>
 
       <div class="trial">
         <div class="tr-top">
           <div class="tr-name">DESTINY-Breast03 <span class="en2">trastuzumab deruxtecan · T-DXd</span></div>
-          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">HER2+ 转移性乳腺癌</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">HER2+ 转移性乳腺癌</span><span class="tr-appr">获批 2019</span></div>
         </div>
+        <div class="trow"><div class="lbl mfr">厂商</div><div class="val">第一三共 <b>Daiichi Sankyo</b> / 阿斯利康（Enhertu）</div></div>
         <div class="trow"><div class="lbl">设计</div><div class="val"><b>德曲妥珠单抗（新一代 HER2 ADC）</b> <span class="vs">vs</span> T-DM1（旧一代 ADC）</div></div>
         <div class="trow"><div class="lbl">人群</div><div class="val">既往治疗过的 HER2 阳性转移性乳腺癌；N ≈ 524</div></div>
         <div class="trow"><div class="lbl">时间</div><div class="val">约 2018–2020，2022 发表</div></div>
@@ -465,16 +520,33 @@
       <div class="trial">
         <div class="tr-top">
           <div class="tr-name">MURANO <span class="en2">venetoclax</span></div>
-          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">复发难治 CLL</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">复发难治 CLL</span><span class="tr-appr">获批 2016</span></div>
         </div>
+        <div class="trow"><div class="lbl mfr">厂商</div><div class="val">艾伯维 <b>AbbVie</b> / 基因泰克（Venclexta / Venclyxto）</div></div>
         <div class="trow"><div class="lbl">设计</div><div class="val"><b>维奈克拉（BCL-2 抑制剂，基于结构/片段设计）＋ 利妥昔单抗</b> <span class="vs">vs</span> 苯达莫司汀 ＋ 利妥昔单抗</div></div>
         <div class="trow"><div class="lbl">人群</div><div class="val">复发/难治慢性淋巴细胞白血病；N ≈ 389</div></div>
         <div class="trow"><div class="lbl">时间</div><div class="val">约 2014–2016，2018 发表</div></div>
         <div class="tr-metrics">
           <div class="tr-metric"><div class="m-k">2 年 PFS</div><div class="m-v">85%<small> vs 36%</small></div><div class="m-d">HR ≈ 0.17</div></div>
-          <div class="tr-metric"><div class="m-k">给药模式</div><div class="m-v">固定疗程</div><div class="d">可停药，非终身服用</div></div>
+          <div class="tr-metric"><div class="m-k">给药模式</div><div class="m-v">固定疗程</div><div class="m-d">可停药，非终身服用</div></div>
         </div>
         <div class="tr-read">BCL-2 曾被认为"表面太光滑、没有口袋"（无法成药）。药化师用第 2 章的<strong>基于结构 / 片段生长</strong>法——先找能贴住一小块的碎片，再一点点长成完整分子——硬造出了维奈克拉。它是"给无口袋蛋白造钥匙"的教科书案例。</div>
+      </div>
+
+      <div class="trial">
+        <div class="tr-top">
+          <div class="tr-name">NEUTRINO <span class="en2">sofosbuvir · 索非布韦</span></div>
+          <div class="tr-tags"><span class="tr-phase">Phase 3</span><span class="tr-ind">丙型肝炎 HCV</span><span class="tr-appr">获批 2013</span></div>
+        </div>
+        <div class="trow"><div class="lbl mfr">厂商</div><div class="val">吉利德 <b>Gilead</b>（Sovaldi / 索华迪）</div></div>
+        <div class="trow"><div class="lbl">设计</div><div class="val"><b>索非布韦（HCV 聚合酶抑制剂，核苷酸前药）</b> ＋ 干扰素 ＋ 利巴韦林；单臂</div></div>
+        <div class="trow"><div class="lbl">人群</div><div class="val">初治的丙肝（基因 1/4/5/6 型）；N ≈ 327</div></div>
+        <div class="trow"><div class="lbl">时间</div><div class="val">约 2011–2013</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">SVR12（治愈率）</div><div class="m-v">≈90%</div><div class="m-d">停药后查不到病毒</div></div>
+          <div class="tr-metric"><div class="m-k">意义</div><div class="m-v">可治愈</div><div class="m-d">慢性丙肝从此可根治</div></div>
+        </div>
+        <div class="tr-read">第 5 章"<strong>前药</strong>"设计的巅峰：索非布韦本身没活性，进肝细胞后被逐步激活成能掐断病毒复制的形式——既保证吸收、又实现肝内定点激活。它把丙肝从"慢性终身病"变成"吃几周药即可治愈"，是药化改变一个疾病命运的典范。</div>
       </div>
 
       <div class="note investor">
