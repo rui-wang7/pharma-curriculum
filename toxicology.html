@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>毒理学入门 · Toxicology: The Basic Science of Poisons</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Spectral:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<button class="menu-btn" id="menuBtn">☰ 目录</button>
+<div class="scrim" id="scrim"></div>
+<div class="shell">
+
+  <aside class="rail" id="rail">
+    <a class="brand" href="index.html"><span class="brand-cn">毒理学入门</span><span class="brand-en">Toxicology · 讲给非专业的你</span></a>
+    <div class="nav-label">章节 · Chapters</div>
+    <nav id="nav">
+      <button class="nav-item active" data-target="tx0"><span class="num">00</span><span class="txt">导论：万物皆毒，唯剂量定毒</span></button>
+      <button class="nav-item" data-target="tx1"><span class="num">01</span><span class="txt">剂量-反应：毒理第一定律</span></button>
+      <button class="nav-item" data-target="tx2"><span class="num">02</span><span class="txt">体内旅程：毒代动力学</span></button>
+      <button class="nav-item" data-target="tx3"><span class="num">03</span><span class="txt">毒性的分子机制</span></button>
+      <button class="nav-item" data-target="tx4"><span class="num">04</span><span class="txt">靶器官：肝肾为何先中招</span></button>
+      <button class="nav-item" data-target="tx5"><span class="num">05</span><span class="txt">三致：致癌·致畸·致突变</span></button>
+      <button class="nav-item" data-target="tx6"><span class="num">06</span><span class="txt">毒物大观：金属·农药·气体·天然毒</span></button>
+      <button class="nav-item" data-target="tx7"><span class="num">07</span><span class="txt">风险评估：多少算安全</span></button>
+      <button class="nav-item" data-target="tx8"><span class="num">08</span><span class="txt">应用毒理：解毒·法医·监管</span></button>
+      <button class="nav-item" data-target="txcases"><span class="num">★</span><span class="txt">毒物档案库</span></button>
+    </nav>
+    <div class="rail-cross">
+      <div class="nav-label">切换 · 参考</div>
+      <a href="index.html"><span class="num">⌂</span>课程门户（首页）</a>
+      <a href="pharmacology.html"><span class="num">Ⅲ</span>药理学入门</a>
+      <a href="medchem.html"><span class="num">Ⅳ</span>药物化学入门</a>
+    </div>
+    <div class="rail-foot">框架参考 Casarett &amp; Doull《毒理学》<br>浅显中文 + 类比 · 重理解，轻死记</div>
+  </aside>
+
+  <main class="main">
+
+    <!-- tx0 -->
+    <section class="module active" id="tx0">
+      <div class="eyebrow">Toxicology 00 · 导论</div>
+      <h1><span class="cn">毒理学 = 药理学的"暗面"：同一台机器，研究"害"这一半</span></h1>
+      <p class="lede">前面几门课研究的是药怎么<strong>治病</strong>。这门课研究同一件事的反面：任何进入身体的东西，在什么条件下会<strong>伤人</strong>。它有一句立课名言——<strong>"万物皆毒，剂量定毒"</strong>。这一章先把这门学问的地基讲清楚：它不是研究"哪些东西是毒药"，而是研究<em>"什么剂量、什么条件下，一样东西会变成毒"</em>。</p>
+
+      <h2><span class="cn">一句 500 年前的话，撑起整门学科</span></h2>
+      <div class="card">
+        <h3>Paracelsus 的名言：剂量决定一切</h3>
+        <p>文艺复兴时期的医生帕拉塞尔苏斯 <span class="en">Paracelsus</span> 说过一句被奉为毒理学圣经的话，大意是：<strong>"所有东西都是毒，没有东西不是毒；只有剂量，才决定一样东西是不是毒。"</strong> 这句话的分量在于——<em>它把"毒"从一个名词（某些东西天生是毒药）变成了一个关系（任何东西在某个剂量以上都会害人）。</em></p>
+      </div>
+      <p>举两个反直觉的例子你就懂了：<strong>水</strong>喝到几升灌进去会因电解质紊乱致命（水中毒）；<strong>肉毒毒素</strong>是已知最毒的物质之一，但微量注射就是除皱针（保妥适）。<em>同一样东西，低剂量是药、高剂量是毒——这条主线会贯穿整门课。</em>所以毒理学不问"这是不是毒药"，只问"多少量、怎么接触、对谁"。</p>
+
+      <h2><span class="cn">毒理学和药理学：一枚硬币的两面</span></h2>
+      <div class="loop">
+        <div class="loop-title">同一套"药物-身体"机器，两门课看不同的一半</div>
+        <div class="chain">
+          <div class="link"><div class="k">药理学</div><div class="v">研究"益"</div><div class="d">药怎么起治疗作用、怎么定剂量 · 第Ⅲ课</div></div>
+          <div class="arrow">↔ 同一台机器</div>
+          <div class="link"><div class="k">毒理学</div><div class="v">研究"害"</div><div class="d">同样进入身体的东西，怎么、在何剂量伤人 · 本课</div></div>
+        </div>
+      </div>
+      <p>这两门课共用一整套底层机器：<strong>东西怎么进身体、怎么分布、怎么被代谢、怎么排出（ADME）</strong>——你在<a href="pharmacology.html">药理课</a>第 4 章学过的那一套，在这门课里原封不动地复用，只是我们盯着"它什么时候造成损害"。所以学过药理学，这门课会觉得亲切；没学过也没关系，第 2 章会把关键的那半台机器重新讲一遍。</p>
+
+      <h2><span class="cn">这门课要回答的几个大问题</span></h2>
+      <ul>
+        <li><strong>多少算毒？</strong>——剂量和伤害之间是什么关系（第 1 章：毒理学的第一定律）。</li>
+        <li><strong>毒物在体内怎么走、为什么有的东西"越代谢越毒"？</strong>（第 2 章：毒代动力学与"代谢活化"这个反直觉的关键概念）。</li>
+        <li><strong>毒物到底怎么把细胞搞坏？</strong>（第 3 章：从共价结合到氧化应激的分子机制）。</li>
+        <li><strong>为什么中毒总是肝、肾先出事？</strong>（第 4 章：靶器官毒性）。</li>
+        <li><strong>致癌、致畸、致突变——"三致"怎么发生、怎么测？</strong>（第 5 章）。</li>
+        <li><strong>常见的毒物有哪些大类？</strong>（第 6 章：金属、农药、气体、天然毒素）。</li>
+        <li><strong>监管部门凭什么说"这个量安全"？</strong>（第 7 章：风险评估）。</li>
+        <li><strong>中毒了怎么救？这门学问怎么反哺造药、破案、立法？</strong>（第 8 章：应用毒理）。</li>
+      </ul>
+
+      <div class="note">
+        <span class="tag">怎么学这门课</span>
+        <p>别把它当成"毒物名录"去背。它的内核其实只有一条主线：<strong>一样外来物质（药、化学品、金属、天然毒素都算）进入身体后，在多大剂量、经过什么代谢、到达哪个器官、以什么分子机制，越过了"有害"的那条线。</strong>把这条线抓住，具体的毒物就都能挂上去理解。</p>
+      </div>
+      <div class="note investor">
+        <span class="tag">这门课的地位</span>
+        <p>《Casarett and Doull's Toxicology》（俗称"毒理学圣经")是这门学科最权威的教材。毒理学不是一门"边角料"课——它是<strong>药物开发的守门人</strong>：<a href="medchem.html">药化课</a>里 ADMET 的那个 <strong>"T"（Toxicity 毒性）</strong>，就是这门课；一个候选药死在临床前或临床，多半死在毒性上（第 8 章）。它也是环境标准、食品安全、职业防护、法医鉴定的科学地基。学完这门课，你就掌握了判断"一样东西到底危不危险"的思维方式。</p>
+      </div>
+    </section>
+
+    <!-- tx1 -->
+    <section class="module" id="tx1">
+      <div class="eyebrow">Toxicology 01 · Dose–Response</div>
+      <h1><span class="cn">剂量-反应关系：毒理学的第一定律</span></h1>
+      <p class="lede">上一章那句"剂量定毒"，落到实处就是一条曲线：<strong>剂量越高，中毒的比例/程度越大。</strong>这条"剂量-反应曲线"是整门毒理学的量尺——所有的"安全""危险""致死量""容许摄入量"都从它上面读出来。这一章把这条曲线彻底讲透。</p>
+
+      <h2><span class="cn">最核心的一张图：剂量-反应曲线</span></h2>
+      <p>把不同剂量喂给一群受试对象，统计"有多少比例出现某种反应（比如死亡、肝损伤）"，画出来通常是一条 <strong>S 形曲线</strong>：低剂量几乎没反应 → 过了某个点开始快速上升 → 高剂量几乎全部出现。<em>这条曲线是毒理学一切定量结论的源头。</em></p>
+      <table class="tbl">
+        <thead><tr><th>曲线上的关键点</th><th>是什么</th><th>怎么用</th></tr></thead>
+        <tbody>
+          <tr><td><strong>阈值</strong> <span class="en">threshold</span></td><td>开始出现有害反应的最低剂量；<em>低于它，身体扛得住</em></td><td>大多数"一般毒性"被认为有阈值——这是"安全剂量"存在的前提</td></tr>
+          <tr><td><strong>NOAEL</strong>（未观察到有害作用剂量）</td><td>实验里"还看不到伤害"的最高剂量</td><td>制定安全标准的起点（第 7 章）</td></tr>
+          <tr><td><strong>LD50 / EC50</strong></td><td>让<strong>一半</strong>受试对象死亡（LD50）或出现效应的剂量</td><td>衡量急性毒性强弱的标准标尺——数越小越毒</td></tr>
+        </tbody>
+      </table>
+
+      <h2><span class="cn">LD50：衡量"多毒"的通用标尺</span></h2>
+      <div class="card">
+        <h3>为什么用"半数致死量"当尺子</h3>
+        <p><strong>LD50</strong>（半数致死量，<span class="en">median lethal dose</span>）＝让一半试验动物死亡的剂量，通常按"每公斤体重多少毫克"表示。为什么取"一半"这个点？因为曲线在中点最陡、最稳定，误差最小，<em>是最可靠的比较点。</em>LD50 越小＝越毒：食盐 LD50 约 3000 mg/kg（很大，很安全），而肉毒毒素小到以"纳克"计（极毒）——同一把尺子上一比，毒性强弱一目了然。</p>
+      </div>
+      <p>要记住 LD50 只衡量<strong>急性致死</strong>这一种毒性。一个东西可能急性 LD50 很大（不容易毒死），却是强致癌物（长期低剂量才要命）。所以"毒性"从来不是一个数，而是"什么剂量、多久、什么终点"三件事一起说。</p>
+
+      <h2><span class="cn">接回药理学：治疗指数就是两条曲线的距离</span></h2>
+      <p>一个药既有"疗效曲线"（多少量能治病）又有"毒性曲线"（多少量会中毒）。这两条曲线离得越远，药越安全——这个"距离"就是<a href="pharmacology.html">药理课</a>第 6 章讲的<strong>治疗指数</strong> <span class="en">therapeutic index</span>。</p>
+      <div class="loop">
+        <div class="loop-title">安全窗 = 疗效曲线与毒性曲线之间的距离</div>
+        <div class="chain">
+          <div class="link"><div class="k">疗效剂量</div><div class="v">ED50</div><div class="d">一半人见效的剂量</div></div>
+          <div class="arrow">← 安全窗 →</div>
+          <div class="link"><div class="k">中毒剂量</div><div class="v">TD50 / LD50</div><div class="d">一半人中毒/致死的剂量</div></div>
+        </div>
+      </div>
+      <p>华法林、地高辛、化疗药这些"治疗窗窄"的药，正是两条曲线贴得太近——<em>治病量和中毒量只差一点点</em>，所以要反复验血调剂量。这解释了为什么有些药必须精细监测：不是它"更毒"，而是它的两条曲线离得太近。</p>
+
+      <h2><span class="cn">几个必须分清的概念</span></h2>
+      <ul>
+        <li><strong>急性 vs 慢性毒性</strong>：一次大剂量（喝农药）vs 长期小剂量累积（铅、香烟、某些致癌物）。两者的曲线、机制、评估方式都不同。</li>
+        <li><strong>局部 vs 全身</strong>：只伤接触部位（强酸灼伤皮肤）vs 吸收后伤远处器官（氰化物随血伤全身）。</li>
+        <li><strong>可逆 vs 不可逆</strong>：停止接触能恢复（多数肝损伤）vs 造成永久损害（神经元死亡、致癌突变）。</li>
+        <li><strong>个体差异</strong>：同样剂量，不同人反应差很大——基因（代谢酶快慢，接第 2 章）、年龄、性别、已有疾病都会移动那条曲线。所以"安全剂量"永远要为最敏感的人群留余量（第 7 章的安全系数）。</li>
+      </ul>
+
+      <div class="note">
+        <span class="tag">一个反直觉的现象：毒物兴奋效应</span>
+        <p>有些物质在<strong>极低剂量</strong>下反而对身体有轻微好处或刺激（叫<strong>毒物兴奋效应</strong> <span class="en">hormesis</span>，曲线呈 J 形或 U 形），高剂量才转为有害。这提醒我们：剂量-反应不总是简单的"越多越坏"。不过在制定安全标准时，出于谨慎通常仍按"有害"这一段来管理。</p>
+      </div>
+      <div class="note investor">
+        <span class="tag">本章小结</span>
+        <p>毒理学的第一定律就是一条 <strong>S 形剂量-反应曲线</strong>，上面几个点撑起整门学科：<strong>阈值</strong>（安全剂量存在的前提）、<strong>NOAEL</strong>（定标准的起点）、<strong>LD50</strong>（比较毒性强弱的通用尺）。药安不安全，看疗效曲线和毒性曲线离多远（治疗指数）。还要分清急/慢、局部/全身、可逆/不可逆和个体差异。下一章：毒物进身体后到底怎么走。</p>
+      </div>
+    </section>
+
+    <!-- tx2 -->
+    <section class="module" id="tx2">
+      <div class="eyebrow">Toxicology 02 · Toxicokinetics</div>
+      <h1><span class="cn">毒物的体内旅程：毒代动力学（和一个反直觉的关键词）</span></h1>
+      <p class="lede">同样一克某物质，是没事还是要命，很大程度取决于它<strong>进得来多少、跑到哪、变成了什么、多久排掉</strong>。这套"体内旅程"就是<a href="pharmacology.html">药理课</a>的 ADME，用在毒物身上叫<strong>毒代动力学</strong> <span class="en">toxicokinetics</span>。这一章的重头戏，是一个让很多人吃惊的概念——<strong>有些毒物本身无毒，是身体自己把它"激活"成毒的。</strong></p>
+
+      <h2><span class="cn">第一步 · 吸收：从哪进来，差别巨大</span></h2>
+      <p>同一种物质，走不同的门进身体，毒性天差地别。这就是为什么"接触途径"是毒理学永远要先问的问题：</p>
+      <table class="tbl">
+        <thead><tr><th>途径</th><th>特点</th><th>典型场景</th></tr></thead>
+        <tbody>
+          <tr><td><strong>口服</strong>（消化道）</td><td>先经肝"首过"处理，很多毒物在这里被拦截或激活</td><td>误服、食物污染、重金属</td></tr>
+          <tr><td><strong>吸入</strong>（肺）</td><td>肺表面积巨大、直接入血、绕开肝首过——起效最快</td><td>气体（CO）、粉尘、有机溶剂、烟</td></tr>
+          <tr><td><strong>皮肤</strong>（经皮）</td><td>脂溶性物质能穿过；面积大时也很危险</td><td>农药、有机溶剂、神经毒剂</td></tr>
+          <tr><td><strong>注射</strong></td><td>直接入血，100% 到达，最凶险</td><td>毒液、静脉误注</td></tr>
+        </tbody>
+      </table>
+      <p>记住一条：<strong>越是"绕开肝、直接入血"的途径（吸入、注射），同样剂量往往越毒</strong>；而口服要先过肝这道关卡（下面讲的首过与代谢），有时反而被拦一部分——但也有时被肝"激活"得更毒。</p>
+
+      <h2><span class="cn">第二步 · 分布：为什么脂溶的东西会"赖着不走"</span></h2>
+      <p>进血后，毒物按自己的化学性质跑到不同地方。有一条规律对毒理特别重要：<strong>脂溶性（亲油）的物质会蓄积在脂肪组织和富脂器官里，赖着不走、慢慢释放。</strong>这解释了很多"环境毒物"的可怕之处——像二噁英、某些农药、有机汞，一旦进体内就长期储存、越积越多（生物蓄积），也会沿食物链层层浓缩（生物放大，接第 6 章）。</p>
+      <p>另外，身体有几道"屏障"保护关键器官：<strong>血脑屏障</strong>（护脑）和<strong>胎盘屏障</strong>（护胎儿）。但它们不是铜墙铁壁——脂溶性小分子（酒精、有机汞、部分农药）照样能穿过去，这正是这些毒物能损伤神经和胎儿的原因（接第 4、5 章）。</p>
+
+      <h2><span class="cn">第三步 · 生物转化：本章最重要的反直觉——"越代谢越毒"</span></h2>
+      <p>身体处理外来物有一套"解毒车间"，主要在肝，分两班：</p>
+      <div class="loop">
+        <div class="loop-title">肝脏解毒两班倒 · 大多数时候是"解毒"，偶尔"帮倒忙"</div>
+        <div class="chain">
+          <div class="link"><div class="k">第一相</div><div class="v">改造（CYP450）</div><div class="d">用"细胞色素P450"酶给分子加个"把手"（氧化等），常生成活性中间体</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">第二相</div><div class="v">打包（结合）</div><div class="d">给分子挂上水溶性"标签"，变得好排出去</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">结果</div><div class="v">通常无毒好排</div><div class="d">但第一相若来不及被第二相"收尾"，活性中间体就去伤细胞</div></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>代谢活化（生物活化）：身体把无毒物变成毒</h3>
+        <p>直觉上"代谢＝解毒"，但毒理学里有个致命例外：<strong>第一相的 P450 酶在给分子"加把手"时，常常先生成一个高度活泼、极具攻击性的"活性中间体"</strong>。正常情况下第二相立刻把它打包排走；<em>可一旦剂量太大、第二相的"打包材料"被耗光，这些活性中间体就四处乱撞、共价结合到细胞的蛋白和 DNA 上，把细胞搞坏。</em>这个"越代谢越毒"的现象叫<strong>代谢活化 / 生物活化</strong> <span class="en">bioactivation</span>。</p>
+        <p>最经典的例子是<strong>对乙酰氨基酚（扑热息痛）过量</strong>：正常剂量它很安全，但过量时肝把一部分代谢成毒性中间体 NAPQI，耗光了"解毒材料"谷胱甘肽后，NAPQI 就大面积杀死肝细胞——这是全球最常见的药物性肝衰竭原因之一（第 4 章、档案库会细讲，解毒剂见第 8 章）。这也直接呼应了<a href="medchem.html">药化课</a>说的"要提防会产生反应性代谢物的分子结构"。</p>
+      </div>
+
+      <h2><span class="cn">第四步 · 排泄：主要走肾和胆</span></h2>
+      <p>处理完的（水溶性的）产物主要从<strong>肾（随尿）</strong>和<strong>肝胆（随粪）</strong>排出，挥发性物质还能从<strong>肺（呼气）</strong>呼出（酒精测试就是这原理）。这一步也埋着两个毒理隐患：肾在浓缩尿液时会把毒物一起浓缩、胆汁排出的毒物有时又被肠道重新吸收回来（肠肝循环，延长停留）——这些都让肝、肾成了最容易受伤的器官，正是下一章要讲的。</p>
+
+      <div class="note">
+        <span class="tag">为什么"同样剂量，有人没事有人中毒"</span>
+        <p>关键常在这套代谢机器的<strong>个体差异</strong>上：P450 酶的活性由基因决定，有人天生代谢快、有人慢；喝酒、吃某些药、遗传多态性都会改变酶的活性，从而放大或减轻毒性。这也是为什么"解毒材料"（如谷胱甘肽）够不够用，往往决定过量的人生死——这是第 8 章解毒治疗的科学依据。</p>
+      </div>
+      <div class="note investor">
+        <span class="tag">本章小结</span>
+        <p>毒物的体内旅程＝ADME 的毒理版：<strong>吸收</strong>（越绕开肝、直接入血越凶）、<strong>分布</strong>（脂溶物蓄积赖着不走、能穿血脑/胎盘屏障）、<strong>生物转化</strong>（肝的两相车间通常解毒，但第一相会"生物活化"出毒性中间体——越代谢越毒，对乙酰氨基酚是经典）、<strong>排泄</strong>（肾、胆、肺）。个体的代谢差异常常决定生死。下一章：这些毒物到了细胞里，究竟怎么下手。</p>
+      </div>
+    </section>
+
+    <!-- tx3 -->
+    <section class="module" id="tx3">
+      <div class="eyebrow">Toxicology 03 · Mechanisms</div>
+      <h1><span class="cn">毒性的分子机制：毒物到底怎么把细胞搞坏</span></h1>
+      <p class="lede">"中毒"最终都发生在细胞层面。虽然毒物成千上万，但它们伤害细胞的<strong>套路其实就几条</strong>。这一章给你一张"通用作案流程图"，之后遇到任何一种毒物，你都能把它套进去看它卡在哪一步。</p>
+
+      <h2><span class="cn">一张通用流程图：从进门到造成损害的四步</span></h2>
+      <div class="loop">
+        <div class="loop-title">毒性发生的通用四步（Casarett &amp; Doull 框架）</div>
+        <div class="chain">
+          <div class="link"><div class="k">第一步</div><div class="v">到达靶点</div><div class="d">毒物（或其活性代谢物）抵达要害分子所在处</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">第二步</div><div class="v">与靶分子作用</div><div class="d">和蛋白/DNA/膜脂结合或反应，破坏其功能</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">第三步</div><div class="v">细胞功能失调</div><div class="d">能量断供、信号错乱、结构崩坏 → 细胞死亡</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">第四步</div><div class="v">修复 or 失修复</div><div class="d">身体能修好则康复；修不过来就成病、成癌、成永久损伤</div></div>
+        </div>
+      </div>
+      <p>这四步里，<strong>第二步"和什么要害分子作用、怎么作用"是毒性的核心</strong>。下面把最常见的几种"作案手法"讲清楚——记住这几种，就抓住了机制的大半。</p>
+
+      <h2><span class="cn">手法一 · 共价结合：像强力胶粘死零件</span></h2>
+      <p>很多活性中间体（第 2 章生物活化来的）极其"黏"，会像强力胶一样<strong>不可逆地粘死</strong>到细胞的关键蛋白或 DNA 上，让它彻底失去功能。粘住酶→代谢瘫痪；粘住 DNA→突变、致癌（第 5 章）。对乙酰氨基酚的 NAPQI 杀肝细胞，走的就是这条。<em>特点是"不可逆"——粘上就摘不掉，损伤是硬伤。</em></p>
+
+      <h2><span class="cn">手法二 · 氧化应激：让细胞"生锈"</span></h2>
+      <div class="card">
+        <h3>自由基与活性氧（ROS）：失控的"火星子"</h3>
+        <p>有些毒物会在细胞里制造大量<strong>活性氧 <span class="en">ROS</span>／自由基</strong>——一种带着"未配对电子"、极不稳定、见谁抢谁的分子。它们四处夺取电子，把细胞膜的脂肪（脂质过氧化）、蛋白、DNA 统统<em>"氧化生锈"</em>。身体本有抗氧化系统（谷胱甘肽、抗氧化酶）来灭火，<strong>可一旦毒物制造的"火星子"超过灭火能力，就叫"氧化应激"，细胞被烧坏。</strong>很多毒物（百草枯、某些金属、辐射）和很多疾病、衰老都与它有关。</p>
+      </div>
+
+      <h2><span class="cn">手法三 · 切断能量：让细胞"断电窒息"</span></h2>
+      <p>细胞靠线粒体这个"发电厂"供能。有一类毒物专打发电厂，让细胞<strong>造不出能量（ATP）而"断电"</strong>——本质上是"细胞层面的窒息"。最典型的是<strong>氰化物</strong>和<strong>一氧化碳</strong>：前者卡死线粒体的发电环节、后者抢占血红蛋白让氧运不到（第 6 章、档案库详解）。心、脑这些最耗能的器官最先扛不住——这解释了为什么这类中毒来得又快又猛。</p>
+
+      <h2><span class="cn">手法四 · 冒充信号：占了受体、扰乱通讯</span></h2>
+      <p>还有一类毒物长得像身体自己的信号分子，去<strong>霸占受体、打乱神经和内分泌通讯</strong>——这其实就是<a href="pharmacology.html">药理课</a>受体那套机制被用来作恶。<strong>有机磷农药/神经毒剂</strong>让"神经开关"关不掉、肌肉持续痉挛；<strong>肉毒毒素</strong>反过来切断神经指令让肌肉瘫痪；某些环境化学物冒充激素、扰乱内分泌（环境激素）。同一套受体机器，治病是药、乱按就是毒。</p>
+
+      <h2><span class="cn">第三、四步：细胞死亡与"修得好修不好"</span></h2>
+      <p>上面几种手法最终让细胞<strong>死亡</strong>——要么"暴毙"（坏死 <span class="en">necrosis</span>，细胞破裂、引发炎症），要么"自杀式凋亡"（<span class="en">apoptosis</span>，程序性、比较干净）。死一点没关系，身体能修（肝再生能力尤其强）。<strong>真正决定后果的是第四步：修得过来就康复，修不过来（或修错了）就留下永久损伤——DNA 修错了变成癌，神经元死了不再生就是终身残疾。</strong>这也是为什么"及时终止接触"在中毒救治里如此关键：给身体争取修复的时间。</p>
+
+      <div class="note">
+        <span class="tag">本章小结</span>
+        <p>毒性发生分四步：<strong>到达靶点 → 与要害分子作用 → 细胞失调死亡 → 修复或失修复</strong>。核心是第二步的几种"作案手法"：<strong>共价结合</strong>（强力胶粘死、不可逆）、<strong>氧化应激</strong>（自由基让细胞生锈）、<strong>切断能量</strong>（细胞窒息，氰化物/CO）、<strong>冒充信号</strong>（霸占受体、乱按开关）。结局取决于身体修不修得过来。有了这张流程图，下一章就能解释一个现象：为什么中毒总是肝、肾先出事。</p>
+      </div>
+    </section>
+
+    <!-- tx4 -->
+    <section class="module" id="tx4">
+      <div class="eyebrow">Toxicology 04 · Target Organs</div>
+      <h1><span class="cn">靶器官毒性：为什么受伤的总是肝和肾</span></h1>
+      <p class="lede">毒物进了身体，很少"平均"地伤每个器官，而是特别集中地打某几个——这叫<strong>靶器官毒性</strong>。规律很清楚：<strong>一个器官越是"处理毒物的第一线"、越是"血流量大、代谢旺、把毒物浓缩起来"，就越容易中招。</strong>理解了这条，你就能预判一个新毒物大概会伤哪。</p>
+
+      <h2><span class="cn">头号受害者：肝——因为它是"解毒车间"本身</span></h2>
+      <div class="card">
+        <h3>肝为什么最先受伤：三个"倒霉"的理由</h3>
+        <p>① <strong>首过</strong>：口服吸收的东西第一站就是肝，浓度最高。② <strong>它就是解毒车间</strong>：第 2 章讲的 P450 生物活化在这里发生——<em>肝一边解别人的毒，一边被自己造出的活性中间体反噬</em>。③ 血流量巨大。这三条叠加，让肝成为药物和毒物损伤的头号靶器官。<strong>对乙酰氨基酚过量、酒精、某些中草药、工业溶剂</strong>致的肝损伤都属此列。好消息是肝再生力极强，只要没超过临界点、及时停止接触，往往能修复。</p>
+      </div>
+
+      <h2><span class="cn">第二受害者：肾——因为它把毒物"浓缩"了</span></h2>
+      <p>肾的工作是过滤血液、浓缩废物成尿。麻烦就出在"浓缩"上：<strong>血里浓度不高的毒物，被肾一路浓缩，到了肾小管里浓度飙升，把肾自己的细胞毒坏。</strong>再加上肾血流量也大（占心输出量约四分之一）。<em>重金属（镉、汞）、部分抗生素、造影剂、某些止痛药</em>的肾毒性都源于此。肾功能一旦受损，毒物又排不出去，形成恶性循环——这是很多中毒转危重的转折点。</p>
+
+      <h2><span class="cn">其余几个重点靶器官</span></h2>
+      <table class="tbl">
+        <thead><tr><th>器官</th><th>为什么脆弱</th><th>典型毒物</th></tr></thead>
+        <tbody>
+          <tr><td><strong>神经系统</strong></td><td>神经元几乎不能再生（死一个少一个）；能量需求极高；有些毒能穿血脑屏障</td><td>有机汞（水俣病）、铅、有机磷、酒精、锰</td></tr>
+          <tr><td><strong>血液 / 造血</strong></td><td>红细胞负责运氧，被抢占或破坏就全身缺氧</td><td>一氧化碳、苯（伤骨髓致白血病）、亚硝酸盐</td></tr>
+          <tr><td><strong>肺 / 呼吸道</strong></td><td>吸入毒物的第一接触面，表面积巨大</td><td>百草枯、石棉（致间皮瘤）、二氧化硫、烟</td></tr>
+          <tr><td><strong>心脏</strong></td><td>耗能高、电活动敏感，能量或离子被扰即出事</td><td>某些化疗药（蒽环类）、可卡因、洋地黄过量</td></tr>
+          <tr><td><strong>皮肤</strong></td><td>接触面，最常见的职业与过敏毒性部位</td><td>强酸碱、镍（过敏）、光敏性物质</td></tr>
+          <tr><td><strong>免疫系统</strong></td><td>可被抑制（易感染/长瘤）或被异常激活（过敏）</td><td>见下方免疫毒性</td></tr>
+        </tbody>
+      </table>
+
+      <h2><span class="cn">特别说说免疫毒性：接回免疫学</span></h2>
+      <p>毒物对免疫系统的伤害有两个相反的方向，正好接上<a href="immunology.html">免疫课</a>：</p>
+      <ul>
+        <li><strong>免疫抑制</strong>：把国防部削弱了，人更容易感染、更容易长肿瘤。某些化学品、重金属、药物有此作用。</li>
+        <li><strong>过敏 / 超敏反应</strong>：免疫系统对本来无害的小分子"反应过度"。很多药疹、职业性哮喘、金属过敏（镍）都是这类——<em>这里"毒性"不取决于剂量大小，而取决于个人是否被"致敏"过</em>，是剂量-反应规律的一个重要例外。严重时可致命（过敏性休克）。</li>
+        <li><strong>自身免疫</strong>：个别毒物能诱骗免疫系统去打自己人（诱发狼疮样反应等）。</li>
+      </ul>
+
+      <div class="note">
+        <span class="tag">怎么预判一个毒物伤哪</span>
+        <p>抓两条线索：① <strong>它在哪被代谢/浓缩</strong>——多半伤肝或肾；② <strong>它冒充哪种信号、打哪种细胞</strong>——像神经递质就伤神经、抢血红蛋白就伤造血、像激素就扰内分泌。把这两条和第 3 章的"作案手法"叠起来，就能对一个陌生毒物做出合理的"它大概伤哪、怎么伤"的判断。</p>
+      </div>
+      <div class="note investor">
+        <span class="tag">本章小结</span>
+        <p>毒物不平均伤人，而是打<strong>靶器官</strong>。规律：<strong>越是处理/浓缩毒物的器官越先中招</strong>——肝（首过＋解毒车间自身被活性中间体反噬）、肾（浓缩尿液把毒物浓缩）是两大头号受害者；神经（不可再生）、血液（运氧被抢）、肺（吸入门户）各有软肋。免疫毒性有抑制和过敏两个相反方向，其中过敏不遵守剂量规律。下一章：三种最令人恐惧的长期毒性——致癌、致畸、致突变。</p>
+      </div>
+    </section>
+
+    <!-- tx5 -->
+    <section class="module" id="tx5">
+      <div class="eyebrow">Toxicology 05 · Carcinogenesis &amp; Teratogenesis</div>
+      <h1><span class="cn">"三致"：致突变、致癌、致畸</span></h1>
+      <p class="lede">前面讲的多是"当下就看得见的伤"。这一章讲三种最令人恐惧的<strong>延迟性、可能不可逆</strong>的毒性——它们往往在接触很久之后才显现，却影响最深远。三者其实是一条因果链：<strong>损伤 DNA（致突变）→ 可能长出癌（致癌）；在胎儿关键期干扰发育 → 生出畸形（致畸）。</strong></p>
+
+      <h2><span class="cn">起点 · 致突变：把"总图纸"改坏了</span></h2>
+      <p>还记得<a href="antisense.html">反义课</a>说的 DNA 是"造蛋白的总图纸"吗？<strong>致突变物 <span class="en">mutagen</span> 就是能改坏这份图纸的毒物</strong>——它们（多半是第 2 章生物活化出的活性中间体）共价结合到 DNA 上、或造成断裂，让复制时出错。图纸一旦改错且没被修复，这个错误就<em>永久传给所有子代细胞</em>。致突变是致癌和遗传损伤的共同起点。</p>
+      <div class="card">
+        <h3>怎么测"会不会致突变"：Ames 试验</h3>
+        <p>有个又便宜又快的经典办法叫 <strong>Ames 试验</strong>：用一种"本来不能在缺营养培养基上生长的细菌"，看加了待测物之后，<em>有多少细菌因为发生突变而恢复了生长能力</em>——突变越多、长出的菌落越多，说明这东西致突变性越强。<strong>因为"致突变"和"致癌"高度相关，Ames 试验成了新化学品/新药筛致癌风险的第一道快速关卡</strong>（贵得多、慢得多的动物致癌试验放在后面）。这也是<a href="medchem.html">药化课</a>里 ADMET 安全评价的常规一环。</p>
+      </div>
+
+      <h2><span class="cn">致癌：一个多步骤、拖很久的过程</span></h2>
+      <p>癌不是"一下子中毒"，而是细胞<strong>攒够了好几处关键突变</strong>后，从"守规矩"变成"疯长不受控"。经典地分三阶段：</p>
+      <div class="loop">
+        <div class="loop-title">化学致癌的三步（拖很久，常需十几二十年）</div>
+        <div class="chain">
+          <div class="link"><div class="k">第一步 · 引发</div><div class="v">Initiation</div><div class="d">致突变物给 DNA 造成第一处永久错误——不可逆</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">第二步 · 促进</div><div class="v">Promotion</div><div class="d">另一些物质反复刺激，让"变坏的细胞"扩增——可逆，需长期</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">第三步 · 进展</div><div class="v">Progression</div><div class="d">攒够突变，变成真正恶性、会转移的癌</div></div>
+        </div>
+      </div>
+      <p>这个模型解释了几件常识：为什么<strong>致癌常有几十年潜伏期</strong>（攒突变要时间）；为什么<strong>戒烟越早越好</strong>（促进阶段可逆，撤掉刺激能中断进程）。致癌物分两类：<strong>遗传毒性致癌物</strong>（直接改 DNA，一般假设"无阈值"——多低都有风险，见第 7 章）和<strong>非遗传毒性致癌物</strong>（靠长期刺激促进，通常有阈值）。这个区分直接决定监管怎么定标准。</p>
+
+      <h2><span class="cn">致畸：在错误的时间伤到发育中的胎儿</span></h2>
+      <div class="card">
+        <h3>致畸最关键的不是剂量，而是"时机"</h3>
+        <p><strong>致畸物 <span class="en">teratogen</span></strong> 是能干扰胎儿正常发育、导致出生缺陷的物质。它有一个和别处很不同的规律：<strong>后果高度取决于接触发生在孕期的哪个"窗口"。</strong>器官在胚胎期各有一段"正在搭建"的敏感窗口，<em>同一个致畸物，在窗口期接触会造成对应器官畸形，错过窗口可能就没事。</em>孕早期（器官形成期）是最危险的窗口。</p>
+      </div>
+      <p>史上最惨痛的教训是<strong>沙利度胺（反应停）</strong>：1950 年代给孕妇止吐的"安全好药"，却在肢体发育窗口期导致上万名婴儿海豹肢畸形。<em>这场灾难直接催生了现代药物必须做严格生殖毒性试验的法规</em>（第 7、8 章）——也是为什么今天孕妇用药如此谨慎。酒精（胎儿酒精综合征）、某些抗癫痫药、维A酸、感染和辐射都是已知致畸因素。</p>
+
+      <div class="note">
+        <span class="tag">三致为什么单独拎出来讲</span>
+        <p>因为它们打破了前几章的两条"常识"：① <strong>延迟性</strong>——伤害当时看不见，几年几十年后才爆发（致癌）；② <strong>可能无阈值</strong>——遗传毒性致癌物被假设"再低的剂量也有风险"，不像一般毒性那样有安全阈值。这两点让"三致"成为风险评估里最棘手、也最保守对待的部分（第 7 章）。</p>
+      </div>
+      <div class="note investor">
+        <span class="tag">本章小结</span>
+        <p>"三致"是一条链：<strong>致突变</strong>（改坏 DNA 总图纸，用 Ames 试验快筛）→ <strong>致癌</strong>（引发-促进-进展三步、潜伏几十年，分"无阈值的遗传毒性"和"有阈值的非遗传毒性"两类）；另一支是<strong>致畸</strong>（关键在孕期"窗口时机"而非单纯剂量，沙利度胺是血的教训）。它们延迟、可能不可逆、可能无阈值——最难评估。下一章从抽象机制回到具体：现实世界里的毒物大类。</p>
+      </div>
+    </section>
+
+    <!-- tx6 -->
+    <section class="module" id="tx6">
+      <div class="eyebrow">Toxicology 06 · Toxic Agents</div>
+      <h1><span class="cn">毒物大观：金属、农药、气体、天然毒素</span></h1>
+      <p class="lede">前五章讲"通用原理"，这一章落地到"现实里到底有哪些毒物"。别指望记全——抓住每一大类的<strong>共同作案手法</strong>（都是第 3 章那几种的变体），一类就通了。这一章是通往"毒物档案库"的引子。</p>
+
+      <h2><span class="cn">一、重金属：抢占酶上的关键位置</span></h2>
+      <p>铅、汞、砷、镉这些重金属的共同套路是：<strong>它们会牢牢结合到蛋白质（尤其酶）上负责干活的关键位点（常是含硫的巯基），把酶"锁死"</strong>，让一大批生化反应瘫痪。它们还都脂溶或能蓄积、排得极慢，所以是典型的<em>慢性、累积性</em>毒物。</p>
+      <table class="tbl">
+        <thead><tr><th>金属</th><th>主要伤害</th><th>历史/来源</th></tr></thead>
+        <tbody>
+          <tr><td><strong>铅</strong> Pb</td><td>神经（儿童智力）、造血、肾</td><td>含铅汽油/油漆/老水管——公共卫生史上的大教训</td></tr>
+          <tr><td><strong>汞</strong> Hg（尤其有机汞）</td><td>神经系统（能穿血脑/胎盘屏障）</td><td>水俣病——工业废汞污染鱼、沿食物链放大</td></tr>
+          <tr><td><strong>砷</strong> As</td><td>多器官、皮肤、致癌</td><td>"毒物之王"，投毒史 + 地下水天然污染</td></tr>
+          <tr><td><strong>镉</strong> Cd</td><td>肾、骨（痛痛病）</td><td>工业/冶炼污染</td></tr>
+        </tbody>
+      </table>
+      <p>它们的解毒思路很统一：用<strong>螯合剂</strong>——一种能像"钳子"一样把金属离子夹住、拖着一起从尿排掉的药（第 8 章）。</p>
+
+      <h2><span class="cn">二、农药：大多在"打神经开关"</span></h2>
+      <p>农药本就是设计来"毒死虫子"的，对人自然也有毒。最重要的一类<strong>有机磷 / 氨基甲酸酯</strong>，作案手法直接接<a href="pharmacology.html">药理课</a>的自主神经：<strong>它们抑制"乙酰胆碱酯酶"——那个负责"关掉神经信号"的酶。酶被抑制，神经递质乙酰胆碱堆积、开关关不掉，导致肌肉持续痉挛、腺体狂分泌、最后呼吸肌麻痹而死。</strong>神经毒剂（沙林等化学武器）是同一机制的极端强化版。另一类除草剂<strong>百草枯</strong>则靠制造大量活性氧（第 3 章氧化应激）把肺烧坏，且无特效解药，极其凶险。</p>
+
+      <h2><span class="cn">三、气体与挥发物：让细胞"窒息"或麻醉</span></h2>
+      <div class="card">
+        <h3>两种"化学性窒息"：CO 和氰化物</h3>
+        <p><strong>一氧化碳（CO）</strong>：它和血红蛋白的结合力比氧强两百多倍，<em>抢占了本该运氧的座位</em>，让血液"看着满，其实运不动氧"——组织缺氧，心脑先垮。无色无味，是"沉默的杀手"。<strong>氰化物</strong>：更狠一层，它不抢座位，而是直接<em>卡死细胞线粒体里用氧发电的那一步</em>——氧送到了也用不了，细胞在"氧气充足"中窒息。两者都是第 3 章"切断能量"手法的代表。</p>
+      </div>
+      <p>此外，<strong>有机溶剂</strong>（苯、甲苯、二氯甲烷等）脂溶、易挥发、易吸入，急性可麻醉/伤肝肾、慢性有的伤造血致白血病（苯）。<strong>刺激性气体</strong>（氯气、二氧化硫、氨）则直接灼伤呼吸道。</p>
+
+      <h2><span class="cn">四、天然毒素：自然界最"精工"的毒</span></h2>
+      <p>"天然"绝不等于"无害"——地球上最毒的一批物质恰恰来自生物，且往往精准打某一个靶点：</p>
+      <ul>
+        <li><strong>肉毒毒素</strong>（细菌）：已知最毒物质之一，切断神经-肌肉指令致瘫痪；微量入药即除皱针/治痉挛。</li>
+        <li><strong>河豚毒素</strong>：堵死神经的钠离子通道，让信号传不过去。</li>
+        <li><strong>鹅膏菌（毒蘑菇）毒素</strong>：抑制细胞造蛋白的机器，几天内毁掉肝——毒蘑菇中毒的头号杀手。</li>
+        <li><strong>黄曲霉毒素</strong>（霉变花生/玉米上的真菌毒素）：强致癌物，直接接第 5 章。</li>
+        <li><strong>蛇毒/蜂毒</strong>：成分复杂，或破坏血液凝固、或攻击神经。</li>
+      </ul>
+
+      <div class="note">
+        <span class="tag">看穿一切毒物的窍门</span>
+        <p>不要一个个背。遇到任何毒物，只问三句：<strong>它属于哪一大类？它的"作案手法"是第 3 章的哪一种（锁死酶／氧化生锈／切断能量／冒充信号）？它因此会伤哪个靶器官（第 4 章）？</strong>三句一问，一个陌生毒物的轮廓就出来了。比如"某农药"→有机磷类→抑制乙酰胆碱酯酶（冒充/扰乱信号）→伤神经肌肉→呼吸衰竭。链条自己就接上了。</p>
+      </div>
+      <div class="note investor">
+        <span class="tag">本章小结</span>
+        <p>四大类毒物，各有一个招牌手法：<strong>重金属</strong>（锁死含硫的酶、慢性蓄积，解药是螯合剂）、<strong>农药</strong>（有机磷抑制乙酰胆碱酯酶让神经开关关不掉；百草枯靠氧化应激烧肺）、<strong>气体</strong>（CO 抢血红蛋白、氰化物卡线粒体，都是"化学性窒息"）、<strong>天然毒素</strong>（精准打单一靶点，且"天然≠安全"）。全都能归到第 3 章那几种手法。下一章：政府和科学家凭什么给这些东西定"安全线"。</p>
+      </div>
+    </section>
+
+    <!-- tx7 -->
+    <section class="module" id="tx7">
+      <div class="eyebrow">Toxicology 07 · Risk Assessment</div>
+      <h1><span class="cn">风险评估：我们凭什么说"这个量安全"</span></h1>
+      <p class="lede">食品添加剂的限量、水里的重金属标准、车间的接触上限、新药的起始剂量——这些"安全线"不是拍脑袋定的，背后是一套叫<strong>风险评估</strong>的严谨方法。这一章讲清楚它的四步逻辑，以及一个关键分岔：<strong>有阈值 vs 无阈值</strong>。学完你就看得懂那些"每日容许摄入量""百万分之一风险"到底怎么来的。</p>
+
+      <h2><span class="cn">先分清两个词：危害 vs 风险</span></h2>
+      <p>这是全章的地基：<strong>危害 <span class="en">hazard</span></strong> 是"这东西<em>有没有</em>造成伤害的能力"（鲨鱼有危害）；<strong>风险 <span class="en">risk</span></strong> 是"在实际接触条件下，伤害<em>真正发生的概率</em>"（关在水族箱玻璃后的鲨鱼，风险≈0）。<em>一样东西再"危险"（危害大），只要接触量足够低，实际风险可以很小。</em>风险评估干的就是：把"危害"和"实际暴露量"合起来，算出真实风险有多大。</p>
+
+      <h2><span class="cn">风险评估的四步</span></h2>
+      <div class="loop">
+        <div class="loop-title">风险评估四步法（各国监管通用框架）</div>
+        <div class="chain">
+          <div class="link"><div class="k">第一步</div><div class="v">危害识别</div><div class="d">这东西会造成什么伤害？（致癌？伤肝？）</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">第二步</div><div class="v">剂量-反应评估</div><div class="d">多少量对应多大伤害？（用第 1 章的曲线、NOAEL）</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">第三步</div><div class="v">暴露评估</div><div class="d">人实际会接触到多少？（吃/喝/吸入多少）</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">第四步</div><div class="v">风险表征</div><div class="d">合起来算：真实风险有多大、可不可接受</div></div>
+        </div>
+      </div>
+
+      <h2><span class="cn">有阈值的毒性：用"安全系数"倒推安全线</span></h2>
+      <div class="card">
+        <h3>从"动物没事的剂量"到"人能安全摄入的量"</h3>
+        <p>对大多数一般毒性（有阈值，第 1 章），定标准的做法是：先从动物实验拿到 <strong>NOAEL</strong>（未见有害作用的最高剂量），再除以一个<strong>安全系数</strong>（通常 100）得到<strong>每日容许摄入量 <span class="en">ADI</span></strong>。那个 100 是怎么来的？<em>×10 是因为"动物和人可能不一样"（种间差异），再 ×10 是因为"人和人也不一样，要保护最敏感的老人小孩病人"（个体差异）。</em>把 NOAEL 打上 100 倍的"安全折扣"，就是留给未知的余量。若数据更不确定，系数还会更大。</p>
+      </div>
+      <p>这解释了为什么食品/饮水的限量往往远远低于"实际会中毒的量"——不是因为那个量真会毒死人，而是<strong>为所有不确定性和最脆弱人群留足了缓冲</strong>。这也是<a href="pharmacology.html">药理课</a>里新药"首次人体试验"起始剂量要压得极低的同一套逻辑。</p>
+
+      <h2><span class="cn">无阈值的毒性：致癌物的特殊麻烦</span></h2>
+      <p>但对<strong>遗传毒性致癌物</strong>（第 5 章，直接改 DNA 那种），主流假设是<strong>"没有绝对安全的阈值"——哪怕一个分子，理论上也有极小的致癌概率。</strong>这时不能用"安全系数法"划一条线，只能改成算概率：<em>估算"终生按这个量接触，额外增加多少癌症风险"，再由社会决定多小的风险算"可接受"</em>（常用的基准是"百万分之一的终生额外风险"）。这就是为什么对致癌物，监管往往追求"能多低就多低"（ALARA 原则），而不是"低于某条线就放心"。</p>
+
+      <h2><span class="cn">风险评估的诚实与局限</span></h2>
+      <ul>
+        <li><strong>要靠外推</strong>：多数数据来自高剂量动物实验，要外推到低剂量的人身上——中间充满假设，所以宁可保守。</li>
+        <li><strong>个体千差万别</strong>：同一标准要保护基因、年龄、健康状况各异的所有人（第 1、2 章的个体差异）。</li>
+        <li><strong>混合暴露</strong>：现实中人同时接触许多东西，它们可能叠加甚至协同——单个评估难以完全覆盖。</li>
+        <li><strong>科学算风险，社会定取舍</strong>：科学能算出"风险多大"，但"多大风险可接受"是价值判断，涉及成本、收益、伦理——这一步不是纯科学问题。</li>
+      </ul>
+
+      <div class="note investor">
+        <span class="tag">本章小结</span>
+        <p>风险评估先分清<strong>危害（有没有伤害能力）</strong>和<strong>风险（实际发生的概率）</strong>，再走四步：<strong>危害识别 → 剂量-反应评估 → 暴露评估 → 风险表征</strong>。对<strong>有阈值</strong>的毒性，用 NOAEL ÷ 安全系数（通常 100＝种间×个体）得出每日容许摄入量 ADI；对<strong>无阈值</strong>的遗传毒性致癌物，改用"额外风险概率"（如百万分之一）。整套方法充满保守假设，且"多大风险可接受"最终是社会的价值判断。下一章：当风险变成现实，怎么救、怎么查、怎么管。</p>
+      </div>
+    </section>
+
+    <!-- tx8 -->
+    <section class="module" id="tx8">
+      <div class="eyebrow">Toxicology 08 · Applied Toxicology</div>
+      <h1><span class="cn">应用毒理：解毒、法医、监管，以及接回造药</span></h1>
+      <p class="lede">最后一章把前面所有原理落到四个真实战场：<strong>怎么救中毒的人（临床毒理）、怎么用毒物证据破案（法医毒理）、怎么立法把毒物管住（监管毒理），以及这门课怎么反过来当"药物开发的守门人"。</strong>学完这一章，整门课就合成了一张完整的地图。</p>
+
+      <h2><span class="cn">一、临床毒理：中毒了怎么救</span></h2>
+      <p>救治中毒有一套通用逻辑，全都建立在前几章的机制上：<strong>①稳住生命体征 → ②减少继续吸收（洗胃/活性炭吸附）→ ③加速排出 → ④用特效解毒剂（如果有）。</strong>其中最漂亮的是"针对机制的特效解毒剂"——它们的设计逻辑直接对应第 2、3、6 章：</p>
+      <table class="tbl">
+        <thead><tr><th>中毒</th><th>解毒剂</th><th>解毒逻辑（对应机制）</th></tr></thead>
+        <tbody>
+          <tr><td><strong>对乙酰氨基酚过量</strong></td><td>N-乙酰半胱氨酸（NAC）</td><td>补充被耗光的"解毒材料"谷胱甘肽，中和毒性中间体 NAPQI（第 2 章生物活化）</td></tr>
+          <tr><td><strong>有机磷农药</strong></td><td>阿托品 + 解磷定</td><td>阿托品挡住堆积的乙酰胆碱、解磷定"复活"被抑制的酶（第 6 章）</td></tr>
+          <tr><td><strong>一氧化碳</strong></td><td>纯氧 / 高压氧</td><td>用高浓度氧把 CO 从血红蛋白上"挤下来"（第 6 章）</td></tr>
+          <tr><td><strong>氰化物</strong></td><td>羟钴胺等</td><td>提供毒物更愿意结合的"诱饵"，把氰化物从线粒体上引开</td></tr>
+          <tr><td><strong>甲醇 / 乙二醇</strong></td><td>乙醇 / 甲吡唑</td><td>抢占代谢酶，阻止它们被"生物活化"成毒性产物（第 2 章的反向应用）</td></tr>
+          <tr><td><strong>重金属</strong></td><td>螯合剂</td><td>像钳子夹住金属离子、一起排出（第 6 章）</td></tr>
+          <tr><td><strong>阿片过量</strong></td><td>纳洛酮</td><td>竞争性占据阿片受体、把毒物顶下来（<a href="pharmacology.html">药理课</a>拮抗剂）</td></tr>
+        </tbody>
+      </table>
+      <p>注意一个残酷现实：<strong>有特效解毒剂的毒物是少数</strong>（百草枯、多数天然毒素都没有）。这也是为什么"减少吸收 + 支持治疗 + 争取时间让身体自修（第 3 章第四步）"始终是中毒救治的主力。</p>
+
+      <h2><span class="cn">二、法医毒理：让毒物自己"作证"</span></h2>
+      <p>法医毒理学用分析化学手段，在遗体、血、尿、毛发里<strong>找出并定量毒物，判断死因是否与中毒有关</strong>。这里前几章的知识全变成证据：<em>毒物的半衰期和代谢产物能反推"何时接触、接触多少"；毛发能记录几个月前的重金属暴露史；某些代谢物的存在本身就是"中过某毒"的铁证。</em>它把毒代动力学（第 2 章）变成了时间线，把机制（第 3 章）变成了因果链。</p>
+
+      <h2><span class="cn">三、监管毒理：把安全线写进法律</span></h2>
+      <p>把第 7 章的风险评估结果，变成能强制执行的标准和法规——这就是监管毒理。它管的范围超乎想象：<strong>药品（上市前的安全性评价）、食品添加剂与农残、饮用水与空气标准、职业接触限值、化妆品、工业化学品登记</strong>。很多今天的法规都是被灾难逼出来的——沙利度胺灾难（第 5 章）催生了现代药物生殖毒性法规，历次环境公害事件推动了排放标准。<em>监管毒理就是把"血的教训"固化成"事前的防线"。</em></p>
+
+      <h2><span class="cn">四、接回造药：毒理学是药物开发的守门人</span></h2>
+      <div class="card">
+        <h3>ADMET 里那个 "T"，决定多少药生死</h3>
+        <p>还记得<a href="medchem.html">药化课</a>反复强调的成药性指标 <strong>ADMET</strong> 吗？前面 ADME 是"药效动力学"，最后那个 <strong>T（Toxicity）就是这门课</strong>。一个候选药在上市前要过层层毒理关卡：<em>细胞毒性 → Ames 致突变筛查（第 5 章）→ 动物急性/长期毒性 → 生殖与致癌试验 → 临床期的安全性监测</em>。<strong>大量候选药不是死在"没效果"，而是死在"毒性过不了关"</strong>——伤肝、致心律失常、有遗传毒性信号。所以毒理学不是造药的敌人，而是那个"在害到人之前先把它拦下来"的守门人。</p>
+      </div>
+      <p>这也和<a href="antisense.html">反义课</a>第 6 章闭环了：那门课讲核酸药的独特毒性（脱靶、免疫刺激），本质上就是把这门课的通用毒理框架，套用到一种新型药物上——<em>无论多新的药物模式，都逃不开"剂量-代谢-机制-靶器官-风险"这条主线。</em></p>
+
+      <h2><span class="cn">整门课，一条主线收尾</span></h2>
+      <div class="loop">
+        <div class="loop-title">毒理学的完整认知链</div>
+        <div class="chain">
+          <div class="link"><div class="k">多少</div><div class="v">剂量-反应</div><div class="d">万物皆毒，剂量定毒（1章）</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">怎么走</div><div class="v">毒代动力学</div><div class="d">吸收分布代谢排泄、生物活化（2章）</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">怎么伤</div><div class="v">机制→靶器官</div><div class="d">几种作案手法、打肝肾神经（3-4章）</div></div>
+          <div class="arrow">→</div>
+          <div class="link"><div class="k">怎么管</div><div class="v">评估→应用</div><div class="d">三致、风险评估、解毒立法（5-8章）</div></div>
+        </div>
+      </div>
+
+      <h2><span class="cn">六门课，一张完整地图</span></h2>
+      <table class="tbl">
+        <thead><tr><th>课程</th><th>回答的问题</th></tr></thead>
+        <tbody>
+          <tr><td><a href="overview.html">药物创新概览</a></td><td>产业全景：有哪些药、打哪条通路、怎么运转</td></tr>
+          <tr><td><a href="immunology.html">免疫学</a></td><td>免疫系统与免疫类药物（也接本课的免疫毒性/过敏）</td></tr>
+          <tr><td><a href="pharmacology.html">药理学</a></td><td>药进身体怎么起"治疗作用"、怎么定剂量</td></tr>
+          <tr><td><a href="medchem.html">药物化学</a></td><td>怎么把操纵靶点的想法设计、造成真分子（ADMET）</td></tr>
+          <tr><td><a href="antisense.html">反义药物技术</a></td><td>RNA 层的新型药物模式</td></tr>
+          <tr><td><strong>毒理学（本课）</strong></td><td>同一套机器的"害"这一半：什么条件下东西会伤人、怎么评估与防范</td></tr>
+        </tbody>
+      </table>
+
+      <div class="note investor">
+        <span class="tag">你现在能看懂什么</span>
+        <p>学完这门课，再看到"某物质超标""某药因肝毒性撤市""某地重金属污染""某中毒事件"，你能一眼拆解：它是什么<strong>剂量</strong>、什么<strong>接触途径</strong>（第 2 章）、什么<strong>作案机制</strong>（第 3 章）、伤哪个<strong>靶器官</strong>（第 4 章）、有没有<strong>特效解毒</strong>（第 8 章）、那条"安全线"是怎么定出来的（第 7 章）。这正是判断"一样东西到底危不危险、报道是否夸大"的核心能力。</p>
+      </div>
+      <div class="note">
+        <span class="tag">整门课一句话收尾</span>
+        <p>毒理学＝<strong>研究"外来物质在什么剂量、经过什么代谢、以什么机制、伤到哪个器官"的科学，并据此评估风险、施救与立法</strong>。它的第一定律永远是那句 500 年前的话——<em>万物皆毒，唯剂量定毒。</em>它是药理学的暗面，也是保护每个人不被"害"越线的那道科学防线。</p>
+      </div>
+      <div class="footer-note">
+        毒理学入门 · Toxicology: The Basic Science of Poisons · 框架参考 Casarett and Doull《Toxicology》<br>
+        为非专业背景设计 —— 浅显中文、重直觉。全 9 章已完成。
+      </div>
+    </section>
+
+    <!-- txcases 毒物档案库 -->
+    <section class="module" id="txcases">
+      <div class="eyebrow">Toxicology ★ · Toxicant Files</div>
+      <h1><span class="cn">毒物档案库：经典毒物与中毒案例</span></h1>
+      <p class="lede trials-intro">把前八章的原理挂到真实毒物上，就成了这份"档案"。每张卡片用统一格式拆解一个经典毒物——<strong>属于哪类、什么作案机制、伤哪个靶器官、经什么途径、有没有特效解毒剂</strong>，并配一段著名事件与解读。它不是"毒物名录"，而是让你练习把第 3 章的"作案手法"和第 4 章的"靶器官"套上去。</p>
+
+      <h2><span class="cn">先读懂这些标签</span></h2>
+      <div class="metric-key">
+        <div class="mk"><b>LD50</b>半数致死量——衡量急性毒性的尺，数越小越毒（第 1 章）</div>
+        <div class="mk"><b>作案机制</b>对应第 3 章：锁死酶／氧化生锈／切断能量／扰乱信号</div>
+        <div class="mk"><b>靶器官</b>主要受伤的器官（第 4 章）</div>
+        <div class="mk"><b>解毒剂</b>特效解药，多数毒物其实没有（第 8 章）</div>
+        <div class="mk"><b>螯合剂</b>像钳子夹住金属、一起排出的解毒药</div>
+        <div class="mk"><b>生物放大</b>毒物沿食物链层层浓缩（第 2、6 章）</div>
+      </div>
+      <div class="note">
+        <span class="tag">关于数据</span>
+        <p>下列毒性数值（LD50 等）为不同来源、不同物种的<strong>近似量级</strong>，仅用于建立"谁更毒"的直觉，不能当作精确临床/法医数据；具体数值随物种、途径、个体差异很大。历史事件为帮助记忆的概述，细节请以权威史料与专业文献为准。中毒救治必须由专业医疗人员进行，本页不构成任何医疗建议。</p>
+      </div>
+
+      <h2><span class="cn">重金属：慢性蓄积、锁死酶（对应第 4、6 章）</span></h2>
+
+      <div class="trial">
+        <div class="tr-top">
+          <div class="tr-name">铅 <span class="en2">Lead · Pb</span></div>
+          <div class="tr-tags"><span class="tr-phase">重金属</span><span class="tr-ind">神经/造血/肾</span><span class="tr-appr">慢性蓄积</span></div>
+        </div>
+        <div class="trow"><div class="lbl mfr">类别</div><div class="val"><b>重金属</b>·慢性、累积性毒物，排泄极慢（半衰期在骨中以年计）</div></div>
+        <div class="trow"><div class="lbl">机制</div><div class="val">结合到多种酶的巯基上把它们<b>锁死</b>；干扰血红素合成；冒充钙离子扰乱神经信号</div></div>
+        <div class="trow"><div class="lbl">靶器官</div><div class="val"><b>神经系统（尤其儿童发育中的大脑）</b>、造血系统、肾</div></div>
+        <div class="trow"><div class="lbl">途径</div><div class="val">口服（含铅油漆碎屑、污染水/食物）、吸入（含铅汽油时代）</div></div>
+        <div class="trow"><div class="lbl">解毒</div><div class="val"><b>螯合剂</b>（如 EDTA、二巯基丁二酸）——把铅夹住排出</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">最大危害</div><div class="m-v">儿童智力</div><div class="m-d">低水平长期暴露即损害发育</div></div>
+          <div class="tr-metric"><div class="m-k">安全阈值</div><div class="m-v">几乎没有</div><div class="m-d">对儿童神经发育无公认安全下限</div></div>
+        </div>
+        <div class="tr-read">公共卫生史上最大的毒理教训之一：含铅汽油、含铅油漆、老旧铅水管让整代人慢性暴露。它完美示范了<strong>"慢性、累积、无明显急性症状却损害深远"</strong>的毒物——尤其伤儿童正在发育的大脑（第 4 章神经不可再生）。逐步禁铅是 20 世纪公共卫生的重大胜利。</div>
+      </div>
+
+      <div class="trial">
+        <div class="tr-top">
+          <div class="tr-name">甲基汞 <span class="en2">Methylmercury</span></div>
+          <div class="tr-tags"><span class="tr-phase">有机金属</span><span class="tr-ind">神经系统</span><span class="tr-appr">水俣病</span></div>
+        </div>
+        <div class="trow"><div class="lbl mfr">类别</div><div class="val"><b>有机汞</b>·脂溶，能穿血脑屏障和胎盘屏障（第 2 章）</div></div>
+        <div class="trow"><div class="lbl">机制</div><div class="val">结合神经细胞的巯基蛋白，破坏神经元；<b>经胎盘伤胎儿</b></div></div>
+        <div class="trow"><div class="lbl">靶器官</div><div class="val"><b>中枢神经系统</b>（感觉异常、共济失调、视野缩窄）、发育中的胎儿</div></div>
+        <div class="trow"><div class="lbl">途径</div><div class="val">口服——沿食物链<b>生物放大</b>，富集在大型鱼体内</div></div>
+        <div class="trow"><div class="lbl">解毒</div><div class="val">螯合剂效果有限；重在预防（限制污染、慎食高汞鱼）</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">著名事件</div><div class="m-v">水俣病</div><div class="m-d">日本工业废汞污染海湾</div></div>
+          <div class="tr-metric"><div class="m-k">最可怕处</div><div class="m-v">胎儿受害</div><div class="m-d">母亲无症状却生下受损婴儿</div></div>
+        </div>
+        <div class="tr-read">1950 年代日本水俣湾，工厂排放的汞被微生物转成脂溶的甲基汞，<strong>沿食物链在鱼体内层层浓缩（生物放大）</strong>，居民食鱼后大批神经中毒。它同时示范了第 2 章的两个关键点：<em>脂溶物的生物放大</em>与<em>能穿胎盘屏障伤胎儿</em>——有些母亲自己没事，却生下严重受损的婴儿。</div>
+      </div>
+
+      <div class="trial">
+        <div class="tr-top">
+          <div class="tr-name">砷 <span class="en2">Arsenic · As</span></div>
+          <div class="tr-tags"><span class="tr-phase">类金属</span><span class="tr-ind">多器官/致癌</span><span class="tr-appr">"毒物之王"</span></div>
+        </div>
+        <div class="trow"><div class="lbl mfr">类别</div><div class="val"><b>类金属</b>·急性可致命，慢性致癌（第 5 章）</div></div>
+        <div class="trow"><div class="lbl">机制</div><div class="val">结合酶的巯基、破坏细胞能量代谢；长期损伤 DNA 致癌</div></div>
+        <div class="trow"><div class="lbl">靶器官</div><div class="val">消化道、心血管、皮肤、神经；慢性致<b>皮肤/膀胱/肺癌</b></div></div>
+        <div class="trow"><div class="lbl">途径</div><div class="val">口服（投毒史；地下水天然砷污染是全球公共卫生问题）</div></div>
+        <div class="trow"><div class="lbl">解毒</div><div class="val">急性可用螯合剂（二巯基类）</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">历史绰号</div><div class="m-v">继承之粉</div><div class="m-d">无色无味，曾是经典投毒剂</div></div>
+          <div class="tr-metric"><div class="m-k">当代威胁</div><div class="m-v">饮水污染</div><div class="m-d">孟加拉等地地下水天然砷</div></div>
+        </div>
+        <div class="tr-read">历史上因无色无味被称"毒物之王"，是经典投毒剂。但它更现实的威胁是<strong>地下水天然砷污染</strong>——影响全球数千万人，属于慢性、致癌型危害（第 5 章）。有意思的是，砷剂如今又以极低受控剂量成为治疗某种白血病的药——正应了第 0 章"剂量定毒"：同一物质，剂量不同，是毒是药。</div>
+      </div>
+
+      <h2><span class="cn">农药与神经毒剂：扰乱神经开关（对应第 3、6 章）</span></h2>
+
+      <div class="trial">
+        <div class="tr-top">
+          <div class="tr-name">有机磷农药 <span class="en2">Organophosphates</span></div>
+          <div class="tr-tags"><span class="tr-phase">农药</span><span class="tr-ind">神经-肌肉</span><span class="tr-appr">有解毒剂</span></div>
+        </div>
+        <div class="trow"><div class="lbl mfr">类别</div><div class="val"><b>农药</b>（同机制的极端版即沙林等<b>神经毒剂</b>）</div></div>
+        <div class="trow"><div class="lbl">机制</div><div class="val">抑制<b>乙酰胆碱酯酶</b>——"关闭神经信号"的酶失灵，递质堆积、开关关不掉（第 6 章）</div></div>
+        <div class="trow"><div class="lbl">靶器官</div><div class="val">神经-肌肉、腺体；死因多为<b>呼吸肌麻痹</b></div></div>
+        <div class="trow"><div class="lbl">途径</div><div class="val">口服、吸入、<b>经皮</b>（脂溶，皮肤也能大量吸收）</div></div>
+        <div class="trow"><div class="lbl">解毒</div><div class="val"><b>阿托品</b>（挡住堆积的乙酰胆碱）＋<b>解磷定</b>（复活被抑制的酶）</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">症状规律</div><div class="m-v">"湿透"</div><div class="m-d">流涎流泪出汗、瞳孔缩小、肌颤</div></div>
+          <div class="tr-metric"><div class="m-k">救治要点</div><div class="m-v">争分夺秒</div><div class="m-d">解磷定须尽早，酶"老化"后难复活</div></div>
+        </div>
+        <div class="tr-read">全球自杀/误服中毒的头号杀手之一，也是最能体现"机制→解毒剂"对应关系的案例（第 8 章）：既然毒在"信号关不掉"，解药就一边<strong>挡信号（阿托品）</strong>一边<strong>修酶（解磷定）</strong>。它的化学武器版沙林是同一机制的强化。记住这条链：抑制乙酰胆碱酯酶 → 乙酰胆碱堆积 → 全身"湿透"＋呼吸肌麻痹。</div>
+      </div>
+
+      <div class="trial">
+        <div class="tr-top">
+          <div class="tr-name">百草枯 <span class="en2">Paraquat</span></div>
+          <div class="tr-tags"><span class="tr-phase">除草剂</span><span class="tr-ind">肺（不可逆）</span><span class="tr-appr">无特效解药</span></div>
+        </div>
+        <div class="trow"><div class="lbl mfr">类别</div><div class="val"><b>除草剂</b>·以"没有特效解毒剂、少量即致命"闻名</div></div>
+        <div class="trow"><div class="lbl">机制</div><div class="val">在体内循环产生大量<b>活性氧（氧化应激）</b>，专门烧毁肺组织（第 3 章）</div></div>
+        <div class="trow"><div class="lbl">靶器官</div><div class="val"><b>肺</b>——进行性肺纤维化，即使初期抢救成功仍可能数周后因肺衰竭死亡</div></div>
+        <div class="trow"><div class="lbl">途径</div><div class="val">口服（误服/自杀）；肺细胞会主动摄取并浓缩它</div></div>
+        <div class="trow"><div class="lbl">解毒</div><div class="val"><b>无特效解毒剂</b>；吸氧反而可能加重（火上浇油）</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">致死量</div><div class="m-v">一小口</div><div class="m-d">很小剂量即可致命</div></div>
+          <div class="tr-metric"><div class="m-k">残酷之处</div><div class="m-v">延迟死亡</div><div class="m-d">清醒数日后仍因肺纤维化死去</div></div>
+        </div>
+        <div class="tr-read">氧化应激机制（第 3 章）的典型且残酷的例子：<strong>它把肺一点点"氧化烧焦"成纤维化</strong>，而肺又主动把它浓缩。因为毒性靠自由基，给氧反而火上浇油——是"想当然的急救反而有害"的著名反例。无特效解药、致死量极小，很多国家已严格限用。它提醒人们：第 8 章那张解毒剂表是奢侈品，多数毒物没有。</div>
+      </div>
+
+      <h2><span class="cn">窒息性毒物：切断能量（对应第 3、6 章）</span></h2>
+
+      <div class="trial">
+        <div class="tr-top">
+          <div class="tr-name">一氧化碳 <span class="en2">Carbon Monoxide · CO</span></div>
+          <div class="tr-tags"><span class="tr-phase">气体</span><span class="tr-ind">全身缺氧</span><span class="tr-appr">"沉默杀手"</span></div>
+        </div>
+        <div class="trow"><div class="lbl mfr">类别</div><div class="val"><b>窒息性气体</b>·无色无味，中毒最常见的气体之一</div></div>
+        <div class="trow"><div class="lbl">机制</div><div class="val">与血红蛋白结合力比氧强 200 多倍，<b>抢占运氧座位</b>→组织缺氧（第 6 章）</div></div>
+        <div class="trow"><div class="lbl">靶器官</div><div class="val">最耗氧的<b>心、脑</b>先垮；可留神经后遗症</div></div>
+        <div class="trow"><div class="lbl">途径</div><div class="val">吸入——燃烧不充分（炭火、燃气热水器、汽车尾气、火灾）</div></div>
+        <div class="trow"><div class="lbl">解毒</div><div class="val"><b>纯氧 / 高压氧</b>——用高浓度氧把 CO 从血红蛋白上挤下来</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">迷惑之处</div><div class="m-v">无色无味</div><div class="m-d">中毒时常已昏迷、无从察觉</div></div>
+          <div class="tr-metric"><div class="m-k">典型误判</div><div class="m-v">"像感冒"</div><div class="m-d">头痛头晕乏力，易被忽视</div></div>
+        </div>
+        <div class="tr-read">"血看着是满的，却运不动氧"——第 3 章"切断能量/化学性窒息"的头号代表。因为无色无味、早期症状像感冒，被称"沉默的杀手"，冬季取暖事故高发。解毒逻辑极干净：既然是"抢座位"，就用高浓度氧把它<strong>竞争性挤下来</strong>（第 8 章）。装一个几十块钱的 CO 报警器，就是最有效的"毒理防线"。</div>
+      </div>
+
+      <div class="trial">
+        <div class="tr-top">
+          <div class="tr-name">氰化物 <span class="en2">Cyanide</span></div>
+          <div class="tr-tags"><span class="tr-phase">化学毒物</span><span class="tr-ind">细胞窒息</span><span class="tr-appr">起效极快</span></div>
+        </div>
+        <div class="trow"><div class="lbl mfr">类别</div><div class="val"><b>化学性窒息剂</b>·作用极快，历史上的著名毒物</div></div>
+        <div class="trow"><div class="lbl">机制</div><div class="val">卡死线粒体里"用氧发电"的关键酶→细胞<b>有氧也用不了</b>（第 3 章）</div></div>
+        <div class="trow"><div class="lbl">靶器官</div><div class="val">全身（心、脑等高耗能组织最先受不了）</div></div>
+        <div class="trow"><div class="lbl">途径</div><div class="val">吸入、口服；火灾烟雾、某些工业过程、部分植物种仁（苦杏仁等）</div></div>
+        <div class="trow"><div class="lbl">解毒</div><div class="val"><b>羟钴胺</b>等——提供毒物更爱结合的"诱饵"把它引开</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">起效速度</div><div class="m-v">数分钟</div><div class="m-d">高浓度可迅速致命</div></div>
+          <div class="tr-metric"><div class="m-k">特征线索</div><div class="m-v">"苦杏仁味"</div><div class="m-d">部分人能闻到（并非人人能闻）</div></div>
+        </div>
+        <div class="tr-read">比 CO 更狠一层：CO 是"氧运不到"，氰化物是"氧运到了也用不了"——直接掐断细胞的发电总闸。因此起效极快。解毒思路很巧：<strong>给它一个比线粒体更有吸引力的结合"诱饵"</strong>，把它从要害上引开再排出（第 8 章）。它和 CO 一起，是理解"细胞层面窒息"的最佳一对。</div>
+      </div>
+
+      <h2><span class="cn">药物与天然毒素：机制经典的教科书案例（对应第 2、5 章）</span></h2>
+
+      <div class="trial">
+        <div class="tr-top">
+          <div class="tr-name">对乙酰氨基酚过量 <span class="en2">Acetaminophen / APAP</span></div>
+          <div class="tr-tags"><span class="tr-phase">药物过量</span><span class="tr-ind">肝</span><span class="tr-appr">有解毒剂</span></div>
+        </div>
+        <div class="trow"><div class="lbl mfr">类别</div><div class="val"><b>常用退烧止痛药</b>·正常剂量极安全，过量则是全球药物性肝衰竭首因之一</div></div>
+        <div class="trow"><div class="lbl">机制</div><div class="val"><b>生物活化（第 2 章）</b>：过量时肝把一部分代谢成毒性中间体 NAPQI，耗光谷胱甘肽后杀死肝细胞</div></div>
+        <div class="trow"><div class="lbl">靶器官</div><div class="val"><b>肝</b>（可致急性肝衰竭）</div></div>
+        <div class="trow"><div class="lbl">途径</div><div class="val">口服过量（误服、叠加多种复方感冒药、蓄意）</div></div>
+        <div class="trow"><div class="lbl">解毒</div><div class="val"><b>N-乙酰半胱氨酸（NAC）</b>——补充谷胱甘肽原料，中和 NAPQI；越早越有效</div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">关键教训</div><div class="m-v">剂量定毒</div><div class="m-d">常规量安全，过量致命</div></div>
+          <div class="tr-metric"><div class="m-k">救治窗口</div><div class="m-v">越早越好</div><div class="m-d">早期给 NAC 几乎可完全防肝损伤</div></div>
+        </div>
+        <div class="tr-read">整门课最好的"教科书案例"：它把第 2 章的<strong>生物活化（越代谢越毒）</strong>、第 4 章的<strong>肝为何首当其冲</strong>、第 8 章的<strong>机制针对性解毒（补上被耗光的谷胱甘肽）</strong>一次串起来。也最能诠释第 0 章"剂量定毒"——同一片药，常规量是安全的家庭常备药，过量却能致命。看懂它，等于把这门课的主线走了一遍。</div>
+      </div>
+
+      <div class="trial">
+        <div class="tr-top">
+          <div class="tr-name">鹅膏菌毒素 <span class="en2">Amatoxin（毒鹅膏）</span></div>
+          <div class="tr-tags"><span class="tr-phase">天然毒素</span><span class="tr-ind">肝</span><span class="tr-appr">"死亡帽"</span></div>
+        </div>
+        <div class="trow"><div class="lbl mfr">类别</div><div class="val"><b>真菌毒素</b>·毒蘑菇中毒的头号致死元凶</div></div>
+        <div class="trow"><div class="lbl">机制</div><div class="val">抑制细胞"造蛋白的机器"（RNA 聚合酶Ⅱ）→细胞停摆，肝首当其冲</div></div>
+        <div class="trow"><div class="lbl">靶器官</div><div class="val"><b>肝</b>（后续可累及肾）</div></div>
+        <div class="trow"><div class="lbl">途径</div><div class="val">口服——误把毒鹅膏当可食蘑菇采食</div></div>
+        <div class="trow"><div class="lbl">解毒</div><div class="val">无可靠特效解药；重症靠支持治疗甚至<b>肝移植</b></div></div>
+        <div class="tr-metrics">
+          <div class="tr-metric"><div class="m-k">最阴险处</div><div class="m-v">假愈期</div><div class="m-d">先腹泻→好转数日→再肝衰竭</div></div>
+          <div class="tr-metric"><div class="m-k">耐受性</div><div class="m-v">加热不破坏</div><div class="m-d">煮熟也不能解毒</div></div>
+        </div>
+        <div class="tr-read">"天然≠安全"最惨痛的注脚。它最阴险的是<strong>"假愈期"</strong>：初期腹泻后症状缓解，让人以为没事，其实肝正在被悄悄摧毁，几天后突然肝衰竭。这也说明第 3 章"第四步（修复/失修复)"的重要——等到症状再现，肝细胞已大量死亡、来不及修。采蘑菇需极度谨慎。</div>
+      </div>
+
+      <div class="note investor">
+        <span class="tag">还有几个值得知道的名字</span>
+        <p><strong>沙利度胺（反应停）</strong>：史上最著名的致畸物（第 5 章），因在肢体发育窗口期致万名婴儿畸形，催生了现代生殖毒性法规。<strong>肉毒毒素</strong>：已知最毒物质之一，切断神经-肌肉指令，却因"剂量定毒"成了除皱和治疗肌张力障碍的药——第 0 章那句名言的活教材。<strong>甲醇</strong>：本身毒性有限，但被肝"生物活化"成甲酸后可致失明、死亡，解毒办法反而是让它"别被代谢"（用乙醇或甲吡唑抢占代谢酶）——第 2 章生物活化的又一经典反例。<strong>二噁英</strong>：极难降解、脂溶蓄积的环境污染物，Seveso 事件的主角，是"持久性有机污染物"的代表。</p>
+      </div>
+      <div class="footer-note">
+        毒物档案库 · 毒性数值为不同来源的近似量级，仅供建立直觉；精确数据、救治方案请以权威专业文献与医疗机构为准。本页不构成医疗建议。
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  const nav=document.getElementById('nav');
+  const items=[...document.querySelectorAll('.nav-item[data-target]')];
+  const mods=[...document.querySelectorAll('.module')];
+  const rail=document.getElementById('rail');
+  const scrim=document.getElementById('scrim');
+  const menuBtn=document.getElementById('menuBtn');
+  function show(id){
+    if(!mods.some(m=>m.id===id)) id='tx0';
+    items.forEach(i=>i.classList.toggle('active',i.dataset.target===id));
+    mods.forEach(m=>m.classList.toggle('active',m.id===id));
+    window.scrollTo({top:0,behavior:'instant' in window?'instant':'auto'});
+    closeRail();
+  }
+  window.tx=function(id){history.replaceState(null,'','#'+id);show(id);return false;};
+  nav.addEventListener('click',e=>{
+    const b=e.target.closest('.nav-item[data-target]'); if(!b)return;
+    history.replaceState(null,'','#'+b.dataset.target);
+    show(b.dataset.target);
+  });
+  function openRail(){rail.classList.add('open');scrim.classList.add('show')}
+  function closeRail(){rail.classList.remove('open');scrim.classList.remove('show')}
+  menuBtn.addEventListener('click',openRail);
+  scrim.addEventListener('click',closeRail);
+  show((location.hash||'#tx0').slice(1));
+  window.addEventListener('hashchange',()=>show((location.hash||'#tx0').slice(1)));
+</script>
+</body>
+</html>
